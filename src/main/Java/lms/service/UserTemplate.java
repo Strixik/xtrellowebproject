@@ -69,8 +69,6 @@ public class UserTemplate {
         if (out == null)return false;
         String regForm = UserHtmlViews.getInstance().getRegForm();
             try {
-            String id = request.getParameter("userId");
-                System.out.println(id);
             String regLogin =  new String(request.getParameter("regLogin").getBytes("iso-8859-1"),
                     "UTF-8");
             regForm = checkFormField(1,regForm,regLogin, f -> {
@@ -97,8 +95,8 @@ public class UserTemplate {
                 });
             String regSecondPassword =  new String(request.getParameter("regSecondPassword").getBytes("iso-8859-1"),
                     "UTF-8");
-            regForm = checkFormField(3, regForm, regFirstPasword.equals(regSecondPassword), f -> {
-                if(f) {
+            regForm = checkFormField(3, regForm, regSecondPassword, f -> {
+                if(f.equals(regFirstPasword)) {
                     return null;
                 }
                 return "Паролі повинні співпадати!";
@@ -116,12 +114,7 @@ public class UserTemplate {
             });
             if (!regForm.contains("has-error")){
                 User user;
-                if (id == "") {
-                    user = new User(regLogin, regFirstPasword, regEmail, LocalDate.now().toString());
-                } else {
-                    user = new User(Long.parseLong(id), regLogin, regFirstPasword, regEmail, LocalDate.now().toString());
-                }
-               // System.out.println("profile\t" + user);
+                user = new User(regLogin, regFirstPasword, regEmail, LocalDate.now().toString());
                 UserDao userDao = new UserImpl();
                 userDao.saveUser(user);
                 return true;
@@ -168,7 +161,13 @@ public class UserTemplate {
        if (out == null)return false;
         String profForm = UserHtmlViews.getInstance().getProfileForm();
         try {
-            String id = request.getParameter("upuserId");
+            String upuserId = request.getParameter("upuserId");
+            profForm = checkFormField(5, profForm, upuserId, f -> {
+                if(f.length() > 0) {
+                    return  null;
+                }
+                return "Бла бла бла";
+            });
             String upLogin =  new String(request.getParameter("upLogin").getBytes("iso-8859-1"),
                     "UTF-8");
             profForm = checkFormField(1, profForm, upLogin, f -> {
@@ -193,8 +192,8 @@ public class UserTemplate {
             });
             String upSecondPassword =  new String(request.getParameter("upSecondPassword").getBytes("iso-8859-1"),
                     "UTF-8");
-            profForm = checkFormField(3, profForm, upFirstPasword.equals(upSecondPassword), f -> {
-                if(f) {
+            profForm = checkFormField(3, profForm, upSecondPassword, f -> {
+                if(f.equals(upFirstPasword)) {
                     return null;
                 }
                 return "Паролі повинні співпадати!";
@@ -280,7 +279,7 @@ public class UserTemplate {
 
             if (!profForm.contains("has-error")) {
                 User user;
-                user = new User(Long.parseLong(id), upLogin, upSecondPassword, upEmail, update_registered, upsex, update_birth, Integer.parseInt(upblock), upfirstname, upsecondname, upcontry, upcity);
+                user = new User(Long.parseLong(upuserId), upLogin, upSecondPassword, upEmail, update_registered, upsex, update_birth, Integer.parseInt(upblock), upfirstname, upsecondname, upcontry, upcity);
                 System.out.println("profile\t" + user);
                 UserDao userDao = new UserImpl();
                 userDao.saveUser(user);

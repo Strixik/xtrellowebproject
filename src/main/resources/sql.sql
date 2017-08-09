@@ -1,4 +1,3 @@
-#insert into users(login, password) values('Strix', '4359848791');
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
 -- Host: localhost    Database: xtrello
@@ -28,6 +27,7 @@ CREATE TABLE `users` (
   `login` varchar(20) DEFAULT NULL,
   `password` varchar(15) DEFAULT NULL,
   `email` varchar(40) DEFAULT NULL,
+  `date_registered` date NOT NULL,
   `sex` enum('man','woman') DEFAULT NULL,
   `date_birth` date DEFAULT NULL,
   `block` tinyint(1) DEFAULT '0',
@@ -37,7 +37,7 @@ CREATE TABLE `users` (
   `city` varchar(40) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `users_login_uindex` (`login`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -46,7 +46,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Strix','123','stixik1985@gmail.com','man','1985-10-24',0,'Андрій','Голбан','Україна','Івано-Франківськ'),(2,'gdfgdf','gdfgdfgdf','gdfgdfgdf',NULL,NULL,0,NULL,NULL,NULL,NULL),(11,'test','test','test@gmail.com',NULL,NULL,0,NULL,NULL,NULL,NULL);
+INSERT INTO `users` VALUES (1,'Strix','123456','stixik1985@gmail.com','2017-08-09','man','1985-10-24',0,'Андрій','Голбан','Україна','Івано-Франківськ'),(10,'test','test123','strixik1985@gmail.com','1985-10-24','woman','2017-08-09',0,'Алла','авіаіва','аіваіва','аіваіваів'),(11,'Strixik','123456','strixik@list.ru','2017-08-09','woman','1987-11-20',0,'Кирил','Богут','Україна','Чернівці'),(13,'Strixik1','123456','strixik1985@gmail.com','2017-08-09',NULL,NULL,0,NULL,NULL,NULL,NULL),(14,'Strixik3','4359848791','strixik1985@gmail.com','2017-08-09',NULL,NULL,0,NULL,NULL,NULL,NULL),(15,'Strixik4','123456','test@gmail.com','2017-08-10',NULL,NULL,0,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -59,8 +59,7 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-08-02 16:57:18
-
+-- Dump completed on 2017-08-10  1:08:11
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
 -- Host: localhost    Database: xtrello
@@ -113,8 +112,7 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-08-02 16:57:18
-
+-- Dump completed on 2017-08-10  1:08:11
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
 -- Host: localhost    Database: xtrello
@@ -167,8 +165,7 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-08-02 16:57:18
-
+-- Dump completed on 2017-08-10  1:08:11
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
 -- Host: localhost    Database: xtrello
@@ -221,5 +218,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-08-02 16:57:18
-
+-- Dump completed on 2017-08-10  1:08:11

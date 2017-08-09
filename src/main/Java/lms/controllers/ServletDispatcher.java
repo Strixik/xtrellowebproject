@@ -26,7 +26,7 @@ public class ServletDispatcher extends HttpServlet {
         switch (request.getPathInfo()) {
             case "/register":
                 if (indexView.checkRegistrationForm(request)) {
-                    indexView.showRegisterForm();
+                    response.sendRedirect("/");
                 }
                 break;
             case "/login":
@@ -36,10 +36,10 @@ public class ServletDispatcher extends HttpServlet {
                 }
                 break;
             case "/profile-edit":
-                if (indexView.checkProfileForm(request)) {
-                  response.sendRedirect("/profile-edit");
-                }
-                break;
+                    if (indexView.checkProfileForm(request)) {
+                    response.sendRedirect("/profile-edit");
+                    }
+                     break;
         }
     }
 
