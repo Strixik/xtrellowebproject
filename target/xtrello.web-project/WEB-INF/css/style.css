@@ -164,3 +164,23 @@ a{color:inherit;text-decoration:none}
 html {
     
 }
+.board{
+	float: left;
+	background-color:#cccccc;
+	width: 200px;
+	height: 100px;
+	margin: 20px;
+	border: solid slategray 1px;
+	border-radius: 15px;
+	text-align: center;
+	padding-right: 25px;
+	padding-left: 25px;
+
+}
+
+#knopka{
+	float: left;
+	margin: 20px;
+	margin-right: 100%;
+
+}

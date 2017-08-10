@@ -1,0 +1,25 @@
+<a href="#myModal" class="btn btn-primary" data-toggle="modal">Створити дошку</a>
+
+<!-- HTML-код модального окна-->
+<div id="myModal" class="modal fade">
+    <form action="/board" method="post">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Заголовок модального окна -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Введіть назву Дошки:</h4>
+            </div>
+            <!-- Основное содержимое модального окна -->
+            <div class="modal-body">
+                <input type="text" class="form-control" id="" name="nameBoard" placeholder="Назва дошки">
+            </div>
+            <!-- Футер модального окна -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Закрити</button>
+                <input type="submit" class="btn btn-primary" title="Зберегти" value="Зберегти">
+            </div>
+        </div>
+    </div>
+    </form>
+</div>
