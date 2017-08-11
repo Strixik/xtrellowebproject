@@ -33,6 +33,7 @@ public class BoardTemplate {
                 Board board = new Board(nameBoard, user_id);
                 BoardDao boardDao = new BoardImpl();
                 boardDao.saveBoard(board);
+      //          session.setAttribute("board_id",board.getId());
                 return true;
             }
 
@@ -50,7 +51,17 @@ public class BoardTemplate {
     for (Board s: boards){
         String board_name = BoardHtmlViews.getInstance().getBoard_name();
          board_name = board_name.replace("<!--board-->",s.getBoard_name());
+         board_name = board_name.replace("board_id",  String.valueOf(s.getId()));
          out.println(board_name);
     }
+    }
+    public boolean dellBoards(HttpServletRequest request){
+        long board_id = Long.parseLong(request.getParameter("boardid").toString());
+        if (board_id > 0L) {
+            BoardDao boardDao = new BoardImpl();
+            boardDao.dellBoard(board_id);
+            return true;
+        }
+        else return false;
     }
 }

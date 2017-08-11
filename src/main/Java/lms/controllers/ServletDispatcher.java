@@ -33,7 +33,7 @@ public class ServletDispatcher extends HttpServlet {
                 break;
             case "/login":
                 if (indexView.checkLogin(request, session)) {
-                    response.sendRedirect("/board");
+                    response.sendRedirect("/board/view");
                 }
                 break;
             case "/profile-edit":
@@ -53,7 +53,7 @@ public class ServletDispatcher extends HttpServlet {
         switch (request.getPathInfo()) {
             case "/":
                 if(session.getAttribute("login") != null) {
-                    response.sendRedirect("/board");
+                    response.sendRedirect("/board/view");
                 } else {
                     indexView.showLoginForm();
                 }

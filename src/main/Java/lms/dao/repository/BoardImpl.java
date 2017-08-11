@@ -50,6 +50,17 @@ public class BoardImpl implements BoardDao {
     @Override
     public void dellBoard(long id) {
         DataSource dataSource = new DataSource();
+        if (id > 0L){
+            try (Connection con = dataSource.getConnection();
+                    Statement stmt = con.createStatement();)
+            {
+                stmt.executeUpdate("DELETE FROM board WHERE id =" + id);
+            } catch (SQLException e){
+                e.printStackTrace();
+            }
+
+
+        }
 
     }
 }

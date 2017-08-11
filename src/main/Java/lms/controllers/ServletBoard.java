@@ -15,21 +15,43 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
-@WebServlet(name = "ServletBoard", urlPatterns = "/board")
+@WebServlet(name = "ServletBoard", urlPatterns = "/board/*")
 public class ServletBoard extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
         BoardTemplate indexView = new BoardTemplate(out);
         HttpSession session = request.getSession();
-                       if (indexView.addBoardForm(request,session)) {
-                    response.sendRedirect("/board");
-                }
+        System.out.println(request.getPathInfo().toString());
+                   switch (request.getPathInfo()) {
+                   case "/add":
+                       if (indexView.addBoardForm(request, session)) {
+                           response.sendRedirect("/view");
+                       }
+                       break;
+                   case "/del":
+                       if (indexView.dellBoards(request)){
+                           response.sendRedirect("/view");
+                       }
+                       break;
+               }
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
         BoardTemplate indexView = new BoardTemplate(out);
         HttpSession session = request.getSession();
-        indexView.showBoard(session);
+        System.out.println(request.getPathInfo().toString());
+        switch (request.getPathInfo()) {
+            case "/view":
+                indexView.showBoard(session);
+                break;
+          /*  case "/del":
+                if (indexView.dellBoards(request)){
+                    response.sendRedirect("/board");
+                }
+                break;*/
+        }
+
+
     }
 }
