@@ -31,7 +31,7 @@ public class UserImpl implements UserDao {
                 //System.out.println(user);
                 return user;
             }
-        } catch (SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         return null;
@@ -42,8 +42,8 @@ public class UserImpl implements UserDao {
         DataSource dataSource = new DataSource();
 
         try (Connection con = dataSource.getConnection();
-             PreparedStatement pstmt = (user.getId()== 0L)?con.prepareStatement("INSERT INTO users (login, password, email, date_registered, sex, date_birth, block, firstname, secondname, contry, city)  VALUES (?,?,?,?,?,?,?,?,?,?,?)"):con.prepareStatement("UPDATE users SET login=?, password=?, email=?, date_registered=?, sex=?, date_birth=?, block=?, firstname=?, secondname=?, contry=?, city=? WHERE id="+user.getId());
-        ){
+             PreparedStatement pstmt = (user.getId() == 0L) ? con.prepareStatement("INSERT INTO users (login, password, email, date_registered, sex, date_birth, block, firstname, secondname, contry, city)  VALUES (?,?,?,?,?,?,?,?,?,?,?)") : con.prepareStatement("UPDATE users SET login=?, password=?, email=?, date_registered=?, sex=?, date_birth=?, block=?, firstname=?, secondname=?, contry=?, city=? WHERE id=" + user.getId());
+        ) {
             pstmt.setString(1, user.getLogin());
             pstmt.setString(2, user.getPassword());
             pstmt.setString(3, user.getEmail());

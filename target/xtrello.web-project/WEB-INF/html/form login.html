@@ -2,8 +2,10 @@
 
     <div class="login-wrap">
         <div class="login-html">
-            <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Вхід</label>
-            <input id="tab-2" type="radio" name="tab" class="sign-up" blabala><label for="tab-2" class="tab">Реєстрація</label>
+            <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1"
+                                                                                     class="tab">Вхід</label>
+            <input id="tab-2" type="radio" name="tab" class="sign-up" blabala><label for="tab-2"
+                                                                                     class="tab">Реєстрація</label>
             <div class="login-form">
                 <div class="sign-in-htm">
                     <form action="/login" method="post">
@@ -33,32 +35,32 @@
                     <form action="/register" method="POST" id="bottom-panel">
                         <script src="../js/jquery.min.js"></script>
                         <script>
-                            $(document).ready(function() {
-                                $('.group').change(function() {
+                            $(document).ready(function () {
+                                $('.group').change(function () {
                                     var regmail = $("#regemail").val();
                                     var reguser = $("#reguser").val();
                                     var pass = $("#firstPass").val();
                                     var pass_rep = $("#secondPass").val();
 
-                                    if (true){
+                                    if (true) {
                                         $("#regemail").css('border', 'red 1px solid');
                                         $("#reguser").css('border', 'red 1px solid');
                                         $("#firstPass").css('border', 'red 1px solid');
                                         $("#secondPass").css('border', 'red 1px solid');
                                     }
-                                    if (regmail != 0){
+                                    if (regmail != 0) {
                                         $("#regemail").css('border', 'green 1px solid');
                                     }
-                                     if (reguser !=0){
+                                    if (reguser != 0) {
                                         $("#reguser").css('border', 'green 1px solid');
                                     }
-                                     if (pass !=0){
+                                    if (pass != 0) {
                                         $("#firstPass").css('border', 'green 1px solid');
                                     }
-                                     if (pass == pass_rep && pass_rep !=0 ){
+                                    if (pass == pass_rep && pass_rep != 0) {
                                         $("#secondPass").css('border', 'green 1px solid');
                                     }
-                                     if ((regmail != 0) && (reguser !=0) && (pass == pass_rep)){
+                                    if ((regmail != 0) && (reguser != 0) && (pass == pass_rep)) {
                                         $('#submit').attr('disabled', false);
                                     }
                                 });
@@ -72,12 +74,14 @@
                         </div>
                         <div class="group">
                             <label for="pass" class="label">Пароль</label>
-                            <input id="firstPass" type="password" name="regFirstPasword" class="input" data-type="password" xtrellovall2>
+                            <input id="firstPass" type="password" name="regFirstPasword" class="input"
+                                   data-type="password" xtrellovall2>
                             <p class="text-danger text-center"><!--2--></p>
                         </div>
                         <div class="group">
                             <label for="pass" class="label">Повторіть Пароль</label>
-                            <input id="secondPass" type="password" name="regSecondPassword" class="input" data-type="password" xtrellovall3>
+                            <input id="secondPass" type="password" name="regSecondPassword" class="input"
+                                   data-type="password" xtrellovall3>
                             <p class="text-danger text-center"><!--3--></p>
                         </div>
                         <div class="group">
@@ -87,14 +91,14 @@
                         </div>
                         <input type="hidden" id="userId" name="userId" xtrellovall5>
                         <div class="group">
-                            <input type="submit" class="button" id="submit"  value="Зареєструвати" disabled>
+                            <input type="submit" class="button" id="submit" value="Зареєструвати" disabled>
                         </div>
 
 
                         <div class="hr"></div>
 
                         <p class="text-danger text-center" id="errorBlock"></p>
-                       <!-- <p class="text-success text-center" id="goodBlock">Вітаю користувача створено!</p>-->
+                        <!-- <p class="text-success text-center" id="goodBlock">Вітаю користувача створено!</p>-->
 
 
                     </form>

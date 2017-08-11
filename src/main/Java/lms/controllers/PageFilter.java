@@ -1,7 +1,5 @@
 package lms.controllers;
 
-import lms.dao.CRUDRepository.UserDao;
-import lms.dao.entity.User;
 import lms.views.UserHtmlViews;
 
 import javax.servlet.*;
@@ -15,7 +13,7 @@ import java.io.PrintWriter;
 /**
  * Adds top and bottom parts of HTML page to servlet responses
  */
-@WebFilter(filterName = "PageFilter", value = {"/*","/board/*}"})
+@WebFilter(filterName = "PageFilter", value = {"/*", "/board/*}"})
 public class PageFilter implements Filter {
     public void destroy() {
     }
@@ -31,15 +29,15 @@ public class PageFilter implements Filter {
         if (session.getAttribute("login") == null && (!request.getServletPath().equals(""))) {
             response.sendRedirect("/");
         }
-            if (session.getAttribute("login") != null) {
-                top = top.replace("<!-- servletInsert04 -->", "<a class=\"navbar-brand navbar-right\">Логін Користувача:  </a>");
-                top = top.replace("<!-- servletInsert05 -->", " <a class=\"navbar-brand navbar-right\">" + session.getAttribute("login").toString().toUpperCase()+ "</a>");
-                top = top.replace("<!-- servletInsert01 -->", UserHtmlViews.getInstance().getLogoutButton());
-            }
-            out.write(top);
-            chain.doFilter(req, resp);
-            out.write(UserHtmlViews.getInstance().getBottomUserView());
+        if (session.getAttribute("login") != null) {
+            top = top.replace("<!-- servletInsert04 -->", "<a class=\"navbar-brand navbar-right\">Логін Користувача:  </a>");
+            top = top.replace("<!-- servletInsert05 -->", " <a class=\"navbar-brand navbar-right\">" + session.getAttribute("login").toString().toUpperCase() + "</a>");
+            top = top.replace("<!-- servletInsert01 -->", UserHtmlViews.getInstance().getLogoutButton());
         }
+        out.write(top);
+        chain.doFilter(req, resp);
+        out.write(UserHtmlViews.getInstance().getBottomUserView());
+    }
 
 
     public void init(FilterConfig config) throws ServletException {

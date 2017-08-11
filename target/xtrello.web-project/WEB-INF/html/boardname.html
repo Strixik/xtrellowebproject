@@ -1,10 +1,11 @@
-<form action="/board/del" method="post" class="board ">
-    <input type="hidden"  name="boardid" value="board_id">
-    <input type="submit" class="close calendar-grid" value="x">
-<a href="/list/" class="boarda">
-    <div class="">
-        <h1><!--board--></h1>
-
-    </div>
-</a>
-</form>
+<div class="boards">
+    <form action="/list/" method="get" class="">
+        <input type="hidden" name="boardid" value="board_id">
+        <!-- <h1>&lt;!&ndash;board&ndash;&gt;</h1>-->
+        <input type="submit"  class="board" value="<!--board-->">
+    </form>
+    <form action="/board/del" method="post" class="tab-close-button">
+        <input type="hidden" name="boardid" value="board_id">
+        <input type="submit" class="btn btn-danger " value="Видалити дошку">
+    </form>
+</div>

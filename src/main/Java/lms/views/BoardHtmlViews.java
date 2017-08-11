@@ -7,7 +7,6 @@ public class BoardHtmlViews {
     private final String board_name;
 
 
-
     public static BoardHtmlViews getInstance() {
         if (ourInstance == null) {
             ourInstance = new BoardHtmlViews();

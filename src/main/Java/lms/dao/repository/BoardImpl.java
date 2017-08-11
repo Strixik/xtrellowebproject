@@ -14,9 +14,9 @@ public class BoardImpl implements BoardDao {
     public List<Board> getAllBoard(long user_id) {
         DataSource dataSource = new DataSource();
         List<Board> boards = new ArrayList<>();
-        try(Connection con = dataSource.getConnection();
-            Statement stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM board WHERE user_id=\""+user_id + "\"");) {
+        try (Connection con = dataSource.getConnection();
+             Statement stmt = con.createStatement();
+             ResultSet rs = stmt.executeQuery("SELECT * FROM board WHERE user_id=\"" + user_id + "\"");) {
             while (rs.next()) {
                 long id = rs.getLong("id");
                 String board = rs.getString("board");
@@ -27,7 +27,7 @@ public class BoardImpl implements BoardDao {
                 );
                 boards.add(aboard);
             }
-        }catch (SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         return boards;
@@ -36,13 +36,12 @@ public class BoardImpl implements BoardDao {
     @Override
     public void saveBoard(Board board) {
         DataSource dataSource = new DataSource();
-        try(Connection con = dataSource.getConnection();
-            PreparedStatement pstm = con.prepareStatement("INSERT INTO board (board, user_id) VALUES (?,?)");)
-        {
+        try (Connection con = dataSource.getConnection();
+             PreparedStatement pstm = con.prepareStatement("INSERT INTO board (board, user_id) VALUES (?,?)");) {
             pstm.setString(1, board.getBoard_name());
             pstm.setLong(2, board.getUser_id());
             pstm.executeUpdate();
-        }catch (SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }
@@ -50,12 +49,11 @@ public class BoardImpl implements BoardDao {
     @Override
     public void dellBoard(long id) {
         DataSource dataSource = new DataSource();
-        if (id > 0L){
+        if (id > 0L) {
             try (Connection con = dataSource.getConnection();
-                    Statement stmt = con.createStatement();)
-            {
+                 Statement stmt = con.createStatement();) {
                 stmt.executeUpdate("DELETE FROM board WHERE id =" + id);
-            } catch (SQLException e){
+            } catch (SQLException e) {
                 e.printStackTrace();
             }
 

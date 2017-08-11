@@ -29,7 +29,7 @@ public class PathHtml {
         this.path = path;
     }
 
-    public String getPartialHtml(String filename){
+    public String getPartialHtml(String filename) {
         StringBuilder strb = new StringBuilder();
         Path file = Paths.get(this.path + filename);
         Charset charset = Charset.forName("UTF-8");

@@ -1,10 +1,7 @@
 package lms.controllers;
 
 
-
-import lms.dao.entity.Board;
 import lms.service.UserTemplate;
-
 import lms.views.BoardHtmlViews;
 import lms.views.PathHtml;
 import lms.views.UserHtmlViews;
@@ -37,10 +34,10 @@ public class ServletDispatcher extends HttpServlet {
                 }
                 break;
             case "/profile-edit":
-                    if (indexView.checkProfileForm(request)) {
+                if (indexView.checkProfileForm(request)) {
                     response.sendRedirect("/profile-edit");
-                    }
-                     break;
+                }
+                break;
         }
     }
 
@@ -52,7 +49,7 @@ public class ServletDispatcher extends HttpServlet {
 
         switch (request.getPathInfo()) {
             case "/":
-                if(session.getAttribute("login") != null) {
+                if (session.getAttribute("login") != null) {
                     response.sendRedirect("/board/view");
                 } else {
                     indexView.showLoginForm();
@@ -71,7 +68,7 @@ public class ServletDispatcher extends HttpServlet {
             default:
                 response.sendRedirect("/");
         }
-}
+    }
 
 
     @Override
@@ -79,7 +76,7 @@ public class ServletDispatcher extends HttpServlet {
         super.init();
         //set path
         PathHtml pathHTML = PathHtml.getInstance();
-        if(pathHTML.getPath().equals("")) {
+        if (pathHTML.getPath().equals("")) {
             pathHTML.setPath(getServletContext().getRealPath("/WEB-INF/html/"));
 
         }

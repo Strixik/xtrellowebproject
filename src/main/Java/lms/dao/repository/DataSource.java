@@ -10,7 +10,7 @@ import java.sql.SQLException;
 class DataSource implements AutoCloseable {
     // JDBC driver name and database URL
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    static final String DB_URL="jdbc:mysql://localhost/xtrello?user=root&password=2259";
+    static final String DB_URL = "jdbc:mysql://localhost/xtrello?user=root&password=2259";
 
     private Connection connection = null;
 
@@ -19,7 +19,7 @@ class DataSource implements AutoCloseable {
      * Завантажує новий екземпляр драйвера
      */
     public DataSource() {
-        try{
+        try {
             Class.forName(JDBC_DRIVER).newInstance();
         } catch (IllegalAccessException | InstantiationException | ClassNotFoundException e) {
             e.printStackTrace();
@@ -28,16 +28,15 @@ class DataSource implements AutoCloseable {
 
     /**
      * Створює з'єднання із БД
+     *
      * @return об'єкт класу з'єднання з БД
      */
-    public Connection getConnection()
-    {
+    public Connection getConnection() {
         try {
-            if( connection == null ) {
+            if (connection == null) {
                 connection = DriverManager.getConnection(DB_URL);
             }
-        }
-        catch( SQLException e ) {
+        } catch (SQLException e) {
             System.out.println("Error Occured " + e.toString());
         }
         return connection;
@@ -46,7 +45,7 @@ class DataSource implements AutoCloseable {
     @Override
     public void close() {
         try {
-            if( connection != null ) {
+            if (connection != null) {
                 connection.close();
             }
         } catch (SQLException e) {

@@ -1,7 +1,5 @@
 package lms.controllers;
 
-import lms.service.BoardTemplate;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -20,6 +18,7 @@ public class ServletList extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
         HttpSession session = request.getSession();
-        //out.println(session.getAttribute("board_id"));
+        session.setAttribute("board_id", request.getParameter("boardid"));
+        out.println(session.getAttribute("board_id"));
     }
 }
