@@ -2,8 +2,10 @@ package lms.controllers;
 
 
 
+import lms.dao.entity.Board;
 import lms.service.UserTemplate;
 
+import lms.views.BoardHtmlViews;
 import lms.views.PathHtml;
 import lms.views.UserHtmlViews;
 
@@ -30,7 +32,6 @@ public class ServletDispatcher extends HttpServlet {
                 }
                 break;
             case "/login":
-                // перевіряє логін форму, якщо неправильно введені дані повертає форму для перезаповнення
                 if (indexView.checkLogin(request, session)) {
                     response.sendRedirect("/board");
                 }
@@ -85,5 +86,6 @@ public class ServletDispatcher extends HttpServlet {
 
         //load partial html files
         UserHtmlViews.getInstance();
+        BoardHtmlViews.getInstance();
     }
 }
