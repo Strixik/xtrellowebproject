@@ -1,6 +1,6 @@
 <div class="row">
     <form action="/profile-edit" method="POST" class="form-horizontal">
-        <div class="col-md-3">
+        <div class="col-sm-4">
             <div class="form-group group1">
                 <p class="primary text-center">Логін Користувача:</p>
                 <input type="text" class="form-control" id="emailLogin" name="upLogin" placeholder="Name" xtrellovall1
@@ -8,7 +8,7 @@
                 <p class="text-danger text-center"><!--1--></p>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-sm-4">
             <div class="form-group group2">
                 <p class="primary text-center">Пароль:</p>
                 <input type="password" class="form-control" id="loginPassword" name="upFirstPasword"
@@ -17,7 +17,7 @@
             </div>
         </div>
 
-        <div class="col-md-3">
+        <div class="col-sm-4">
             <div class="form-group group3">
                 <p class="primary text-center">Повторити пароль:</p>
                 <input type="password" class="form-control" id="loginPassword2" name="upSecondPassword"
@@ -25,16 +25,8 @@
                 <p class="text-danger text-center"><!--3--></p>
             </div>
         </div>
-
-        <div class="col-md-3">
-            <div class="form-group group4">
-                <p class="primary text-center">Електронна пошта:</p>
-                <input type="email" class="form-control" id="registerName" name="upEmail"
-                       placeholder="Name" xtrellovall4>
-                <p class="text-danger text-center"><!--4--></p>
-            </div>
-        </div>
-        <div class="col-md-3">
+<hr>
+        <div class="col-sm-4">
             <div class="form-group group6">
                 <p class="primary text-center">Дата реєстрації:</p>
                 <input type="date" class="form-control" id="registerName" name="update_registered"
@@ -42,7 +34,17 @@
                 <p class="text-danger text-center"><!--6--></p>
             </div>
         </div>
-        <div class="col-md-3">
+
+        <div class="col-sm-4">
+            <div class="form-group group4">
+                <p class="primary text-center">Електронна пошта:</p>
+                <input type="email" class="form-control" id="registerName" name="upEmail"
+                       placeholder="Name" xtrellovall4>
+                <p class="text-danger text-center"><!--4--></p>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
             <div class="form-group group7">
                 <p class="primary text-center">Виберіть стать:</p>
                 <select class="form-control" size="1" name="upsex" xtrellovall7>
@@ -52,15 +54,8 @@
                 <p class="text-danger text-center"><!--7--></p>
             </div>
         </div>
-        <div class="col-md-3">
-            <div class="form-group group8">
-                <p class="primary text-center">Дата народження:</p>
-                <input type="date" class="form-control" id="registerName" name="update_birth"
-                       placeholder="Name" xtrellovall8>
-                <p class="text-danger text-center"><!--8--></p>
-            </div>
-        </div>
-        <div class="col-md-3">
+        <hr>
+        <div class="col-sm-4">
             <div class="form-group group9">
                 <p class="primary text-center">Статус блокування:</p>
                 <input type="text" class="form-control" id="registerName" name="upblock"
@@ -68,7 +63,17 @@
                 <p class="text-danger text-center"><!--9--></p>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+
+        <div class="col-sm-4">
+            <div class="form-group group8">
+                <p class="primary text-center">Дата народження:</p>
+                <input type="date" class="form-control" id="registerName" name="update_birth"
+                       placeholder="Name" xtrellovall8>
+                <p class="text-danger text-center"><!--8--></p>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
             <div class="form-group group0">
                 <p class="primary text-center">Ім'я:</p>
                 <input type="text" class="form-control" id="registerName" name="upfirstname"
@@ -76,7 +81,8 @@
                 <p class="text-danger text-center"><!--0--></p>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+        <hr>
+        <div class="col-sm-4">
             <div class="form-group group-1">
                 <p class="primary text-center">Фамілія:</p>
                 <input type="text" class="form-control" id="registerName" name="upsecondname"
@@ -84,7 +90,8 @@
                 <p class="text-danger text-center"><!---1--></p>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+
+        <div class="col-sm-4">
             <div class="form-group group-2">
                 <p class="primary text-center">Країна:</p>
                 <input type="text" class="form-control" id="registerName" name="upcontry"
@@ -92,7 +99,8 @@
                 <p class="text-danger text-center"><!---2--></p>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+
+        <div class="col-sm-4">
             <div class="form-group group-3">
                 <p class="primary text-center">Місто:</p>
                 <input type="text" class="form-control" id="registerName" name="upcity"
@@ -100,10 +108,10 @@
                 <p class="text-danger text-center"><!---3--></p>
             </div>
         </div>
-
+<hr>
         <input type="hidden" id="userId" name="upuserId" xtrellovall5>
 
-        <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+        <div class="col-sm-offset-4 col-sm-4">
             <button type="submit" class="btn btn-default btn-block">Зберегти</button>
         </div>
     </form>

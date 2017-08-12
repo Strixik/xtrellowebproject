@@ -12,13 +12,13 @@ import java.io.PrintWriter;
 @WebServlet(name = "ServletList", urlPatterns = "/list/*")
 public class ServletList extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-    }
-
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
         HttpSession session = request.getSession();
         session.setAttribute("board_id", request.getParameter("boardid"));
         out.println(session.getAttribute("board_id"));
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
     }
 }

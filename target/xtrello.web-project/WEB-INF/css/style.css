@@ -233,3 +233,9 @@ html {
 .close{
     border-radius: 30px;
 }
+.navbar-header {
+    min-width: 20%;
+}
+.navbar-brand {
+    font-size: 2em;
+}
