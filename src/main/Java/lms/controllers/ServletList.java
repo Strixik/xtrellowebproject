@@ -16,24 +16,22 @@ public class ServletList extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
         HttpSession session = request.getSession();
-
-
         ListTemplate listView = new ListTemplate(out);
         switch (request.getPathInfo()) {
             case "/":
                 session.setAttribute("board_id", request.getParameter("boardid"));
                 out.println(session.getAttribute("board_id"));
-                response.sendRedirect("view");
+                response.sendRedirect("/list/view");
                 break;
 
             case "/add":
                 if (listView.addListForm(request, session)) {
-                    response.sendRedirect("view");
+                    response.sendRedirect("/list/view");
                 }
                 break;
             case "/del":
                 if (listView.deleteList(request)) {
-                    response.sendRedirect("view");
+                    response.sendRedirect("/list/view");
                 }
                 break;
         }
@@ -42,6 +40,7 @@ public class ServletList extends HttpServlet {
         PrintWriter out = response.getWriter();
         ListTemplate listView = new ListTemplate(out);
         HttpSession session = request.getSession();
+        System.out.println(session.getAttribute("board_id"));
         switch (request.getPathInfo()) {
             case "/view":
                 listView.showList(session);

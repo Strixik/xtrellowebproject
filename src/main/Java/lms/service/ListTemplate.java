@@ -21,7 +21,7 @@ public class ListTemplate {
     public boolean addListForm(HttpServletRequest request, HttpSession session) {
         if (out == null) return false;
         try {
-            long boardId = Long.parseLong(session.getAttribute("boardId").toString());
+            long boardId = Long.parseLong(session.getAttribute("board_id").toString());
             String nameList = new String(request.getParameter("nameList").getBytes("iso-8859-1"),
                     "UTF-8");
             System.out.println(boardId + nameList);
@@ -41,7 +41,7 @@ public class ListTemplate {
 
     public void showList(HttpSession session) {
         if (out == null) return;
-        Long boardId = Long.parseLong(session.getAttribute("boardId").toString());
+        Long boardId = Long.parseLong(session.getAttribute("board_id").toString());
         ListDao listDao = new ListImpl();
         List<Panel> lists = listDao.showAllLists(boardId);
         out.println(ListHtmlViews.getInstance().getModalBottom());
