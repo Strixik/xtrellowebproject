@@ -239,3 +239,13 @@ html {
 .navbar-brand {
     font-size: 2em;
 }
+.liststyle{
+    border: solid slategray 1px;
+    border-radius: 15px;
+    margin: 5px;
+
+}
+.panel-info{
+   word-wrap: break-word;
+    min-height: 100px;
+}

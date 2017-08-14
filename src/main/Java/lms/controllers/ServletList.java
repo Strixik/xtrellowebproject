@@ -1,5 +1,7 @@
 package lms.controllers;
 
+import lms.service.ListTemplate;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,11 +16,35 @@ public class ServletList extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
         HttpSession session = request.getSession();
-        session.setAttribute("board_id", request.getParameter("boardid"));
-        out.println(session.getAttribute("board_id"));
+        ListTemplate listView = new ListTemplate(out);
+        switch (request.getPathInfo()) {
+            case "/":
+                session.setAttribute("board_id", request.getParameter("boardid"));
+                out.println(session.getAttribute("board_id"));
+                response.sendRedirect("/list/view");
+                break;
+
+            case "/add":
+                if (listView.addListForm(request, session)) {
+                    response.sendRedirect("/list/view");
+                }
+                break;
+            case "/del":
+                if (listView.deleteList(request)) {
+                    response.sendRedirect("/list/view");
+                }
+                break;
+        }
     }
-
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        PrintWriter out = response.getWriter();
+        ListTemplate listView = new ListTemplate(out);
+        HttpSession session = request.getSession();
+        System.out.println(session.getAttribute("board_id"));
+        switch (request.getPathInfo()) {
+            case "/view":
+                listView.showList(session);
+                break;
+        }
     }
 }

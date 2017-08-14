@@ -13,7 +13,7 @@ import java.io.PrintWriter;
 /**
  * Adds top and bottom parts of HTML page to servlet responses
  */
-@WebFilter(filterName = "PageFilter", value = {"/*", "/board/*}"})
+@WebFilter(filterName = "PageFilter", value = {"/*", "/board/*", "/list/*"})
 public class PageFilter implements Filter {
     public void destroy() {
     }

@@ -3,6 +3,7 @@ package lms.controllers;
 
 import lms.service.UserTemplate;
 import lms.views.BoardHtmlViews;
+import lms.views.ListHtmlViews;
 import lms.views.PathHtml;
 import lms.views.UserHtmlViews;
 
@@ -84,5 +85,6 @@ public class ServletDispatcher extends HttpServlet {
         //load partial html files
         UserHtmlViews.getInstance();
         BoardHtmlViews.getInstance();
+        ListHtmlViews.getInstance();
     }
 }
