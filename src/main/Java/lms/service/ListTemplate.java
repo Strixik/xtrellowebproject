@@ -1,11 +1,16 @@
 package lms.service;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import lms.dao.CRUDRepository.CardDao;
 import lms.dao.CRUDRepository.ListDao;
 import lms.dao.entity.Card;
 import lms.dao.entity.Panel;
 import lms.dao.repository.CardImpl;
+=======
+import lms.dao.CRUDRepository.ListDao;
+import lms.dao.entity.Panel;
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
 =======
 import lms.dao.CRUDRepository.ListDao;
 import lms.dao.entity.Panel;
@@ -18,9 +23,13 @@ import javax.servlet.http.HttpSession;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
+=======
+import java.util.List;
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
 =======
 import java.util.List;
 >>>>>>> d92383d42685fd4343d6a90af958558380ba098a
@@ -58,6 +67,7 @@ public class ListTemplate {
         Long boardId = Long.parseLong(session.getAttribute("board_id").toString());
         ListDao listDao = new ListImpl();
 <<<<<<< HEAD
+<<<<<<< HEAD
         CardDao cardDao = new CardImpl();
 
         List<Panel> lists = listDao.showAllLists(boardId);
@@ -73,12 +83,17 @@ public class ListTemplate {
             }
             listName = listName.replace("<!--"+panel.getId()+"your text"+"-->", sb );
 =======
+=======
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
         List<Panel> lists = listDao.showAllLists(boardId);
         out.println(ListHtmlViews.getInstance().getModalBottom());
         for (Panel panel : lists) {
             String listName = ListHtmlViews.getInstance().getListName();
             listName = listName.replace("<!--list-->", panel.getListName());
             listName = listName.replace("listId", String.valueOf(panel.getId()));
+<<<<<<< HEAD
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
+=======
 >>>>>>> d92383d42685fd4343d6a90af958558380ba098a
             out.println(listName);
         }

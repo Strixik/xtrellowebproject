@@ -2,6 +2,10 @@ package lms.dao.repository;
 
 import lms.dao.CRUDRepository.ListDao;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import lms.dao.entity.Board;
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
 =======
 import lms.dao.entity.Board;
 >>>>>>> d92383d42685fd4343d6a90af958558380ba098a

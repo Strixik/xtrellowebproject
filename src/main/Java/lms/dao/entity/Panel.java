@@ -2,6 +2,7 @@ package lms.dao.entity;
 
 public class Panel {
 <<<<<<< HEAD
+<<<<<<< HEAD
         private long id;
         private String listName;
         private long boardId;
@@ -77,6 +78,8 @@ public class Panel {
 
 
 =======
+=======
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
     private long id;
     private String listName;
     private long boardId;
@@ -149,4 +152,7 @@ public class Panel {
         return result;
     }
 }
+<<<<<<< HEAD
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
+=======
 >>>>>>> d92383d42685fd4343d6a90af958558380ba098a

@@ -8,6 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ff76bf16-629b-4f01-920e-683232b27251" name="Default" comment="">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/Java/lms/dao/CRUDRepository/CardDao.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/Java/lms/dao/CRUDRepository/ListDao.java" />
@@ -41,6 +42,17 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/controllers/ServletList.class" afterPath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/controllers/ServletList.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/dao/repository/DataSource.class" afterPath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/dao/repository/DataSource.class" />
 >>>>>>> d92383d42685fd4343d6a90af958558380ba098a
+=======
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/Java/lms/dao/CRUDRepository/CardDao.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/lms/dao/entity/List.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/dao/entity/List.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/lms/controllers/ServletDispatcher.class" afterPath="$PROJECT_DIR$/target/classes/lms/controllers/ServletDispatcher.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/lms/controllers/ServletList.class" afterPath="$PROJECT_DIR$/target/classes/lms/controllers/ServletList.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/lms/dao/repository/DataSource.class" afterPath="$PROJECT_DIR$/target/classes/lms/dao/repository/DataSource.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/controllers/ServletDispatcher.class" afterPath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/controllers/ServletDispatcher.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/controllers/ServletList.class" afterPath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/controllers/ServletList.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/dao/repository/DataSource.class" afterPath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/dao/repository/DataSource.class" />
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Java/lms/controllers/PageFilter.java" afterPath="$PROJECT_DIR$/src/main/Java/lms/controllers/PageFilter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Java/lms/controllers/ServletCard.java" afterPath="$PROJECT_DIR$/src/main/Java/lms/controllers/ServletCard.java" />
@@ -48,10 +60,16 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Java/lms/controllers/ServletList.java" afterPath="$PROJECT_DIR$/src/main/Java/lms/controllers/ServletList.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Java/lms/dao/entity/Card.java" afterPath="$PROJECT_DIR$/src/main/Java/lms/dao/entity/Card.java" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/modallistbottom.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/modallistbottom.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/html/modallistbottom.html" afterPath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/html/modallistbottom.html" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/Java/lms/dao/entity/List.java" afterPath="$PROJECT_DIR$/src/main/Java/lms/dao/entity/Panel.java" />
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Java/lms/service/ListTemplate.java" afterPath="$PROJECT_DIR$/src/main/Java/lms/service/ListTemplate.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/html/boardname.html" afterPath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/html/boardname.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/html/modallistbottom.html" afterPath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/html/modallistbottom.html" />
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
 =======
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Java/lms/service/ListTemplate.java" afterPath="$PROJECT_DIR$/src/main/Java/lms/service/ListTemplate.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/html/boardname.html" afterPath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/html/boardname.html" />
@@ -103,12 +121,15 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <file leaf-file-name="BoardDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Java/lms/dao/CRUDRepository/BoardDao.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
               <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
 =======
+=======
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
       <file leaf-file-name="list" pinned="false" current-in-tab="false">
         <entry file="das://table:/b22d1ab6/ead8f60a-727f-41ae-8049-96b86fe54cf9/xtrello.list">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -123,12 +144,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="160">
               <caret line="8" column="40" lean-forward="true" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+<<<<<<< HEAD
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
+=======
 >>>>>>> d92383d42685fd4343d6a90af958558380ba098a
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <file leaf-file-name="BoardImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/Java/lms/dao/repository/BoardImpl.java">
@@ -144,6 +169,8 @@
                 <marker date="1502489654224" expanded="true" signature="1819:1847" ph="DELETE FROM " />
               </folding>
 =======
+=======
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
       <file leaf-file-name="modallistbottom.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/modallistbottom.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -156,6 +183,7 @@
       </file>
       <file leaf-file-name="ListTemplate.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Java/lms/service/ListTemplate.java">
+<<<<<<< HEAD
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-21">
               <caret line="27" column="52" lean-forward="true" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
@@ -171,6 +199,23 @@
       <file leaf-file-name="ListHtmlViews.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Java/lms/views/ListHtmlViews.java">
           <provider selected="true" editor-type-id="text-editor">
+=======
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-21">
+              <caret line="27" column="52" lean-forward="true" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#440#441#0" expanded="true" />
+                <element signature="e#470#471#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ListHtmlViews.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/Java/lms/views/ListHtmlViews.java">
+          <provider selected="true" editor-type-id="text-editor">
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
             <state relative-caret-position="457">
               <caret line="31" column="1" lean-forward="true" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
               <folding />
@@ -180,6 +225,7 @@
       </file>
       <file leaf-file-name="Card.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Java/lms/dao/entity/Card.java">
+<<<<<<< HEAD
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1100">
               <caret line="55" column="37" lean-forward="false" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
@@ -204,6 +250,32 @@
       <file leaf-file-name="CardDao.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/Java/lms/dao/CRUDRepository/CardDao.java">
           <provider selected="true" editor-type-id="text-editor">
+=======
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1100">
+              <caret line="55" column="37" lean-forward="false" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
+              <folding>
+                <element signature="e#441#442#0" expanded="true" />
+                <element signature="e#466#467#0" expanded="true" />
+                <element signature="e#500#501#0" expanded="true" />
+                <element signature="e#528#529#0" expanded="true" />
+                <element signature="e#563#564#0" expanded="true" />
+                <element signature="e#594#595#0" expanded="true" />
+                <element signature="e#642#643#0" expanded="true" />
+                <element signature="e#682#683#0" expanded="true" />
+                <element signature="e#713#714#0" expanded="true" />
+                <element signature="e#742#743#0" expanded="true" />
+                <element signature="e#784#785#0" expanded="true" />
+                <element signature="e#820#821#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CardDao.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/Java/lms/dao/CRUDRepository/CardDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
             <state relative-caret-position="40">
               <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
               <folding />
@@ -213,23 +285,30 @@
         </entry>
       </file>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <file leaf-file-name="CardDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Java/lms/dao/CRUDRepository/CardDao.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
               <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
 =======
+=======
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
       <file leaf-file-name="boardname.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/boardname.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="260">
               <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+<<<<<<< HEAD
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
+=======
 >>>>>>> d92383d42685fd4343d6a90af958558380ba098a
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <file leaf-file-name="ListDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Java/lms/dao/CRUDRepository/ListDao.java">
@@ -237,11 +316,16 @@
             <state relative-caret-position="68">
               <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
 =======
+=======
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
       <file leaf-file-name="listname.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/listname.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="40">
               <caret line="2" column="41" lean-forward="false" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="41" />
+<<<<<<< HEAD
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
+=======
 >>>>>>> d92383d42685fd4343d6a90af958558380ba098a
               <folding />
             </state>
@@ -249,11 +333,19 @@
         </entry>
       </file>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <file leaf-file-name="UserDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Java/lms/dao/CRUDRepository/UserDao.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
               <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+=======
+      <file leaf-file-name="ServletList.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/Java/lms/controllers/ServletList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="199">
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
 =======
       <file leaf-file-name="ServletList.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Java/lms/controllers/ServletList.java">
@@ -326,15 +418,19 @@
         <option value="$PROJECT_DIR$/src/main/Java/lms/service/BoardTemplate.java" />
         <option value="$PROJECT_DIR$/src/main/Java/lms/controllers/ServletBoard.java" />
 <<<<<<< HEAD
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/modallistbottom.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/boardname.html" />
 =======
+=======
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/style.css" />
 >>>>>>> d92383d42685fd4343d6a90af958558380ba098a
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/indextop.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/start-logout-button.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/indexbottom.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/profileform.html" />
+<<<<<<< HEAD
 <<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main/Java/lms/dao/entity/Panel.java" />
         <option value="$PROJECT_DIR$/src/main/Java/lms/dao/CRUDRepository/ListDao.java" />
@@ -352,6 +448,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/style.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/listname.html" />
 =======
+=======
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
         <option value="$PROJECT_DIR$/src/main/Java/lms/dao/CRUDRepository/BoardDao.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/list-form.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/list-title.html" />
@@ -368,6 +466,9 @@
         <option value="$PROJECT_DIR$/src/main/Java/lms/controllers/ServletList.java" />
         <option value="$PROJECT_DIR$/src/main/Java/lms/service/ListTemplate.java" />
         <option value="$PROJECT_DIR$/src/main/Java/lms/dao/entity/Card.java" />
+<<<<<<< HEAD
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
+=======
 >>>>>>> d92383d42685fd4343d6a90af958558380ba098a
       </list>
     </option>
@@ -438,6 +539,9 @@
     <option name="y" value="-1088" />
     <option name="width" value="1874" />
     <option name="height" value="1096" />
+<<<<<<< HEAD
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
+=======
 >>>>>>> d92383d42685fd4343d6a90af958558380ba098a
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -458,7 +562,10 @@
     <panes>
       <pane id="Scratches" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
       <pane id="Scope" />
 >>>>>>> d92383d42685fd4343d6a90af958558380ba098a
       <pane id="ProjectPane">
@@ -644,9 +751,14 @@
         </subPane>
       </pane>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
+=======
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
 =======
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
@@ -663,7 +775,11 @@
     <property name="project.structure.side.proportion" value="0.40114942" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="D:/xtrello-dev" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
 =======
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
 >>>>>>> d92383d42685fd4343d6a90af958558380ba098a
@@ -904,6 +1020,9 @@
       <workItem from="1502632680953" duration="206000" />
       <workItem from="1502639056989" duration="3443000" />
       <workItem from="1502712476022" duration="4303000" />
+<<<<<<< HEAD
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
+=======
 >>>>>>> d92383d42685fd4343d6a90af958558380ba098a
     </task>
     <task id="LOCAL-00001" summary="list">
@@ -918,7 +1037,11 @@
   </component>
   <component name="TimeTrackingManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="164060000" />
+=======
+    <option name="totallyTimeSpent" value="163247000" />
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
 =======
     <option name="totallyTimeSpent" value="163247000" />
 >>>>>>> d92383d42685fd4343d6a90af958558380ba098a
@@ -934,7 +1057,11 @@
   </component>
   <component name="ToolWindowManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="7" />
+=======
+    <frame x="-204" y="-1088" width="1874" height="1096" extended-state="6" />
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
 =======
     <frame x="-204" y="-1088" width="1874" height="1096" extended-state="6" />
 >>>>>>> d92383d42685fd4343d6a90af958558380ba098a
@@ -945,9 +1072,12 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32948717" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32083333" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293348" sideWeight="0.48809522" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32997763" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+=======
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
 =======
 >>>>>>> d92383d42685fd4343d6a90af958558380ba098a
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1032,9 +1162,13 @@
   </component>
   <component name="editorHistoryManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/Java/lms/dao/repository/UserRepository.java" />
     <entry file="file://$PROJECT_DIR$/src/main/Java/lms/controllers/ServletUser.java" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/index.html">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/test.html" />
+    <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.6/mysql-connector-java-5.1.6.jar!/com/mysql/jdbc/SQLError.class">
 =======
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/test.html" />
     <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.6/mysql-connector-java-5.1.6.jar!/com/mysql/jdbc/SQLError.class">
@@ -1104,6 +1238,95 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Java/lms/controllers/ServletCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/css/style.css">
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="238" column="15" lean-forward="true" selection-start-line="238" selection-start-column="15" selection-end-line="238" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/indextop.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="34" column="11" lean-forward="false" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/indexbottom.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="4" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/main/Java/lms/dao/repository/CRUDRepository.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/Java/lms/views/PathHtml.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/Java/lms/dao/CRUDRepository/BoardDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="7" column="10" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/lms/dao/repository/UserImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="715">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/sql.sql">
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3840">
+          <caret line="192" column="27" lean-forward="false" selection-start-line="192" selection-start-column="27" selection-end-line="192" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/list-form.html" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/list-title.html" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/start-logout-button.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="17" column="80" lean-forward="false" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/form login.html">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="102">
+          <caret line="6" column="29" lean-forward="false" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/ba08f67/ead8f60a-727f-41ae-8049-96b86fe54cf9/xtrello.list" />
+    <entry file="das://table:/ba08f67/ead8f60a-727f-41ae-8049-96b86fe54cf9/xtrello.board" />
+    <entry file="das://table:/ba08f67/ead8f60a-727f-41ae-8049-96b86fe54cf9/xtrello.users" />
+    <entry file="file://$PROJECT_DIR$/src/main/Java/lms/dao/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/lms/dao/entity/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="45" column="18" lean-forward="false" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/lms/controllers/ServletCard.java">
 >>>>>>> d92383d42685fd4343d6a90af958558380ba098a
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1115,11 +1338,49 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
           <caret line="238" column="15" lean-forward="true" selection-start-line="238" selection-start-column="15" selection-end-line="238" selection-end-column="15" />
+=======
+        <state relative-caret-position="1580">
+          <caret line="79" column="30" lean-forward="false" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2000">
+          <caret line="100" column="84" lean-forward="false" selection-start-line="100" selection-start-column="20" selection-end-line="100" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/regform.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1400">
+          <caret line="70" column="28" lean-forward="false" selection-start-line="70" selection-start-column="28" selection-end-line="70" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/profileform.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1660">
+          <caret line="83" column="9" lean-forward="false" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/lms/service/BoardTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="880">
+          <caret line="55" column="30" lean-forward="false" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+          <folding />
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/indextop.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="680">
           <caret line="34" column="11" lean-forward="false" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
         </state>
@@ -1167,6 +1428,53 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="26" column="23" lean-forward="false" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+=======
+        <state relative-caret-position="780">
+          <caret line="44" column="31" lean-forward="false" selection-start-line="44" selection-start-column="31" selection-end-line="44" selection-end-column="31" />
+          <folding>
+            <marker date="1502628286772" expanded="true" signature="538:591" ph="SELECT * FRO... board" />
+            <marker date="1502628286772" expanded="true" signature="1819:1847" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/lms/views/BoardHtmlViews.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding>
+            <element signature="e#628#629#0" expanded="true" />
+            <element signature="e#663#664#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/lms/dao/entity/Panel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-40">
+          <caret line="4" column="27" lean-forward="false" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+          <folding>
+            <element signature="e#474#475#0" expanded="true" />
+            <element signature="e#499#500#0" expanded="true" />
+            <element signature="e#533#534#0" expanded="true" />
+            <element signature="e#561#562#0" expanded="true" />
+            <element signature="e#596#597#0" expanded="true" />
+            <element signature="e#627#628#0" expanded="true" />
+            <element signature="e#675#676#0" expanded="true" />
+            <element signature="e#715#716#0" expanded="true" />
+            <element signature="e#747#748#0" expanded="true" />
+            <element signature="e#777#778#0" expanded="true" />
+            <element signature="e#821#822#0" expanded="true" />
+            <element signature="e#859#860#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/lms/dao/CRUDRepository/ListDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
           <folding>
             <element signature="e#628#629#0" expanded="false" />
             <element signature="e#663#664#0" expanded="false" />
@@ -1174,6 +1482,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/form login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="94">
@@ -1189,16 +1498,21 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Java/lms/dao/entity/User.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/Java/lms/dao/repository/ListImpl.java">
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state relative-caret-position="452">
+          <caret line="46" column="37" lean-forward="true" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
           <folding>
-            <element signature="method#toString#0;class#User#0" expanded="false" />
-            <element signature="method#equals#0;class#User#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <marker date="1502713454334" expanded="true" signature="1017:1044" ph="DELETE FROM " />
+            <marker date="1502713454334" expanded="true" signature="1511:1564" ph="SELECT * FRO... list" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/Java/lms/dao/entity/Board.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -1208,10 +1522,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1580">
           <caret line="79" column="30" lean-forward="false" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/Java/lms/controllers/ServletDispatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="87" column="36" lean-forward="false" selection-start-line="87" selection-start-column="36" selection-end-line="87" selection-end-column="36" />
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2000">
@@ -1225,23 +1546,32 @@
         <state relative-caret-position="1400">
           <caret line="70" column="28" lean-forward="false" selection-start-line="70" selection-start-column="28" selection-end-line="70" selection-end-column="75" />
 >>>>>>> d92383d42685fd4343d6a90af958558380ba098a
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/Java/lms/dao/repository/DataSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="12" column="88" lean-forward="false" selection-start-line="12" selection-start-column="88" selection-end-line="12" selection-end-column="88" />
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
           <folding />
         </state>
       </provider>
     </entry>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/Java/lms/service/BoardTemplate.java">
+=======
+    <entry file="file://$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/html/boardname.html">
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+        <state relative-caret-position="260">
+          <caret line="13" column="6" lean-forward="false" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/lms/service/UserTemplate.java">
+    <entry file="file://$PROJECT_DIR$/src/main/Java/lms/logger/Logger.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="17">
           <caret line="56" column="9" lean-forward="false" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
           <folding>
@@ -1262,11 +1592,17 @@
           <caret line="55" column="30" lean-forward="false" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
           <folding />
 >>>>>>> d92383d42685fd4343d6a90af958558380ba098a
+=======
+        <state relative-caret-position="40">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/lms/dao/repository/UserImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/Java/lms/controllers/ServletBoard.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <state relative-caret-position="832">
           <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
@@ -1283,19 +1619,33 @@
             <marker date="1502628286772" expanded="true" signature="538:591" ph="SELECT * FRO... board" />
             <marker date="1502628286772" expanded="true" signature="1819:1847" ph="DELETE FROM " />
 >>>>>>> d92383d42685fd4343d6a90af958558380ba098a
+=======
+        <state relative-caret-position="560">
+          <caret line="37" column="39" lean-forward="false" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
           </folding>
         </state>
       </provider>
     </entry>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/indextop.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
           <caret line="34" column="11" lean-forward="false" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/Java/lms/controllers/PageFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="21" column="55" lean-forward="true" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/start-logout-button.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -1332,6 +1682,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/Java/lms/service/UserTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1360">
+          <caret line="56" column="9" lean-forward="false" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
+          <folding>
+            <element signature="method#showErrorLoginForm#0;class#UserTemplate#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/b22d1ab6/ead8f60a-727f-41ae-8049-96b86fe54cf9/xtrello.list">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/modalboardbottom.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="40" lean-forward="true" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
           <folding />
         </state>
       </provider>
@@ -1377,6 +1750,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Java/lms/dao/CRUDRepository/ListDao.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="220">
           <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
@@ -1406,10 +1780,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="87" column="36" lean-forward="false" selection-start-line="87" selection-start-column="36" selection-end-line="87" selection-end-column="36" />
+=======
+        <state relative-caret-position="199">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/Java/lms/dao/repository/ListImpl.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1433,10 +1812,17 @@
         <state relative-caret-position="200">
           <caret line="12" column="88" lean-forward="false" selection-start-line="12" selection-start-column="88" selection-end-line="12" selection-end-column="88" />
 >>>>>>> d92383d42685fd4343d6a90af958558380ba098a
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/boardname.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/Java/lms/controllers/ServletList.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1463,10 +1849,17 @@
         <state relative-caret-position="40">
           <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
 >>>>>>> d92383d42685fd4343d6a90af958558380ba098a
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/modallistbottom.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/Java/lms/dao/entity/Card.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1496,10 +1889,17 @@
         <state relative-caret-position="200">
           <caret line="21" column="55" lean-forward="true" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
 >>>>>>> d92383d42685fd4343d6a90af958558380ba098a
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/listname.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="41" lean-forward="false" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="41" />
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/Java/lms/dao/repository/CardImpl.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1596,18 +1996,35 @@
         <state relative-caret-position="199">
           <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/Java/lms/service/ListTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-21">
+          <caret line="27" column="52" lean-forward="true" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#440#441#0" expanded="true" />
+            <element signature="e#470#471#0" expanded="true" />
+          </folding>
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/boardname.html">
+    <entry file="file://$PROJECT_DIR$/src/main/Java/lms/views/ListHtmlViews.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="260">
           <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
+=======
+        <state relative-caret-position="457">
+          <caret line="31" column="1" lean-forward="true" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
 >>>>>>> d92383d42685fd4343d6a90af958558380ba098a
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/listname.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -1678,6 +2095,33 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/Java/lms/dao/entity/Card.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1100">
+          <caret line="55" column="37" lean-forward="false" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
+          <folding>
+            <element signature="e#441#442#0" expanded="true" />
+            <element signature="e#466#467#0" expanded="true" />
+            <element signature="e#500#501#0" expanded="true" />
+            <element signature="e#528#529#0" expanded="true" />
+            <element signature="e#563#564#0" expanded="true" />
+            <element signature="e#594#595#0" expanded="true" />
+            <element signature="e#642#643#0" expanded="true" />
+            <element signature="e#682#683#0" expanded="true" />
+            <element signature="e#713#714#0" expanded="true" />
+            <element signature="e#742#743#0" expanded="true" />
+            <element signature="e#784#785#0" expanded="true" />
+            <element signature="e#820#821#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/lms/dao/CRUDRepository/CardDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+>>>>>>> d92383d42685fd4343d6a90af958558380ba098a
           <folding />
         </state>
       </provider>
