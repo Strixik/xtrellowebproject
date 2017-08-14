@@ -12,13 +12,7 @@ public class Card {
     }
 
     public Card(String cardText, long listId) {
-<<<<<<< HEAD
-<<<<<<< HEAD
         this.id = 0L;
-=======
->>>>>>> d92383d42685fd4343d6a90af958558380ba098a
-=======
->>>>>>> d92383d42685fd4343d6a90af958558380ba098a
         this.cardText = cardText;
         this.listId = listId;
     }

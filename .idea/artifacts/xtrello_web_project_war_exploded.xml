@@ -1,10 +1,10 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="xtrellowebproject:war exploded">
+  <artifact type="exploded-war" name="xtrello.web-project:war exploded">
     <output-path>$PROJECT_DIR$/target/xtrello.web-project</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="xtrellowebproject" />
+          <element id="module-output" name="xtrello.web-project" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.6" />
@@ -13,7 +13,7 @@
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/target/xtrello.web-project/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="xtrellowebproject/web/Web" />
+      <element id="javaee-facet-resources" facet="xtrello.web-project/web/Web" />
     </root>
   </artifact>
 </component>
