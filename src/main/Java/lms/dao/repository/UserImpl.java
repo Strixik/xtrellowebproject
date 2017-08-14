@@ -4,6 +4,8 @@ import lms.dao.CRUDRepository.UserDao;
 import lms.dao.entity.User;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserImpl implements UserDao {
     @Override
@@ -61,5 +63,66 @@ public class UserImpl implements UserDao {
             e.printStackTrace();
         }
 
+    }
+
+    @Override
+    public List<User> findByLoginByEmail(String searchString) {
+
+        DataSource dataSource = new DataSource();
+        List<User> users = new ArrayList<>();
+
+        try (Connection con = dataSource.getConnection();
+             Statement stmt = con.createStatement();
+             ResultSet rs = stmt.executeQuery("SELECT DISTINCT id, login, password, email, date_registered FROM users WHERE (login LIKE \"%" + searchString + "%\" OR email LIKE \"%" + searchString + "%\") LIMIT 10");
+        ){
+            while(rs.next()) {
+                User user = new User(
+                        rs.getLong("id"),
+                        rs.getString("login"),
+                        rs.getString("password"),
+                        rs.getString("email"),
+                        rs.getString("date_registered")
+                );
+                users.add(user);
+            }
+            return users;
+        }  catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
+    @Override
+    public List<User> allUser() {
+        DataSource dataSource = new DataSource();
+        List<User> users = new ArrayList<>();
+
+        try (Connection con = dataSource.getConnection();
+             Statement stmt = con.createStatement();
+             ResultSet rs = stmt.executeQuery("SELECT * FROM users");
+        ){
+            while(rs.next()) {
+                User user = new User(
+                        rs.getInt("id"),
+                        rs.getString("login"),
+                        rs.getString("password"),
+                        rs.getString("email"),
+                        rs.getString("date_registered"),
+                        rs.getString("sex"),
+                        rs.getString("date_birth"),
+                        rs.getInt("block"),
+                        rs.getString("firstname"),
+                        rs.getString("secondname"),
+                        rs.getString("contry"),
+                        rs.getString("city"));
+                users.add(user);
+            }
+            return users;
+        }  catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return null;
     }
 }

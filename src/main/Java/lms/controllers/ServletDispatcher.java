@@ -66,6 +66,14 @@ public class ServletDispatcher extends HttpServlet {
             case "/profile-edit":
                 indexView.showUserProfileForm(session.getAttribute("login").toString());
                 break;
+               case "/useradmin":
+                   indexView.showAllUsers();
+                   break;
+                   case "/admintest":
+                       String login = request.getParameter("login").toString();
+                       indexView.showUserProfileForm(login);
+                   break;
+
             default:
                 response.sendRedirect("/");
         }

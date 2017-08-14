@@ -10,6 +10,7 @@ import javax.servlet.http.HttpSession;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.time.LocalDate;
+import java.util.List;
 
 public class UserTemplate {
 
@@ -47,8 +48,11 @@ public class UserTemplate {
                     "UTF-8");
             UserDao userDao = new UserImpl();
             User user = userDao.findByUser(login);
-            if (user == null) {
+            if (user == null ) {
                 showErrorLoginForm();
+                return false;
+            } else if (user.getBlock()== 1) {
+                showBlockLoginForm();
                 return false;
             } else if (user.getPassword().equals(password)) {
                 session.setAttribute("user_id", user.getId());
@@ -66,6 +70,11 @@ public class UserTemplate {
     private void showErrorLoginForm() {
         String loginForm = UserHtmlViews.getInstance().getFormUserView();
         loginForm = loginForm.replace("<!--123-->", "<p class=\"text-danger text-center\">Логін або пароль не вірні!</p>");
+        out.println(loginForm);
+    }
+    private void showBlockLoginForm() {
+        String loginForm = UserHtmlViews.getInstance().getFormUserView();
+        loginForm = loginForm.replace("<!--123-->", "<p class=\"text-danger text-center\">Даного користувача ЗАБЛОКОВАНО!</p>");
         out.println(loginForm);
     }
 
@@ -297,6 +306,19 @@ public class UserTemplate {
         }
         out.println(profForm);
         return false;
+    }
+    public void showAllUsers(){
+        UserDao userDao = new UserImpl();
+       List<User> users = userDao.allUser();
+       out.println("<div class=\"row\">\n" +
+               "    <div class=\"col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3\">\n" +
+               "        <ul class=\"list-group\">");
+       for (User u : users){
+           out.write("<a class=\"list-group-item\" href=\"/admintest?id="+u.getId()+"&login="+u.getLogin()+"\" ><span class=\"glyphicon glyphicon-user\" aria-hidden=\"true\"></span>"+"&nbsp;&nbsp;"+u.getLogin()+"&nbsp;&nbsp;"+"<span class=\"glyphicon glyphicon-envelope\" aria-hidden=\"true\"></span>"+"&nbsp;&nbsp;"+u.getEmail()+"&nbsp;&nbsp;"+"<span class=\"glyphicon glyphicon-plus pull-right\" aria-hidden=\"true\"></span></a>");
+       }
+        out.println("</ul>\n" +
+                "    </div>\n" +
+                "</div>");
     }
 
 

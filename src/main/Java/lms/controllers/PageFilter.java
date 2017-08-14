@@ -33,7 +33,12 @@ public class PageFilter implements Filter {
           top = top.replace("<!-- servletInsert01 -->", UserHtmlViews.getInstance().getLogoutButton());
             top = top.replace("<!-- servletInsert04 -->", "<a class=\"btn btn-primary navbar-right\"aria-label=\"Right Align\">Логін Користувача:  </a>");
             top = top.replace("<!-- servletInsert05 -->", " <a href=\"/profile-edit\" class=\"btn btn-primary navbar-right\"aria-label=\"Right Align\">" + session.getAttribute("login").toString().toUpperCase() + "</a>");
+            if (session.getAttribute("login").equals("Strix")) {
+               top = top.replace("hidden", "" );
+            }
         }
+
+
         out.write(top);
         chain.doFilter(req, resp);
         out.write(UserHtmlViews.getInstance().getBottomUserView());
