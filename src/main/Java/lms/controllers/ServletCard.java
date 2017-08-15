@@ -20,11 +20,11 @@ public class ServletCard extends HttpServlet {
                 cardView.addCard(request);
                 response.sendRedirect("/list/view");
                 break;
-//            case "/del":
-//                if (cardView.dellBoards(request)) {
-//                    response.sendRedirect("/list/view");
-//                }
-//                break;
+            case "/del":
+                if (cardView.delCard(request)) {
+                   response.sendRedirect("/list/view");
+                }
+                break;
         }
     }
 

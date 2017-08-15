@@ -27,5 +27,14 @@ public class CardTemplate {
             e.printStackTrace();
         }
     }
+    public boolean  delCard (HttpServletRequest request) {
+        long cardId = Long.parseLong(request.getParameter("id"));
+        if (cardId != 0) {
+            CardDao cardDao = new CardImpl();
+            cardDao.removeCard(cardId);
+            return true;
+        }
+        return false;
+    }
 
 }

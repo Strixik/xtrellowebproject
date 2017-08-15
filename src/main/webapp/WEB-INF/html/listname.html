@@ -4,9 +4,10 @@
                <input type="hidden" name="listid" value="listId">
                <input type="submit" disabled  class="col-sm-2 btn-block" value="<!--list-->">
            </form>
-
+            <form action="/card/del" method="post">
             <ul class="panel-info"><!--listIdyour text--></ul>
-
+            <input type="submit" class="btn btn-danger right" value="del">
+            </form>
             <form action="/card/add" method="post">
             <div class="input-group">
             <input type="text" name="cardText" placeholder="введіть ваш текст" class="form-control ">
