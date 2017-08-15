@@ -19,10 +19,16 @@ public class PageFilter implements Filter {
     }
 
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
-        resp.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = resp.getWriter();
         HttpServletRequest request = (HttpServletRequest) req;
         HttpServletResponse response = (HttpServletResponse) resp;
+
+        String path = ((HttpServletRequest) request).getRequestURI();
+        if (path.startsWith("/testajax/")) {
+            chain.doFilter(request, response); // Just continue chain.
+        } else {
+            resp.setContentType("text/html;charset=UTF-8");
+            PrintWriter out = resp.getWriter();
+
 
         String top = UserHtmlViews.getInstance().getTopUserView();
         HttpSession session = request.getSession();
@@ -42,6 +48,7 @@ public class PageFilter implements Filter {
         out.write(top);
         chain.doFilter(req, resp);
         out.write(UserHtmlViews.getInstance().getBottomUserView());
+        }
     }
 
 

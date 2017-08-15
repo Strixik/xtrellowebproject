@@ -32,6 +32,8 @@ public class ServletList extends HttpServlet {
             case "/del":
                 if (listView.deleteList(request)) {
                     response.sendRedirect("/list/view");
+                } else {
+                    response.sendRedirect("/list/view");
                 }
                 break;
         }

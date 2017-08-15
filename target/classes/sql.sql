@@ -1,60 +1,71 @@
-CREATE TABLE users
+create table users
 (
-  id              INT AUTO_INCREMENT
-    PRIMARY KEY,
-  login           VARCHAR(20)            NULL,
-  password        VARCHAR(15)            NULL,
-  email           VARCHAR(40)            NULL,
-  date_registered DATE                   NOT NULL,
-  sex             ENUM ('man', 'woman')  NULL,
-  date_birth      DATE                   NULL,
-  block           TINYINT(1) DEFAULT '0' NULL,
-  firstname       VARCHAR(25)            NULL,
-  secondname      VARCHAR(25)            NULL,
-  contry          VARCHAR(40)            NULL,
-  city            VARCHAR(40)            NULL,
-  CONSTRAINT users_login_uindex
-  UNIQUE (login)
-);
+  id int auto_increment
+    primary key,
+  login varchar(20) null,
+  password varchar(15) null,
+  email varchar(40) null,
+  date_registered date not null,
+  sex enum('man', 'woman') null,
+  date_birth date null,
+  block tinyint(1) default '0' null,
+  firstname varchar(25) null,
+  secondname varchar(25) null,
+  contry varchar(40) null,
+  city varchar(40) null,
+  constraint users_login_uindex
+  unique (login)
+)
+;
 
-CREATE TABLE board
+create table board
 (
-  id      INT AUTO_INCREMENT
-    PRIMARY KEY,
-  board   VARCHAR(30) NOT NULL,
-  user_id INT         NULL,
-  CONSTRAINT board_users_id_fk
-  FOREIGN KEY (user_id) REFERENCES users (id)
-);
+  id int auto_increment
+    primary key,
+  board varchar(30) not null,
+  user_id int null,
+  constraint board_users_id_fk
+  foreign key (user_id) references users (id)
+    on delete cascade
+)
+;
 
-CREATE INDEX board_users_id_fk
-  ON board (user_id);
+create index board_users_id_fk
+  on board (user_id)
+;
 
-CREATE TABLE list
+create table list
 (
-  id       INT AUTO_INCREMENT
-    PRIMARY KEY,
-  list     VARCHAR(40) NOT NULL,
-  id_board INT         NULL,
-  CONSTRAINT list_board_id_fk
-  FOREIGN KEY (id_board) REFERENCES board (id)
-);
+  id int auto_increment
+    primary key,
+  list varchar(40) not null,
+  id_board int null,
+  constraint list_board_id_fk
+  foreign key (id_board) references board (id)
+    on delete cascade
+)
+;
 
-CREATE INDEX list_board_id_fk
-  ON list (id_board);
+create index list_board_id_fk
+  on list (id_board)
+;
 
-CREATE TABLE card
+create table card
 (
-  id      INT AUTO_INCREMENT
-    PRIMARY KEY,
-  card    VARCHAR(40) NOT NULL,
-  id_list INT         NULL,
-  CONSTRAINT card_list_id_fk
-  FOREIGN KEY (id_list) REFERENCES list (id)
-);
+  id int auto_increment
+    primary key,
+  card varchar(40) not null,
+  id_list int null,
+  constraint card_list_id_fk
+  foreign key (id_list) references list (id)
+    on delete cascade
+)
+;
 
-CREATE INDEX card_list_id_fk
-  ON card (id_list);
+create index card_list_id_fk
+  on card (id_list)
+;
+
 
 
 

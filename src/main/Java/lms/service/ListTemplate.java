@@ -52,7 +52,7 @@ public class ListTemplate {
 
         List<Panel> lists = listDao.showAllLists(boardId);
         out.println(ListHtmlViews.getInstance().getModalBottom());
-        for (Panel panel : lists) {
+            for (Panel panel : lists) {
             List<Card> cards = cardDao.showAllCards(panel.getId());
             String listName = ListHtmlViews.getInstance().getListName();
             listName = listName.replace("<!--list-->", panel.getListName());
