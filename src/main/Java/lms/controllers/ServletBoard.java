@@ -39,6 +39,9 @@ public class ServletBoard extends HttpServlet {
             case "/view":
                 indexView.showBoard(session);
                 break;
+             case "/all":
+                 indexView.showBoardAll();
+                 break;
                 }
     }
 }

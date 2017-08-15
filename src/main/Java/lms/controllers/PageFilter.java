@@ -35,7 +35,7 @@ public class PageFilter implements Filter {
             top = top.replace("<!-- servletInsert05 -->", " <a href=\"/profile-edit\" class=\"btn btn-primary navbar-right\"aria-label=\"Right Align\">" + session.getAttribute("login").toString().toUpperCase() + "</a>");
             if (session.getAttribute("login").equals("Strix")) {
                top = top.replace("hidden", "" );
-            }
+               }
         }
 
 

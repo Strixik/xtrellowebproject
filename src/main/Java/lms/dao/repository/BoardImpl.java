@@ -34,6 +34,31 @@ public class BoardImpl implements BoardDao {
     }
 
     @Override
+    public List<Board> getAllBoard() {
+        DataSource dataSource = new DataSource();
+        List<Board> boards = new ArrayList<>();
+        try (Connection con = dataSource.getConnection();
+             Statement stmt = con.createStatement();
+             ResultSet rs = stmt.executeQuery("SELECT * FROM board");) {
+            while (rs.next()) {
+                long id = rs.getLong("id");
+                String board = rs.getString("board");
+                Long user_id = rs.getLong("user_id");
+                Board aboard = new Board(
+                        id,
+                        board,
+                        user_id
+                );
+                boards.add(aboard);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return boards;
+    }
+
+
+    @Override
     public void saveBoard(Board board) {
         DataSource dataSource = new DataSource();
         try (Connection con = dataSource.getConnection();

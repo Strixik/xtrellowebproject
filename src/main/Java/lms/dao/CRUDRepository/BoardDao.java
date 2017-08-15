@@ -6,6 +6,7 @@ import java.util.List;
 
 public interface BoardDao {
     public List<Board> getAllBoard(long user_id);
+    public List<Board> getAllBoard();
 
     void saveBoard(Board board);
 

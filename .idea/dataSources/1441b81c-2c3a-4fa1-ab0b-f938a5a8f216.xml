@@ -44,6 +44,7 @@
       <RefSchemaName>xtrello</RefSchemaName>
       <RefTableName>users</RefTableName>
       <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <column id="19" parent="10" name="id">
       <Position>1</Position>
@@ -73,6 +74,7 @@
       <RefSchemaName>xtrello</RefSchemaName>
       <RefTableName>list</RefTableName>
       <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <column id="25" parent="11" name="id">
       <Position>1</Position>
@@ -102,6 +104,7 @@
       <RefSchemaName>xtrello</RefSchemaName>
       <RefTableName>board</RefTableName>
       <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <column id="31" parent="12" name="id">
       <Position>1</Position>

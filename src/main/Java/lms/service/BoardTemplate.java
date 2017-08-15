@@ -58,6 +58,18 @@ public class BoardTemplate {
             out.println(board_name);
         }
     }
+    public void showBoardAll() {
+        if (out == null) return;
+        BoardDao boardDao = new BoardImpl();
+        List<Board> boards = boardDao.getAllBoard();
+        out.println(BoardHtmlViews.getInstance().getModal_boottom());
+        for (Board s : boards) {
+            String board_name = BoardHtmlViews.getInstance().getBoard_name();
+            board_name = board_name.replace("<!--board-->", s.getBoard_name());
+            board_name = board_name.replace("board_id", String.valueOf(s.getId()));
+            out.println(board_name);
+        }
+    }
 
     public boolean dellBoards(HttpServletRequest request) {
         long board_id = Long.parseLong(request.getParameter("boardid").toString());
