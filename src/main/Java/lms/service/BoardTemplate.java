@@ -30,12 +30,11 @@ public class BoardTemplate {
             long user_id = Long.parseLong(session.getAttribute("user_id").toString());
             String nameBoard = new String(request.getParameter("nameBoard").getBytes("iso-8859-1"),
                     "UTF-8");
-            System.out.println(user_id + nameBoard);
-            if (nameBoard != null && user_id != 0) {
+            System.out.println("ІД Юзера + Імя дошки\n"+user_id + nameBoard);
+            if (nameBoard != null && user_id != 0 && !nameBoard.isEmpty()) {
                 Board board = new Board(nameBoard, user_id);
                 BoardDao boardDao = new BoardImpl();
                 boardDao.saveBoard(board);
-                //          session.setAttribute("board_id",board.getId());
                 return true;
             }
 

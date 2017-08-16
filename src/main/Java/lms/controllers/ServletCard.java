@@ -21,14 +21,15 @@ public class ServletCard extends HttpServlet {
                 response.sendRedirect("/list/view");
                 break;
             case "/del":
-                if (cardView.delCard(request)) {
-                   response.sendRedirect("/list/view");
-                }
+                if (cardView.delCard(request)){
+                response.sendRedirect("/list/view");
+                } else
+                response.sendRedirect("/list/view");
                 break;
         }
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        response.sendRedirect("/list/view");
     }
 }

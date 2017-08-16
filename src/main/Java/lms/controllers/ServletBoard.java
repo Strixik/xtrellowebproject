@@ -21,10 +21,14 @@ public class ServletBoard extends HttpServlet {
             case "/add":
                 if (indexView.addBoardForm(request, session)) {
                     response.sendRedirect("/view");
+                } else {
+            response.sendRedirect("/view");
                 }
                 break;
             case "/del":
                 if (indexView.dellBoards(request)) {
+                    response.sendRedirect("/view");
+                } else {
                     response.sendRedirect("/view");
                 }
                 break;

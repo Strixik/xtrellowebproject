@@ -27,6 +27,8 @@ public class ServletList extends HttpServlet {
             case "/add":
                 if (listView.addListForm(request, session)) {
                     response.sendRedirect("/list/view");
+                } else {
+                    response.sendRedirect("/list/view");
                 }
                 break;
             case "/del":
@@ -36,6 +38,8 @@ public class ServletList extends HttpServlet {
                     response.sendRedirect("/list/view");
                 }
                 break;
+            default:
+                response.sendRedirect("/list/view");
         }
     }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

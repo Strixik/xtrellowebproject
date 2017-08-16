@@ -17,7 +17,7 @@ public class CardTemplate {
             String cardText = new String(request.getParameter("cardText").getBytes("iso-8859-1"),
                     "UTF-8");
             System.out.println(listId + cardText);
-            if (cardText != null && listId != 0) {
+            if (cardText != null && listId != 0 && !cardText.isEmpty() ) {
                 Card card = new Card(cardText, listId);
                 CardDao cardDao = new CardImpl();
                 cardDao.saveCard(card);
@@ -28,10 +28,12 @@ public class CardTemplate {
         }
     }
     public boolean  delCard (HttpServletRequest request) {
-        long cardId = Long.parseLong(request.getParameter("id"));
-        if (cardId != 0) {
+        String cardId = request.getParameter("id");
+
+        if (cardId != null && !cardId.isEmpty()) {
+            long id = Long.parseLong(cardId);
             CardDao cardDao = new CardImpl();
-            cardDao.removeCard(cardId);
+            cardDao.removeCard(id);
             return true;
         }
         return false;

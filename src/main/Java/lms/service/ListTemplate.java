@@ -29,7 +29,7 @@ public class ListTemplate {
             String nameList = new String(request.getParameter("nameList").getBytes("iso-8859-1"),
                     "UTF-8");
             System.out.println(boardId + nameList);
-            if (nameList != null && boardId != 0L) {
+            if (nameList != null && boardId != 0L && !nameList.isEmpty()) {
                 Panel list = new Panel(nameList, boardId);
                 ListDao listDao = new ListImpl();
                 listDao.saveList(list);
