@@ -48,7 +48,7 @@ public class BoardTemplate {
         if (out == null) return;
         Long user_id = Long.parseLong(session.getAttribute("user_id").toString());
         BoardDao boardDao = new BoardImpl();
-        List<Board> boards = boardDao.getAllBoard(user_id);
+        List<Board> boards = boardDao.showAllBoards(user_id);
         out.println(BoardHtmlViews.getInstance().getModal_boottom());
         for (Board s : boards) {
             String board_name = BoardHtmlViews.getInstance().getBoard_name();
@@ -60,7 +60,7 @@ public class BoardTemplate {
     public void showBoardAll() {
         if (out == null) return;
         BoardDao boardDao = new BoardImpl();
-        List<Board> boards = boardDao.getAllBoard();
+        List<Board> boards = boardDao.showAllBoards();
         out.println(BoardHtmlViews.getInstance().getModal_boottom());
         for (Board s : boards) {
             String board_name = BoardHtmlViews.getInstance().getBoard_name();
@@ -74,7 +74,7 @@ public class BoardTemplate {
         long board_id = Long.parseLong(request.getParameter("boardid").toString());
         if (board_id > 0L) {
             BoardDao boardDao = new BoardImpl();
-            boardDao.dellBoard(board_id);
+            boardDao.removeBoard(board_id);
             return true;
         } else return false;
     }

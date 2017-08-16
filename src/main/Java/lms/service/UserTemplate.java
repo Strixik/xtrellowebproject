@@ -309,7 +309,7 @@ public class UserTemplate {
     }
     public void showAllUsers(){
         UserDao userDao = new UserImpl();
-       List<User> users = userDao.allUser();
+       List<User> users = userDao.showAllUsers();
        out.println("<div class=\"row\">\n" +
                "    <div class=\"col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3\">\n" +
                "        <ul class=\"list-group\">");

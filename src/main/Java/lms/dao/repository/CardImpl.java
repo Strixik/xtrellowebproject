@@ -13,7 +13,7 @@ public class CardImpl implements CardDao {
     public void saveCard(Card card) {
         DataSource dataSource = new DataSource();
         try (Connection con = dataSource.getConnection();
-             PreparedStatement pstm = con.prepareStatement("INSERT INTO card (card, id_list) VALUES (?,?)");) {
+             PreparedStatement pstm = con.prepareStatement("INSERT INTO card (card, id_list) VALUES (?,?)")) {
             pstm.setString(1, card.getCardText());
             pstm.setLong(2, card.getListId());
             pstm.executeUpdate();
@@ -41,7 +41,7 @@ public class CardImpl implements CardDao {
             List<Card> cards = new ArrayList<>();
             try (Connection con = dataSource.getConnection();
                  Statement stmt = con.createStatement();
-                 ResultSet rs = stmt.executeQuery("SELECT * FROM card WHERE id_list=\"" + listId + "\"");) {
+                 ResultSet rs = stmt.executeQuery("SELECT * FROM card WHERE id_list=\"" + listId + "\"")) {
                 while (rs.next()) {
                     long id = rs.getLong("id");
                     String card = rs.getString("card");

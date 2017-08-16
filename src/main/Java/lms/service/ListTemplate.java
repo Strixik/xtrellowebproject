@@ -29,7 +29,7 @@ public class ListTemplate {
             String nameList = new String(request.getParameter("nameList").getBytes("iso-8859-1"),
                     "UTF-8");
             System.out.println(boardId + nameList);
-            if (nameList != null && boardId != 0L && !nameList.isEmpty()) {
+            if (boardId != 0L && !nameList.isEmpty()) {
                 Panel list = new Panel(nameList, boardId);
                 ListDao listDao = new ListImpl();
                 listDao.saveList(list);
@@ -59,7 +59,7 @@ public class ListTemplate {
             listName = listName.replace("listId", String.valueOf(panel.getId()));
             StringBuilder sb = new StringBuilder();
             for (Card c: cards){
-             sb.append("<li><input type=\"radio\" value=\""+c.getId()+"\" name=\"id\">").append(c.getCardText()).append("</li>");
+             sb.append("<li><input type=\"radio\" value=\"").append(c.getId()).append("\" name=\"id\">").append(c.getCardText()).append("</li>");
             }
             listName = listName.replace("<!--"+panel.getId()+"your text"+"-->", sb );
 

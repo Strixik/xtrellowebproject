@@ -44,7 +44,9 @@ public class UserImpl implements UserDao {
         DataSource dataSource = new DataSource();
 
         try (Connection con = dataSource.getConnection();
-             PreparedStatement pstmt = (user.getId() == 0L) ? con.prepareStatement("INSERT INTO users (login, password, email, date_registered, sex, date_birth, block, firstname, secondname, contry, city)  VALUES (?,?,?,?,?,?,?,?,?,?,?)") : con.prepareStatement("UPDATE users SET login=?, password=?, email=?, date_registered=?, sex=?, date_birth=?, block=?, firstname=?, secondname=?, contry=?, city=? WHERE id=" + user.getId());
+             PreparedStatement pstmt = (user.getId() == 0L) ?
+                     con.prepareStatement("INSERT INTO users (login, password, email, date_registered, sex, date_birth, block, firstname, secondname, contry, city)  VALUES (?,?,?,?,?,?,?,?,?,?,?)") :
+                     con.prepareStatement("UPDATE users SET login=?, password=?, email=?, date_registered=?, sex=?, date_birth=?, block=?, firstname=?, secondname=?, contry=?, city=? WHERE id=" + user.getId())
         ) {
             pstmt.setString(1, user.getLogin());
             pstmt.setString(2, user.getPassword());
@@ -94,13 +96,13 @@ public class UserImpl implements UserDao {
     }
 
     @Override
-    public List<User> allUser() {
+    public List<User> showAllUsers() {
         DataSource dataSource = new DataSource();
         List<User> users = new ArrayList<>();
 
         try (Connection con = dataSource.getConnection();
              Statement stmt = con.createStatement();
-             ResultSet rs = stmt.executeQuery("SELECT * FROM users");
+             ResultSet rs = stmt.executeQuery("SELECT * FROM users")
         ){
             while(rs.next()) {
                 User user = new User(

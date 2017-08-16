@@ -9,6 +9,8 @@ public interface UserDao {
 
     void saveUser(User user);
 
-    public List<User> findByLoginByEmail(String searchString);
-    List<User> allUser();
+    List<User> findByLoginByEmail(String searchString);
+
+    //for admin
+    List<User> showAllUsers();
 }

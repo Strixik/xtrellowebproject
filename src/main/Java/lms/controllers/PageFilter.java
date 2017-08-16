@@ -10,9 +10,6 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-/**
- * Adds top and bottom parts of HTML page to servlet responses
- */
 @WebFilter(filterName = "PageFilter", value = {"/*", "/board/*", "/list/*"})
 public class PageFilter implements Filter {
     public void destroy() {
@@ -22,9 +19,9 @@ public class PageFilter implements Filter {
         HttpServletRequest request = (HttpServletRequest) req;
         HttpServletResponse response = (HttpServletResponse) resp;
 
-        String path = ((HttpServletRequest) request).getRequestURI();
+        String path = request.getRequestURI();
         if (path.startsWith("/testajax/")) {
-            chain.doFilter(request, response); // Just continue chain.
+            chain.doFilter(request, response);
         } else {
             resp.setContentType("text/html;charset=UTF-8");
             PrintWriter out = resp.getWriter();

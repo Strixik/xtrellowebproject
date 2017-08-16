@@ -11,7 +11,7 @@ public class BoardImpl implements BoardDao {
 
 
     @Override
-    public List<Board> getAllBoard(long user_id) {
+    public List<Board> showAllBoards(long user_id) {
         DataSource dataSource = new DataSource();
         List<Board> boards = new ArrayList<>();
         try (Connection con = dataSource.getConnection();
@@ -34,7 +34,7 @@ public class BoardImpl implements BoardDao {
     }
 
     @Override
-    public List<Board> getAllBoard() {
+    public List<Board> showAllBoards() {
         DataSource dataSource = new DataSource();
         List<Board> boards = new ArrayList<>();
         try (Connection con = dataSource.getConnection();
@@ -72,11 +72,11 @@ public class BoardImpl implements BoardDao {
     }
 
     @Override
-    public void dellBoard(long id) {
+    public void removeBoard(long id) {
         DataSource dataSource = new DataSource();
         if (id > 0L) {
             try (Connection con = dataSource.getConnection();
-                 Statement stmt = con.createStatement();) {
+                 Statement stmt = con.createStatement()) {
                 stmt.executeUpdate("DELETE FROM board WHERE id =" + id);
             } catch (SQLException e) {
                 e.printStackTrace();

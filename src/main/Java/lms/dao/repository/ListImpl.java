@@ -27,7 +27,7 @@ public class ListImpl implements ListDao {
         DataSource dataSource = new DataSource();
         if (id > 0L) {
             try (Connection con = dataSource.getConnection();
-                 Statement stmt = con.createStatement();) {
+                 Statement stmt = con.createStatement()) {
                 stmt.executeUpdate("DELETE FROM list WHERE id =" + id);
             } catch (SQLException e) {
                 e.printStackTrace();

@@ -249,6 +249,7 @@ html {
    word-wrap: break-word;
     min-height: 100px;
     list-style-type: none;
+    margin: 0;
 }
 .floating{
     float: right;

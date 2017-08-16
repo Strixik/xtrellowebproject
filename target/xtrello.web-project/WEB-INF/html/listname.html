@@ -1,11 +1,11 @@
-<div>
-       <div class="col-sm-3 liststyle">
+<div class="">
+       <div class="col-sm-2 liststyle">
            <form action="/list/" method="post" class="">
                <input type="hidden" name="listid" value="listId">
-               <input type="submit" disabled  class="col-sm-3 btn-block" value="<!--list-->">
+               <input type="submit" disabled  class="col-sm-2 btn-block" value="<!--list-->">
            </form>
             <form action="/card/del" method="post">
-            <ul class="panel-info"><!--listIdyour text--></ul>
+            <div class="panel-info" ><!--listIdyour text--></div>
             <button type="submit" class="btn btn-danger floating" title="Видалити нотатку">
                 <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></button>
             </form>
@@ -22,7 +22,7 @@
 
            <form action="/list/del" method="post" class="tab-close-button">
                <input type="hidden" name="listid" value="listId">
-               <input type="submit" class="btn btn-danger col-sm-3 btn-block" value="Видалити список">
+               <input type="submit" class="btn btn-danger col-sm-2 btn-block" value="Видалити список">
 
            </form>
     </div><!-- /.col-lg-6 -->
