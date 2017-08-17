@@ -1,6 +1,7 @@
 package lms.dao.repository;
 
-import lms.dao.CRUDRepository.UserDao;
+import lms.dao.DataSource;
+import lms.dao.UserDao;
 import lms.dao.entity.User;
 
 import java.sql.*;

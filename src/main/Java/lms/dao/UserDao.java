@@ -1,13 +1,13 @@
-package lms.dao.CRUDRepository;
+package lms.dao;
 
 import lms.dao.entity.User;
 
 import java.util.List;
 
 public interface UserDao {
-    User findByUser(String login);
-
     void saveUser(User user);
+
+    User findByUser(String login);
 
     List<User> findByLoginByEmail(String searchString);
 

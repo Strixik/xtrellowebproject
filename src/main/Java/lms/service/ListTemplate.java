@@ -1,12 +1,11 @@
 package lms.service;
 
 
-import lms.dao.CRUDRepository.CardDao;
-import lms.dao.CRUDRepository.ListDao;
+import lms.dao.CRUD;
 import lms.dao.entity.Card;
 import lms.dao.entity.Panel;
-import lms.dao.repository.CardImpl;
-import lms.dao.repository.ListImpl;
+import lms.dao.repository.CardRepo;
+import lms.dao.repository.PanelRepo;
 import lms.views.ListHtmlViews;
 
 import javax.servlet.http.HttpServletRequest;
@@ -17,7 +16,6 @@ import java.util.List;
 
 public class ListTemplate {
     private PrintWriter out;
-
     public ListTemplate(PrintWriter out) {
         this.out = out;
     }
@@ -26,17 +24,15 @@ public class ListTemplate {
         if (out == null) return false;
         try {
             long boardId = Long.parseLong(session.getAttribute("board_id").toString());
-            String nameList = new String(request.getParameter("nameList").getBytes("iso-8859-1"),
-                    "UTF-8");
+            String nameList = new String(request.getParameter("nameList")
+                    .getBytes("iso-8859-1"), "UTF-8");
             System.out.println(boardId + nameList);
             if (boardId != 0L && !nameList.isEmpty()) {
-                Panel list = new Panel(nameList, boardId);
-                ListDao listDao = new ListImpl();
-                listDao.saveList(list);
-                //          session.setAttribute("board_id",list.getId());
+                Panel panel = new Panel(nameList, boardId);
+                CRUD<Panel> panelRepo = new PanelRepo();
+                panelRepo.save(panel);
                 return true;
             }
-
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
@@ -46,31 +42,30 @@ public class ListTemplate {
     public void showList(HttpSession session) {
         if (out == null) return;
         Long boardId = Long.parseLong(session.getAttribute("board_id").toString());
-        ListDao listDao = new ListImpl();
+        CRUD<Panel> panelRepo = new PanelRepo();
+        CRUD<Card> cardRepo = new CardRepo();
 
-        CardDao cardDao = new CardImpl();
-
-        List<Panel> lists = listDao.showAllLists(boardId);
+        List<Panel> panels = panelRepo.retrieveAll(boardId);
         out.println(ListHtmlViews.getInstance().getModalBottom());
-            for (Panel panel : lists) {
-            List<Card> cards = cardDao.showAllCards(panel.getId());
-            String listName = ListHtmlViews.getInstance().getListName();
-            listName = listName.replace("<!--list-->", panel.getListName());
-            listName = listName.replace("listId", String.valueOf(panel.getId()));
+        for (Panel panel : panels) {
+            List<Card> cards = cardRepo.retrieveAll(panel.getId());
+            String panelTitle = ListHtmlViews.getInstance().getListName();
+            panelTitle = panelTitle.replace("<!--list-->", panel.getListName());
+            panelTitle = panelTitle.replace("listId", String.valueOf(panel.getId()));
             StringBuilder sb = new StringBuilder();
             for (Card c: cards){
-             sb.append("<li><input type=\"radio\" value=\"").append(c.getId()).append("\" name=\"id\">").append(c.getCardText()).append("</li>");
+                sb.append("<li><input type=\"radio\" value=\"").append(c.getId())
+                        .append("\" name=\"id\">").append(c.getCardText()).append("</li>");
             }
-            listName = listName.replace("<!--"+panel.getId()+"your text"+"-->", sb );
-
-            out.println(listName);
+            panelTitle = panelTitle.replace("<!--" + panel.getId() + "your text" + "-->", sb);
+            out.println(panelTitle);
         }
     }
     public boolean deleteList(HttpServletRequest request) {
         long listId = Long.parseLong(request.getParameter("listid").toString());
         if (listId > 0L) {
-            ListDao listDao = new ListImpl();
-            listDao.removeList(listId);
+            CRUD<Panel> panelRepo = new PanelRepo();
+            panelRepo.remove(listId);
             return true;
         } else return false;
     }

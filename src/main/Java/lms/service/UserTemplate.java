@@ -1,6 +1,6 @@
 package lms.service;
 
-import lms.dao.CRUDRepository.UserDao;
+import lms.dao.UserDao;
 import lms.dao.entity.User;
 import lms.dao.repository.UserImpl;
 import lms.views.UserHtmlViews;

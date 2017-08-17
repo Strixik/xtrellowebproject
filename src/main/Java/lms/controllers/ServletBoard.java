@@ -15,18 +15,18 @@ import java.io.PrintWriter;
 public class ServletBoard extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
-        BoardTemplate indexView = new BoardTemplate(out);
+        BoardTemplate boardView = new BoardTemplate(out);
         HttpSession session = request.getSession();
         switch (request.getPathInfo()) {
             case "/add":
-                if (indexView.addBoardForm(request, session)) {
+                if (boardView.addBoardForm(request, session)) {
                     response.sendRedirect("/view");
                 } else {
             response.sendRedirect("/view");
                 }
                 break;
             case "/del":
-                if (indexView.dellBoards(request)) {
+                if (boardView.deleteBoard(request)) {
                     response.sendRedirect("/view");
                 } else {
                     response.sendRedirect("/view");
@@ -37,14 +37,14 @@ public class ServletBoard extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
-        BoardTemplate indexView = new BoardTemplate(out);
+        BoardTemplate boardView = new BoardTemplate(out);
         HttpSession session = request.getSession();
          switch (request.getPathInfo()) {
             case "/view":
-                indexView.showBoard(session);
+                boardView.showBoard(session);
                 break;
              case "/all":
-                 indexView.showBoardAll();
+                 boardView.showBoardAllForAdmin();
                  break;
                 }
     }
