@@ -1,0 +1,65 @@
+Using CATALINA_BASE:   "C:\Users\Volodymyr S\.IntelliJIdea2017.2\system\tomcat\Unnamed_xtrello_web-project_2"
+Using CATALINA_HOME:   "C:\Program Files\Apache Software Foundation\apache-tomcat-9.0.0.M22"
+Using CATALINA_TMPDIR: "C:\Program Files\Apache Software Foundation\apache-tomcat-9.0.0.M22\temp"
+Using JRE_HOME:        "C:\Program Files\Java\jdk1.8.0_131"
+Using CLASSPATH:       "C:\Program Files\Apache Software Foundation\apache-tomcat-9.0.0.M22\bin\bootstrap.jar;C:\Program Files\Apache Software Foundation\apache-tomcat-9.0.0.M22\bin\tomcat-juli.jar"
+18-Aug-2017 14:47:28.869 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/9.0.0.M22
+18-Aug-2017 14:47:28.870 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 21 2017 09:44:18 UTC
+18-Aug-2017 14:47:28.870 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         9.0.0.0
+18-Aug-2017 14:47:28.871 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+18-Aug-2017 14:47:28.871 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+18-Aug-2017 14:47:28.871 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+18-Aug-2017 14:47:28.871 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_131\jre
+18-Aug-2017 14:47:28.871 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_131-b11
+18-Aug-2017 14:47:28.871 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+18-Aug-2017 14:47:28.871 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\Volodymyr S\.IntelliJIdea2017.2\system\tomcat\Unnamed_xtrello_web-project_2
+18-Aug-2017 14:47:28.871 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Program Files\Apache Software Foundation\apache-tomcat-9.0.0.M22
+18-Aug-2017 14:47:28.871 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\Volodymyr S\.IntelliJIdea2017.2\system\tomcat\Unnamed_xtrello_web-project_2\conf\logging.properties
+18-Aug-2017 14:47:28.872 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+18-Aug-2017 14:47:28.872 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcom.sun.management.jmxremote=
+18-Aug-2017 14:47:28.872 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcom.sun.management.jmxremote.port=1097
+18-Aug-2017 14:47:28.872 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcom.sun.management.jmxremote.ssl=false
+18-Aug-2017 14:47:28.872 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcom.sun.management.jmxremote.authenticate=false
+18-Aug-2017 14:47:28.872 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.rmi.server.hostname=127.0.0.1
+18-Aug-2017 14:47:28.872 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+18-Aug-2017 14:47:28.872 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+18-Aug-2017 14:47:28.872 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\Volodymyr S\.IntelliJIdea2017.2\system\tomcat\Unnamed_xtrello_web-project_2
+18-Aug-2017 14:47:28.872 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Program Files\Apache Software Foundation\apache-tomcat-9.0.0.M22
+18-Aug-2017 14:47:28.872 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Program Files\Apache Software Foundation\apache-tomcat-9.0.0.M22\temp
+18-Aug-2017 14:47:28.872 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\ProgramData\chocolatey\bin;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\Volodymyr S\AppData\Local\Microsoft\WindowsApps;C:\bin\mysql\current\bin;C:\Users\Volodymyr S\AppData\Roaming\npm;C:\Users\Volodymyr S\AppData\Local\GitHubDesktop\bin;.]
+18-Aug-2017 14:47:28.974 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+18-Aug-2017 14:47:28.990 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+18-Aug-2017 14:47:29.001 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+18-Aug-2017 14:47:29.003 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+18-Aug-2017 14:47:29.003 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 406 ms
+18-Aug-2017 14:47:29.024 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+18-Aug-2017 14:47:29.024 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/9.0.0.M22
+18-Aug-2017 14:47:29.032 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+18-Aug-2017 14:47:29.042 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+18-Aug-2017 14:47:29.044 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 40 ms
+Connected to server
+18-Aug-2017 14:47:29.670 INFO [RMI TCP Connection(3)-127.0.0.1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+18-Aug-2017 14:47:30.211 INFO [http-nio-8080-exec-1] lms.controllers.ServletDispatcher.doGet pathInfo:	/
+18-Aug-2017 14:47:30.211 INFO [http-nio-8080-exec-1] lms.controllers.ServletDispatcher.doGet pathInfo:	/
+18-Aug-2017 14:47:30.221 INFO [http-nio-8080-exec-2] lms.controllers.ServletDispatcher.doGet pathInfo:	/
+18-Aug-2017 14:47:30.221 INFO [http-nio-8080-exec-2] lms.controllers.ServletDispatcher.doGet pathInfo:	/
+18-Aug-2017 14:47:30.468 INFO [http-nio-8080-exec-4] lms.controllers.ServletDispatcher.doGet pathInfo:	/
+18-Aug-2017 14:47:30.468 INFO [http-nio-8080-exec-4] lms.controllers.ServletDispatcher.doGet pathInfo:	/
+18-Aug-2017 14:47:30.804 INFO [http-nio-8080-exec-5] lms.controllers.ServletDispatcher.doGet pathInfo:	/favicon.ico
+18-Aug-2017 14:47:30.804 INFO [http-nio-8080-exec-5] lms.controllers.ServletDispatcher.doGet pathInfo:	/favicon.ico
+18-Aug-2017 14:47:30.811 INFO [http-nio-8080-exec-6] lms.controllers.ServletDispatcher.doGet pathInfo:	/
+18-Aug-2017 14:47:30.811 INFO [http-nio-8080-exec-6] lms.controllers.ServletDispatcher.doGet pathInfo:	/
+18-Aug-2017 14:47:37.380 INFO [http-nio-8080-exec-7] lms.controllers.ServletDispatcher.doPost pathInfo:	/login
+18-Aug-2017 14:47:37.380 INFO [http-nio-8080-exec-7] lms.controllers.ServletDispatcher.doPost pathInfo:	/login
+18-Aug-2017 14:47:37.665 INFO [http-nio-8080-exec-7] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='vlirm', password='123qwe', email='vlirm@yahoo.com', date_registered='2017-08-17', sex='null', date_birth='null', block=0, firstname='null', secondname='null', contry='null', city='null'}
+18-Aug-2017 14:47:37.665 INFO [http-nio-8080-exec-7] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='vlirm', password='123qwe', email='vlirm@yahoo.com', date_registered='2017-08-17', sex='null', date_birth='null', block=0, firstname='null', secondname='null', contry='null', city='null'}
+18-Aug-2017 14:47:37.678 INFO [http-nio-8080-exec-8] lms.controllers.ServletBoard.doGet pathInfo:	/view
+18-Aug-2017 14:47:37.678 INFO [http-nio-8080-exec-8] lms.controllers.ServletBoard.doGet pathInfo:	/view
+18-Aug-2017 14:47:37.899 INFO [http-nio-8080-exec-9] lms.controllers.ServletDispatcher.doGet pathInfo:	/favicon.ico
+18-Aug-2017 14:47:37.899 INFO [http-nio-8080-exec-9] lms.controllers.ServletDispatcher.doGet pathInfo:	/favicon.ico
+18-Aug-2017 14:47:37.907 INFO [http-nio-8080-exec-10] lms.controllers.ServletDispatcher.doGet pathInfo:	/
+18-Aug-2017 14:47:37.907 INFO [http-nio-8080-exec-10] lms.controllers.ServletDispatcher.doGet pathInfo:	/
+18-Aug-2017 14:47:37.915 INFO [http-nio-8080-exec-1] lms.controllers.ServletBoard.doGet pathInfo:	/view
+18-Aug-2017 14:47:37.915 INFO [http-nio-8080-exec-1] lms.controllers.ServletBoard.doGet pathInfo:	/view
+18-Aug-2017 14:47:39.042 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Program Files\Apache Software Foundation\apache-tomcat-9.0.0.M22\webapps\manager]
+18-Aug-2017 14:47:39.106 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Program Files\Apache Software Foundation\apache-tomcat-9.0.0.M22\webapps\manager] has finished in [64] ms

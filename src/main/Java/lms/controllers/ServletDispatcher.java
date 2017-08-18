@@ -15,14 +15,18 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.logging.*;
 
 @WebServlet(name = "ServletDispatcher", urlPatterns = "/*", loadOnStartup = 1)
 public class ServletDispatcher extends HttpServlet {
+    private static Logger log = Logger.getLogger(ServletDispatcher.class.getName());
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
         UserTemplate indexView = new UserTemplate(out);
         HttpSession session = request.getSession();
 
+        log.info("pathInfo:\t" + request.getPathInfo());
         switch (request.getPathInfo()) {
             case "/register":
                 if (indexView.checkRegistrationForm(request)) {
@@ -48,6 +52,7 @@ public class ServletDispatcher extends HttpServlet {
         HttpSession session = request.getSession();
         UserTemplate indexView = new UserTemplate(out);
 
+        log.info("pathInfo:\t" + request.getPathInfo());
         switch (request.getPathInfo()) {
             case "/":
                 if (session.getAttribute("login") != null) {
@@ -57,6 +62,7 @@ public class ServletDispatcher extends HttpServlet {
                 }
                 break;
             case "/logout":
+                log.warning("logged out:\t" + session.getAttribute("username"));
                 session.removeAttribute("login");
                 response.sendRedirect("/");
                 break;
@@ -66,13 +72,13 @@ public class ServletDispatcher extends HttpServlet {
             case "/profile-edit":
                 indexView.showUserProfileForm(session.getAttribute("login").toString());
                 break;
-               case "/useradmin":
-                   indexView.showAllUsers();
-                   break;
-                   case "/admintest":
-                       String login = request.getParameter("login").toString();
-                       indexView.showUserProfileForm(login);
-                   break;
+            case "/useradmin":
+                indexView.showAllUsers();
+                break;
+            case "/admintest":
+                String login = request.getParameter("login");
+                indexView.showUserProfileForm(login);
+                break;
 
             default:
                 response.sendRedirect("/");
@@ -83,16 +89,25 @@ public class ServletDispatcher extends HttpServlet {
     @Override
     public void init() throws ServletException {
         super.init();
-        //set path
+        //set path to Html files
         PathHtml pathHTML = PathHtml.getInstance();
         if (pathHTML.getPath().equals("")) {
             pathHTML.setPath(getServletContext().getRealPath("/WEB-INF/html/"));
 
         }
-
         //load partial html files
         UserHtmlViews.getInstance();
         BoardHtmlViews.getInstance();
         ListHtmlViews.getInstance();
+        //logger config
+        try {
+            Handler fileHandler = new FileHandler(getServletContext().getRealPath("WEB-INF/logs/app.log"));
+            fileHandler.setFormatter(new SimpleFormatter());
+            Logger.getLogger("").addHandler(fileHandler);
+            Logger.getLogger("").addHandler(new ConsoleHandler());
+            Logger.getLogger("").setLevel(Level.INFO);
+        } catch (IOException e) {
+            log.severe("problem with log file: " + e);
+        }
     }
 }

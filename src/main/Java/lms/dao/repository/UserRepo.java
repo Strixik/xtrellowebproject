@@ -7,15 +7,18 @@ import lms.dao.entity.User;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
-public class UserImpl implements UserDao {
+public class UserRepo implements UserDao {
+    private static Logger log = Logger.getLogger(UserRepo.class.getName());
+
     @Override
     public User findByUser(String login) {
         DataSource dataSource = new DataSource();
 
         try (Connection con = dataSource.getConnection();
              Statement stmt = con.createStatement();
-             ResultSet rs = stmt.executeQuery("SELECT * FROM users WHERE users.login=\"" + login + "\";");
+             ResultSet rs = stmt.executeQuery("SELECT * FROM users WHERE users.login=\"" + login + "\";")
         ) {
             if (rs.next()) {
                 User user = new User(
@@ -31,11 +34,11 @@ public class UserImpl implements UserDao {
                         rs.getString("secondname"),
                         rs.getString("contry"),
                         rs.getString("city"));
-                //System.out.println(user);
+                log.info("В базі знайдено користувача: \t" + user);
                 return user;
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.severe("Connection to database is lost: \t" + e.toString());
         }
         return null;
     }
@@ -45,27 +48,26 @@ public class UserImpl implements UserDao {
         DataSource dataSource = new DataSource();
 
         try (Connection con = dataSource.getConnection();
-             PreparedStatement pstmt = (user.getId() == 0L) ?
+             PreparedStatement preparedSt = (user.getId() == 0L) ?
                      con.prepareStatement("INSERT INTO users (login, password, email, date_registered, sex, date_birth, block, firstname, secondname, contry, city)  VALUES (?,?,?,?,?,?,?,?,?,?,?)") :
                      con.prepareStatement("UPDATE users SET login=?, password=?, email=?, date_registered=?, sex=?, date_birth=?, block=?, firstname=?, secondname=?, contry=?, city=? WHERE id=" + user.getId())
         ) {
-            pstmt.setString(1, user.getLogin());
-            pstmt.setString(2, user.getPassword());
-            pstmt.setString(3, user.getEmail());
-            pstmt.setString(4, user.getDate_registered());
-            pstmt.setString(5, user.getSex());
-            pstmt.setString(6, user.getDate_birth());
-            pstmt.setInt(7, user.getBlock());
-            pstmt.setString(8, user.getFirstname());
-            pstmt.setString(9, user.getSecondname());
-            pstmt.setString(10, user.getContry());
-            pstmt.setString(11, user.getCity());
-            pstmt.executeUpdate();
+            preparedSt.setString(1, user.getLogin());
+            preparedSt.setString(2, user.getPassword());
+            preparedSt.setString(3, user.getEmail());
+            preparedSt.setString(4, user.getDate_registered());
+            preparedSt.setString(5, user.getSex());
+            preparedSt.setString(6, user.getDate_birth());
+            preparedSt.setInt(7, user.getBlock());
+            preparedSt.setString(8, user.getFirstname());
+            preparedSt.setString(9, user.getSecondname());
+            preparedSt.setString(10, user.getContry());
+            preparedSt.setString(11, user.getCity());
+            preparedSt.executeUpdate();
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.severe("Connection to database is lost: \t" + e.toString());
         }
-
     }
 
     @Override
@@ -77,8 +79,8 @@ public class UserImpl implements UserDao {
         try (Connection con = dataSource.getConnection();
              Statement stmt = con.createStatement();
              ResultSet rs = stmt.executeQuery("SELECT DISTINCT id, login, password, email, date_registered FROM users WHERE (login LIKE \"%" + searchString + "%\" OR email LIKE \"%" + searchString + "%\") LIMIT 10");
-        ){
-            while(rs.next()) {
+        ) {
+            while (rs.next()) {
                 User user = new User(
                         rs.getLong("id"),
                         rs.getString("login"),
@@ -89,10 +91,9 @@ public class UserImpl implements UserDao {
                 users.add(user);
             }
             return users;
-        }  catch (SQLException e) {
-            e.printStackTrace();
+        } catch (SQLException e) {
+            log.severe("Connection to database is lost: \t" + e.toString());
         }
-
         return null;
     }
 
@@ -104,8 +105,8 @@ public class UserImpl implements UserDao {
         try (Connection con = dataSource.getConnection();
              Statement stmt = con.createStatement();
              ResultSet rs = stmt.executeQuery("SELECT * FROM users")
-        ){
-            while(rs.next()) {
+        ) {
+            while (rs.next()) {
                 User user = new User(
                         rs.getInt("id"),
                         rs.getString("login"),
@@ -122,10 +123,9 @@ public class UserImpl implements UserDao {
                 users.add(user);
             }
             return users;
-        }  catch (SQLException e) {
-            e.printStackTrace();
+        } catch (SQLException e) {
+            log.severe("Connection to database is lost: \t" + e.toString());
         }
-
         return null;
     }
 }

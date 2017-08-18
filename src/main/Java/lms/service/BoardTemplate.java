@@ -10,6 +10,7 @@ import javax.servlet.http.HttpSession;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class BoardTemplate {
 
@@ -18,6 +19,8 @@ public class BoardTemplate {
     public BoardTemplate(PrintWriter out) {
         this.out = out;
     }
+
+    private static Logger logger = Logger.getGlobal();
 
     public void showModalBottom() {
         if (out == null) return;
@@ -30,8 +33,8 @@ public class BoardTemplate {
             String boardTitle = new String(request.getParameter("nameBoard")
                     .getBytes("iso-8859-1"), "UTF-8");
             long userId = Long.parseLong(session.getAttribute("user_id").toString());
-            System.out.println("ІД Юзера + Імя дошки\n" + userId + boardTitle);
-            if (boardTitle != null && userId != 0 && !boardTitle.isEmpty()) {
+            logger.info("ІД Юзера + Імя дошки\n" + userId + boardTitle);
+            if (userId != 0L && !boardTitle.isEmpty()) {
                 Board board = new Board(boardTitle, userId);
                 CRUD<Board> boardRepo = new BoardRepo();
                 boardRepo.save(board);

@@ -7,8 +7,11 @@ import lms.dao.entity.Panel;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class PanelRepo implements CRUD<Panel> {
+    private static Logger log = Logger.getLogger(PanelRepo.class.getName());
+
     @Override
     public void save(Panel panel) {
         DataSource dataSource = new DataSource();
@@ -19,7 +22,7 @@ public class PanelRepo implements CRUD<Panel> {
             preparedSt.setLong(2, panel.getBoardId());
             preparedSt.executeUpdate();
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.severe("Connection to database is lost: \t" + e.toString());
         }
     }
     @Override
@@ -31,7 +34,7 @@ public class PanelRepo implements CRUD<Panel> {
             ) {
                 stmt.executeUpdate("DELETE FROM list WHERE id =" + id);
             } catch (SQLException e) {
-                e.printStackTrace();
+                log.severe("Connection to database is lost: \t" + e.toString());
             }
         }
     }
@@ -52,7 +55,7 @@ public class PanelRepo implements CRUD<Panel> {
                 panels.add(panel);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.severe("Connection to database is lost: \t" + e.toString());
         }
         return panels;
     }

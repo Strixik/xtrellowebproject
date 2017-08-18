@@ -2,7 +2,7 @@ package lms.service;
 
 import lms.dao.UserDao;
 import lms.dao.entity.User;
-import lms.dao.repository.UserImpl;
+import lms.dao.repository.UserRepo;
 import lms.views.UserHtmlViews;
 
 import javax.servlet.http.HttpServletRequest;
@@ -46,7 +46,7 @@ public class UserTemplate {
                     "UTF-8");
             String password = new String(request.getParameter("password").getBytes("iso-8859-1"),
                     "UTF-8");
-            UserDao userDao = new UserImpl();
+            UserDao userDao = new UserRepo();
             User user = userDao.findByUser(login);
             if (user == null ) {
                 showErrorLoginForm();
@@ -85,7 +85,7 @@ public class UserTemplate {
             String regLogin = new String(request.getParameter("regLogin").getBytes("iso-8859-1"),
                     "UTF-8");
             regForm = checkFormField(1, regForm, regLogin, f -> {
-                UserDao userDao = new UserImpl();
+                UserDao userDao = new UserRepo();
                 User user = userDao.findByUser(regLogin);
                 if (user == null) {
                     return null;
@@ -128,7 +128,7 @@ public class UserTemplate {
             if (!regForm.contains("has-error")) {
                 User user;
                 user = new User(regLogin, regFirstPasword, regEmail, LocalDate.now().toString());
-                UserDao userDao = new UserImpl();
+                UserDao userDao = new UserRepo();
                 userDao.saveUser(user);
                 return true;
             }
@@ -152,7 +152,7 @@ public class UserTemplate {
 
     public void showUserProfileForm(String login) {
         if (out == null) return;
-        UserDao userDao = new UserImpl();
+        UserDao userDao = new UserRepo();
         User user = userDao.findByUser(login);
         if (user == null) return;
         String regForm = UserHtmlViews.getInstance().getProfileForm();
@@ -297,7 +297,7 @@ public class UserTemplate {
                 User user;
                 user = new User(Long.parseLong(upuserId), upLogin, upSecondPassword, upEmail, update_registered, upsex, update_birth, Integer.parseInt(upblock), upfirstname, upsecondname, upcontry, upcity);
                 System.out.println("profile\t" + user);
-                UserDao userDao = new UserImpl();
+                UserDao userDao = new UserRepo();
                 userDao.saveUser(user);
                 return true;
             }
@@ -308,7 +308,7 @@ public class UserTemplate {
         return false;
     }
     public void showAllUsers(){
-        UserDao userDao = new UserImpl();
+        UserDao userDao = new UserRepo();
        List<User> users = userDao.showAllUsers();
        out.println("<div class=\"row\">\n" +
                "    <div class=\"col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3\">\n" +

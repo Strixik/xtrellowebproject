@@ -7,8 +7,11 @@ import lms.dao.entity.Card;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class CardRepo implements CRUD<Card> {
+    private static Logger log = Logger.getLogger(CardRepo.class.getName());
+
     @Override
     public void save(Card card) {
         DataSource dataSource = new DataSource();
@@ -20,7 +23,7 @@ public class CardRepo implements CRUD<Card> {
             preparedSt.setLong(2, card.getListId());
             preparedSt.executeUpdate();
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.severe("Connection to database is lost: \t" + e.toString());
         }
     }
     @Override
@@ -28,10 +31,11 @@ public class CardRepo implements CRUD<Card> {
         DataSource dataSource = new DataSource();
         if (id > 0L) {
             try (Connection con = dataSource.getConnection();
-                 Statement statement = con.createStatement();) {
+                 Statement statement = con.createStatement()
+            ) {
                 statement.executeUpdate("DELETE FROM card WHERE id =" + id);
             } catch (SQLException e) {
-                e.printStackTrace();
+                log.severe("Connection to database is lost: \t" + e.toString());
             }
         }
     }
@@ -52,7 +56,7 @@ public class CardRepo implements CRUD<Card> {
                 cards.add(acard);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.severe("Connection to database is lost: \t" + e.toString());
         }
         return cards;
     }

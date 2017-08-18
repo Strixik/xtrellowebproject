@@ -10,13 +10,18 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.logging.Logger;
 
 @WebServlet(name = "ServletList", urlPatterns = "/list/*")
 public class ServletList extends HttpServlet {
+    private static Logger log = Logger.getLogger(ServletList.class.getName());
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
         HttpSession session = request.getSession();
         ListTemplate listView = new ListTemplate(out);
+
+        log.info("pathInfo:\t" + request.getPathInfo());
         switch (request.getPathInfo()) {
             case "/":
                 session.setAttribute("board_id", request.getParameter("boardid"));
@@ -42,11 +47,13 @@ public class ServletList extends HttpServlet {
                 response.sendRedirect("/list/view");
         }
     }
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
-        ListTemplate listView = new ListTemplate(out);
         HttpSession session = request.getSession();
-        System.out.println(session.getAttribute("board_id"));
+        ListTemplate listView = new ListTemplate(out);
+
+        log.info("pathInfo:\t" + request.getPathInfo());
         switch (request.getPathInfo()) {
             case "/view":
                 listView.showList(session);

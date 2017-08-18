@@ -7,8 +7,11 @@ import lms.dao.entity.Board;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class BoardRepo implements CRUD<Board> {
+    private static Logger log = Logger.getLogger(BoardRepo.class.getName());
+
     @Override
     public void save(Board board) {
         DataSource dataSource = new DataSource();
@@ -19,7 +22,7 @@ public class BoardRepo implements CRUD<Board> {
             preparedSt.setLong(2, board.getUser_id());
             preparedSt.executeUpdate();
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.severe("Connection to database is lost: \t" + e.toString());
         }
     }
 
@@ -32,7 +35,7 @@ public class BoardRepo implements CRUD<Board> {
             ) {
                 statement.executeUpdate("DELETE FROM board WHERE id =" + id);
             } catch (SQLException e) {
-                e.printStackTrace();
+                log.severe("Connection to database is lost: \t" + e.toString());
             }
         }
     }
@@ -52,7 +55,7 @@ public class BoardRepo implements CRUD<Board> {
                 boards.add(aboard);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.severe("Connection to database is lost: \t" + e.toString());
         }
         return boards;
     }
@@ -79,7 +82,7 @@ public class BoardRepo implements CRUD<Board> {
                 boards.add(aboard);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.severe("Connection to database is lost: \t" + e.toString());
         }
         return boards;
     }
