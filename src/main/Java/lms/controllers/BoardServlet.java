@@ -12,9 +12,9 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Logger;
 
-@WebServlet(name = "ServletBoard", urlPatterns = "/board/*")
-public class ServletBoard extends HttpServlet {
-    private static Logger log = Logger.getLogger(ServletBoard.class.getName());
+@WebServlet(name = "BoardServlet", urlPatterns = "/board/*")
+public class BoardServlet extends HttpServlet {
+    private static Logger log = Logger.getLogger(BoardServlet.class.getName());
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();

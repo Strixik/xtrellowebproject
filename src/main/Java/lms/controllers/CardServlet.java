@@ -10,9 +10,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.logging.Logger;
 
-@WebServlet(name = "ServletCard", urlPatterns = "/card/*")
-public class ServletCard extends HttpServlet {
-    private static Logger log = Logger.getLogger(ServletCard.class.getName());
+@WebServlet(name = "CardServlet", urlPatterns = "/card/*")
+public class CardServlet extends HttpServlet {
+    private static Logger log = Logger.getLogger(CardServlet.class.getName());
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         CardService cardView = new CardService();

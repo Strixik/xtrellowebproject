@@ -17,9 +17,9 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.*;
 
-@WebServlet(name = "ServletDispatcher", urlPatterns = "/*", loadOnStartup = 1)
-public class ServletDispatcher extends HttpServlet {
-    private static Logger log = Logger.getLogger(ServletDispatcher.class.getName());
+@WebServlet(name = "IndexServlet", urlPatterns = "/*", loadOnStartup = 1)
+public class IndexServlet extends HttpServlet {
+    private static Logger log = Logger.getLogger(IndexServlet.class.getName());
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
@@ -84,7 +84,6 @@ public class ServletDispatcher extends HttpServlet {
                 response.sendRedirect("/");
         }
     }
-
 
     @Override
     public void init() throws ServletException {
