@@ -12,19 +12,19 @@ import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.logging.Logger;
 
-public class BoardTemplate {
-
+public class BoardService {
+    private static Logger log = Logger.getLogger(BoardService.class.getName());
     private PrintWriter out;
 
-    public BoardTemplate(PrintWriter out) {
+    public BoardService(PrintWriter out) {
         this.out = out;
     }
 
     private static Logger logger = Logger.getGlobal();
 
-    public void showModalBottom() {
+    public void showModalWindow() {
         if (out == null) return;
-        out.println(BoardHtmlViews.getInstance().getModal_boottom());
+        out.println(BoardHtmlViews.getInstance().getBoardAddModalWindow());
     }
 
     public boolean addBoardForm(HttpServletRequest request, HttpSession session) {
@@ -52,10 +52,10 @@ public class BoardTemplate {
         Long user_id = Long.parseLong(session.getAttribute("user_id").toString());
         CRUD<Board> boardRepo = new BoardRepo();
         List<Board> boards = boardRepo.retrieveAll(user_id);
-        out.println(BoardHtmlViews.getInstance().getModal_boottom());
+        out.println(BoardHtmlViews.getInstance().getBoardAddModalWindow());
         for (Board s : boards) {
             String boardTitle = BoardHtmlViews.getInstance().getBoardHtml();
-            boardTitle = boardTitle.replace("<!--board-->", s.getBoard_name());
+            boardTitle = boardTitle.replace("<!--board-->", s.getBoardTitle());
             boardTitle = boardTitle.replace("board_id", String.valueOf(s.getId()));
             out.println(boardTitle);
         }
@@ -65,10 +65,10 @@ public class BoardTemplate {
         if (out == null) return;
         BoardRepo boardRepo = new BoardRepo();
         List<Board> boards = boardRepo.retrieveAllBoardsForAdmin();
-        out.println(BoardHtmlViews.getInstance().getModal_boottom());
+        out.println(BoardHtmlViews.getInstance().getBoardAddModalWindow());
         for (Board s : boards) {
             String boardTitle = BoardHtmlViews.getInstance().getBoardHtml();
-            boardTitle = boardTitle.replace("<!--board-->", s.getBoard_name());
+            boardTitle = boardTitle.replace("<!--board-->", s.getBoardTitle());
             boardTitle = boardTitle.replace("board_id", String.valueOf(s.getId()));
             out.println(boardTitle);
         }

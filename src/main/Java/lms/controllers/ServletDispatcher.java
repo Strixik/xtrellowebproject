@@ -1,9 +1,9 @@
 package lms.controllers;
 
 
-import lms.service.UserTemplate;
+import lms.service.UserService;
 import lms.views.BoardHtmlViews;
-import lms.views.ListHtmlViews;
+import lms.views.PanelHtmlViews;
 import lms.views.PathHtml;
 import lms.views.UserHtmlViews;
 
@@ -23,7 +23,7 @@ public class ServletDispatcher extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
-        UserTemplate indexView = new UserTemplate(out);
+        UserService indexView = new UserService(out);
         HttpSession session = request.getSession();
 
         log.info("pathInfo:\t" + request.getPathInfo());
@@ -50,7 +50,7 @@ public class ServletDispatcher extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
         HttpSession session = request.getSession();
-        UserTemplate indexView = new UserTemplate(out);
+        UserService indexView = new UserService(out);
 
         log.info("pathInfo:\t" + request.getPathInfo());
         switch (request.getPathInfo()) {
@@ -98,7 +98,7 @@ public class ServletDispatcher extends HttpServlet {
         //load partial html files
         UserHtmlViews.getInstance();
         BoardHtmlViews.getInstance();
-        ListHtmlViews.getInstance();
+        PanelHtmlViews.getInstance();
         //logger config
         try {
             Handler fileHandler = new FileHandler(getServletContext().getRealPath("WEB-INF/logs/app.log"));

@@ -18,7 +18,7 @@ public class PanelRepo implements CRUD<Panel> {
         try (Connection con = dataSource.getConnection();
              PreparedStatement preparedSt = con.prepareStatement("INSERT INTO list (list, id_board) VALUES (?,?)")
         ) {
-            preparedSt.setString(1, panel.getListName());
+            preparedSt.setString(1, panel.getPanelTitle());
             preparedSt.setLong(2, panel.getBoardId());
             preparedSt.executeUpdate();
         } catch (SQLException e) {

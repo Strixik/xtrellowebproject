@@ -1,6 +1,6 @@
 package lms.controllers;
 
-import lms.service.BoardTemplate;
+import lms.service.BoardService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,7 +18,7 @@ public class ServletBoard extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
-        BoardTemplate boardView = new BoardTemplate(out);
+        BoardService boardView = new BoardService(out);
         HttpSession session = request.getSession();
 
         log.info("pathInfo:\t" + request.getPathInfo());
@@ -42,7 +42,7 @@ public class ServletBoard extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
-        BoardTemplate boardView = new BoardTemplate(out);
+        BoardService boardView = new BoardService(out);
         HttpSession session = request.getSession();
 
         log.info("pathInfo:\t" + request.getPathInfo());

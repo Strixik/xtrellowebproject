@@ -3,7 +3,7 @@ package lms.views;
 public class BoardHtmlViews {
     private static BoardHtmlViews ourInstance;
 
-    private final String modalButton;
+    private final String boardAddModalWindow;
     private final String boardHtml;
 
 
@@ -18,12 +18,12 @@ public class BoardHtmlViews {
     public BoardHtmlViews() {
         PathHtml pathHtml = PathHtml.getInstance();
 
-        this.modalButton = pathHtml.getPartialHtml("board-modal-button.html");
+        this.boardAddModalWindow = pathHtml.getPartialHtml("board-add-modal-window.html");
         this.boardHtml = pathHtml.getPartialHtml("board.html");
     }
 
-    public String getModal_boottom() {
-        return modalButton;
+    public String getBoardAddModalWindow() {
+        return boardAddModalWindow;
     }
 
     public String getBoardHtml() {

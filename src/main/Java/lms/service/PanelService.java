@@ -6,7 +6,7 @@ import lms.dao.entity.Card;
 import lms.dao.entity.Panel;
 import lms.dao.repository.CardRepo;
 import lms.dao.repository.PanelRepo;
-import lms.views.ListHtmlViews;
+import lms.views.PanelHtmlViews;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -14,9 +14,10 @@ import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
 
-public class ListTemplate {
+public class PanelService {
     private PrintWriter out;
-    public ListTemplate(PrintWriter out) {
+
+    public PanelService(PrintWriter out) {
         this.out = out;
     }
 
@@ -46,11 +47,11 @@ public class ListTemplate {
         CRUD<Card> cardRepo = new CardRepo();
 
         List<Panel> panels = panelRepo.retrieveAll(boardId);
-        out.println(ListHtmlViews.getInstance().getModalButton());
+        out.println(PanelHtmlViews.getInstance().getListAddModalWindow());
         for (Panel panel : panels) {
             List<Card> cards = cardRepo.retrieveAll(panel.getId());
-            String panelTitle = ListHtmlViews.getInstance().getListHtml();
-            panelTitle = panelTitle.replace("<!--list-->", panel.getListName());
+            String panelTitle = PanelHtmlViews.getInstance().getListHtml();
+            panelTitle = panelTitle.replace("<!--list-->", panel.getPanelTitle());
             panelTitle = panelTitle.replace("listId", String.valueOf(panel.getId()));
             StringBuilder sb = new StringBuilder();
             for (Card c: cards){

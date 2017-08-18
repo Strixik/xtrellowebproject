@@ -1,6 +1,6 @@
 package lms.controllers;
 
-import lms.service.ListTemplate;
+import lms.service.PanelService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,7 +19,7 @@ public class ServletList extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
         HttpSession session = request.getSession();
-        ListTemplate listView = new ListTemplate(out);
+        PanelService listView = new PanelService(out);
 
         log.info("pathInfo:\t" + request.getPathInfo());
         switch (request.getPathInfo()) {
@@ -51,7 +51,7 @@ public class ServletList extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
         HttpSession session = request.getSession();
-        ListTemplate listView = new ListTemplate(out);
+        PanelService listView = new PanelService(out);
 
         log.info("pathInfo:\t" + request.getPathInfo());
         switch (request.getPathInfo()) {

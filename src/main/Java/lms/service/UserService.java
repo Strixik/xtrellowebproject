@@ -12,7 +12,7 @@ import java.io.UnsupportedEncodingException;
 import java.time.LocalDate;
 import java.util.List;
 
-public class UserTemplate {
+public class UserService {
 
     interface FormField<E> {
         String check(E e);
@@ -20,7 +20,7 @@ public class UserTemplate {
 
     private PrintWriter out;
 
-    public UserTemplate(PrintWriter out) {
+    public UserService(PrintWriter out) {
         this.out = out;
     }
 
@@ -92,15 +92,15 @@ public class UserTemplate {
                 }
                 return "Такий користувач вже зареєстрований";
             });
-            String regFirstPasword = new String(request.getParameter("regFirstPasword").getBytes("iso-8859-1"),
+            String regFirstPassword = new String(request.getParameter("regFirstPassword").getBytes("iso-8859-1"),
                     "UTF-8");
-            regForm = checkFormField(2, regForm, regFirstPasword, f -> {
+            regForm = checkFormField(2, regForm, regFirstPassword, f -> {
                 if (f.length() >= 6) {
                     return null;
                 }
                 return "Мінімальна довжина 6 символів";
             });
-            regForm = checkFormField(2, regForm, regFirstPasword, f -> {
+            regForm = checkFormField(2, regForm, regFirstPassword, f -> {
                 if (f.length() <= 20) {
                     return null;
                 }
@@ -109,7 +109,7 @@ public class UserTemplate {
             String regSecondPassword = new String(request.getParameter("regSecondPassword").getBytes("iso-8859-1"),
                     "UTF-8");
             regForm = checkFormField(3, regForm, regSecondPassword, f -> {
-                if (f.equals(regFirstPasword)) {
+                if (f.equals(regFirstPassword)) {
                     return null;
                 }
                 return "Паролі повинні співпадати!";
@@ -127,7 +127,7 @@ public class UserTemplate {
             });
             if (!regForm.contains("has-error")) {
                 User user;
-                user = new User(regLogin, regFirstPasword, regEmail, LocalDate.now().toString());
+                user = new User(regLogin, regFirstPassword, regEmail, LocalDate.now().toString());
                 UserDao userDao = new UserRepo();
                 userDao.saveUser(user);
                 return true;
@@ -165,9 +165,9 @@ public class UserTemplate {
         regForm = regForm.replace("xtrellovall7", "value=\"" + user.getSex() + "\"");
         regForm = regForm.replace("xtrellovall8", "value=\"" + user.getDate_birth() + "\"");
         regForm = regForm.replace("xtrellovall9", "value=\"" + user.getBlock() + "\"");
-        regForm = regForm.replace("xtrellovall0", "value=\"" + user.getFirstname() + "\"");
-        regForm = regForm.replace("xtrellovall-1", "value=\"" + user.getSecondname() + "\"");
-        regForm = regForm.replace("xtrellovall-2", "value=\"" + user.getContry() + "\"");
+        regForm = regForm.replace("xtrellovall0", "value=\"" + user.getFirstName() + "\"");
+        regForm = regForm.replace("xtrellovall-1", "value=\"" + user.getSecondName() + "\"");
+        regForm = regForm.replace("xtrellovall-2", "value=\"" + user.getCountry() + "\"");
         regForm = regForm.replace("xtrellovall-3", "value=\"" + user.getCity() + "\"");
         out.println(regForm);
     }
@@ -192,15 +192,15 @@ public class UserTemplate {
                 }
                 return "Мінімальна довжина 3 символів";
             });
-            String upFirstPasword = new String(request.getParameter("upFirstPasword").getBytes("iso-8859-1"),
+            String upFirstPassword = new String(request.getParameter("upFirstPassword").getBytes("iso-8859-1"),
                     "UTF-8");
-            profForm = checkFormField(2, profForm, upFirstPasword, f -> {
+            profForm = checkFormField(2, profForm, upFirstPassword, f -> {
                 if (f.length() >= 6) {
                     return null;
                 }
                 return "Мінімальна довжина 6 символів";
             });
-            profForm = checkFormField(2, profForm, upFirstPasword, f -> {
+            profForm = checkFormField(2, profForm, upFirstPassword, f -> {
                 if (f.length() <= 20) {
                     return null;
                 }
@@ -209,7 +209,7 @@ public class UserTemplate {
             String upSecondPassword = new String(request.getParameter("upSecondPassword").getBytes("iso-8859-1"),
                     "UTF-8");
             profForm = checkFormField(3, profForm, upSecondPassword, f -> {
-                if (f.equals(upFirstPasword)) {
+                if (f.equals(upFirstPassword)) {
                     return null;
                 }
                 return "Паролі повинні співпадати!";

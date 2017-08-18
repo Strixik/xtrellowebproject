@@ -1,18 +1,18 @@
 create table users
 (
-  id int auto_increment
+  id              int auto_increment
     primary key,
-  login varchar(20) null,
-  password varchar(15) null,
-  email varchar(40) null,
-  date_registered date not null,
-  sex enum('man', 'woman') null,
-  date_birth date null,
-  block tinyint(1) default '0' null,
-  firstname varchar(25) null,
-  secondname varchar(25) null,
-  contry varchar(40) null,
-  city varchar(40) null,
+  login           varchar(20)            null,
+  password        varchar(15)            null,
+  email           varchar(40)            null,
+  date_registered date                   not null,
+  sex             enum('man', 'woman')   null,
+  date_birth      date                   null,
+  block           tinyint(1) default '0' null,
+  firstName       VARCHAR(25)            NULL,
+  secondName      VARCHAR(25)            NULL,
+  country         VARCHAR(40)            NULL,
+  city            varchar(40)            null,
   constraint users_login_uindex
   unique (login)
 )
@@ -20,18 +20,18 @@ create table users
 
 create table board
 (
-  id int auto_increment
+  id     int auto_increment
     primary key,
-  board varchar(30) not null,
-  user_id int null,
+  board  varchar(30) not null,
+  userId INT         NULL,
   constraint board_users_id_fk
-  foreign key (user_id) references users (id)
+  FOREIGN KEY (userId) REFERENCES users (id)
     on delete cascade
 )
 ;
 
 create index board_users_id_fk
-  on board (user_id)
+  ON board (userId)
 ;
 
 create table list

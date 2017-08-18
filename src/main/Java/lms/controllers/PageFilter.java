@@ -42,7 +42,6 @@ public class PageFilter implements Filter {
                 }
             }
 
-
             out.write(top);
             chain.doFilter(req, resp);
             out.write(UserHtmlViews.getInstance().getBottomUserView());

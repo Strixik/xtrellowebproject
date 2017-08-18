@@ -2,18 +2,18 @@ package lms.dao.entity;
 
 public class Panel {
         private long id;
-        private String listName;
+    private String panelTitle;
         private long boardId;
 
-        public Panel(long id, String listName, long boardId) {
+    public Panel(long id, String panelTitle, long boardId) {
             this.id = id;
-            this.listName = listName;
+        this.panelTitle = panelTitle;
             this.boardId = boardId;
         }
 
-        public Panel(String listName, long boardId) {
+    public Panel(String panelTitle, long boardId) {
             this.id = 0L;
-            this.listName = listName;
+        this.panelTitle = panelTitle;
             this.boardId = boardId;
         }
 
@@ -28,12 +28,12 @@ public class Panel {
             this.id = id;
         }
 
-        public String getListName() {
-            return listName;
+    public String getPanelTitle() {
+        return panelTitle;
         }
 
-        public void setListName(String listName) {
-            this.listName = listName;
+    public void setPanelTitle(String panelTitle) {
+        this.panelTitle = panelTitle;
         }
 
         public long getBoardId() {
@@ -48,7 +48,7 @@ public class Panel {
         public String toString() {
             return "Panel{" +
                     "id=" + id +
-                    ", listName='" + listName + '\'' +
+                    ", panelTitle='" + panelTitle + '\'' +
                     ", boardId=" + boardId +
                     '}';
         }
@@ -62,13 +62,13 @@ public class Panel {
 
             if (id != panel.id) return false;
             if (boardId != panel.boardId) return false;
-            return listName != null ? listName.equals(panel.listName) : panel.listName == null;
+            return panelTitle != null ? panelTitle.equals(panel.panelTitle) : panel.panelTitle == null;
         }
 
         @Override
         public int hashCode() {
             int result = (int) (id ^ (id >>> 32));
-            result = 31 * result + (listName != null ? listName.hashCode() : 0);
+            result = 31 * result + (panelTitle != null ? panelTitle.hashCode() : 0);
             result = 31 * result + (int) (boardId ^ (boardId >>> 32));
             return result;
         }

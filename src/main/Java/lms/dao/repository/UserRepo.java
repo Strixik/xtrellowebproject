@@ -59,9 +59,9 @@ public class UserRepo implements UserDao {
             preparedSt.setString(5, user.getSex());
             preparedSt.setString(6, user.getDate_birth());
             preparedSt.setInt(7, user.getBlock());
-            preparedSt.setString(8, user.getFirstname());
-            preparedSt.setString(9, user.getSecondname());
-            preparedSt.setString(10, user.getContry());
+            preparedSt.setString(8, user.getFirstName());
+            preparedSt.setString(9, user.getSecondName());
+            preparedSt.setString(10, user.getCountry());
             preparedSt.setString(11, user.getCity());
             preparedSt.executeUpdate();
 

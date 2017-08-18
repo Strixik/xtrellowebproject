@@ -1,7 +1,7 @@
 body {
     margin: 0;
     color: #6a6f8c;
-    background: #fccc21 ;
+    background: #fccc21;
     font: 600 16px/18px 'Open Sans', sans-serif;
 }
 
@@ -203,7 +203,7 @@ a {
 .board {
     float: left;
     color: yellow;
-    background-color: #9f20fc;
+    background-color: #342e3b;
     border: solid slategray 1px;
     text-align: center;
     border-radius: 15px;
@@ -243,14 +243,14 @@ a {
 .liststyle{
     border: solid slategray 1px;
     border-radius: 15px;
-    color: indigo;
-    background-color: indigo;
+    color: #342e3b;
+    background-color: #342e3b;
     margin: 5px;
 
 }
 .panel-info{
    word-wrap: break-word;
-    height: 550px;
+    min-height: 550px;
     list-style-type: none;
     margin: 10px;
 }
@@ -268,10 +268,11 @@ a {
 .margin10 {
     margin: 10px;
 }
-.cardClass{
+
+.cardClass {
     margin: 5px;
     width: 100%;
-    background-color: blueviolet;
+    background-color: dimgrey;
     color: #fcf97e;
     font-size: 0.9em;
 }

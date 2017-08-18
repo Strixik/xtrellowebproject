@@ -7,8 +7,8 @@ import lms.dao.repository.CardRepo;
 import javax.servlet.http.HttpServletRequest;
 import java.io.UnsupportedEncodingException;
 
-public class CardTemplate {
-    public CardTemplate() {
+public class CardService {
+    public CardService() {
     }
 
     public void addCard (HttpServletRequest request) {

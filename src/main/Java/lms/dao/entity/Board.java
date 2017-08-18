@@ -2,19 +2,19 @@ package lms.dao.entity;
 
 public class Board {
     private long id;
-    private String board_name;
-    private long user_id;
+    private String boardTitle;
+    private long userId;
 
-    public Board(long id, String board_name, long user_id) {
+    public Board(long id, String boardTitle, long userId) {
         this.id = id;
-        this.board_name = board_name;
-        this.user_id = user_id;
+        this.boardTitle = boardTitle;
+        this.userId = userId;
     }
 
-    public Board(String board_name, long user_id) {
+    public Board(String boardTitle, long userId) {
         this.id = 0L;
-        this.board_name = board_name;
-        this.user_id = user_id;
+        this.boardTitle = boardTitle;
+        this.userId = userId;
     }
 
     public long getId() {
@@ -25,20 +25,20 @@ public class Board {
         this.id = id;
     }
 
-    public String getBoard_name() {
-        return board_name;
+    public String getBoardTitle() {
+        return boardTitle;
     }
 
-    public void setBoard_name(String board_name) {
-        this.board_name = board_name;
+    public void setBoardTitle(String boardTitle) {
+        this.boardTitle = boardTitle;
     }
 
-    public long getUser_id() {
-        return user_id;
+    public long getUserId() {
+        return userId;
     }
 
-    public void setUser_id(long user_id) {
-        this.user_id = user_id;
+    public void setUserId(long userId) {
+        this.userId = userId;
     }
 
 
@@ -46,8 +46,8 @@ public class Board {
     public String toString() {
         return "Board{" +
                 "id=" + id +
-                ", board_name='" + board_name + '\'' +
-                ", user_id=" + user_id +
+                ", boardTitle='" + boardTitle + '\'' +
+                ", userId=" + userId +
                 '}';
     }
 
@@ -59,15 +59,15 @@ public class Board {
         Board board = (Board) o;
 
         if (id != board.id) return false;
-        if (user_id != board.user_id) return false;
-        return board_name != null ? board_name.equals(board.board_name) : board.board_name == null;
+        if (userId != board.userId) return false;
+        return boardTitle != null ? boardTitle.equals(board.boardTitle) : board.boardTitle == null;
     }
 
     @Override
     public int hashCode() {
         int result = (int) (id ^ (id >>> 32));
-        result = 31 * result + (board_name != null ? board_name.hashCode() : 0);
-        result = 31 * result + (int) (user_id ^ (user_id >>> 32));
+        result = 31 * result + (boardTitle != null ? boardTitle.hashCode() : 0);
+        result = 31 * result + (int) (userId ^ (userId >>> 32));
         return result;
     }
 }

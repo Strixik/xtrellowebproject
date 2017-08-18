@@ -18,8 +18,8 @@ public class BoardRepo implements CRUD<Board> {
         try (Connection con = dataSource.getConnection();
              PreparedStatement preparedSt = con.prepareStatement("INSERT INTO board (board, user_id) VALUES (?,?)")
         ) {
-            preparedSt.setString(1, board.getBoard_name());
-            preparedSt.setLong(2, board.getUser_id());
+            preparedSt.setString(1, board.getBoardTitle());
+            preparedSt.setLong(2, board.getUserId());
             preparedSt.executeUpdate();
         } catch (SQLException e) {
             log.severe("Connection to database is lost: \t" + e.toString());

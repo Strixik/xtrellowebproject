@@ -9,9 +9,9 @@ create table users
   sex enum('man', 'woman') null,
   date_birth date null,
   block tinyint(1) default '0' null,
-  firstname varchar(25) null,
-  secondname varchar(25) null,
-  contry varchar(40) null,
+  firstName varchar(25) null,
+  secondName varchar(25) null,
+  country varchar(40) null,
   city varchar(40) null,
   constraint users_login_uindex
   unique (login)
@@ -23,15 +23,15 @@ create table board
   id int auto_increment
     primary key,
   board varchar(30) not null,
-  user_id int null,
+  userId int null,
   constraint board_users_id_fk
-  foreign key (user_id) references users (id)
+  foreign key (userId) references users (id)
     on delete cascade
 )
 ;
 
 create index board_users_id_fk
-  on board (user_id)
+  on board (userId)
 ;
 
 create table list

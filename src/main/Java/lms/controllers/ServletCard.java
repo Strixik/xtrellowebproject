@@ -1,6 +1,6 @@
 package lms.controllers;
 
-import lms.service.CardTemplate;
+import lms.service.CardService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,7 +15,7 @@ public class ServletCard extends HttpServlet {
     private static Logger log = Logger.getLogger(ServletCard.class.getName());
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        CardTemplate cardView = new CardTemplate();
+        CardService cardView = new CardService();
 
         log.info("pathInfo:\t" + request.getPathInfo());
         switch (request.getPathInfo()) {
