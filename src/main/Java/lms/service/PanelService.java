@@ -13,8 +13,10 @@ import javax.servlet.http.HttpSession;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class PanelService {
+    private static Logger log = Logger.getLogger(PanelService.class.getName());
     private PrintWriter out;
 
     public PanelService(PrintWriter out) {
@@ -27,7 +29,7 @@ public class PanelService {
             long boardId = Long.parseLong(session.getAttribute("board_id").toString());
             String nameList = new String(request.getParameter("nameList")
                     .getBytes("iso-8859-1"), "UTF-8");
-            System.out.println(boardId + nameList);
+            log.info(boardId + " " + nameList);
             if (boardId != 0L && !nameList.isEmpty()) {
                 Panel panel = new Panel(nameList, boardId);
                 CRUD<Panel> panelRepo = new PanelRepo();
@@ -35,7 +37,7 @@ public class PanelService {
                 return true;
             }
         } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
+            log.severe("UnsupportedEncodingException " + e.toString());
         }
         return false;
     }

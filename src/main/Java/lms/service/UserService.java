@@ -11,8 +11,10 @@ import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class UserService {
+    private static Logger log = Logger.getLogger(UserService.class.getName());
 
     interface FormField<E> {
         String check(E e);
@@ -48,10 +50,10 @@ public class UserService {
                     "UTF-8");
             UserDao userDao = new UserRepo();
             User user = userDao.findByUser(login);
-            if (user == null ) {
+            if (user == null) {
                 showErrorLoginForm();
                 return false;
-            } else if (user.getBlock()== 1) {
+            } else if (user.getBlock() == 1) {
                 showBlockLoginForm();
                 return false;
             } else if (user.getPassword().equals(password)) {
@@ -60,7 +62,7 @@ public class UserService {
                 return true;
             }
         } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
+            log.severe("UnsupportedEncodingException " + e.toString());
         }
         showErrorLoginForm();
         return false;
@@ -72,6 +74,7 @@ public class UserService {
         loginForm = loginForm.replace("<!--123-->", "<p class=\"text-danger text-center\">Логін або пароль не вірні!</p>");
         out.println(loginForm);
     }
+
     private void showBlockLoginForm() {
         String loginForm = UserHtmlViews.getInstance().getFormUserView();
         loginForm = loginForm.replace("<!--123-->", "<p class=\"text-danger text-center\">Даного користувача ЗАБЛОКОВАНО!</p>");
@@ -134,7 +137,7 @@ public class UserService {
             }
 
         } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
+            log.severe("UnsupportedEncodingException " + e.toString());
         }
         out.println(regForm);
         return false;
@@ -296,26 +299,27 @@ public class UserService {
             if (!profForm.contains("has-error")) {
                 User user;
                 user = new User(Long.parseLong(upuserId), upLogin, upSecondPassword, upEmail, update_registered, upsex, update_birth, Integer.parseInt(upblock), upfirstname, upsecondname, upcontry, upcity);
-                System.out.println("profile\t" + user);
+                log.info("profile\t" + user);
                 UserDao userDao = new UserRepo();
                 userDao.saveUser(user);
                 return true;
             }
         } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
+            log.severe("UnsupportedEncodingException " + e.toString());
         }
         out.println(profForm);
         return false;
     }
-    public void showAllUsers(){
+
+    public void showAllUsers() {
         UserDao userDao = new UserRepo();
-       List<User> users = userDao.showAllUsers();
-       out.println("<div class=\"row\">\n" +
-               "    <div class=\"col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3\">\n" +
-               "        <ul class=\"list-group\">");
-       for (User u : users){
-           out.write("<a class=\"list-group-item\" href=\"/admintest?id="+u.getId()+"&login="+u.getLogin()+"\" ><span class=\"glyphicon glyphicon-user\" aria-hidden=\"true\"></span>"+"&nbsp;&nbsp;"+u.getLogin()+"&nbsp;&nbsp;"+"<span class=\"glyphicon glyphicon-envelope\" aria-hidden=\"true\"></span>"+"&nbsp;&nbsp;"+u.getEmail()+"&nbsp;&nbsp;"+"<span class=\"glyphicon glyphicon-plus pull-right\" aria-hidden=\"true\"></span></a>");
-       }
+        List<User> users = userDao.showAllUsers();
+        out.println("<div class=\"row\">\n" +
+                "    <div class=\"col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3\">\n" +
+                "        <ul class=\"list-group\">");
+        for (User u : users) {
+            out.write("<a class=\"list-group-item\" href=\"/admintest?id=" + u.getId() + "&login=" + u.getLogin() + "\" ><span class=\"glyphicon glyphicon-user\" aria-hidden=\"true\"></span>" + "&nbsp;&nbsp;" + u.getLogin() + "&nbsp;&nbsp;" + "<span class=\"glyphicon glyphicon-envelope\" aria-hidden=\"true\"></span>" + "&nbsp;&nbsp;" + u.getEmail() + "&nbsp;&nbsp;" + "<span class=\"glyphicon glyphicon-plus pull-right\" aria-hidden=\"true\"></span></a>");
+        }
         out.println("</ul>\n" +
                 "    </div>\n" +
                 "</div>");

@@ -42,7 +42,7 @@ public class BoardService {
             }
 
         } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
+            log.severe("UnsupportedEncodingException " + e.toString());
         }
         return false;
     }

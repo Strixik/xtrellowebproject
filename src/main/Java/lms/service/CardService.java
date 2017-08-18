@@ -6,8 +6,10 @@ import lms.dao.repository.CardRepo;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.UnsupportedEncodingException;
+import java.util.logging.Logger;
 
 public class CardService {
+    private static Logger log = Logger.getLogger(CardService.class.getName());
     public CardService() {
     }
 
@@ -16,7 +18,7 @@ public class CardService {
             long listId = Long.parseLong(request.getParameter("listid"));
             String cardText = new String(request.getParameter("cardText")
                     .getBytes("iso-8859-1"), "UTF-8");
-            System.out.println(listId + cardText);
+            log.info(listId + " " + cardText);
             if (listId != 0 && !cardText.isEmpty()) {
                 Card card = new Card(cardText, listId);
                 CRUD<Card> cardCRUD = new CardRepo();
@@ -24,7 +26,7 @@ public class CardService {
             }
 
         } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
+            log.severe("UnsupportedEncodingException " + e.toString());
         }
     }
     public boolean  delCard (HttpServletRequest request) {
