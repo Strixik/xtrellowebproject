@@ -1,7 +1,7 @@
 body {
     margin: 0;
     color: #6a6f8c;
-    background: #d4d4d4;
+    background: #FFEF71;
     font: 600 16px/18px 'Open Sans', sans-serif;
 }
 
@@ -217,9 +217,15 @@ html {
 }
 
 #knopka {
-    float: left;
-    margin: 20px;
-    margin-right: 100%;
+    float: right;
+    font-size: 1em;
+    height: 60px;
+    width: 120px;
+    word-wrap: normal;
+    /*margin: 20px;*/
+    margin-right: 130px;
+    margin-top: 20px;
+    /*margin-left: 100%;*/
 
 }
 .boards {
@@ -242,14 +248,15 @@ html {
 .liststyle{
     border: solid slategray 1px;
     border-radius: 15px;
+    background-color: #A5B5FF;
     margin: 5px;
 
 }
 .panel-info{
    word-wrap: break-word;
-    min-height: 100px;
+    min-height: 500px;
     list-style-type: none;
-    margin: 0;
+    margin: 10px;
 }
 .floating{
     float: right;
@@ -257,8 +264,12 @@ html {
 }
 
 .margin {
-    margin-top: 40px;
+    margin-top: 60px;
     margin-left: 40px;
     margin-right: 40px;
 
+}
+
+.margin10 {
+    margin: 10px;
 }

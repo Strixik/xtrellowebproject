@@ -1,18 +1,18 @@
-<a href="#myModal" class="btn btn-default" id="knopka" data-toggle="modal">Створити список</a>
+<a href="#myModal" class="btn btn-success" id="knopka" data-toggle="modal">Створити <br> дошку</a>
 
 <!-- HTML-код модального окна-->
 <div id="myModal" class="modal fade">
-    <form action="/list/add" method="post">
+    <form action="/board/add" method="post">
         <div class="modal-dialog">
             <div class="modal-content">
                 <!-- Заголовок модального окна -->
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    <h4 class="modal-title">Введіть назву списку:</h4>
+                    <h4 class="modal-title">Введіть назву Дошки:</h4>
                 </div>
                 <!-- Основное содержимое модального окна -->
                 <div class="modal-body">
-                    <input type="text" class="form-control" id="" name="nameList" placeholder="Назва списку">
+                    <input type="text" class="form-control" id="" name="nameBoard" placeholder="Назва дошки">
                 </div>
                 <!-- Футер модального окна -->
                 <div class="modal-footer">

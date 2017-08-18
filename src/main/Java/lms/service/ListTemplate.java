@@ -46,10 +46,10 @@ public class ListTemplate {
         CRUD<Card> cardRepo = new CardRepo();
 
         List<Panel> panels = panelRepo.retrieveAll(boardId);
-        out.println(ListHtmlViews.getInstance().getModalBottom());
+        out.println(ListHtmlViews.getInstance().getModalButton());
         for (Panel panel : panels) {
             List<Card> cards = cardRepo.retrieveAll(panel.getId());
-            String panelTitle = ListHtmlViews.getInstance().getListName();
+            String panelTitle = ListHtmlViews.getInstance().getListHtml();
             panelTitle = panelTitle.replace("<!--list-->", panel.getListName());
             panelTitle = panelTitle.replace("listId", String.valueOf(panel.getId()));
             StringBuilder sb = new StringBuilder();

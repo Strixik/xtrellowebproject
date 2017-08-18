@@ -3,8 +3,8 @@ package lms.views;
 public class ListHtmlViews {
     private static ListHtmlViews ourInstance;
 
-    private final String modalBottom;
-    private final String listName;
+    private final String modalButton;
+    private final String listHtml;
 
 
     public static ListHtmlViews getInstance() {
@@ -18,15 +18,15 @@ public class ListHtmlViews {
     public ListHtmlViews() {
         PathHtml pathHtml = PathHtml.getInstance();
 
-        this.modalBottom = pathHtml.getPartialHtml("modallistbottom.html");
-        this.listName = pathHtml.getPartialHtml("listname.html");
+        this.modalButton = pathHtml.getPartialHtml("list-modal-button.html");
+        this.listHtml = pathHtml.getPartialHtml("list.html");
     }
 
-    public String getModalBottom() {
-        return modalBottom;
+    public String getModalButton() {
+        return modalButton;
     }
 
-    public String getListName() {
-        return listName;
+    public String getListHtml() {
+        return listHtml;
     }
 }

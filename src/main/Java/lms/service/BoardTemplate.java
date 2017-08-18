@@ -54,7 +54,7 @@ public class BoardTemplate {
         List<Board> boards = boardRepo.retrieveAll(user_id);
         out.println(BoardHtmlViews.getInstance().getModal_boottom());
         for (Board s : boards) {
-            String boardTitle = BoardHtmlViews.getInstance().getBoard_name();
+            String boardTitle = BoardHtmlViews.getInstance().getBoardHtml();
             boardTitle = boardTitle.replace("<!--board-->", s.getBoard_name());
             boardTitle = boardTitle.replace("board_id", String.valueOf(s.getId()));
             out.println(boardTitle);
@@ -67,7 +67,7 @@ public class BoardTemplate {
         List<Board> boards = boardRepo.retrieveAllBoardsForAdmin();
         out.println(BoardHtmlViews.getInstance().getModal_boottom());
         for (Board s : boards) {
-            String boardTitle = BoardHtmlViews.getInstance().getBoard_name();
+            String boardTitle = BoardHtmlViews.getInstance().getBoardHtml();
             boardTitle = boardTitle.replace("<!--board-->", s.getBoard_name());
             boardTitle = boardTitle.replace("board_id", String.valueOf(s.getId()));
             out.println(boardTitle);

@@ -9,7 +9,7 @@ public class UserHtmlViews {
     private final String topUserView;
     private final String formUserView;
     private final String bottomUserView;
-    private final String logoutButton;
+    private final String menuBarRight;
     private final String regForm;
     private final String profileForm;
 
@@ -23,12 +23,12 @@ public class UserHtmlViews {
 
     private UserHtmlViews() {
         PathHtml pathHtml = PathHtml.getInstance();
-        this.topUserView = pathHtml.getPartialHtml("indextop.html");
-        this.formUserView = pathHtml.getPartialHtml("form login.html");
-        this.bottomUserView = pathHtml.getPartialHtml("indexbottom.html");
-        this.logoutButton = pathHtml.getPartialHtml("start-logout-button.html");
-        this.regForm = pathHtml.getPartialHtml("regform.html");
-        this.profileForm = pathHtml.getPartialHtml("profileform.html");
+        this.topUserView = pathHtml.getPartialHtml("index-top.html");
+        this.formUserView = pathHtml.getPartialHtml("login-form.html");
+        this.bottomUserView = pathHtml.getPartialHtml("index-bottom.html");
+        this.menuBarRight = pathHtml.getPartialHtml("menu-bar-right.html");
+        this.regForm = pathHtml.getPartialHtml("reg-form.html");
+        this.profileForm = pathHtml.getPartialHtml("profile-form.html");
     }
 
     public String getTopUserView() {
@@ -39,8 +39,8 @@ public class UserHtmlViews {
         return formUserView;
     }
 
-    public String getLogoutButton() {
-        return logoutButton;
+    public String getMenuBarRight() {
+        return menuBarRight;
     }
 
     public String getBottomUserView() {

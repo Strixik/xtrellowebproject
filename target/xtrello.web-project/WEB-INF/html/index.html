@@ -12,7 +12,8 @@
 </head>
 <body>
 <!-- Fixed navbar top -->
-<nav class="navbar navbar-inverse navbar-fixed">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
@@ -22,125 +23,148 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand">xTrello</a>
-
+            <a class="navbar-brand" href="/">xTrello</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                       aria-expanded="false">Мої дані<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/note/add">Профіль Користувача</a></li>
-                        <li><a href="/note/show">Активність</a></li>
-                        <li><a href="/note/info">Інфо</a></li>
-                    </ul>
-                </li>
-                <a class="navbar-brand">Любі силки</a>
-                <a class="navbar-brand">Любі силки</a>
-                <a class="navbar-brand">Любі силки</a>
-            </ul>
 
-            <a class="navbar-brand navbar-right">Strix</a>
-            <a class="navbar-brand navbar-right">Імя Користувача:</a>
+            <ul class="nav navbar-nav">
+                <!-- servletInsert02 -->
+                <!-- servletInsert03 -->
+            </ul>
             <!-- servletInsert01 -->
+            <!-- servletInsert06 -->
+
         </div><!--/.nav-collapse -->
     </div>
 </nav>
+<div class="row margin">
 
-<!-- Work -->
-<div class="container marginmenu" role="main">
+    <div class="container marginmenu" role="main">
 
-    <div class="login-wrap">
-        <div class="login-html">
-            <input id="tab-1" type="radio" name="tab" class="sign-in" dw><label for="tab-1" class="tab">Вхід</label>
-            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Реєстрація</label>
-            <div class="login-form">
-                <div class="sign-in-htm">
-                    <form>
-                        <div class="group">
-                            <label for="user" class="label">Логін</label>
-                            <input id="user" type="text" class="input">
-                        </div>
-                        <div class="group">
-                            <label for="pass" class="label">Пароль</label>
-                            <input id="pass" type="password" class="input" data-type="password">
-                        </div>
-                        <div class="group">
-                            <input id="check" type="checkbox" class="check" checked>
-                            <label for="check"><span class="icon"></span> Запамятати</label>
-                        </div>
-                        <div class="group">
-                            <input type="submit" class="button" value="Ввійти">
-                        </div>
-                    </form>
-                    <div class="hr"></div>
-                    <!--	<p class="text-danger text-center">Логін або пароль не вірні!</p>-->
-                    <!--	<p class="text-danger text-center">Ви не заповнели Логін та Пароль!</p>-->
-
-                </div>
-                <div class="sign-up-htm">
-                    <form action="">
-
-                        <div class="group">
-                            <label for="user" class="label">Логін</label>
-                            <input id="user" type="text" class="input">
-                            <p class="text-danger text-center">Ви не заповнели!</p>
-                        </div>
-                        <div class="group">
-                            <label for="pass" class="label">Пароль</label>
-                            <input id="pass" type="password" class="input" data-type="password">
-                            <p class="text-danger text-center">Ви не заповнели Пароль!</p>
-                        </div>
-                        <div class="group">
-                            <label for="pass" class="label">Повторіть Пароль</label>
-                            <input id="repPass" type="password" class="input" data-type="password">
-                            <p class="text-danger text-center">Паролі не збігаються</p>
-                        </div>
-                        <div class="group">
-                            <label for="pass" class="label">Електронна пошта</label>
-                            <input id="email" type="text" class="input">
-                            <p class="text-danger text-center">Ви не вірно заповнили емайл!</p>
-                        </div>
-                        <div class="group ">
-                            <input type="submit" class="button" value="Зареєструвати">
-                        </div>
+        <div class="login-wrap">
+            <div class="login-html">
+                <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1"
+                                                                                         class="tab">Вхід</label>
+                <input id="tab-2" type="radio" name="tab" class="sign-up" blabala><label for="tab-2"
+                                                                                         class="tab">Реєстрація</label>
+                <div class="login-form">
+                    <div class="sign-in-htm">
+                        <form action="/login" method="post">
+                            <div class="group">
+                                <!--123-->
+                                <label for="user" class="label">Логін</label>
+                                <input id="user" type="text" name="login" class="input">
+                            </div>
+                            <div class="group">
+                                <label for="pass" class="label">Пароль</label>
+                                <input id="pass" type="password" name="password" class="input" data-type="password">
+                            </div>
+                            <div class="group">
+                                <input id="check" type="checkbox" class="check" checked>
+                                <label for="check"><span class="icon"></span> Запамятати</label>
+                            </div>
+                            <div class="group">
+                                <input type="submit" class="button" value="Ввійти">
+                            </div>
+                        </form>
                         <div class="hr"></div>
 
-                        <p class="text-danger text-center" id="errorBlock"></p>
-                        <!--<p class="text-danger text-center">Ви не заповнили всі поля !</p>-->
-                        <!--<p class="text-success text-center">Вітаю користувача створено!</p>-->
+                        <!--	<p class="text-danger text-center">Ви не заповнели Логін та Пароль!</p>-->
+
+                    </div>
+                    <div class="sign-up-htm">
+                        <form action="/register" method="POST" id="bottom-panel">
+                            <script src="../js/jquery.min.js"></script>
+                            <script>
+                                $(document).ready(function () {
+                                    $('.group').change(function () {
+                                        var regmail = $("#regemail").val();
+                                        var reguser = $("#reguser").val();
+                                        var pass = $("#firstPass").val();
+                                        var pass_rep = $("#secondPass").val();
+
+                                        if (true) {
+                                            $("#regemail").css('border', 'red 1px solid');
+                                            $("#reguser").css('border', 'red 1px solid');
+                                            $("#firstPass").css('border', 'red 1px solid');
+                                            $("#secondPass").css('border', 'red 1px solid');
+                                        }
+                                        if (regmail != 0) {
+                                            $("#regemail").css('border', 'green 1px solid');
+                                        }
+                                        if (reguser != 0) {
+                                            $("#reguser").css('border', 'green 1px solid');
+                                        }
+                                        if (pass != 0) {
+                                            $("#firstPass").css('border', 'green 1px solid');
+                                        }
+                                        if (pass == pass_rep && pass_rep != 0) {
+                                            $("#secondPass").css('border', 'green 1px solid');
+                                        }
+                                        if ((regmail != 0) && (reguser != 0) && (pass == pass_rep)) {
+                                            $('#submit').attr('disabled', false);
+                                        }
+                                    });
+
+                                });
+                            </script>
+                            <div class="group">
+                                <label for="user" class="label">Логін</label>
+                                <input id="reguser" type="text" name="regLogin" class="input" xtrellovall1>
+                                <p class="text-danger text-center"><!--1--></p>
+                            </div>
+                            <div class="group">
+                                <label for="pass" class="label">Пароль</label>
+                                <input id="firstPass" type="password" name="regFirstPasword" class="input"
+                                       data-type="password" xtrellovall2>
+                                <p class="text-danger text-center"><!--2--></p>
+                            </div>
+                            <div class="group">
+                                <label for="pass" class="label">Повторіть Пароль</label>
+                                <input id="secondPass" type="password" name="regSecondPassword" class="input"
+                                       data-type="password" xtrellovall3>
+                                <p class="text-danger text-center"><!--3--></p>
+                            </div>
+                            <div class="group">
+                                <label for="pass" class="label">Електронна пошта</label>
+                                <input id="regemail" type="text" name="regEmail" class="input" xtrellovall4>
+                                <p class="text-danger text-center"><!--4--></p>
+                            </div>
+                            <input type="hidden" id="userId" name="userId" xtrellovall5>
+                            <div class="group">
+                                <input type="submit" class="button" id="submit" value="Зареєструвати" disabled>
+                            </div>
 
 
-                    </form>
+                            <div class="hr"></div>
+
+                            <p class="text-danger text-center" id="errorBlock"></p>
+                            <!-- <p class="text-success text-center" id="goodBlock">Вітаю користувача створено!</p>-->
+
+
+                        </form>
+
+
+                    </div>
                 </div>
             </div>
         </div>
+
     </div>
 
+
+    <!-- Fixed navbar bottom -->
 </div>
-
-
-<!-- Fixed navbar bottom -->
+<hr>
 <nav class="navbar navbar-inverse navbar-fixed-bottom">
     <div class="container">
         <div class="navbar-header">
-            <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>-->
-            <a class="navbar-brand navbar-left">Заздалегіть вдячні команда xTrello!</a>
-
+            <a class="btn btn-basic navbar-left">Заздалегіть вдячні команда xTrello!</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-
             </ul>
-
-
-            <a class="navbar-brand navbar-right">Контакти: 0968256315</a>
+            <a class="btn btn-basic navbar-right">Контакти: 0968256315</a>
             <!-- servletInsert01 -->
         </div><!--/.nav-collapse -->
     </div>
