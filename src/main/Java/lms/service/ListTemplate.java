@@ -54,8 +54,8 @@ public class ListTemplate {
             panelTitle = panelTitle.replace("listId", String.valueOf(panel.getId()));
             StringBuilder sb = new StringBuilder();
             for (Card c: cards){
-                sb.append("<li><input type=\"radio\" value=\"").append(c.getId())
-                        .append("\" name=\"id\">").append(c.getCardText()).append("</li>");
+                sb.append("<input type=\"radio\" value=\"").append(c.getId())
+                        .append("\" name=\"id\">").append("<li class=\"cardClass\">").append(c.getCardText()).append("</li>");
             }
             panelTitle = panelTitle.replace("<!--" + panel.getId() + "your text" + "-->", sb);
             out.println(panelTitle);

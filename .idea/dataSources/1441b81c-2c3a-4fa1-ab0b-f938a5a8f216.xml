@@ -11,7 +11,7 @@
     <schema id="5" parent="1" name="mysql"/>
     <schema id="6" parent="1" name="performance_schema"/>
     <schema id="7" parent="1" name="xkeep"/>
-    <schema id="8" parent="1" name="wowello"/>
+    <schema id="8" parent="1" name="wowdb"/>
     <table id="9" parent="2" name="board"/>
     <table id="10" parent="2" name="card"/>
     <table id="11" parent="2" name="list"/>
@@ -54,7 +54,7 @@
     </column>
     <column id="20" parent="10" name="card">
       <Position>2</Position>
-      <DataType>varchar(40)|0</DataType>
+      <DataType>text|0</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="21" parent="10" name="id_list">
@@ -145,18 +145,22 @@
     <column id="39" parent="12" name="firstname">
       <Position>9</Position>
       <DataType>varchar(25)|0</DataType>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
     <column id="40" parent="12" name="secondname">
       <Position>10</Position>
       <DataType>varchar(25)|0</DataType>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
     <column id="41" parent="12" name="contry">
       <Position>11</Position>
       <DataType>varchar(40)|0</DataType>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
     <column id="42" parent="12" name="city">
       <Position>12</Position>
       <DataType>varchar(40)|0</DataType>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
     <index id="43" parent="12" name="users_login_uindex">
       <ColNames>login</ColNames>

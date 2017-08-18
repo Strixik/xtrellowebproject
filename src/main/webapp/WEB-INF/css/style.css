@@ -1,7 +1,7 @@
 body {
     margin: 0;
     color: #6a6f8c;
-    background: #FFEF71;
+    background: #fccc21;
     font: 600 16px/18px 'Open Sans', sans-serif;
 }
 
@@ -71,7 +71,6 @@ a {
 
 .login-html .tab {
     font-size: 22px;
-    margin-right: 15px;
     padding-bottom: 5px;
     margin: 0 15px 10px 0;
     display: inline-block;
@@ -201,33 +200,17 @@ a {
     text-align: center;
 }
 
-html {
-
-}
-
 .board {
     float: left;
-    background-color: #cccccc;
+    color: yellow;
+    background-color: #9f20fc;
     border: solid slategray 1px;
     text-align: center;
     border-radius: 15px;
     height: 80px;
     width: 100%;
-
 }
 
-#knopka {
-    float: right;
-    font-size: 1em;
-    height: 60px;
-    width: 120px;
-    word-wrap: normal;
-    /*margin: 20px;*/
-    margin-right: 130px;
-    margin-top: 20px;
-    /*margin-left: 100%;*/
-
-}
 .boards {
     float: left;
     width: 200px;
@@ -236,25 +219,38 @@ html {
     text-align: center;
     position: relative;
 }
+
+#knopka {
+    float: right;
+    font-size: 1em;
+    height: 60px;
+    width: 120px;
+    margin-right: 40px;
+    margin-top: 20px;
+}
+
 .close{
     border-radius: 30px;
 }
 .navbar-header {
+    width: 60px;
     min-width: 20%;
 }
 .navbar-brand {
+    color: violet;
     font-size: 2em;
 }
 .liststyle{
     border: solid slategray 1px;
     border-radius: 15px;
-    background-color: #A5B5FF;
+    color: indigo;
+    background-color: indigo;
     margin: 5px;
 
 }
 .panel-info{
    word-wrap: break-word;
-    min-height: 500px;
+    height: 550px;
     list-style-type: none;
     margin: 10px;
 }
@@ -267,9 +263,16 @@ html {
     margin-top: 60px;
     margin-left: 40px;
     margin-right: 40px;
-
 }
 
 .margin10 {
     margin: 10px;
+}
+
+.cardClass {
+    margin: 5px;
+    width: 100%;
+    background-color: blueviolet;
+    color: #fcf97e;
+    font-size: 0.9em;
 }
