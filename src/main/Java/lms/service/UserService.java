@@ -10,11 +10,8 @@ import javax.servlet.http.HttpSession;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.time.LocalDate;
-import java.util.List;
-import java.util.logging.Logger;
 
 public class UserService {
-    private static Logger log = Logger.getLogger(UserService.class.getName());
 
     interface FormField<E> {
         String check(E e);
@@ -36,9 +33,9 @@ public class UserService {
         out.println(UserHtmlViews.getInstance().getRegForm());
     }
 
-    public void showProfileForm() {
-        if (out == null) return;
-        out.println(UserHtmlViews.getInstance().getProfileForm());
+    public String showProfileForm() {
+        String showProfileForm = UserHtmlViews.getInstance().getProfileForm();
+        return showProfileForm;
     }
 
     public boolean checkLogin(HttpServletRequest request, HttpSession session) {
@@ -62,7 +59,7 @@ public class UserService {
                 return true;
             }
         } catch (UnsupportedEncodingException e) {
-            log.severe("UnsupportedEncodingException " + e.toString());
+            e.printStackTrace();
         }
         showErrorLoginForm();
         return false;
@@ -73,7 +70,6 @@ public class UserService {
         loginForm = loginForm.replace("<!--123-->", "<p class=\"text-danger text-center\">Логін або пароль не вірні!</p>");
         out.println(loginForm);
     }
-
     private void showBlockLoginForm() {
         String loginForm = UserHtmlViews.getInstance().getLoginForm();
         loginForm = loginForm.replace("<!--123-->", "<p class=\"text-danger text-center\">Даного користувача ЗАБЛОКОВАНО!</p>");
@@ -94,15 +90,15 @@ public class UserService {
                 }
                 return "Такий користувач вже зареєстрований";
             });
-            String regFirstPassword = new String(request.getParameter("regFirstPassword").getBytes("iso-8859-1"),
+            String regFirstPasword = new String(request.getParameter("regFirstPasword").getBytes("iso-8859-1"),
                     "UTF-8");
-            regForm = checkFormField(2, regForm, regFirstPassword, f -> {
+            regForm = checkFormField(2, regForm, regFirstPasword, f -> {
                 if (f.length() >= 6) {
                     return null;
                 }
                 return "Мінімальна довжина 6 символів";
             });
-            regForm = checkFormField(2, regForm, regFirstPassword, f -> {
+            regForm = checkFormField(2, regForm, regFirstPasword, f -> {
                 if (f.length() <= 20) {
                     return null;
                 }
@@ -111,7 +107,7 @@ public class UserService {
             String regSecondPassword = new String(request.getParameter("regSecondPassword").getBytes("iso-8859-1"),
                     "UTF-8");
             regForm = checkFormField(3, regForm, regSecondPassword, f -> {
-                if (f.equals(regFirstPassword)) {
+                if (f.equals(regFirstPasword)) {
                     return null;
                 }
                 return "Паролі повинні співпадати!";
@@ -129,14 +125,14 @@ public class UserService {
             });
             if (!regForm.contains("has-error")) {
                 User user;
-                user = new User(regLogin, regFirstPassword, regEmail, LocalDate.now().toString());
+                user = new User(regLogin, regFirstPasword, regEmail, LocalDate.now().toString());
                 UserDao userDao = new UserRepo();
                 userDao.saveUser(user);
                 return true;
             }
 
         } catch (UnsupportedEncodingException e) {
-            log.severe("UnsupportedEncodingException " + e.toString());
+            e.printStackTrace();
         }
         out.println(regForm);
         return false;
@@ -157,7 +153,7 @@ public class UserService {
         UserDao userDao = new UserRepo();
         User user = userDao.findByUser(login);
         if (user == null) return;
-        String regForm = UserHtmlViews.getInstance().getProfileForm();
+        String regForm = showProfileForm();
         regForm = regForm.replace("xtrellovall1", "value=\"" + user.getLogin() + "\"");
         regForm = regForm.replace("xtrellovall2", "value=\"" + user.getPassword() + "\"");
         regForm = regForm.replace("xtrellovall3", "value=\"" + user.getPassword() + "\"");
@@ -177,7 +173,7 @@ public class UserService {
     public boolean checkProfileForm(HttpServletRequest request) {
 
         if (out == null) return false;
-        String profForm = UserHtmlViews.getInstance().getProfileForm();
+        String profForm = showProfileForm();
         try {
             String upuserId = request.getParameter("upuserId");
             profForm = checkFormField(5, profForm, upuserId, f -> {
@@ -194,15 +190,15 @@ public class UserService {
                 }
                 return "Мінімальна довжина 3 символів";
             });
-            String upFirstPassword = new String(request.getParameter("upFirstPassword").getBytes("iso-8859-1"),
+            String upFirstPasword = new String(request.getParameter("upFirstPasword").getBytes("iso-8859-1"),
                     "UTF-8");
-            profForm = checkFormField(2, profForm, upFirstPassword, f -> {
+            profForm = checkFormField(2, profForm, upFirstPasword, f -> {
                 if (f.length() >= 6) {
                     return null;
                 }
                 return "Мінімальна довжина 6 символів";
             });
-            profForm = checkFormField(2, profForm, upFirstPassword, f -> {
+            profForm = checkFormField(2, profForm, upFirstPasword, f -> {
                 if (f.length() <= 20) {
                     return null;
                 }
@@ -211,7 +207,7 @@ public class UserService {
             String upSecondPassword = new String(request.getParameter("upSecondPassword").getBytes("iso-8859-1"),
                     "UTF-8");
             profForm = checkFormField(3, profForm, upSecondPassword, f -> {
-                if (f.equals(upFirstPassword)) {
+                if (f.equals(upFirstPasword)) {
                     return null;
                 }
                 return "Паролі повинні співпадати!";
@@ -298,31 +294,16 @@ public class UserService {
             if (!profForm.contains("has-error")) {
                 User user;
                 user = new User(Long.parseLong(upuserId), upLogin, upSecondPassword, upEmail, update_registered, upsex, update_birth, Integer.parseInt(upblock), upfirstname, upsecondname, upcontry, upcity);
-                log.info("profile\t" + user);
+                System.out.println("profile\t" + user);
                 UserDao userDao = new UserRepo();
                 userDao.saveUser(user);
                 return true;
             }
         } catch (UnsupportedEncodingException e) {
-            log.severe("UnsupportedEncodingException " + e.toString());
+            e.printStackTrace();
         }
         out.println(profForm);
         return false;
     }
-
-    public void showAllUsers() {
-        UserDao userDao = new UserRepo();
-        List<User> users = userDao.showAllUsers();
-        out.println("<div class=\"row\">\n" +
-                "    <div class=\"col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3\">\n" +
-                "        <ul class=\"list-group\">");
-        for (User u : users) {
-            out.write("<a class=\"list-group-item\" href=\"/admintest?id=" + u.getId() + "&login=" + u.getLogin() + "\" ><span class=\"glyphicon glyphicon-user\" aria-hidden=\"true\"></span>" + "&nbsp;&nbsp;" + u.getLogin() + "&nbsp;&nbsp;" + "<span class=\"glyphicon glyphicon-envelope\" aria-hidden=\"true\"></span>" + "&nbsp;&nbsp;" + u.getEmail() + "&nbsp;&nbsp;" + "<span class=\"glyphicon glyphicon-plus pull-right\" aria-hidden=\"true\"></span></a>");
-        }
-        out.println("</ul>\n" +
-                "    </div>\n" +
-                "</div>");
-    }
-
 
 }

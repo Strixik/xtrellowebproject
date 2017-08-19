@@ -39,9 +39,9 @@ FOREIGN KEY (id_list) REFERENCES list (id)
 CREATE TABLE users
 (
   id              INT AUTO_INCREMENT PRIMARY KEY,
-  login           VARCHAR(30)            NULL,
-  password        VARCHAR(30)            NULL,
-  email           VARCHAR(60)            NULL,
+  login           VARCHAR(30)            NOT NULL,
+  password        VARCHAR(30)            NOT NULL,
+  email           VARCHAR(60)            NOT NULL,
   date_registered DATE                   NOT NULL,
   sex             ENUM ('man', 'woman')  NULL,
   date_birth      DATE                   NULL,
@@ -51,7 +51,9 @@ CREATE TABLE users
   contry          VARCHAR(30) DEFAULT '' NULL,
   city            VARCHAR(30) DEFAULT '' NULL,
   CONSTRAINT users_login_uindex
-  UNIQUE (login)
+  UNIQUE (login),
+  CONSTRAINT users_email_uindex
+  UNIQUE (email)
 );
 
 ALTER TABLE board

@@ -1,6 +1,7 @@
 package lms.servlets;
 
 
+import lms.service.AdminService;
 import lms.service.UserService;
 import lms.views.BoardHtmlViews;
 import lms.views.PanelHtmlViews;
@@ -51,6 +52,7 @@ public class IndexServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         HttpSession session = request.getSession();
         UserService indexView = new UserService(out);
+        AdminService adminView = new AdminService(out);
 
         log.info("pathInfo:\t" + request.getPathInfo());
         switch (request.getPathInfo()) {
@@ -73,7 +75,7 @@ public class IndexServlet extends HttpServlet {
                 indexView.showUserProfileForm(session.getAttribute("login").toString());
                 break;
             case "/useradmin":
-                indexView.showAllUsers();
+                adminView.showAllUsers();
                 break;
             case "/admintest":
                 String login = request.getParameter("login");

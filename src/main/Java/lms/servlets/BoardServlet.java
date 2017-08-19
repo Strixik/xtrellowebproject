@@ -1,5 +1,6 @@
 package lms.servlets;
 
+import lms.service.AdminService;
 import lms.service.BoardService;
 
 import javax.servlet.ServletException;
@@ -42,8 +43,9 @@ public class BoardServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
-        BoardService boardView = new BoardService(out);
         HttpSession session = request.getSession();
+        BoardService boardView = new BoardService(out);
+        AdminService adminView = new AdminService(out);
 
         log.info("pathInfo:\t" + request.getPathInfo());
         switch (request.getPathInfo()) {
@@ -51,7 +53,7 @@ public class BoardServlet extends HttpServlet {
                 boardView.showAllBoards(session);
                 break;
             case "/all":
-                boardView.showAllBoardsForAdmin();
+                adminView.showAllBoardsForAdmin();
                 break;
         }
     }

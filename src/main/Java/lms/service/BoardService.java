@@ -41,20 +41,6 @@ public class BoardService {
         return false;
     }
 
-    public void showAllBoards(HttpSession session) {
-        if (out == null) return;
-        Long user_id = Long.parseLong(session.getAttribute("user_id").toString());
-        CRUD<Board> boardRepo = new BoardRepo();
-        List<Board> boards = boardRepo.retrieveAll(user_id);
-        out.println(BoardHtmlViews.getInstance().getBoardAddModalWindow());
-        for (Board b : boards) {
-            String boardTitle = BoardHtmlViews.getInstance().getBoardHtml();
-            boardTitle = boardTitle.replace("<!--board-->", b.getBoardTitle());
-            boardTitle = boardTitle.replace("board_id", String.valueOf(b.getId()));
-            out.println(boardTitle);
-        }
-    }
-
     public boolean deleteBoard(HttpServletRequest request) {
         long id = Long.parseLong(request.getParameter("boardid").toString());
         if (id > 0L) {
@@ -64,14 +50,12 @@ public class BoardService {
         } else return false;
     }
 
-    /**
-     * method only for admin
-     * show all boards of all user
-     */
-    public void showAllBoardsForAdmin() {
+
+    public void showAllBoards(HttpSession session) {
         if (out == null) return;
-        BoardRepo boardRepo = new BoardRepo();
-        List<Board> boards = boardRepo.retrieveAllBoardsForAdmin();
+        Long user_id = Long.parseLong(session.getAttribute("user_id").toString());
+        CRUD<Board> boardRepo = new BoardRepo();
+        List<Board> boards = boardRepo.retrieveAll(user_id);
         out.println(BoardHtmlViews.getInstance().getBoardAddModalWindow());
         for (Board b : boards) {
             String boardTitle = BoardHtmlViews.getInstance().getBoardHtml();
