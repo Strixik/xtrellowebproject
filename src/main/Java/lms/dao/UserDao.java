@@ -11,6 +11,6 @@ public interface UserDao {
 
     List<User> findByLoginByEmail(String searchString);
 
-    //for admin
+    //method only for admin
     List<User> showAllUsers();
 }

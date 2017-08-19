@@ -61,7 +61,7 @@ public class BoardRepo implements CRUD<Board> {
     }
 
     /**
-     * method for admin
+     * method only for admin
      *
      * @return List<Board> boards (all boards of all users)
      */

@@ -65,7 +65,7 @@ public class PanelService {
         }
     }
     public boolean deleteList(HttpServletRequest request) {
-        long listId = Long.parseLong(request.getParameter("listid").toString());
+        long listId = Long.parseLong(request.getParameter("listid"));
         if (listId > 0L) {
             CRUD<Panel> panelRepo = new PanelRepo();
             panelRepo.remove(listId);

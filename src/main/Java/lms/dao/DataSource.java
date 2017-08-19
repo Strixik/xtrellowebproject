@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import java.util.logging.Logger;
 
 /**
- * Створює зв'язок із БД. Використовується в класах цього пакету.
+ * Class describe creation of database connection
  */
 public class DataSource implements AutoCloseable {
     private static Logger log = Logger.getLogger(DataSource.class.getName());
@@ -24,10 +24,7 @@ public class DataSource implements AutoCloseable {
             e.printStackTrace();
         }
     }
-    /**
-     * Створює з'єднання із БД
-     * @return об'єкт класу з'єднання з БД
-     */
+
     public Connection getConnection() {
         try {
             if (connection == null) {

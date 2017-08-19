@@ -24,7 +24,7 @@ public class CardServlet extends HttpServlet {
                 response.sendRedirect("/list/view");
                 break;
             case "/del":
-                if (cardView.delCard(request)) {
+                if (cardView.deleteCard(request)) {
                     response.sendRedirect("/list/view");
                 } else
                     response.sendRedirect("/list/view");

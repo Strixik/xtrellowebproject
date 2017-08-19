@@ -10,6 +10,7 @@ import java.util.logging.Logger;
 
 public class CardService {
     private static Logger log = Logger.getLogger(CardService.class.getName());
+
     public CardService() {
     }
 
@@ -24,12 +25,12 @@ public class CardService {
                 CRUD<Card> cardCRUD = new CardRepo();
                 cardCRUD.save(card);
             }
-
         } catch (UnsupportedEncodingException e) {
             log.severe("UnsupportedEncodingException " + e.toString());
         }
     }
-    public boolean  delCard (HttpServletRequest request) {
+
+    public boolean deleteCard(HttpServletRequest request) {
         String cardId = request.getParameter("id");
 
         if (cardId != null && !cardId.isEmpty()) {
@@ -40,5 +41,4 @@ public class CardService {
         }
         return false;
     }
-
 }
