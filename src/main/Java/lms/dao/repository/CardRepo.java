@@ -45,15 +45,13 @@ public class CardRepo implements CRUD<Card> {
         DataSource dataSource = new DataSource();
         List<Card> cards = new ArrayList<>();
         try (Connection con = dataSource.getConnection();
-             Statement statement = con.createStatement();
-             ResultSet rs =
-                     statement.executeQuery("SELECT * FROM card WHERE id_list=\"" + listId + "\"")
-        ) {
+             PreparedStatement preparedSt = con.prepareStatement("SELECT * FROM card WHERE id_list=\"" + listId + "\"");
+             ResultSet rs = preparedSt.executeQuery()) {
             while (rs.next()) {
                 long id = rs.getLong("id");
                 String cardText = rs.getString("card");
-                Card acard = new Card(id, cardText, listId);
-                cards.add(acard);
+                Card card = new Card(id, cardText, listId);
+                cards.add(card);
             }
         } catch (SQLException e) {
             log.severe("Connection to database is lost: \t" + e.toString());

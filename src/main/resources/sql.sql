@@ -1,71 +1,61 @@
-create table users
+CREATE TABLE board
 (
-  id              int auto_increment
-    primary key,
-  login           varchar(20)            null,
-  password        varchar(15)            null,
-  email           varchar(40)            null,
-  date_registered date                   not null,
-  sex             enum('man', 'woman')   null,
-  date_birth      date                   null,
-  block           tinyint(1) default '0' null,
-  firstName       VARCHAR(25)            NULL,
-  secondName      VARCHAR(25)            NULL,
-  country         VARCHAR(40)            NULL,
-  city            varchar(40)            null,
-  constraint users_login_uindex
-  unique (login)
-)
-;
+  id      INT AUTO_INCREMENT PRIMARY KEY,
+  board   VARCHAR(30) NOT NULL,
+  user_id INT         NULL
+);
 
-create table board
+CREATE INDEX board_users_id_fk
+  ON board (user_id);
+
+CREATE TABLE card
 (
-  id     int auto_increment
-    primary key,
-  board  varchar(30) not null,
-  userId INT         NULL,
-  constraint board_users_id_fk
-  FOREIGN KEY (userId) REFERENCES users (id)
-    on delete cascade
-)
-;
+  id      INT AUTO_INCREMENT PRIMARY KEY,
+  card    TEXT NOT NULL,
+  id_list INT  NULL
+);
 
-create index board_users_id_fk
-  ON board (userId)
-;
+CREATE INDEX card_list_id_fk
+  ON card (id_list);
 
-create table list
+CREATE TABLE list
 (
-  id int auto_increment
-    primary key,
-  list varchar(40) not null,
-  id_board int null,
-  constraint list_board_id_fk
-  foreign key (id_board) references board (id)
-    on delete cascade
-)
-;
+  id       INT AUTO_INCREMENT PRIMARY KEY,
+  list     VARCHAR(30) NOT NULL,
+  id_board INT         NULL,
+  CONSTRAINT list_board_id_fk
+  FOREIGN KEY (id_board) REFERENCES board (id)
+    ON DELETE CASCADE
+);
 
-create index list_board_id_fk
-  on list (id_board)
-;
+CREATE INDEX list_board_id_fk
+  ON list (id_board);
 
-create table card
+ALTER TABLE card
+  ADD CONSTRAINT card_list_id_fk
+FOREIGN KEY (id_list) REFERENCES list (id)
+  ON DELETE CASCADE;
+
+CREATE TABLE users
 (
-  id int auto_increment
-    primary key,
-  card varchar(40) not null,
-  id_list int null,
-  constraint card_list_id_fk
-  foreign key (id_list) references list (id)
-    on delete cascade
-)
-;
+  id              INT AUTO_INCREMENT PRIMARY KEY,
+  login           VARCHAR(30)            NULL,
+  password        VARCHAR(30)            NULL,
+  email           VARCHAR(60)            NULL,
+  date_registered DATE                   NOT NULL,
+  sex             ENUM ('man', 'woman')  NULL,
+  date_birth      DATE                   NULL,
+  block           TINYINT(1) DEFAULT '0' NULL,
+  firstname       VARCHAR(30) DEFAULT '' NULL,
+  secondname      VARCHAR(30) DEFAULT '' NULL,
+  contry          VARCHAR(30) DEFAULT '' NULL,
+  city            VARCHAR(30) DEFAULT '' NULL,
+  CONSTRAINT users_login_uindex
+  UNIQUE (login)
+);
 
-create index card_list_id_fk
-  on card (id_list)
-;
-
-
-
+ALTER TABLE board
+  ADD CONSTRAINT board_users_id_fk
+FOREIGN KEY (user_id) REFERENCES users (id)
+  ON DELETE CASCADE;
 

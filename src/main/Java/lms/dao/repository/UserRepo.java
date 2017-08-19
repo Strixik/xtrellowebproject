@@ -4,7 +4,10 @@ import lms.dao.DataSource;
 import lms.dao.UserDao;
 import lms.dao.entity.User;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
@@ -17,8 +20,8 @@ public class UserRepo implements UserDao {
         DataSource dataSource = new DataSource();
 
         try (Connection con = dataSource.getConnection();
-             Statement stmt = con.createStatement();
-             ResultSet rs = stmt.executeQuery("SELECT * FROM users WHERE users.login=\"" + login + "\";")
+             PreparedStatement preparedSt = con.prepareStatement("SELECT * FROM users WHERE users.login=\"" + login + "\";");
+             ResultSet rs = preparedSt.executeQuery()
         ) {
             if (rs.next()) {
                 User user = new User(
@@ -77,8 +80,9 @@ public class UserRepo implements UserDao {
         List<User> users = new ArrayList<>();
 
         try (Connection con = dataSource.getConnection();
-             Statement stmt = con.createStatement();
-             ResultSet rs = stmt.executeQuery("SELECT DISTINCT id, login, password, email, date_registered FROM users WHERE (login LIKE \"%" + searchString + "%\" OR email LIKE \"%" + searchString + "%\") LIMIT 10");
+             PreparedStatement preparedSt = con.prepareStatement("SELECT DISTINCT id, login, password, email, date_registered FROM users " +
+                     "WHERE (login LIKE \"%" + searchString + "%\" OR email LIKE \"%" + searchString + "%\") LIMIT 10");
+             ResultSet rs = preparedSt.executeQuery()
         ) {
             while (rs.next()) {
                 User user = new User(
@@ -103,8 +107,8 @@ public class UserRepo implements UserDao {
         List<User> users = new ArrayList<>();
 
         try (Connection con = dataSource.getConnection();
-             Statement stmt = con.createStatement();
-             ResultSet rs = stmt.executeQuery("SELECT * FROM users")
+             PreparedStatement preparedSt = con.prepareStatement("SELECT * FROM users");
+             ResultSet rs = preparedSt.executeQuery()
         ) {
             while (rs.next()) {
                 User user = new User(

@@ -4,7 +4,10 @@ import lms.dao.CRUD;
 import lms.dao.DataSource;
 import lms.dao.entity.Board;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
@@ -31,9 +34,9 @@ public class BoardRepo implements CRUD<Board> {
         DataSource dataSource = new DataSource();
         if (id > 0L) {
             try (Connection con = dataSource.getConnection();
-                 Statement statement = con.createStatement()
+                 PreparedStatement preparedSt = con.prepareStatement("DELETE FROM board WHERE id =" + id)
             ) {
-                statement.executeUpdate("DELETE FROM board WHERE id =" + id);
+                preparedSt.executeUpdate();
             } catch (SQLException e) {
                 log.severe("Connection to database is lost: \t" + e.toString());
             }
@@ -45,8 +48,8 @@ public class BoardRepo implements CRUD<Board> {
         DataSource dataSource = new DataSource();
         List<Board> boards = new ArrayList<>();
         try (Connection con = dataSource.getConnection();
-             Statement statement = con.createStatement();
-             ResultSet rs = statement.executeQuery("SELECT * FROM board WHERE user_id=\"" + user_id + "\"");) {
+             PreparedStatement preparedSt = con.prepareStatement("SELECT * FROM board WHERE user_id=\"" + user_id + "\"");
+             ResultSet rs = preparedSt.executeQuery()) {
             while (rs.next()) {
                 long id = rs.getLong("id");
                 String board = rs.getString("board");
@@ -62,7 +65,6 @@ public class BoardRepo implements CRUD<Board> {
 
     /**
      * method only for admin
-     *
      * @return List<Board> boards (all boards of all users)
      */
 
@@ -70,16 +72,15 @@ public class BoardRepo implements CRUD<Board> {
         DataSource dataSource = new DataSource();
         List<Board> boards = new ArrayList<>();
         try (Connection con = dataSource.getConnection();
-             Statement stmt = con.createStatement();
-             ResultSet rs = stmt.executeQuery("SELECT * FROM board")
+             PreparedStatement preparedSt = con.prepareStatement("SELECT * FROM board");
+             ResultSet rs = preparedSt.executeQuery()
         ) {
             while (rs.next()) {
                 long id = rs.getLong("id");
-                String board = rs.getString("board");
-                Long user_id = rs.getLong("user_id");
-                Board aboard = new Board(id, board, user_id
-                );
-                boards.add(aboard);
+                String boardTitle = rs.getString("board");
+                Long usedId = rs.getLong("user_id");
+                Board board = new Board(id, boardTitle, usedId);
+                boards.add(board);
             }
         } catch (SQLException e) {
             log.severe("Connection to database is lost: \t" + e.toString());

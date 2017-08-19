@@ -4,7 +4,10 @@ import lms.dao.CRUD;
 import lms.dao.DataSource;
 import lms.dao.entity.Panel;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
@@ -30,9 +33,9 @@ public class PanelRepo implements CRUD<Panel> {
         DataSource dataSource = new DataSource();
         if (id > 0L) {
             try (Connection con = dataSource.getConnection();
-                 Statement stmt = con.createStatement()
+                 PreparedStatement preparedSt = con.prepareStatement("DELETE FROM list WHERE id =" + id)
             ) {
-                stmt.executeUpdate("DELETE FROM list WHERE id =" + id);
+                preparedSt.executeUpdate();
             } catch (SQLException e) {
                 log.severe("Connection to database is lost: \t" + e.toString());
             }
@@ -45,8 +48,8 @@ public class PanelRepo implements CRUD<Panel> {
         DataSource dataSource = new DataSource();
         List<Panel> panels = new ArrayList<>();
         try (Connection con = dataSource.getConnection();
-             Statement statement = con.createStatement();
-             ResultSet rs = statement.executeQuery("SELECT * FROM list WHERE id_board=\"" + boardId + "\"")
+             PreparedStatement preparedSt = con.prepareStatement("SELECT * FROM list WHERE id_board=\"" + boardId + "\"");
+             ResultSet rs = preparedSt.executeQuery()
         ) {
             while (rs.next()) {
                 long id = rs.getLong("id");
