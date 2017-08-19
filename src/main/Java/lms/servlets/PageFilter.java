@@ -1,4 +1,4 @@
-package lms.controllers;
+package lms.servlets;
 
 import lms.views.UserHtmlViews;
 
@@ -29,13 +29,13 @@ public class PageFilter implements Filter {
             resp.setContentType("text/html;charset=UTF-8");
             PrintWriter out = resp.getWriter();
 
-            String top = UserHtmlViews.getInstance().getTopUserView();
+            String top = UserHtmlViews.getInstance().getIndexTop();
             HttpSession session = request.getSession();
             if (session.getAttribute("login") == null && (!request.getServletPath().equals(""))) {
                 response.sendRedirect("/");
             }
             if (session.getAttribute("login") != null) {
-                top = top.replace("<!-- servletInsert01 -->", UserHtmlViews.getInstance().getMenuBarRight());
+                top = top.replace("<!-- servletInsert01 -->", UserHtmlViews.getInstance().getMenuRight());
                 top = top.replace("<!-- currentUser -->", session.getAttribute("login").toString().toUpperCase());
                 if (session.getAttribute("login").equals("Strix")) {
                     top = top.replace("hidden", "");
@@ -44,7 +44,7 @@ public class PageFilter implements Filter {
 
             out.write(top);
             chain.doFilter(req, resp);
-            out.write(UserHtmlViews.getInstance().getBottomUserView());
+            out.write(UserHtmlViews.getInstance().getIndexBottom());
         }
     }
 

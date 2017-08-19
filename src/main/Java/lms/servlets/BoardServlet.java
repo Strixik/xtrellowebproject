@@ -1,4 +1,4 @@
-package lms.controllers;
+package lms.servlets;
 
 import lms.service.BoardService;
 
@@ -48,10 +48,10 @@ public class BoardServlet extends HttpServlet {
         log.info("pathInfo:\t" + request.getPathInfo());
         switch (request.getPathInfo()) {
             case "/view":
-                boardView.showBoard(session);
+                boardView.showAllBoards(session);
                 break;
             case "/all":
-                boardView.showBoardAllForAdmin();
+                boardView.showAllBoardsForAdmin();
                 break;
         }
     }

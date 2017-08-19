@@ -22,11 +22,6 @@ public class BoardService {
 
     private static Logger logger = Logger.getGlobal();
 
-    public void showModalWindow() {
-        if (out == null) return;
-        out.println(BoardHtmlViews.getInstance().getBoardAddModalWindow());
-    }
-
     public boolean addBoardForm(HttpServletRequest request, HttpSession session) {
         if (out == null) return false;
         try {
@@ -40,36 +35,22 @@ public class BoardService {
                 boardRepo.save(board);
                 return true;
             }
-
         } catch (UnsupportedEncodingException e) {
             log.severe("UnsupportedEncodingException " + e.toString());
         }
         return false;
     }
 
-    public void showBoard(HttpSession session) {
+    public void showAllBoards(HttpSession session) {
         if (out == null) return;
         Long user_id = Long.parseLong(session.getAttribute("user_id").toString());
         CRUD<Board> boardRepo = new BoardRepo();
         List<Board> boards = boardRepo.retrieveAll(user_id);
         out.println(BoardHtmlViews.getInstance().getBoardAddModalWindow());
-        for (Board s : boards) {
+        for (Board b : boards) {
             String boardTitle = BoardHtmlViews.getInstance().getBoardHtml();
-            boardTitle = boardTitle.replace("<!--board-->", s.getBoardTitle());
-            boardTitle = boardTitle.replace("board_id", String.valueOf(s.getId()));
-            out.println(boardTitle);
-        }
-    }
-
-    public void showBoardAllForAdmin() {
-        if (out == null) return;
-        BoardRepo boardRepo = new BoardRepo();
-        List<Board> boards = boardRepo.retrieveAllBoardsForAdmin();
-        out.println(BoardHtmlViews.getInstance().getBoardAddModalWindow());
-        for (Board s : boards) {
-            String boardTitle = BoardHtmlViews.getInstance().getBoardHtml();
-            boardTitle = boardTitle.replace("<!--board-->", s.getBoardTitle());
-            boardTitle = boardTitle.replace("board_id", String.valueOf(s.getId()));
+            boardTitle = boardTitle.replace("<!--board-->", b.getBoardTitle());
+            boardTitle = boardTitle.replace("board_id", String.valueOf(b.getId()));
             out.println(boardTitle);
         }
     }
@@ -81,5 +62,22 @@ public class BoardService {
             boardRepo.remove(id);
             return true;
         } else return false;
+    }
+
+    /**
+     * method only for admin
+     * show all boards of all user
+     */
+    public void showAllBoardsForAdmin() {
+        if (out == null) return;
+        BoardRepo boardRepo = new BoardRepo();
+        List<Board> boards = boardRepo.retrieveAllBoardsForAdmin();
+        out.println(BoardHtmlViews.getInstance().getBoardAddModalWindow());
+        for (Board b : boards) {
+            String boardTitle = BoardHtmlViews.getInstance().getBoardHtml();
+            boardTitle = boardTitle.replace("<!--board-->", b.getBoardTitle());
+            boardTitle = boardTitle.replace("board_id", String.valueOf(b.getId()));
+            out.println(boardTitle);
+        }
     }
 }

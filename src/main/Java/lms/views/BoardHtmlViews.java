@@ -1,5 +1,8 @@
 package lms.views;
 
+/**
+ * Lazy loading singleton with HTML parts
+ */
 public class BoardHtmlViews {
     private static BoardHtmlViews ourInstance;
 

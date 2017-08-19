@@ -1,4 +1,4 @@
-package lms.controllers;
+package lms.servlets;
 
 
 import lms.service.UserService;

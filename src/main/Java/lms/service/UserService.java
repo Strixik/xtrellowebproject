@@ -28,7 +28,7 @@ public class UserService {
 
     public void showLoginForm() {
         if (out == null) return;
-        out.println(UserHtmlViews.getInstance().getFormUserView());
+        out.println(UserHtmlViews.getInstance().getLoginForm());
     }
 
     public void showRegisterForm() {
@@ -69,13 +69,13 @@ public class UserService {
     }
 
     private void showErrorLoginForm() {
-        String loginForm = UserHtmlViews.getInstance().getFormUserView();
+        String loginForm = UserHtmlViews.getInstance().getLoginForm();
         loginForm = loginForm.replace("<!--123-->", "<p class=\"text-danger text-center\">Логін або пароль не вірні!</p>");
         out.println(loginForm);
     }
 
     private void showBlockLoginForm() {
-        String loginForm = UserHtmlViews.getInstance().getFormUserView();
+        String loginForm = UserHtmlViews.getInstance().getLoginForm();
         loginForm = loginForm.replace("<!--123-->", "<p class=\"text-danger text-center\">Даного користувача ЗАБЛОКОВАНО!</p>");
         out.println(loginForm);
     }

@@ -1,5 +1,8 @@
 package lms.views;
 
+/**
+ * Lazy loading singleton with HTML parts
+ */
 public class PanelHtmlViews {
     private static PanelHtmlViews ourInstance;
 
