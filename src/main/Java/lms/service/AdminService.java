@@ -46,7 +46,7 @@ public class AdminService {
         for (Board b : boards) {
             String boardTitle = BoardHtmlViews.getInstance().getBoardHtml();
             boardTitle = boardTitle.replace("<!--user-->",  userDao.findByUserId(b.getUserId()).getLogin() );
-            boardTitle = boardTitle.replace("<!--board-->", b.getBoardTitle() + " - " + userDao.findByUserId(b.getUserId()).getLogin() );
+            boardTitle = boardTitle.replace("<!--board-->", b.getBoardTitle());
             boardTitle = boardTitle.replace("board_id", String.valueOf(b.getId()));
             out.println(boardTitle);
         }
