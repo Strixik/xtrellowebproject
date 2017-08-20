@@ -50,12 +50,13 @@ public class UserService {
             if (user == null) {
                 showErrorLoginForm();
                 return false;
-            } else if (user.getBlock() == 1) {
+            } else if (user.getBlock().equals("block")) {
                 showBlockLoginForm();
                 return false;
             } else if (user.getPassword().equals(password)) {
                 session.setAttribute("user_id", user.getId());
                 session.setAttribute("login", user.getLogin());
+                session.setAttribute("status", user.getBlock());
                 return true;
             }
         } catch (UnsupportedEncodingException e) {
@@ -148,7 +149,7 @@ public class UserService {
         return formStr;
     }
 
-    public void showUserProfileForm(String login) {
+    public void showUserProfileForm(String login, HttpSession session ) {
         if (out == null) return;
         UserDao userDao = new UserRepo();
         User user = userDao.findByUser(login);
@@ -162,7 +163,10 @@ public class UserService {
         regForm = regForm.replace("xtrellovall6", "value=\"" + user.getDate_registered() + "\"");
         regForm = regForm.replace("xtrellovall7", "value=\"" + user.getSex() + "\"");
         regForm = regForm.replace("xtrellovall8", "value=\"" + user.getDate_birth() + "\"");
+        if (session.getAttribute("status").equals("admin")){
         regForm = regForm.replace("xtrellovall9", "value=\"" + user.getBlock() + "\"");
+        }
+        regForm = regForm.replace("xtrellovall9", "value=\"" + user.getBlock() + "\"" + " readonly");
         regForm = regForm.replace("xtrellovall0", "value=\"" + user.getFirstName() + "\"");
         regForm = regForm.replace("xtrellovall-1", "value=\"" + user.getSecondName() + "\"");
         regForm = regForm.replace("xtrellovall-2", "value=\"" + user.getCountry() + "\"");
@@ -182,6 +186,7 @@ public class UserService {
                 }
                 return "Бла бла бла";
             });
+
             String upLogin = new String(request.getParameter("upLogin").getBytes("iso-8859-1"),
                     "UTF-8");
             profForm = checkFormField(1, profForm, upLogin, f -> {
@@ -190,7 +195,8 @@ public class UserService {
                 }
                 return "Мінімальна довжина 3 символів";
             });
-            String upFirstPasword = new String(request.getParameter("upFirstPasword").getBytes("iso-8859-1"),
+
+            String upFirstPasword = new String(request.getParameter("upFirstPassword").getBytes("iso-8859-1"),
                     "UTF-8");
             profForm = checkFormField(2, profForm, upFirstPasword, f -> {
                 if (f.length() >= 6) {
@@ -198,6 +204,7 @@ public class UserService {
                 }
                 return "Мінімальна довжина 6 символів";
             });
+
             profForm = checkFormField(2, profForm, upFirstPasword, f -> {
                 if (f.length() <= 20) {
                     return null;
@@ -206,6 +213,7 @@ public class UserService {
             });
             String upSecondPassword = new String(request.getParameter("upSecondPassword").getBytes("iso-8859-1"),
                     "UTF-8");
+
             profForm = checkFormField(3, profForm, upSecondPassword, f -> {
                 if (f.equals(upFirstPasword)) {
                     return null;
@@ -214,6 +222,7 @@ public class UserService {
             });
             String upEmail = new String(request.getParameter("upEmail").getBytes("iso-8859-1"),
                     "UTF-8");
+
             profForm = checkFormField(4, profForm, upEmail, f -> {
                 if (f.matches("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
                         + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$")
@@ -224,6 +233,7 @@ public class UserService {
             });
             String update_registered = new String(request.getParameter("update_registered").getBytes("iso-8859-1"),
                     "UTF-8");
+            System.out.println(update_registered);
             profForm = checkFormField(6, profForm, update_registered, f -> {
                 if (f.length() == 10) {
                     return null;
@@ -234,6 +244,7 @@ public class UserService {
 
             String upsex = new String(request.getParameter("upsex").getBytes("iso-8859-1"),
                     "UTF-8");
+            System.out.println(upsex);
             profForm = checkFormField(7, profForm, upsex, f -> {
                 if (f.length() >= 0) {
                     return null;
@@ -242,6 +253,7 @@ public class UserService {
             });
             String update_birth = new String(request.getParameter("update_birth").getBytes("iso-8859-1"),
                     "UTF-8");
+            System.out.println(update_birth);
             profForm = checkFormField(8, profForm, update_birth, f -> {
                 if (f.length() == 10) {
                     return null;
@@ -250,8 +262,9 @@ public class UserService {
             });
             String upblock = new String(request.getParameter("upblock").getBytes("iso-8859-1"),
                     "UTF-8");
+            System.out.println(upblock);
             profForm = checkFormField(9, profForm, upblock, f -> {
-                if (f.length() == 1) {
+                if (f.length() >= 3) {
                     return null;
                 }
                 return "По стандарту 0 опція не працює";
@@ -259,6 +272,7 @@ public class UserService {
 
             String upfirstname = new String(request.getParameter("upfirstname").getBytes("iso-8859-1"),
                     "UTF-8");
+            System.out.println(upfirstname);
             profForm = checkFormField(0, profForm, upfirstname, f -> {
                 if (f.length() >= 5) {
                     return null;
@@ -293,7 +307,7 @@ public class UserService {
 
             if (!profForm.contains("has-error")) {
                 User user;
-                user = new User(Long.parseLong(upuserId), upLogin, upSecondPassword, upEmail, update_registered, upsex, update_birth, Integer.parseInt(upblock), upfirstname, upsecondname, upcontry, upcity);
+                user = new User(Long.parseLong(upuserId), upLogin, upSecondPassword, upEmail, update_registered, upsex, update_birth, upblock, upfirstname, upsecondname, upcontry, upcity);
                 System.out.println("profile\t" + user);
                 UserDao userDao = new UserRepo();
                 userDao.saveUser(user);

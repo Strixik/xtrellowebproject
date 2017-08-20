@@ -37,7 +37,7 @@ public class PageFilter implements Filter {
             if (session.getAttribute("login") != null) {
                 top = top.replace("<!-- servletInsert01 -->", UserHtmlViews.getInstance().getMenuRight());
                 top = top.replace("<!-- currentUser -->", session.getAttribute("login").toString().toUpperCase());
-                if (session.getAttribute("login").equals("Strix")) {
+                if (session.getAttribute("status").equals("admin")) {
                     top = top.replace("hidden", "");
                 }
             }

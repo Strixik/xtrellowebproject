@@ -28,7 +28,7 @@ public class UserRepo implements UserDao {
             pstmt.setString(4, user.getDate_registered());
             pstmt.setString(5, user.getSex());
             pstmt.setString(6, user.getDate_birth());
-            pstmt.setInt(7, user.getBlock());
+            pstmt.setString(7, user.getBlock());
             pstmt.setString(8, user.getFirstName());
             pstmt.setString(9, user.getSecondName());
             pstmt.setString(10, user.getCountry());
@@ -57,7 +57,7 @@ public class UserRepo implements UserDao {
                         rs.getString("date_registered"),
                         rs.getString("sex"),
                         rs.getString("date_birth"),
-                        rs.getInt("block"),
+                        rs.getString("block"),
                         rs.getString("firstname"),
                         rs.getString("secondname"),
                         rs.getString("contry"),
@@ -123,7 +123,7 @@ public class UserRepo implements UserDao {
                         rs.getString("date_registered"),
                         rs.getString("sex"),
                         rs.getString("date_birth"),
-                        rs.getInt("block"),
+                        rs.getString("block"),
                         rs.getString("firstname"),
                         rs.getString("secondname"),
                         rs.getString("contry"),

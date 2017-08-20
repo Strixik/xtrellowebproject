@@ -8,13 +8,13 @@ public class User {
     private String date_registered;
     private String sex;
     private String date_birth;
-    private int block;
+    private String block;
     private String firstName;
     private String secondName;
     private String country;
     private String city;
 
-    public User(long id, String login, String password, String email, String date_registered, String sex, String date_birth, int block, String firstName, String secondName, String country, String city) {
+    public User(long id, String login, String password, String email, String date_registered, String sex, String date_birth, String block, String firstName, String secondName, String country, String city) {
         this.id = id;
         this.login = login;
         this.password = password;
@@ -104,11 +104,11 @@ public class User {
         this.date_birth = date_birth;
     }
 
-    public int getBlock() {
+    public String getBlock() {
         return block;
     }
 
-    public void setBlock(int block) {
+    public void setBlock(String block) {
         this.block = block;
     }
 
@@ -172,7 +172,6 @@ public class User {
         User user = (User) o;
 
         if (id != user.id) return false;
-        if (block != user.block) return false;
         if (login != null ? !login.equals(user.login) : user.login != null) return false;
         if (password != null ? !password.equals(user.password) : user.password != null) return false;
         if (email != null ? !email.equals(user.email) : user.email != null) return false;
@@ -180,6 +179,7 @@ public class User {
             return false;
         if (sex != null ? !sex.equals(user.sex) : user.sex != null) return false;
         if (date_birth != null ? !date_birth.equals(user.date_birth) : user.date_birth != null) return false;
+        if (block != null ? !block.equals(user.block) : user.block != null) return false;
         if (firstName != null ? !firstName.equals(user.firstName) : user.firstName != null) return false;
         if (secondName != null ? !secondName.equals(user.secondName) : user.secondName != null) return false;
         if (country != null ? !country.equals(user.country) : user.country != null) return false;
@@ -195,7 +195,7 @@ public class User {
         result = 31 * result + (date_registered != null ? date_registered.hashCode() : 0);
         result = 31 * result + (sex != null ? sex.hashCode() : 0);
         result = 31 * result + (date_birth != null ? date_birth.hashCode() : 0);
-        result = 31 * result + block;
+        result = 31 * result + (block != null ? block.hashCode() : 0);
         result = 31 * result + (firstName != null ? firstName.hashCode() : 0);
         result = 31 * result + (secondName != null ? secondName.hashCode() : 0);
         result = 31 * result + (country != null ? country.hashCode() : 0);
