@@ -8,6 +8,7 @@ public interface UserDao {
     void saveUser(User user);
 
     User findByUser(String login);
+    User findByUserId(long id);
 
     List<User> findByLoginByEmail(String searchString);
 

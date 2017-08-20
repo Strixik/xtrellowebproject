@@ -216,6 +216,7 @@ a {
     width: 200px;
     height: 100px;
     margin: 20px;
+    margin-bottom: 50px;
     text-align: center;
     position: relative;
 }

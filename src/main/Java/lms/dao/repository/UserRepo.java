@@ -71,6 +71,37 @@ public class UserRepo implements UserDao {
         return null;
     }
 
+    @Override
+    public User findByUserId(long id) {
+        DataSource dataSource = new DataSource();
+
+        try (Connection con = dataSource.getConnection();
+             Statement stmt = con.createStatement();
+             ResultSet rs = stmt.executeQuery("SELECT * FROM users WHERE users.id=\"" + id + "\";")
+        ) {
+            if (rs.next()) {
+                User user = new User(
+                        rs.getInt("id"),
+                        rs.getString("login"),
+                        rs.getString("password"),
+                        rs.getString("email"),
+                        rs.getString("date_registered"),
+                        rs.getString("sex"),
+                        rs.getString("date_birth"),
+                        rs.getString("block"),
+                        rs.getString("firstname"),
+                        rs.getString("secondname"),
+                        rs.getString("contry"),
+                        rs.getString("city"));
+                log.info("В базі знайдено користувача: \t" + user);
+                return user;
+            }
+        } catch (SQLException e) {
+            log.severe("Connection to database is lost: \t" + e.toString());
+        }
+        return null;
+    }
+
 
     @Override
     public List<User> findByLoginByEmail(String searchString) {
