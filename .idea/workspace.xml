@@ -7,26 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b4c1f9b-0b96-4c5b-bb39-14e4cffdec28" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/lms/dao/entity/User.class" afterPath="$PROJECT_DIR$/target/classes/lms/dao/entity/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/lms/dao/repository/UserRepo.class" afterPath="$PROJECT_DIR$/target/classes/lms/dao/repository/UserRepo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/lms/service/UserService.class" afterPath="$PROJECT_DIR$/target/classes/lms/service/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/lms/servlets/IndexServlet.class" afterPath="$PROJECT_DIR$/target/classes/lms/servlets/IndexServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/lms/servlets/PageFilter.class" afterPath="$PROJECT_DIR$/target/classes/lms/servlets/PageFilter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/dao/entity/User.class" afterPath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/dao/entity/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/dao/repository/UserRepo.class" afterPath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/dao/repository/UserRepo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/service/UserService.class" afterPath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/service/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/servlets/IndexServlet.class" afterPath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/servlets/IndexServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/servlets/PageFilter.class" afterPath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/servlets/PageFilter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/1441b81c-2c3a-4fa1-ab0b-f938a5a8f216.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/1441b81c-2c3a-4fa1-ab0b-f938a5a8f216.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Java/lms/dao/entity/User.java" afterPath="$PROJECT_DIR$/src/main/Java/lms/dao/entity/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Java/lms/dao/repository/UserRepo.java" afterPath="$PROJECT_DIR$/src/main/Java/lms/dao/repository/UserRepo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Java/lms/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/Java/lms/service/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Java/lms/servlets/IndexServlet.java" afterPath="$PROJECT_DIR$/src/main/Java/lms/servlets/IndexServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Java/lms/servlets/PageFilter.java" afterPath="$PROJECT_DIR$/src/main/Java/lms/servlets/PageFilter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/profile-form.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/profile-form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/logs/app.log" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/logs/app.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/html/profile-form.html" afterPath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/html/profile-form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/sql.sql" afterPath="$PROJECT_DIR$/src/main/resources/sql.sql" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,24 +34,6 @@
         <item name="" type="eadb38e5:DatabaseStructure$Root" />
         <item name="xtrello@localhost" type="e3449647:DbNodeDescriptor" />
         <item name="xtrello" type="e3449647:DbNodeDescriptor" />
-      </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="xtrello@localhost" type="e3449647:DbNodeDescriptor" />
-        <item name="xtrello" type="e3449647:DbNodeDescriptor" />
-        <item name="board" type="e3449647:DbNodeDescriptor" />
-      </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="xtrello@localhost" type="e3449647:DbNodeDescriptor" />
-        <item name="xtrello" type="e3449647:DbNodeDescriptor" />
-        <item name="card" type="e3449647:DbNodeDescriptor" />
-      </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="xtrello@localhost" type="e3449647:DbNodeDescriptor" />
-        <item name="xtrello" type="e3449647:DbNodeDescriptor" />
-        <item name="list" type="e3449647:DbNodeDescriptor" />
       </path>
       <path>
         <item name="" type="eadb38e5:DatabaseStructure$Root" />
@@ -107,7 +70,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserRepo.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserRepo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Java/lms/dao/repository/UserRepo.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
@@ -119,6 +82,26 @@
                 <marker date="1503262923441" expanded="true" signature="3261:3453" ph="SELECT DISTI... users" />
                 <marker date="1503262923441" expanded="true" signature="4455:4474" ph="SELECT * FRO... users" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sql.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/sql.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="298">
+              <caret line="49" column="70" lean-forward="false" selection-start-line="49" selection-start-column="70" selection-end-line="49" selection-end-column="70" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="console_1.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1441b81c-2c3a-4fa1-ab0b-f938a5a8f216/console_1.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="59" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="59" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -243,7 +226,6 @@
         <option value="$PROJECT_DIR$/src/main/Java/lms/views/UserHtmlViews.java" />
         <option value="$PROJECT_DIR$/src/main/Java/lms/views/PanelHtmlViews.java" />
         <option value="$PROJECT_DIR$/src/main/Java/lms/views/BoardHtmlViews.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/sql.sql" />
         <option value="$PROJECT_DIR$/src/main/Java/lms/servlets/BoardServlet.java" />
         <option value="$PROJECT_DIR$/src/main/Java/lms/service/BoardService.java" />
         <option value="$PROJECT_DIR$/src/main/Java/lms/service/AdminService.java" />
@@ -255,6 +237,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/profile-form.html" />
         <option value="$PROJECT_DIR$/src/main/Java/lms/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/Java/lms/dao/repository/UserRepo.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/sql.sql" />
       </list>
     </option>
   </component>
@@ -678,7 +661,7 @@
       <workItem from="1503078932720" duration="4462000" />
       <workItem from="1503133408938" duration="7130000" />
       <workItem from="1503143044724" duration="1804000" />
-      <workItem from="1503246469784" duration="6301000" />
+      <workItem from="1503246469784" duration="6739000" />
     </task>
     <task id="LOCAL-00001" summary="create empty CRUD interface">
       <created>1502980474794</created>
@@ -761,7 +744,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90681000" />
+    <option name="totallyTimeSpent" value="91119000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -828,21 +811,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/logs/app.log" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/index-bottom.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" column="7" lean-forward="false" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/index-top.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="463">
@@ -996,13 +964,6 @@
         <state relative-caret-position="760">
           <caret line="52" column="33" lean-forward="false" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/sql.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="40" column="37" lean-forward="false" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -1201,6 +1162,38 @@
             <marker date="1503262923441" expanded="true" signature="3261:3453" ph="SELECT DISTI... users" />
             <marker date="1503262923441" expanded="true" signature="4455:4474" ph="SELECT * FRO... users" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1441b81c-2c3a-4fa1-ab0b-f938a5a8f216/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://src:table:/aa4df2c8/1441b81c-2c3a-4fa1-ab0b-f938a5a8f216/xtrello.users">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1441b81c-2c3a-4fa1-ab0b-f938a5a8f216/console_1.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="59" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/sql.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="49" column="70" lean-forward="false" selection-start-line="49" selection-start-column="70" selection-end-line="49" selection-end-column="70" />
+          <folding />
         </state>
       </provider>
     </entry>
