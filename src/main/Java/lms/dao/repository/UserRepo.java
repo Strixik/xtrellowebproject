@@ -28,7 +28,7 @@ public class UserRepo implements UserDao {
             pstmt.setString(4, user.getDate_registered());
             pstmt.setString(5, user.getSex());
             pstmt.setString(6, user.getDate_birth());
-            pstmt.setString(7, user.getBlock());
+            pstmt.setString(7, (user.getBlock() == null)?"user":user.getBlock());
             pstmt.setString(8, user.getFirstName());
             pstmt.setString(9, user.getSecondName());
             pstmt.setString(10, user.getCountry());
