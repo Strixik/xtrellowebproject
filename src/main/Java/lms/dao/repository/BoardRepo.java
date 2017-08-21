@@ -87,4 +87,27 @@ public class BoardRepo implements CRUD<Board> {
         }
         return boards;
     }
-}
+    public List<Board> retrieveAllBoardsForSearch(String searchString, Long id) {
+        DataSource dataSource = new DataSource();
+        List<Board> boards = new ArrayList<>();
+        try (Connection con = dataSource.getConnection();
+             PreparedStatement preparedSt = con.prepareStatement("SELECT DISTINCT id, board, user_id FROM board WHERE  board LIKE \"%" + searchString + "%\"AND user_id =\"" + id + "\"");
+             ResultSet rs = preparedSt.executeQuery()
+        ) {
+            while (rs.next()) {
+                Board board = new Board(
+                        rs.getLong("id"),
+                        rs.getString("board"),
+                        rs.getLong("user_id")
+                    );
+                boards.add(board);
+            }
+            return boards;
+        } catch (SQLException e) {
+            log.severe("Connection to database is lost: \t" + e.toString());
+        }
+        return null;
+    }
+    }
+
+

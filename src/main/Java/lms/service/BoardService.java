@@ -63,5 +63,18 @@ public class BoardService {
             boardTitle = boardTitle.replace("board_id", String.valueOf(b.getId()));
             out.println(boardTitle);
         }
+    } public void showAllBoardsSearch(HttpServletRequest request, HttpSession session) {
+        if (out == null) return;
+        String str = request.getParameter("searchText");
+        Long user_id = Long.parseLong(session.getAttribute("user_id").toString());
+        BoardRepo boardRepo = new BoardRepo();
+        List<Board> boards = boardRepo.retrieveAllBoardsForSearch(str, user_id);
+        out.println(BoardHtmlViews.getInstance().getBoardAddModalWindow());
+        for (Board b : boards) {
+            String boardTitle = BoardHtmlViews.getInstance().getBoardHtml();
+            boardTitle = boardTitle.replace("<!--board-->", b.getBoardTitle());
+            boardTitle = boardTitle.replace("board_id", String.valueOf(b.getId()));
+            out.println(boardTitle);
+        }
     }
 }

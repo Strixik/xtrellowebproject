@@ -52,6 +52,9 @@ public class BoardServlet extends HttpServlet {
             case "/view":
                 boardView.showAllBoards(session);
                 break;
+            case "/insert-search-notes-url-here":
+                boardView.showAllBoardsSearch(request,session);
+                break;
             case "/all":
                 adminView.showAllBoardsForAdmin();
                 break;
