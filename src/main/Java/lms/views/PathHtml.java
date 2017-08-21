@@ -6,11 +6,13 @@ import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.logging.Logger;
 
 /**
  * Singleton. Holds path object to html folder
  */
 public class PathHtml {
+    private static Logger log = Logger.getLogger(PathHtml.class.getName());
     private String path = "";
     private static PathHtml ourInstance = new PathHtml();
 
@@ -39,8 +41,8 @@ public class PathHtml {
             while ((line = reader.readLine()) != null) {
                 strb.append(line).append("\n");
             }
-        } catch (IOException x) {
-            System.err.format("IOException: %s%n", x);
+        } catch (IOException e) {
+            log.warning("Can't find html file: " + e.toString());
         }
 
         return strb.toString();

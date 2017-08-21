@@ -1,10 +1,13 @@
 package lms.views;
 
+/**
+ * Lazy loading singleton with HTML parts
+ */
 public class BoardHtmlViews {
     private static BoardHtmlViews ourInstance;
 
-    private final String modal_bottom;
-    private final String board_name;
+    private final String boardAddModalWindow;
+    private final String boardHtml;
 
 
     public static BoardHtmlViews getInstance() {
@@ -18,15 +21,15 @@ public class BoardHtmlViews {
     public BoardHtmlViews() {
         PathHtml pathHtml = PathHtml.getInstance();
 
-        this.modal_bottom = pathHtml.getPartialHtml("modalboardbottom.html");
-        this.board_name = pathHtml.getPartialHtml("boardname.html");
+        this.boardAddModalWindow = pathHtml.getPartialHtml("board-add-modal-window.html");
+        this.boardHtml = pathHtml.getPartialHtml("board.html");
     }
 
-    public String getModal_boottom() {
-        return modal_bottom;
+    public String getBoardAddModalWindow() {
+        return boardAddModalWindow;
     }
 
-    public String getBoard_name() {
-        return board_name;
+    public String getBoardHtml() {
+        return boardHtml;
     }
 }

@@ -1,0 +1,30 @@
+<div class="margin10">
+    <div class="col-sm-2 liststyle">
+        <form action="/list/panel.html" method="post" class="">
+            <input type="hidden" name="listid" value="listId">
+            <input type="submit" disabled class="col-sm-2 btn-block" value="<!--list-->">
+        </form>
+        <form action="/card/del" method="post">
+            <div class="panel-info"><!--listIdyour text--></div>
+            <button type="submit" class="btn btn-danger floating" title="Видалити нотатку">
+                <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></button>
+        </form>
+        <form action="/card/add" method="post">
+            <div class="input-group">
+                <input type="text" name="cardText" placeholder="введіть ваш текст" class="form-control ">
+                <input type="hidden" name="listid" value="listId">
+                <span class="input-group-btn">
+            <input class="btn btn-default" type="submit" value="ОК">
+            </span>
+            </div>
+        </form>
+        <!-- /input-group -->
+
+        <form action="/list/del" method="post" class="tab-close-button">
+            <input type="hidden" name="listid" value="listId">
+            <input type="submit" class="btn btn-danger col-sm-2 btn-block" value="Видалити список">
+
+        </form>
+    </div><!-- /.col-lg-6 -->
+
+</div>

@@ -1,15 +1,15 @@
 package lms.views;
 
 /**
- * Lazy loading singleton with HTML parts for Note views
+ * Lazy loading singleton with HTML parts
  */
 public class UserHtmlViews {
     private static UserHtmlViews ourInstance;
 
-    private final String topUserView;
-    private final String formUserView;
-    private final String bottomUserView;
-    private final String logoutButton;
+    private final String indexTop;
+    private final String indexBottom;
+    private final String menuRight;
+    private final String loginForm;
     private final String regForm;
     private final String profileForm;
 
@@ -23,28 +23,28 @@ public class UserHtmlViews {
 
     private UserHtmlViews() {
         PathHtml pathHtml = PathHtml.getInstance();
-        this.topUserView = pathHtml.getPartialHtml("indextop.html");
-        this.formUserView = pathHtml.getPartialHtml("form login.html");
-        this.bottomUserView = pathHtml.getPartialHtml("indexbottom.html");
-        this.logoutButton = pathHtml.getPartialHtml("start-logout-button.html");
-        this.regForm = pathHtml.getPartialHtml("regform.html");
-        this.profileForm = pathHtml.getPartialHtml("profileform.html");
+        this.indexTop = pathHtml.getPartialHtml("index-top.html");
+        this.indexBottom = pathHtml.getPartialHtml("index-bottom.html");
+        this.menuRight = pathHtml.getPartialHtml("menu-right.html");
+        this.loginForm = pathHtml.getPartialHtml("login-form.html");
+        this.regForm = pathHtml.getPartialHtml("reg-form.html");
+        this.profileForm = pathHtml.getPartialHtml("profile-form.html");
     }
 
-    public String getTopUserView() {
-        return topUserView;
+    public String getIndexTop() {
+        return indexTop;
     }
 
-    public String getFormUserView() {
-        return formUserView;
+    public String getIndexBottom() {
+        return indexBottom;
     }
 
-    public String getLogoutButton() {
-        return logoutButton;
+    public String getMenuRight() {
+        return menuRight;
     }
 
-    public String getBottomUserView() {
-        return bottomUserView;
+    public String getLoginForm() {
+        return loginForm;
     }
 
     public String getRegForm() {
