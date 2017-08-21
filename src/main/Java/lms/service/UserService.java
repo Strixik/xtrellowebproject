@@ -274,10 +274,10 @@ public class UserService {
                     "UTF-8");
 
             profForm = checkFormField(0, profForm, upfirstname, f -> {
-                if (f.length() >= 5) {
+                if (f.length() >= 3) {
                     return null;
                 }
-                return "Мінімальна довжина 5 символів";
+                return "Мінімальна довжина 3 символів";
             });
 
             String upsecondname = new String(request.getParameter("upsecondname").getBytes("iso-8859-1"),
