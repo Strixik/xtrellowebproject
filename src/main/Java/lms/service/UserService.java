@@ -167,10 +167,10 @@ public class UserService {
         regForm = regForm.replace("xtrellovall9", "value=\"" + user.getBlock() + "\"");
         }
         regForm = regForm.replace("xtrellovall9", "value=\"" + user.getBlock() + "\"" + " readonly");
-        regForm = regForm.replace("xtrellovall0", "value=\"" + user.getFirstName() + "\"");
-        regForm = regForm.replace("xtrellovall-1", "value=\"" + user.getSecondName() + "\"");
-        regForm = regForm.replace("xtrellovall-2", "value=\"" + user.getCountry() + "\"");
-        regForm = regForm.replace("xtrellovall-3", "value=\"" + user.getCity() + "\"");
+        regForm = regForm.replace("xtrellovall0", "value=\"" + ((user.getFirstName() == null)?"Данні не заповнено":user.getFirstName())+ "\"");
+        regForm = regForm.replace("xtrellovall-1", "value=\"" +((user.getSecondName() == null)?"Данні не заповнено":user.getSecondName())+ "\"");
+        regForm = regForm.replace("xtrellovall-2", "value=\"" + ((user.getCountry() == null)?"Данні не заповнено":user.getCountry())+ "\"");
+        regForm = regForm.replace("xtrellovall-3", "value=\"" +((user.getCity() == null)?"Данні не заповнено":user.getCity())+ "\"");
         out.println(regForm);
     }
 
