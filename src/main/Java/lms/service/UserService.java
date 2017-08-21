@@ -233,7 +233,7 @@ public class UserService {
             });
             String update_registered = new String(request.getParameter("update_registered").getBytes("iso-8859-1"),
                     "UTF-8");
-            System.out.println(update_registered);
+
             profForm = checkFormField(6, profForm, update_registered, f -> {
                 if (f.length() == 10) {
                     return null;
@@ -244,7 +244,7 @@ public class UserService {
 
             String upsex = new String(request.getParameter("upsex").getBytes("iso-8859-1"),
                     "UTF-8");
-            System.out.println(upsex);
+
             profForm = checkFormField(7, profForm, upsex, f -> {
                 if (f.length() >= 0) {
                     return null;
@@ -253,7 +253,7 @@ public class UserService {
             });
             String update_birth = new String(request.getParameter("update_birth").getBytes("iso-8859-1"),
                     "UTF-8");
-            System.out.println(update_birth);
+
             profForm = checkFormField(8, profForm, update_birth, f -> {
                 if (f.length() == 10) {
                     return null;
@@ -262,7 +262,7 @@ public class UserService {
             });
             String upblock = new String(request.getParameter("upblock").getBytes("iso-8859-1"),
                     "UTF-8");
-            System.out.println(upblock);
+
             profForm = checkFormField(9, profForm, upblock, f -> {
                 if (f.length() >= 3) {
                     return null;
@@ -272,7 +272,7 @@ public class UserService {
 
             String upfirstname = new String(request.getParameter("upfirstname").getBytes("iso-8859-1"),
                     "UTF-8");
-            System.out.println(upfirstname);
+
             profForm = checkFormField(0, profForm, upfirstname, f -> {
                 if (f.length() >= 5) {
                     return null;
@@ -308,7 +308,6 @@ public class UserService {
             if (!profForm.contains("has-error")) {
                 User user;
                 user = new User(Long.parseLong(upuserId), upLogin, upSecondPassword, upEmail, update_registered, upsex, update_birth, upblock, upfirstname, upsecondname, upcontry, upcity);
-                System.out.println("profile\t" + user);
                 UserDao userDao = new UserRepo();
                 userDao.saveUser(user);
                 return true;
