@@ -13,10 +13,6 @@ import java.time.LocalDate;
 
 public class UserService {
 
-    interface FormField<E> {
-        String check(E e);
-    }
-
     private PrintWriter out;
 
     public UserService(PrintWriter out) {
@@ -38,52 +34,42 @@ public class UserService {
         return showProfileForm;
     }
 
-    public boolean checkLogin(HttpServletRequest request, HttpSession session) {
+    public boolean checkLogin(HttpServletRequest request, HttpSession session) throws UnsupportedEncodingException {
         if (out == null) return false;
-        try {
-            String login = new String(request.getParameter("login").getBytes("iso-8859-1"),
-                    "UTF-8");
-            String password = new String(request.getParameter("password").getBytes("iso-8859-1"),
-                    "UTF-8");
+        String login = Helper.requestParameter("login", request);
+        String password = Helper.requestParameter("password", request);
             UserDao userDao = new UserRepo();
             User user = userDao.findByUser(login);
-            if (user == null) {
-                showErrorLoginForm();
-                return false;
-            } else if (user.getBlock().equals("block")) {
-                showBlockLoginForm();
-                return false;
-            } else if (user.getPassword().equals(password)) {
-                session.setAttribute("user_id", user.getId());
-                session.setAttribute("login", user.getLogin());
-                session.setAttribute("status", user.getBlock());
-                return true;
+        if (showErrorLoginForm(user, password)) {
+            session.setAttribute("user_id", user.getId());
+            session.setAttribute("login", user.getLogin());
+            session.setAttribute("status", user.getBlock());
+            return true;
             }
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }
-        showErrorLoginForm();
+
         return false;
     }
 
-    private void showErrorLoginForm() {
+    private boolean showErrorLoginForm(User user, String password) {
         String loginForm = UserHtmlViews.getInstance().getLoginForm();
-        loginForm = loginForm.replace("<!--123-->", "<p class=\"text-danger text-center\">Логін або пароль не вірні!</p>");
-        out.println(loginForm);
-    }
-    private void showBlockLoginForm() {
-        String loginForm = UserHtmlViews.getInstance().getLoginForm();
-        loginForm = loginForm.replace("<!--123-->", "<p class=\"text-danger text-center\">Даного користувача ЗАБЛОКОВАНО!</p>");
-        out.println(loginForm);
+        if (user == null || !user.getPassword().equals(password)) {
+            loginForm = loginForm.replace("<!--#{ErrorLoginText}-->", "Логін або пароль не вірні!");
+            out.println(loginForm);
+            return false;
+        } else if (user.getBlock().equals("block")) {
+            loginForm = loginForm.replace("<!--#{ErrorLoginText}-->", "Даного користувача ЗАБЛОКОВАНО!");
+            out.println(loginForm);
+            return false;
+        }
+
+        return true;
     }
 
     public boolean checkRegistrationForm(HttpServletRequest request) {
-        if (out == null) return false;
         String regForm = UserHtmlViews.getInstance().getRegForm();
         try {
-            String regLogin = new String(request.getParameter("regLogin").getBytes("iso-8859-1"),
-                    "UTF-8");
-            regForm = checkFormField(1, regForm, regLogin, f -> {
+            String regLogin = Helper.requestParameter("regLogin", request);
+            regForm = Helper.checkFormField(1, regForm, regLogin, f -> {
                 UserDao userDao = new UserRepo();
                 User user = userDao.findByUser(regLogin);
                 if (user == null) {
@@ -91,32 +77,29 @@ public class UserService {
                 }
                 return "Такий користувач вже зареєстрований";
             });
-            String regFirstPasword = new String(request.getParameter("regFirstPasword").getBytes("iso-8859-1"),
-                    "UTF-8");
-            regForm = checkFormField(2, regForm, regFirstPasword, f -> {
+            String regFirstPasword = Helper.requestParameter("regFirstPasword", request);
+            regForm = Helper.checkFormField(2, regForm, regFirstPasword, f -> {
                 if (f.length() >= 6) {
                     return null;
                 }
                 return "Мінімальна довжина 6 символів";
             });
-            regForm = checkFormField(2, regForm, regFirstPasword, f -> {
+            regForm = Helper.checkFormField(2, regForm, regFirstPasword, f -> {
                 if (f.length() <= 20) {
                     return null;
                 }
                 return "Максимальна довжина 20 символів";
             });
-            String regSecondPassword = new String(request.getParameter("regSecondPassword").getBytes("iso-8859-1"),
-                    "UTF-8");
-            regForm = checkFormField(3, regForm, regSecondPassword, f -> {
+            String regSecondPassword = Helper.requestParameter("regSecondPassword", request);
+
+            regForm = Helper.checkFormField(3, regForm, regSecondPassword, f -> {
                 if (f.equals(regFirstPasword)) {
                     return null;
                 }
                 return "Паролі повинні співпадати!";
             });
-
-            String regEmail = new String(request.getParameter("regEmail").getBytes("iso-8859-1"),
-                    "UTF-8");
-            regForm = checkFormField(4, regForm, regEmail, f -> {
+            String regEmail = Helper.requestParameter("regEmail", request);
+            regForm = Helper.checkFormField(4, regForm, regEmail, f -> {
                 if (f.matches("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
                         + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$")
                         ) {
@@ -137,16 +120,6 @@ public class UserService {
         }
         out.println(regForm);
         return false;
-    }
-
-    private <E> String checkFormField(int fieldNumber, String formStr, E field, FormField<E> ff) {
-        String msg = ff.check(field);
-        formStr = formStr.replace("xtrellovall" + fieldNumber, "value=\"" + String.valueOf(field) + "\"");
-        if (msg != null) {
-            formStr = formStr.replace("group" + fieldNumber, "has-error");
-            formStr = formStr.replace("<!--" + fieldNumber + "-->", msg);
-        }
-        return formStr;
     }
 
     public void showUserProfileForm(String login, HttpSession session ) {
@@ -175,55 +148,48 @@ public class UserService {
     }
 
     public boolean checkProfileForm(HttpServletRequest request) {
-
-        if (out == null) return false;
         String profForm = showProfileForm();
         try {
-            String upuserId = request.getParameter("upuserId");
-            profForm = checkFormField(5, profForm, upuserId, f -> {
+            String upuserId = Helper.requestParameter("upuserId", request);
+            profForm = Helper.checkFormField(5, profForm, upuserId, f -> {
                 if (f.length() > 0) {
                     return null;
                 }
                 return "Бла бла бла";
             });
 
-            String upLogin = new String(request.getParameter("upLogin").getBytes("iso-8859-1"),
-                    "UTF-8");
-            profForm = checkFormField(1, profForm, upLogin, f -> {
+            String upLogin = Helper.requestParameter("upLogin", request);
+            profForm = Helper.checkFormField(1, profForm, upLogin, f -> {
                 if (f.length() >= 3) {
                     return null;
                 }
                 return "Мінімальна довжина 3 символів";
             });
 
-            String upFirstPasword = new String(request.getParameter("upFirstPassword").getBytes("iso-8859-1"),
-                    "UTF-8");
-            profForm = checkFormField(2, profForm, upFirstPasword, f -> {
+            String upFirstPasword = Helper.requestParameter("upFirstPassword", request);
+            profForm = Helper.checkFormField(2, profForm, upFirstPasword, f -> {
                 if (f.length() >= 6) {
                     return null;
                 }
                 return "Мінімальна довжина 6 символів";
             });
 
-            profForm = checkFormField(2, profForm, upFirstPasword, f -> {
+            profForm = Helper.checkFormField(2, profForm, upFirstPasword, f -> {
                 if (f.length() <= 20) {
                     return null;
                 }
                 return "Максимальна довжина 20 символів";
             });
-            String upSecondPassword = new String(request.getParameter("upSecondPassword").getBytes("iso-8859-1"),
-                    "UTF-8");
+            String upSecondPassword = Helper.requestParameter("upSecondPassword", request);
 
-            profForm = checkFormField(3, profForm, upSecondPassword, f -> {
+            profForm = Helper.checkFormField(3, profForm, upSecondPassword, f -> {
                 if (f.equals(upFirstPasword)) {
                     return null;
                 }
                 return "Паролі повинні співпадати!";
             });
-            String upEmail = new String(request.getParameter("upEmail").getBytes("iso-8859-1"),
-                    "UTF-8");
-
-            profForm = checkFormField(4, profForm, upEmail, f -> {
+            String upEmail = Helper.requestParameter("upEmail", request);
+            profForm = Helper.checkFormField(4, profForm, upEmail, f -> {
                 if (f.matches("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
                         + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$")
                         ) {
@@ -231,74 +197,63 @@ public class UserService {
                 }
                 return "Невірна ел. адреса!";
             });
-            String update_registered = new String(request.getParameter("update_registered").getBytes("iso-8859-1"),
-                    "UTF-8");
-
-            profForm = checkFormField(6, profForm, update_registered, f -> {
+            String update_registered = Helper.requestParameter("update_registered", request);
+            profForm = Helper.checkFormField(6, profForm, update_registered, f -> {
                 if (f.length() == 10) {
                     return null;
                 }
                 return "Довжина повина становити 10 символів";
             });
 
+            String upsex = Helper.requestParameter("upsex", request);
 
-            String upsex = new String(request.getParameter("upsex").getBytes("iso-8859-1"),
-                    "UTF-8");
-
-            profForm = checkFormField(7, profForm, upsex, f -> {
+            profForm = Helper.checkFormField(7, profForm, upsex, f -> {
                 if (f.length() >= 0) {
                     return null;
                 }
                 return "Виберіть Стать";
             });
-            String update_birth = new String(request.getParameter("update_birth").getBytes("iso-8859-1"),
-                    "UTF-8");
+            String update_birth = Helper.requestParameter("update_birth", request);
 
-            profForm = checkFormField(8, profForm, update_birth, f -> {
+            profForm = Helper.checkFormField(8, profForm, update_birth, f -> {
                 if (f.length() == 10) {
                     return null;
                 }
                 return "Довжина повина становити 10 символів";
             });
-            String upblock = new String(request.getParameter("upblock").getBytes("iso-8859-1"),
-                    "UTF-8");
-
-            profForm = checkFormField(9, profForm, upblock, f -> {
+            String upblock = Helper.requestParameter("upblock", request);
+            profForm = Helper.checkFormField(9, profForm, upblock, f -> {
                 if (f.length() >= 3) {
                     return null;
                 }
                 return "По стандарту 0 опція не працює";
             });
 
-            String upfirstname = new String(request.getParameter("upfirstname").getBytes("iso-8859-1"),
-                    "UTF-8");
+            String upfirstname = Helper.requestParameter("upfirstname", request);
 
-            profForm = checkFormField(0, profForm, upfirstname, f -> {
+            profForm = Helper.checkFormField(0, profForm, upfirstname, f -> {
                 if (f.length() >= 3) {
                     return null;
                 }
                 return "Мінімальна довжина 3 символів";
             });
 
-            String upsecondname = new String(request.getParameter("upsecondname").getBytes("iso-8859-1"),
-                    "UTF-8");
-            profForm = checkFormField(-1, profForm, upsecondname, f -> {
+            String upsecondname = Helper.requestParameter("upsecondname", request);
+            profForm = Helper.checkFormField(-1, profForm, upsecondname, f -> {
                 if (f.length() >= 3) {
                     return null;
                 }
                 return "Мінімальна довжина 3 символів";
             });
-            String upcontry = new String(request.getParameter("upcontry").getBytes("iso-8859-1"),
-                    "UTF-8");
-            profForm = checkFormField(-2, profForm, upcontry, f -> {
+            String upcontry = Helper.requestParameter("upcontry", request);
+            profForm = Helper.checkFormField(-2, profForm, upcontry, f -> {
                 if (f.length() >= 3) {
                     return null;
                 }
                 return "Мінімальна довжина 3 символів";
             });
-            String upcity = new String(request.getParameter("upcity").getBytes("iso-8859-1"),
-                    "UTF-8");
-            profForm = checkFormField(-3, profForm, upcity, f -> {
+            String upcity = Helper.requestParameter("upcity", request);
+            profForm = Helper.checkFormField(-3, profForm, upcity, f -> {
                 if (f.length() >= 3) {
                     return null;
                 }

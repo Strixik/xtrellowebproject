@@ -12,6 +12,8 @@ public class UserHtmlViews {
     private final String loginForm;
     private final String regForm;
     private final String profileForm;
+    private final String adminUserForm;
+    private final String adminInsertForm;
 
 
     public static UserHtmlViews getInstance() {
@@ -29,6 +31,8 @@ public class UserHtmlViews {
         this.loginForm = pathHtml.getPartialHtml("login-form.html");
         this.regForm = pathHtml.getPartialHtml("reg-form.html");
         this.profileForm = pathHtml.getPartialHtml("profile-form.html");
+        this.adminUserForm = pathHtml.getPartialHtml("user-list-for-admin.html");
+        this.adminInsertForm = pathHtml.getPartialHtml("insert-for-admin-list-user.html");
     }
 
     public String getIndexTop() {
@@ -41,6 +45,14 @@ public class UserHtmlViews {
 
     public String getMenuRight() {
         return menuRight;
+    }
+
+    public String getAdminUserForm() {
+        return adminUserForm;
+    }
+
+    public String getAdminInsertForm() {
+        return adminInsertForm;
     }
 
     public String getLoginForm() {

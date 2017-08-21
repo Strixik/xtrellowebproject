@@ -3,611 +3,500 @@ Using CATALINA_HOME:   "E:\apache-tomcat-9.0.0.M22-windows-x64\apache-tomcat-9.0
 Using CATALINA_TMPDIR: "E:\apache-tomcat-9.0.0.M22-windows-x64\apache-tomcat-9.0.0.M22\temp"
 Using JRE_HOME:        "C:\Program Files\Java\jdk1.8.0_131"
 Using CLASSPATH:       "E:\apache-tomcat-9.0.0.M22-windows-x64\apache-tomcat-9.0.0.M22\bin\bootstrap.jar;E:\apache-tomcat-9.0.0.M22-windows-x64\apache-tomcat-9.0.0.M22\bin\tomcat-juli.jar"
-21-Aug-2017 15:31:31.759 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/9.0.0.M22
-21-Aug-2017 15:31:31.761 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 21 2017 09:44:18 UTC
-21-Aug-2017 15:31:31.762 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         9.0.0.0
-21-Aug-2017 15:31:31.762 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 7
-21-Aug-2017 15:31:31.762 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.1
-21-Aug-2017 15:31:31.762 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
-21-Aug-2017 15:31:31.762 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_131\jre
-21-Aug-2017 15:31:31.762 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_131-b11
-21-Aug-2017 15:31:31.762 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
-21-Aug-2017 15:31:31.762 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\User\.IntelliJIdea2017.2\system\tomcat\Unnamed_xtrello_web-project_2
-21-Aug-2017 15:31:31.762 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         E:\apache-tomcat-9.0.0.M22-windows-x64\apache-tomcat-9.0.0.M22
-21-Aug-2017 15:31:31.763 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\User\.IntelliJIdea2017.2\system\tomcat\Unnamed_xtrello_web-project_2\conf\logging.properties
-21-Aug-2017 15:31:31.763 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
-21-Aug-2017 15:31:31.763 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcom.sun.management.jmxremote=
-21-Aug-2017 15:31:31.763 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcom.sun.management.jmxremote.port=1097
-21-Aug-2017 15:31:31.764 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcom.sun.management.jmxremote.ssl=false
-21-Aug-2017 15:31:31.764 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcom.sun.management.jmxremote.authenticate=false
-21-Aug-2017 15:31:31.764 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.rmi.server.hostname=127.0.0.1
-21-Aug-2017 15:31:31.764 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
-21-Aug-2017 15:31:31.764 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
-21-Aug-2017 15:31:31.764 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\User\.IntelliJIdea2017.2\system\tomcat\Unnamed_xtrello_web-project_2
-21-Aug-2017 15:31:31.764 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=E:\apache-tomcat-9.0.0.M22-windows-x64\apache-tomcat-9.0.0.M22
-21-Aug-2017 15:31:31.764 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=E:\apache-tomcat-9.0.0.M22-windows-x64\apache-tomcat-9.0.0.M22\temp
-21-Aug-2017 15:31:31.765 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded APR based Apache Tomcat Native library [1.2.12] using APR version [1.5.2].
-21-Aug-2017 15:31:31.765 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-21-Aug-2017 15:31:31.765 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-21-Aug-2017 15:31:32.835 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.0.2k  26 Jan 2017]
-21-Aug-2017 15:31:32.990 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
-21-Aug-2017 15:31:33.034 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
-21-Aug-2017 15:31:33.037 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
-21-Aug-2017 15:31:33.039 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
-21-Aug-2017 15:31:33.040 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1778 ms
-21-Aug-2017 15:31:33.077 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
-21-Aug-2017 15:31:33.077 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/9.0.0.M22
-21-Aug-2017 15:31:33.089 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
-21-Aug-2017 15:31:33.104 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
-21-Aug-2017 15:31:33.109 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 69 ms
+21-Aug-2017 22:31:55.432 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/9.0.0.M22
+21-Aug-2017 22:31:55.432 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 21 2017 09:44:18 UTC
+21-Aug-2017 22:31:55.432 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         9.0.0.0
+21-Aug-2017 22:31:55.432 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 7
+21-Aug-2017 22:31:55.432 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.1
+21-Aug-2017 22:31:55.432 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+21-Aug-2017 22:31:55.432 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_131\jre
+21-Aug-2017 22:31:55.432 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_131-b11
+21-Aug-2017 22:31:55.432 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+21-Aug-2017 22:31:55.432 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\User\.IntelliJIdea2017.2\system\tomcat\Unnamed_xtrello_web-project_2
+21-Aug-2017 22:31:55.432 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         E:\apache-tomcat-9.0.0.M22-windows-x64\apache-tomcat-9.0.0.M22
+21-Aug-2017 22:31:55.432 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\User\.IntelliJIdea2017.2\system\tomcat\Unnamed_xtrello_web-project_2\conf\logging.properties
+21-Aug-2017 22:31:55.432 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+21-Aug-2017 22:31:55.432 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcom.sun.management.jmxremote=
+21-Aug-2017 22:31:55.432 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcom.sun.management.jmxremote.port=1097
+21-Aug-2017 22:31:55.432 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcom.sun.management.jmxremote.ssl=false
+21-Aug-2017 22:31:55.432 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcom.sun.management.jmxremote.authenticate=false
+21-Aug-2017 22:31:55.448 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.rmi.server.hostname=127.0.0.1
+21-Aug-2017 22:31:55.448 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+21-Aug-2017 22:31:55.448 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+21-Aug-2017 22:31:55.448 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\User\.IntelliJIdea2017.2\system\tomcat\Unnamed_xtrello_web-project_2
+21-Aug-2017 22:31:55.448 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=E:\apache-tomcat-9.0.0.M22-windows-x64\apache-tomcat-9.0.0.M22
+21-Aug-2017 22:31:55.448 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=E:\apache-tomcat-9.0.0.M22-windows-x64\apache-tomcat-9.0.0.M22\temp
+21-Aug-2017 22:31:55.448 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded APR based Apache Tomcat Native library [1.2.12] using APR version [1.5.2].
+21-Aug-2017 22:31:55.448 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+21-Aug-2017 22:31:55.448 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+21-Aug-2017 22:31:56.493 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.0.2k  26 Jan 2017]
+21-Aug-2017 22:31:56.618 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+21-Aug-2017 22:31:56.649 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+21-Aug-2017 22:31:56.664 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+21-Aug-2017 22:31:56.664 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+21-Aug-2017 22:31:56.664 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1556 ms
+21-Aug-2017 22:31:56.696 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+21-Aug-2017 22:31:56.696 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/9.0.0.M22
+21-Aug-2017 22:31:56.696 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+21-Aug-2017 22:31:56.711 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
 Connected to server
-21-Aug-2017 15:31:34.042 INFO [RMI TCP Connection(3)-127.0.0.1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-21-Aug-2017 15:31:34.902 INFO [http-nio-8080-exec-1] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:31:34.902 INFO [http-nio-8080-exec-1] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:31:34.914 INFO [http-nio-8080-exec-2] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:31:34.914 INFO [http-nio-8080-exec-2] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:31:35.641 INFO [http-nio-8080-exec-4] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:31:35.641 INFO [http-nio-8080-exec-4] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:31:43.091 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [E:\apache-tomcat-9.0.0.M22-windows-x64\apache-tomcat-9.0.0.M22\webapps\manager]
-21-Aug-2017 15:31:43.148 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [E:\apache-tomcat-9.0.0.M22-windows-x64\apache-tomcat-9.0.0.M22\webapps\manager] has finished in [56] ms
-21-Aug-2017 15:31:53.013 INFO [http-nio-8080-exec-6] lms.servlets.IndexServlet.doPost pathInfo:	/register
-21-Aug-2017 15:31:53.013 INFO [http-nio-8080-exec-6] lms.servlets.IndexServlet.doPost pathInfo:	/register
-21-Aug-2017 15:31:53.447 INFO [http-nio-8080-exec-9] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:31:53.447 INFO [http-nio-8080-exec-9] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:31:59.091 INFO [http-nio-8080-exec-10] lms.servlets.IndexServlet.doPost pathInfo:	/login
-21-Aug-2017 15:31:59.091 INFO [http-nio-8080-exec-10] lms.servlets.IndexServlet.doPost pathInfo:	/login
-21-Aug-2017 15:31:59.121 INFO [http-nio-8080-exec-10] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='null', date_birth='null', block=user, firstName='null', secondName='null', country='null', city='null'}
-21-Aug-2017 15:31:59.121 INFO [http-nio-8080-exec-10] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='null', date_birth='null', block=user, firstName='null', secondName='null', country='null', city='null'}
-21-Aug-2017 15:31:59.130 INFO [http-nio-8080-exec-1] lms.servlets.BoardServlet.doGet pathInfo:	/view
-21-Aug-2017 15:31:59.130 INFO [http-nio-8080-exec-1] lms.servlets.BoardServlet.doGet pathInfo:	/view
-21-Aug-2017 15:32:13.581 INFO [http-nio-8080-exec-2] lms.servlets.BoardServlet.doPost pathInfo:	/add
-21-Aug-2017 15:32:13.581 INFO [http-nio-8080-exec-2] lms.servlets.BoardServlet.doPost pathInfo:	/add
-21-Aug-2017 15:32:13.603 INFO [http-nio-8080-exec-3] lms.servlets.IndexServlet.doGet pathInfo:	/view
-21-Aug-2017 15:32:13.603 INFO [http-nio-8080-exec-3] lms.servlets.IndexServlet.doGet pathInfo:	/view
-21-Aug-2017 15:32:13.608 INFO [http-nio-8080-exec-4] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:32:13.608 INFO [http-nio-8080-exec-4] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:32:13.614 INFO [http-nio-8080-exec-7] lms.servlets.BoardServlet.doGet pathInfo:	/view
-21-Aug-2017 15:32:13.614 INFO [http-nio-8080-exec-7] lms.servlets.BoardServlet.doGet pathInfo:	/view
-21-Aug-2017 15:32:23.940 INFO [http-nio-8080-exec-8] lms.servlets.BoardServlet.doPost pathInfo:	/add
-21-Aug-2017 15:32:23.940 INFO [http-nio-8080-exec-8] lms.servlets.BoardServlet.doPost pathInfo:	/add
-21-Aug-2017 15:32:23.959 INFO [http-nio-8080-exec-5] lms.servlets.IndexServlet.doGet pathInfo:	/view
-21-Aug-2017 15:32:23.959 INFO [http-nio-8080-exec-5] lms.servlets.IndexServlet.doGet pathInfo:	/view
-21-Aug-2017 15:32:23.966 INFO [http-nio-8080-exec-6] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:32:23.966 INFO [http-nio-8080-exec-6] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:32:23.972 INFO [http-nio-8080-exec-9] lms.servlets.BoardServlet.doGet pathInfo:	/view
-21-Aug-2017 15:32:23.972 INFO [http-nio-8080-exec-9] lms.servlets.BoardServlet.doGet pathInfo:	/view
-21-Aug-2017 15:32:31.141 INFO [http-nio-8080-exec-10] lms.servlets.BoardServlet.doPost pathInfo:	/add
-21-Aug-2017 15:32:31.141 INFO [http-nio-8080-exec-10] lms.servlets.BoardServlet.doPost pathInfo:	/add
-21-Aug-2017 15:32:31.158 INFO [http-nio-8080-exec-1] lms.servlets.IndexServlet.doGet pathInfo:	/view
-21-Aug-2017 15:32:31.158 INFO [http-nio-8080-exec-1] lms.servlets.IndexServlet.doGet pathInfo:	/view
-21-Aug-2017 15:32:31.162 INFO [http-nio-8080-exec-2] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:32:31.162 INFO [http-nio-8080-exec-2] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:32:31.166 INFO [http-nio-8080-exec-3] lms.servlets.BoardServlet.doGet pathInfo:	/view
-21-Aug-2017 15:32:31.166 INFO [http-nio-8080-exec-3] lms.servlets.BoardServlet.doGet pathInfo:	/view
-21-Aug-2017 15:32:35.923 INFO [http-nio-8080-exec-4] lms.servlets.BoardServlet.doGet pathInfo:	/insert-search-notes-url-here
-21-Aug-2017 15:32:35.923 INFO [http-nio-8080-exec-4] lms.servlets.BoardServlet.doGet pathInfo:	/insert-search-notes-url-here
-21-Aug-2017 15:32:39.203 INFO [http-nio-8080-exec-7] lms.servlets.BoardServlet.doGet pathInfo:	/insert-search-notes-url-here
-21-Aug-2017 15:32:39.203 INFO [http-nio-8080-exec-7] lms.servlets.BoardServlet.doGet pathInfo:	/insert-search-notes-url-here
-21-Aug-2017 15:32:42.228 INFO [http-nio-8080-exec-8] lms.servlets.BoardServlet.doGet pathInfo:	/insert-search-notes-url-here
-21-Aug-2017 15:32:42.228 INFO [http-nio-8080-exec-8] lms.servlets.BoardServlet.doGet pathInfo:	/insert-search-notes-url-here
-21-Aug-2017 15:32:44.524 INFO [http-nio-8080-exec-5] lms.servlets.BoardServlet.doGet pathInfo:	/insert-search-notes-url-here
-21-Aug-2017 15:32:44.524 INFO [http-nio-8080-exec-5] lms.servlets.BoardServlet.doGet pathInfo:	/insert-search-notes-url-here
-21-Aug-2017 15:32:46.982 INFO [http-nio-8080-exec-6] lms.servlets.PanelServlet.doPost pathInfo:	/
-21-Aug-2017 15:32:46.982 INFO [http-nio-8080-exec-6] lms.servlets.PanelServlet.doPost pathInfo:	/
-21-Aug-2017 15:32:46.988 INFO [http-nio-8080-exec-9] lms.servlets.PanelServlet.doGet pathInfo:	/view
-21-Aug-2017 15:32:46.988 INFO [http-nio-8080-exec-9] lms.servlets.PanelServlet.doGet pathInfo:	/view
-21-Aug-2017 15:32:54.504 INFO [http-nio-8080-exec-10] lms.servlets.PanelServlet.doPost pathInfo:	/add
-21-Aug-2017 15:32:54.504 INFO [http-nio-8080-exec-10] lms.servlets.PanelServlet.doPost pathInfo:	/add
-21-Aug-2017 15:32:54.505 INFO [http-nio-8080-exec-10] lms.service.PanelService.addListForm 28 Список №1
-21-Aug-2017 15:32:54.505 INFO [http-nio-8080-exec-10] lms.service.PanelService.addListForm 28 Список №1
-21-Aug-2017 15:32:54.533 INFO [http-nio-8080-exec-1] lms.servlets.PanelServlet.doGet pathInfo:	/view
-21-Aug-2017 15:32:54.533 INFO [http-nio-8080-exec-1] lms.servlets.PanelServlet.doGet pathInfo:	/view
-21-Aug-2017 15:33:00.635 INFO [http-nio-8080-exec-2] lms.servlets.PanelServlet.doPost pathInfo:	/add
-21-Aug-2017 15:33:00.635 INFO [http-nio-8080-exec-2] lms.servlets.PanelServlet.doPost pathInfo:	/add
-21-Aug-2017 15:33:00.637 INFO [http-nio-8080-exec-2] lms.service.PanelService.addListForm 28 Список №2
-21-Aug-2017 15:33:00.637 INFO [http-nio-8080-exec-2] lms.service.PanelService.addListForm 28 Список №2
-21-Aug-2017 15:33:00.653 INFO [http-nio-8080-exec-3] lms.servlets.PanelServlet.doGet pathInfo:	/view
-21-Aug-2017 15:33:00.653 INFO [http-nio-8080-exec-3] lms.servlets.PanelServlet.doGet pathInfo:	/view
-21-Aug-2017 15:33:12.215 INFO [http-nio-8080-exec-4] lms.servlets.PanelServlet.doPost pathInfo:	/add
-21-Aug-2017 15:33:12.215 INFO [http-nio-8080-exec-4] lms.servlets.PanelServlet.doPost pathInfo:	/add
-21-Aug-2017 15:33:12.216 INFO [http-nio-8080-exec-4] lms.service.PanelService.addListForm 28 Список №3
-21-Aug-2017 15:33:12.216 INFO [http-nio-8080-exec-4] lms.service.PanelService.addListForm 28 Список №3
-21-Aug-2017 15:33:12.237 INFO [http-nio-8080-exec-7] lms.servlets.PanelServlet.doGet pathInfo:	/view
-21-Aug-2017 15:33:12.237 INFO [http-nio-8080-exec-7] lms.servlets.PanelServlet.doGet pathInfo:	/view
-21-Aug-2017 15:33:19.162 INFO [http-nio-8080-exec-8] lms.servlets.PanelServlet.doPost pathInfo:	/add
-21-Aug-2017 15:33:19.162 INFO [http-nio-8080-exec-8] lms.servlets.PanelServlet.doPost pathInfo:	/add
-21-Aug-2017 15:33:19.163 INFO [http-nio-8080-exec-8] lms.service.PanelService.addListForm 28 Список №4
-21-Aug-2017 15:33:19.163 INFO [http-nio-8080-exec-8] lms.service.PanelService.addListForm 28 Список №4
-21-Aug-2017 15:33:19.178 INFO [http-nio-8080-exec-5] lms.servlets.PanelServlet.doGet pathInfo:	/view
-21-Aug-2017 15:33:19.178 INFO [http-nio-8080-exec-5] lms.servlets.PanelServlet.doGet pathInfo:	/view
-21-Aug-2017 15:33:30.989 INFO [http-nio-8080-exec-6] lms.servlets.CardServlet.doPost pathInfo:	/add
-21-Aug-2017 15:33:30.989 INFO [http-nio-8080-exec-6] lms.servlets.CardServlet.doPost pathInfo:	/add
-21-Aug-2017 15:33:30.990 INFO [http-nio-8080-exec-6] lms.service.CardService.addCard 38 Привіт
-21-Aug-2017 15:33:30.990 INFO [http-nio-8080-exec-6] lms.service.CardService.addCard 38 Привіт
-21-Aug-2017 15:33:31.013 INFO [http-nio-8080-exec-9] lms.servlets.PanelServlet.doGet pathInfo:	/view
-21-Aug-2017 15:33:31.013 INFO [http-nio-8080-exec-9] lms.servlets.PanelServlet.doGet pathInfo:	/view
-21-Aug-2017 15:33:35.796 INFO [http-nio-8080-exec-10] lms.servlets.CardServlet.doPost pathInfo:	/add
-21-Aug-2017 15:33:35.796 INFO [http-nio-8080-exec-10] lms.servlets.CardServlet.doPost pathInfo:	/add
-21-Aug-2017 15:33:35.799 INFO [http-nio-8080-exec-10] lms.service.CardService.addCard 39 Хай
-21-Aug-2017 15:33:35.799 INFO [http-nio-8080-exec-10] lms.service.CardService.addCard 39 Хай
-21-Aug-2017 15:33:35.821 INFO [http-nio-8080-exec-1] lms.servlets.PanelServlet.doGet pathInfo:	/view
-21-Aug-2017 15:33:35.821 INFO [http-nio-8080-exec-1] lms.servlets.PanelServlet.doGet pathInfo:	/view
-21-Aug-2017 15:33:43.268 INFO [http-nio-8080-exec-2] lms.servlets.CardServlet.doPost pathInfo:	/add
-21-Aug-2017 15:33:43.268 INFO [http-nio-8080-exec-2] lms.servlets.CardServlet.doPost pathInfo:	/add
-21-Aug-2017 15:33:43.269 INFO [http-nio-8080-exec-2] lms.service.CardService.addCard 40 Якось Так!
-21-Aug-2017 15:33:43.269 INFO [http-nio-8080-exec-2] lms.service.CardService.addCard 40 Якось Так!
-21-Aug-2017 15:33:43.283 INFO [http-nio-8080-exec-3] lms.servlets.PanelServlet.doGet pathInfo:	/view
-21-Aug-2017 15:33:43.283 INFO [http-nio-8080-exec-3] lms.servlets.PanelServlet.doGet pathInfo:	/view
-21-Aug-2017 15:33:47.362 INFO [http-nio-8080-exec-4] lms.servlets.CardServlet.doPost pathInfo:	/add
-21-Aug-2017 15:33:47.362 INFO [http-nio-8080-exec-4] lms.servlets.CardServlet.doPost pathInfo:	/add
-21-Aug-2017 15:33:47.363 INFO [http-nio-8080-exec-4] lms.service.CardService.addCard 41 асвіаів
-21-Aug-2017 15:33:47.363 INFO [http-nio-8080-exec-4] lms.service.CardService.addCard 41 асвіаів
-21-Aug-2017 15:33:47.391 INFO [http-nio-8080-exec-7] lms.servlets.PanelServlet.doGet pathInfo:	/view
-21-Aug-2017 15:33:47.391 INFO [http-nio-8080-exec-7] lms.servlets.PanelServlet.doGet pathInfo:	/view
-21-Aug-2017 15:33:49.802 INFO [http-nio-8080-exec-8] lms.servlets.CardServlet.doPost pathInfo:	/add
-21-Aug-2017 15:33:49.802 INFO [http-nio-8080-exec-8] lms.servlets.CardServlet.doPost pathInfo:	/add
-21-Aug-2017 15:33:49.803 INFO [http-nio-8080-exec-8] lms.service.CardService.addCard 41 авіаіва
-21-Aug-2017 15:33:49.803 INFO [http-nio-8080-exec-8] lms.service.CardService.addCard 41 авіаіва
-21-Aug-2017 15:33:49.828 INFO [http-nio-8080-exec-5] lms.servlets.PanelServlet.doGet pathInfo:	/view
-21-Aug-2017 15:33:49.828 INFO [http-nio-8080-exec-5] lms.servlets.PanelServlet.doGet pathInfo:	/view
-21-Aug-2017 15:33:52.469 INFO [http-nio-8080-exec-6] lms.servlets.CardServlet.doPost pathInfo:	/del
-21-Aug-2017 15:33:52.469 INFO [http-nio-8080-exec-6] lms.servlets.CardServlet.doPost pathInfo:	/del
-21-Aug-2017 15:33:52.482 INFO [http-nio-8080-exec-9] lms.servlets.PanelServlet.doGet pathInfo:	/view
-21-Aug-2017 15:33:52.482 INFO [http-nio-8080-exec-9] lms.servlets.PanelServlet.doGet pathInfo:	/view
-21-Aug-2017 15:33:56.180 INFO [http-nio-8080-exec-10] lms.servlets.PanelServlet.doPost pathInfo:	/del
-21-Aug-2017 15:33:56.180 INFO [http-nio-8080-exec-10] lms.servlets.PanelServlet.doPost pathInfo:	/del
-21-Aug-2017 15:33:56.201 INFO [http-nio-8080-exec-1] lms.servlets.PanelServlet.doGet pathInfo:	/view
-21-Aug-2017 15:33:56.201 INFO [http-nio-8080-exec-1] lms.servlets.PanelServlet.doGet pathInfo:	/view
-21-Aug-2017 15:34:01.529 INFO [http-nio-8080-exec-2] lms.servlets.BoardServlet.doGet pathInfo:	/insert-search-notes-url-here
-21-Aug-2017 15:34:01.529 INFO [http-nio-8080-exec-2] lms.servlets.BoardServlet.doGet pathInfo:	/insert-search-notes-url-here
-21-Aug-2017 15:34:02.948 INFO [http-nio-8080-exec-3] lms.servlets.PanelServlet.doPost pathInfo:	/
-21-Aug-2017 15:34:02.948 INFO [http-nio-8080-exec-3] lms.servlets.PanelServlet.doPost pathInfo:	/
-21-Aug-2017 15:34:02.963 INFO [http-nio-8080-exec-4] lms.servlets.PanelServlet.doGet pathInfo:	/view
-21-Aug-2017 15:34:02.963 INFO [http-nio-8080-exec-4] lms.servlets.PanelServlet.doGet pathInfo:	/view
-21-Aug-2017 15:34:07.251 INFO [http-nio-8080-exec-7] lms.servlets.BoardServlet.doGet pathInfo:	/insert-search-notes-url-here
-21-Aug-2017 15:34:07.251 INFO [http-nio-8080-exec-7] lms.servlets.BoardServlet.doGet pathInfo:	/insert-search-notes-url-here
-21-Aug-2017 15:34:08.884 INFO [http-nio-8080-exec-8] lms.servlets.PanelServlet.doPost pathInfo:	/
-21-Aug-2017 15:34:08.884 INFO [http-nio-8080-exec-8] lms.servlets.PanelServlet.doPost pathInfo:	/
-21-Aug-2017 15:34:08.897 INFO [http-nio-8080-exec-5] lms.servlets.PanelServlet.doGet pathInfo:	/view
-21-Aug-2017 15:34:08.897 INFO [http-nio-8080-exec-5] lms.servlets.PanelServlet.doGet pathInfo:	/view
-21-Aug-2017 15:34:11.867 INFO [http-nio-8080-exec-6] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
-21-Aug-2017 15:34:11.867 INFO [http-nio-8080-exec-6] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
-21-Aug-2017 15:34:11.877 INFO [http-nio-8080-exec-6] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='null', date_birth='null', block=user, firstName='null', secondName='null', country='null', city='null'}
-21-Aug-2017 15:34:11.877 INFO [http-nio-8080-exec-6] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='null', date_birth='null', block=user, firstName='null', secondName='null', country='null', city='null'}
-21-Aug-2017 15:34:46.938 INFO [http-nio-8080-exec-10] lms.servlets.IndexServlet.doPost pathInfo:	/profile-edit
-21-Aug-2017 15:34:46.938 INFO [http-nio-8080-exec-10] lms.servlets.IndexServlet.doPost pathInfo:	/profile-edit
-21-Aug-2017 15:35:03.877 INFO [http-nio-8080-exec-1] lms.servlets.IndexServlet.doPost pathInfo:	/profile-edit
-21-Aug-2017 15:35:03.877 INFO [http-nio-8080-exec-1] lms.servlets.IndexServlet.doPost pathInfo:	/profile-edit
-21-Aug-2017 15:35:03.896 INFO [http-nio-8080-exec-2] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
-21-Aug-2017 15:35:03.896 INFO [http-nio-8080-exec-2] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
-21-Aug-2017 15:35:03.904 INFO [http-nio-8080-exec-2] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=user, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
-21-Aug-2017 15:35:03.904 INFO [http-nio-8080-exec-2] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=user, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
-21-Aug-2017 15:35:06.333 INFO [http-nio-8080-exec-3] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
-21-Aug-2017 15:35:06.333 INFO [http-nio-8080-exec-3] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
-21-Aug-2017 15:35:06.343 INFO [http-nio-8080-exec-3] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=user, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
-21-Aug-2017 15:35:06.343 INFO [http-nio-8080-exec-3] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=user, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
-21-Aug-2017 15:35:11.507 INFO [http-nio-8080-exec-4] lms.servlets.IndexServlet.doGet pathInfo:	/logout
-21-Aug-2017 15:35:11.507 INFO [http-nio-8080-exec-4] lms.servlets.IndexServlet.doGet pathInfo:	/logout
-21-Aug-2017 15:35:11.508 WARNING [http-nio-8080-exec-4] lms.servlets.IndexServlet.doGet logged out:	null
-21-Aug-2017 15:35:11.508 WARNING [http-nio-8080-exec-4] lms.servlets.IndexServlet.doGet logged out:	null
-21-Aug-2017 15:35:11.513 INFO [http-nio-8080-exec-7] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:35:11.513 INFO [http-nio-8080-exec-7] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:35:14.291 INFO [http-nio-8080-exec-8] lms.servlets.IndexServlet.doPost pathInfo:	/login
-21-Aug-2017 15:35:14.291 INFO [http-nio-8080-exec-8] lms.servlets.IndexServlet.doPost pathInfo:	/login
-21-Aug-2017 15:35:14.300 INFO [http-nio-8080-exec-8] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
-21-Aug-2017 15:35:14.300 INFO [http-nio-8080-exec-8] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
-21-Aug-2017 15:35:14.303 INFO [http-nio-8080-exec-5] lms.servlets.BoardServlet.doGet pathInfo:	/view
-21-Aug-2017 15:35:14.303 INFO [http-nio-8080-exec-5] lms.servlets.BoardServlet.doGet pathInfo:	/view
-21-Aug-2017 15:35:18.948 INFO [http-nio-8080-exec-6] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
-21-Aug-2017 15:35:18.948 INFO [http-nio-8080-exec-6] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
-21-Aug-2017 15:35:22.274 INFO [http-nio-8080-exec-9] lms.servlets.IndexServlet.doGet pathInfo:	/admintest
-21-Aug-2017 15:35:22.274 INFO [http-nio-8080-exec-9] lms.servlets.IndexServlet.doGet pathInfo:	/admintest
-21-Aug-2017 15:35:22.286 INFO [http-nio-8080-exec-9] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=user, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
-21-Aug-2017 15:35:22.286 INFO [http-nio-8080-exec-9] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=user, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
-21-Aug-2017 15:35:34.092 INFO [http-nio-8080-exec-10] lms.servlets.IndexServlet.doPost pathInfo:	/profile-edit
-21-Aug-2017 15:35:34.092 INFO [http-nio-8080-exec-10] lms.servlets.IndexServlet.doPost pathInfo:	/profile-edit
-21-Aug-2017 15:35:34.113 INFO [http-nio-8080-exec-1] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
-21-Aug-2017 15:35:34.113 INFO [http-nio-8080-exec-1] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
-21-Aug-2017 15:35:34.123 INFO [http-nio-8080-exec-1] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
-21-Aug-2017 15:35:34.123 INFO [http-nio-8080-exec-1] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
-21-Aug-2017 15:35:36.531 INFO [http-nio-8080-exec-2] lms.servlets.IndexServlet.doGet pathInfo:	/logout
-21-Aug-2017 15:35:36.531 INFO [http-nio-8080-exec-2] lms.servlets.IndexServlet.doGet pathInfo:	/logout
-21-Aug-2017 15:35:36.532 WARNING [http-nio-8080-exec-2] lms.servlets.IndexServlet.doGet logged out:	null
-21-Aug-2017 15:35:36.532 WARNING [http-nio-8080-exec-2] lms.servlets.IndexServlet.doGet logged out:	null
-21-Aug-2017 15:35:36.546 INFO [http-nio-8080-exec-3] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:35:36.546 INFO [http-nio-8080-exec-3] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:35:39.936 INFO [http-nio-8080-exec-4] lms.servlets.IndexServlet.doPost pathInfo:	/login
-21-Aug-2017 15:35:39.936 INFO [http-nio-8080-exec-4] lms.servlets.IndexServlet.doPost pathInfo:	/login
-21-Aug-2017 15:35:39.948 INFO [http-nio-8080-exec-4] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=block, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
-21-Aug-2017 15:35:39.948 INFO [http-nio-8080-exec-4] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=block, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
-21-Aug-2017 15:35:45.202 INFO [http-nio-8080-exec-7] lms.servlets.IndexServlet.doPost pathInfo:	/login
-21-Aug-2017 15:35:45.202 INFO [http-nio-8080-exec-7] lms.servlets.IndexServlet.doPost pathInfo:	/login
-21-Aug-2017 15:35:45.212 INFO [http-nio-8080-exec-7] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
-21-Aug-2017 15:35:45.212 INFO [http-nio-8080-exec-7] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
-21-Aug-2017 15:35:45.216 INFO [http-nio-8080-exec-8] lms.servlets.BoardServlet.doGet pathInfo:	/view
-21-Aug-2017 15:35:45.216 INFO [http-nio-8080-exec-8] lms.servlets.BoardServlet.doGet pathInfo:	/view
-21-Aug-2017 15:35:47.738 INFO [http-nio-8080-exec-5] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
-21-Aug-2017 15:35:47.738 INFO [http-nio-8080-exec-5] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
-21-Aug-2017 15:35:48.962 INFO [http-nio-8080-exec-6] lms.servlets.IndexServlet.doGet pathInfo:	/admintest
-21-Aug-2017 15:35:48.962 INFO [http-nio-8080-exec-6] lms.servlets.IndexServlet.doGet pathInfo:	/admintest
-21-Aug-2017 15:35:48.971 INFO [http-nio-8080-exec-6] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=block, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
-21-Aug-2017 15:35:48.971 INFO [http-nio-8080-exec-6] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=block, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
-21-Aug-2017 15:35:56.044 INFO [http-nio-8080-exec-9] lms.servlets.IndexServlet.doPost pathInfo:	/profile-edit
-21-Aug-2017 15:35:56.044 INFO [http-nio-8080-exec-9] lms.servlets.IndexServlet.doPost pathInfo:	/profile-edit
-21-Aug-2017 15:35:56.091 INFO [http-nio-8080-exec-10] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
-21-Aug-2017 15:35:56.091 INFO [http-nio-8080-exec-10] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
-21-Aug-2017 15:35:56.100 INFO [http-nio-8080-exec-10] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
-21-Aug-2017 15:35:56.100 INFO [http-nio-8080-exec-10] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
-21-Aug-2017 15:35:58.363 INFO [http-nio-8080-exec-1] lms.servlets.IndexServlet.doGet pathInfo:	/logout
-21-Aug-2017 15:35:58.363 INFO [http-nio-8080-exec-1] lms.servlets.IndexServlet.doGet pathInfo:	/logout
-21-Aug-2017 15:35:58.364 WARNING [http-nio-8080-exec-1] lms.servlets.IndexServlet.doGet logged out:	null
-21-Aug-2017 15:35:58.364 WARNING [http-nio-8080-exec-1] lms.servlets.IndexServlet.doGet logged out:	null
-21-Aug-2017 15:35:58.368 INFO [http-nio-8080-exec-2] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:35:58.368 INFO [http-nio-8080-exec-2] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:36:01.694 INFO [http-nio-8080-exec-3] lms.servlets.IndexServlet.doPost pathInfo:	/login
-21-Aug-2017 15:36:01.694 INFO [http-nio-8080-exec-3] lms.servlets.IndexServlet.doPost pathInfo:	/login
-21-Aug-2017 15:36:01.706 INFO [http-nio-8080-exec-3] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=admin, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
-21-Aug-2017 15:36:01.706 INFO [http-nio-8080-exec-3] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=admin, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
-21-Aug-2017 15:36:01.710 INFO [http-nio-8080-exec-4] lms.servlets.BoardServlet.doGet pathInfo:	/view
-21-Aug-2017 15:36:01.710 INFO [http-nio-8080-exec-4] lms.servlets.BoardServlet.doGet pathInfo:	/view
-21-Aug-2017 15:36:04.618 INFO [http-nio-8080-exec-7] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
-21-Aug-2017 15:36:04.618 INFO [http-nio-8080-exec-7] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
-21-Aug-2017 15:36:07.201 INFO [http-nio-8080-exec-8] lms.servlets.BoardServlet.doGet pathInfo:	/all
-21-Aug-2017 15:36:07.201 INFO [http-nio-8080-exec-8] lms.servlets.BoardServlet.doGet pathInfo:	/all
-21-Aug-2017 15:36:07.218 INFO [http-nio-8080-exec-8] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=15, login='Strixik4', password='123456', email='test@gmail.com', date_registered='2017-08-10', sex='man', date_birth='2017-08-15', block=user, firstName='gdfgdfgdf', secondName='gdfgdfgdfg', country='gdfgdfgdfg', city='gdfgdfgdfgdf'}
-21-Aug-2017 15:36:07.218 INFO [http-nio-8080-exec-8] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=15, login='Strixik4', password='123456', email='test@gmail.com', date_registered='2017-08-10', sex='man', date_birth='2017-08-15', block=user, firstName='gdfgdfgdf', secondName='gdfgdfgdfg', country='gdfgdfgdfg', city='gdfgdfgdfgdf'}
-21-Aug-2017 15:36:07.225 INFO [http-nio-8080-exec-8] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=11, login='Strixik', password='123456', email='strixik@list.ru', date_registered='2017-08-09', sex='man', date_birth='1987-11-20', block=user, firstName='Кирил', secondName='Богут', country='Україна', city='Чернівці'}
-21-Aug-2017 15:36:07.225 INFO [http-nio-8080-exec-8] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=11, login='Strixik', password='123456', email='strixik@list.ru', date_registered='2017-08-09', sex='man', date_birth='1987-11-20', block=user, firstName='Кирил', secondName='Богут', country='Україна', city='Чернівці'}
-21-Aug-2017 15:36:07.234 INFO [http-nio-8080-exec-8] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
-21-Aug-2017 15:36:07.234 INFO [http-nio-8080-exec-8] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
-21-Aug-2017 15:36:07.244 INFO [http-nio-8080-exec-8] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
-21-Aug-2017 15:36:07.244 INFO [http-nio-8080-exec-8] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
-21-Aug-2017 15:36:07.253 INFO [http-nio-8080-exec-8] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
-21-Aug-2017 15:36:07.253 INFO [http-nio-8080-exec-8] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
-21-Aug-2017 15:36:07.262 INFO [http-nio-8080-exec-8] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
-21-Aug-2017 15:36:07.262 INFO [http-nio-8080-exec-8] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
-21-Aug-2017 15:36:07.273 INFO [http-nio-8080-exec-8] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=admin, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
-21-Aug-2017 15:36:07.273 INFO [http-nio-8080-exec-8] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=admin, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
-21-Aug-2017 15:36:07.281 INFO [http-nio-8080-exec-8] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=admin, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
-21-Aug-2017 15:36:07.281 INFO [http-nio-8080-exec-8] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=admin, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
-21-Aug-2017 15:36:07.289 INFO [http-nio-8080-exec-8] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=admin, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
-21-Aug-2017 15:36:07.289 INFO [http-nio-8080-exec-8] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=admin, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
-21-Aug-2017 15:36:11.484 INFO [http-nio-8080-exec-5] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
-21-Aug-2017 15:36:11.484 INFO [http-nio-8080-exec-5] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
-21-Aug-2017 15:36:11.492 INFO [http-nio-8080-exec-5] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=admin, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
-21-Aug-2017 15:36:11.492 INFO [http-nio-8080-exec-5] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=admin, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
-21-Aug-2017 15:36:14.291 INFO [http-nio-8080-exec-6] lms.servlets.IndexServlet.doGet pathInfo:	/logout
-21-Aug-2017 15:36:14.291 INFO [http-nio-8080-exec-6] lms.servlets.IndexServlet.doGet pathInfo:	/logout
-21-Aug-2017 15:36:14.291 WARNING [http-nio-8080-exec-6] lms.servlets.IndexServlet.doGet logged out:	null
-21-Aug-2017 15:36:14.291 WARNING [http-nio-8080-exec-6] lms.servlets.IndexServlet.doGet logged out:	null
-21-Aug-2017 15:36:14.295 INFO [http-nio-8080-exec-9] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:36:14.295 INFO [http-nio-8080-exec-9] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:36:15.861 INFO [http-nio-8080-exec-10] lms.servlets.IndexServlet.doPost pathInfo:	/login
-21-Aug-2017 15:36:15.861 INFO [http-nio-8080-exec-10] lms.servlets.IndexServlet.doPost pathInfo:	/login
-21-Aug-2017 15:36:15.873 INFO [http-nio-8080-exec-10] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
-21-Aug-2017 15:36:15.873 INFO [http-nio-8080-exec-10] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
-21-Aug-2017 15:36:15.876 INFO [http-nio-8080-exec-1] lms.servlets.BoardServlet.doGet pathInfo:	/view
-21-Aug-2017 15:36:15.876 INFO [http-nio-8080-exec-1] lms.servlets.BoardServlet.doGet pathInfo:	/view
-21-Aug-2017 15:36:18.676 INFO [http-nio-8080-exec-2] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
-21-Aug-2017 15:36:18.676 INFO [http-nio-8080-exec-2] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
-21-Aug-2017 15:36:18.691 INFO [http-nio-8080-exec-2] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
-21-Aug-2017 15:36:18.691 INFO [http-nio-8080-exec-2] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
-21-Aug-2017 15:36:23.750 INFO [http-nio-8080-exec-3] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
-21-Aug-2017 15:36:23.750 INFO [http-nio-8080-exec-3] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
-21-Aug-2017 15:36:25.035 INFO [http-nio-8080-exec-4] lms.servlets.IndexServlet.doGet pathInfo:	/admintest
-21-Aug-2017 15:36:25.035 INFO [http-nio-8080-exec-4] lms.servlets.IndexServlet.doGet pathInfo:	/admintest
-21-Aug-2017 15:36:25.043 INFO [http-nio-8080-exec-4] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=admin, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
-21-Aug-2017 15:36:25.043 INFO [http-nio-8080-exec-4] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=admin, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
-21-Aug-2017 15:36:29.148 INFO [http-nio-8080-exec-7] lms.servlets.IndexServlet.doPost pathInfo:	/profile-edit
-21-Aug-2017 15:36:29.148 INFO [http-nio-8080-exec-7] lms.servlets.IndexServlet.doPost pathInfo:	/profile-edit
-21-Aug-2017 15:36:29.162 INFO [http-nio-8080-exec-8] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
-21-Aug-2017 15:36:29.162 INFO [http-nio-8080-exec-8] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
-21-Aug-2017 15:36:29.170 INFO [http-nio-8080-exec-8] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
-21-Aug-2017 15:36:29.170 INFO [http-nio-8080-exec-8] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
-21-Aug-2017 15:36:31.825 INFO [http-nio-8080-exec-5] lms.servlets.IndexServlet.doGet pathInfo:	/logout
-21-Aug-2017 15:36:31.825 INFO [http-nio-8080-exec-5] lms.servlets.IndexServlet.doGet pathInfo:	/logout
-21-Aug-2017 15:36:31.825 WARNING [http-nio-8080-exec-5] lms.servlets.IndexServlet.doGet logged out:	null
-21-Aug-2017 15:36:31.825 WARNING [http-nio-8080-exec-5] lms.servlets.IndexServlet.doGet logged out:	null
-21-Aug-2017 15:36:31.831 INFO [http-nio-8080-exec-6] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:36:31.831 INFO [http-nio-8080-exec-6] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:36:35.434 INFO [http-nio-8080-exec-9] lms.servlets.IndexServlet.doPost pathInfo:	/login
-21-Aug-2017 15:36:35.434 INFO [http-nio-8080-exec-9] lms.servlets.IndexServlet.doPost pathInfo:	/login
-21-Aug-2017 15:36:35.444 INFO [http-nio-8080-exec-9] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=user, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
-21-Aug-2017 15:36:35.444 INFO [http-nio-8080-exec-9] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=user, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
-21-Aug-2017 15:36:35.448 INFO [http-nio-8080-exec-10] lms.servlets.BoardServlet.doGet pathInfo:	/view
-21-Aug-2017 15:36:35.448 INFO [http-nio-8080-exec-10] lms.servlets.BoardServlet.doGet pathInfo:	/view
-21-Aug-2017 15:36:39.578 INFO [http-nio-8080-exec-1] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
-21-Aug-2017 15:36:39.578 INFO [http-nio-8080-exec-1] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
-21-Aug-2017 15:36:39.586 INFO [http-nio-8080-exec-1] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=user, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
-21-Aug-2017 15:36:39.586 INFO [http-nio-8080-exec-1] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=user, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
-21-Aug-2017 15:36:45.946 INFO [http-nio-8080-exec-2] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
-21-Aug-2017 15:36:45.946 INFO [http-nio-8080-exec-2] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
-21-Aug-2017 15:36:45.954 INFO [http-nio-8080-exec-2] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=user, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
-21-Aug-2017 15:36:45.954 INFO [http-nio-8080-exec-2] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=user, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
-21-Aug-2017 15:36:47.845 INFO [http-nio-8080-exec-3] lms.servlets.BoardServlet.doGet pathInfo:	/view
-21-Aug-2017 15:36:47.845 INFO [http-nio-8080-exec-3] lms.servlets.BoardServlet.doGet pathInfo:	/view
-21-Aug-2017 15:36:52.955 INFO [http-nio-8080-exec-4] lms.servlets.PanelServlet.doPost pathInfo:	/
-21-Aug-2017 15:36:52.955 INFO [http-nio-8080-exec-4] lms.servlets.PanelServlet.doPost pathInfo:	/
-21-Aug-2017 15:36:52.960 INFO [http-nio-8080-exec-7] lms.servlets.PanelServlet.doGet pathInfo:	/view
-21-Aug-2017 15:36:52.960 INFO [http-nio-8080-exec-7] lms.servlets.PanelServlet.doGet pathInfo:	/view
-21-Aug-2017 15:37:00.365 INFO [http-nio-8080-exec-8] lms.servlets.PanelServlet.doPost pathInfo:	/add
-21-Aug-2017 15:37:00.365 INFO [http-nio-8080-exec-8] lms.servlets.PanelServlet.doPost pathInfo:	/add
-21-Aug-2017 15:37:00.366 INFO [http-nio-8080-exec-8] lms.service.PanelService.addListForm 30 dsadasd
-21-Aug-2017 15:37:00.366 INFO [http-nio-8080-exec-8] lms.service.PanelService.addListForm 30 dsadasd
-21-Aug-2017 15:37:00.384 INFO [http-nio-8080-exec-5] lms.servlets.PanelServlet.doGet pathInfo:	/view
-21-Aug-2017 15:37:00.384 INFO [http-nio-8080-exec-5] lms.servlets.PanelServlet.doGet pathInfo:	/view
-21-Aug-2017 15:37:04.922 INFO [http-nio-8080-exec-6] lms.servlets.BoardServlet.doGet pathInfo:	/insert-search-notes-url-here
-21-Aug-2017 15:37:04.922 INFO [http-nio-8080-exec-6] lms.servlets.BoardServlet.doGet pathInfo:	/insert-search-notes-url-here
-21-Aug-2017 15:37:05.844 INFO [http-nio-8080-exec-9] lms.servlets.PanelServlet.doPost pathInfo:	/
-21-Aug-2017 15:37:05.844 INFO [http-nio-8080-exec-9] lms.servlets.PanelServlet.doPost pathInfo:	/
-21-Aug-2017 15:37:05.849 INFO [http-nio-8080-exec-10] lms.servlets.PanelServlet.doGet pathInfo:	/view
-21-Aug-2017 15:37:05.849 INFO [http-nio-8080-exec-10] lms.servlets.PanelServlet.doGet pathInfo:	/view
-21-Aug-2017 15:37:10.116 INFO [http-nio-8080-exec-1] lms.servlets.BoardServlet.doGet pathInfo:	/insert-search-notes-url-here
-21-Aug-2017 15:37:10.116 INFO [http-nio-8080-exec-1] lms.servlets.BoardServlet.doGet pathInfo:	/insert-search-notes-url-here
-21-Aug-2017 15:37:11.123 INFO [http-nio-8080-exec-2] lms.servlets.PanelServlet.doPost pathInfo:	/
-21-Aug-2017 15:37:11.123 INFO [http-nio-8080-exec-2] lms.servlets.PanelServlet.doPost pathInfo:	/
-21-Aug-2017 15:37:11.129 INFO [http-nio-8080-exec-3] lms.servlets.PanelServlet.doGet pathInfo:	/view
-21-Aug-2017 15:37:11.129 INFO [http-nio-8080-exec-3] lms.servlets.PanelServlet.doGet pathInfo:	/view
-21-Aug-2017 15:37:13.662 INFO [http-nio-8080-exec-4] lms.servlets.BoardServlet.doGet pathInfo:	/insert-search-notes-url-here
-21-Aug-2017 15:37:13.662 INFO [http-nio-8080-exec-4] lms.servlets.BoardServlet.doGet pathInfo:	/insert-search-notes-url-here
-21-Aug-2017 15:37:14.738 INFO [http-nio-8080-exec-7] lms.servlets.PanelServlet.doPost pathInfo:	/
-21-Aug-2017 15:37:14.738 INFO [http-nio-8080-exec-7] lms.servlets.PanelServlet.doPost pathInfo:	/
-21-Aug-2017 15:37:14.743 INFO [http-nio-8080-exec-8] lms.servlets.PanelServlet.doGet pathInfo:	/view
-21-Aug-2017 15:37:14.743 INFO [http-nio-8080-exec-8] lms.servlets.PanelServlet.doGet pathInfo:	/view
-21-Aug-2017 15:37:23.115 INFO [http-nio-8080-exec-5] lms.servlets.BoardServlet.doGet pathInfo:	/view
-21-Aug-2017 15:37:23.115 INFO [http-nio-8080-exec-5] lms.servlets.BoardServlet.doGet pathInfo:	/view
-21-Aug-2017 15:37:27.419 INFO [http-nio-8080-exec-6] lms.servlets.IndexServlet.doGet pathInfo:	/logout
-21-Aug-2017 15:37:27.419 INFO [http-nio-8080-exec-6] lms.servlets.IndexServlet.doGet pathInfo:	/logout
-21-Aug-2017 15:37:27.420 WARNING [http-nio-8080-exec-6] lms.servlets.IndexServlet.doGet logged out:	null
-21-Aug-2017 15:37:27.420 WARNING [http-nio-8080-exec-6] lms.servlets.IndexServlet.doGet logged out:	null
-21-Aug-2017 15:37:27.424 INFO [http-nio-8080-exec-9] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:37:27.424 INFO [http-nio-8080-exec-9] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:40:43.501 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor [C:\Users\User\.IntelliJIdea2017.2\system\tomcat\Unnamed_xtrello_web-project_2\conf\Catalina\localhost\css.xml]
-21-Aug-2017 15:40:43.532 SEVERE [RMI TCP Connection(8)-127.0.0.1] org.apache.tomcat.util.modeler.BaseModelMBean.invoke Exception invoking method manageApp
- java.lang.IllegalArgumentException: addChild:  Child name '/css' is not unique
-	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:727)
-	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:716)
-	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:703)
-	at org.apache.catalina.startup.HostConfig.manageApp(HostConfig.java:1729)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.apache.tomcat.util.modeler.BaseModelMBean.invoke(BaseModelMBean.java:300)
-	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
-	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
-	at org.apache.catalina.mbeans.MBeanFactory.createStandardContext(MBeanFactory.java:456)
-	at org.apache.catalina.mbeans.MBeanFactory.createStandardContext(MBeanFactory.java:405)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.apache.tomcat.util.modeler.BaseModelMBean.invoke(BaseModelMBean.java:300)
-	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
-	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
-	at javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1468)
-	at javax.management.remote.rmi.RMIConnectionImpl.access$300(RMIConnectionImpl.java:76)
-	at javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1309)
-	at javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1401)
-	at javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:346)
-	at sun.rmi.transport.Transport$1.run(Transport.java:200)
-	at sun.rmi.transport.Transport$1.run(Transport.java:197)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at sun.rmi.transport.Transport.serviceCall(Transport.java:196)
-	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:568)
-	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:826)
-	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:683)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:682)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:748)
-
-21-Aug-2017 15:40:43.579 SEVERE [RMI TCP Connection(8)-127.0.0.1] org.apache.tomcat.util.modeler.BaseModelMBean.invoke Exception invoking method createStandardContext
- javax.management.RuntimeOperationsException: Exception invoking method manageApp
-	at org.apache.tomcat.util.modeler.BaseModelMBean.invoke(BaseModelMBean.java:308)
-	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
-	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
-	at org.apache.catalina.mbeans.MBeanFactory.createStandardContext(MBeanFactory.java:456)
-	at org.apache.catalina.mbeans.MBeanFactory.createStandardContext(MBeanFactory.java:405)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.apache.tomcat.util.modeler.BaseModelMBean.invoke(BaseModelMBean.java:300)
-	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
-	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
-	at javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1468)
-	at javax.management.remote.rmi.RMIConnectionImpl.access$300(RMIConnectionImpl.java:76)
-	at javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1309)
-	at javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1401)
-	at javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:346)
-	at sun.rmi.transport.Transport$1.run(Transport.java:200)
-	at sun.rmi.transport.Transport$1.run(Transport.java:197)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at sun.rmi.transport.Transport.serviceCall(Transport.java:196)
-	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:568)
-	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:826)
-	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:683)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:682)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: java.lang.IllegalArgumentException: addChild:  Child name '/css' is not unique
-	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:727)
-	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:716)
-	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:703)
-	at org.apache.catalina.startup.HostConfig.manageApp(HostConfig.java:1729)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.apache.tomcat.util.modeler.BaseModelMBean.invoke(BaseModelMBean.java:300)
-	... 33 more
-
-21-Aug-2017 15:40:44.032 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor [C:\Users\User\.IntelliJIdea2017.2\system\tomcat\Unnamed_xtrello_web-project_2\conf\Catalina\localhost\css.xml] has finished in [531] ms
-21-Aug-2017 15:40:49.569 WARNING [RMI TCP Connection(12)-127.0.0.1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ROOT] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
-21-Aug-2017 15:40:49.569 WARNING [RMI TCP Connection(12)-127.0.0.1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [MySQL Statement Cancellation Timer] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+21-Aug-2017 22:31:56.727 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 58 ms
+21-Aug-2017 22:31:57.335 INFO [RMI TCP Connection(3)-127.0.0.1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-Aug-2017 22:31:57.819 INFO [http-nio-8080-exec-2] lms.servlets.IndexServlet.doGet pathInfo:	/
+21-Aug-2017 22:31:57.819 INFO [http-nio-8080-exec-2] lms.servlets.IndexServlet.doGet pathInfo:	/
+21-Aug-2017 22:31:57.834 INFO [http-nio-8080-exec-6] lms.servlets.IndexServlet.doGet pathInfo:	/
+21-Aug-2017 22:31:57.834 INFO [http-nio-8080-exec-6] lms.servlets.IndexServlet.doGet pathInfo:	/
+21-Aug-2017 22:31:58.290 INFO [http-nio-8080-exec-1] lms.servlets.IndexServlet.doGet pathInfo:	/
+21-Aug-2017 22:31:58.290 INFO [http-nio-8080-exec-1] lms.servlets.IndexServlet.doGet pathInfo:	/
+21-Aug-2017 22:32:06.711 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [E:\apache-tomcat-9.0.0.M22-windows-x64\apache-tomcat-9.0.0.M22\webapps\manager]
+21-Aug-2017 22:32:06.742 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [E:\apache-tomcat-9.0.0.M22-windows-x64\apache-tomcat-9.0.0.M22\webapps\manager] has finished in [31] ms
+21-Aug-2017 22:32:17.930 INFO [http-nio-8080-exec-9] lms.servlets.IndexServlet.doPost pathInfo:	/register
+21-Aug-2017 22:32:17.930 INFO [http-nio-8080-exec-9] lms.servlets.IndexServlet.doPost pathInfo:	/register
+21-Aug-2017 22:32:18.333 INFO [http-nio-8080-exec-10] lms.servlets.IndexServlet.doGet pathInfo:	/
+21-Aug-2017 22:32:18.333 INFO [http-nio-8080-exec-10] lms.servlets.IndexServlet.doGet pathInfo:	/
+21-Aug-2017 22:32:23.147 INFO [http-nio-8080-exec-2] lms.servlets.IndexServlet.doPost pathInfo:	/login
+21-Aug-2017 22:32:23.147 INFO [http-nio-8080-exec-2] lms.servlets.IndexServlet.doPost pathInfo:	/login
+21-Aug-2017 22:32:23.170 INFO [http-nio-8080-exec-2] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=21, login='Strix6', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='null', date_birth='null', block=user, firstName='null', secondName='null', country='null', city='null'}
+21-Aug-2017 22:32:23.170 INFO [http-nio-8080-exec-2] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=21, login='Strix6', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='null', date_birth='null', block=user, firstName='null', secondName='null', country='null', city='null'}
+21-Aug-2017 22:32:23.179 INFO [http-nio-8080-exec-6] lms.servlets.BoardServlet.doGet pathInfo:	/view
+21-Aug-2017 22:32:23.179 INFO [http-nio-8080-exec-6] lms.servlets.BoardServlet.doGet pathInfo:	/view
+21-Aug-2017 22:32:25.412 INFO [http-nio-8080-exec-1] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
+21-Aug-2017 22:32:25.412 INFO [http-nio-8080-exec-1] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
+21-Aug-2017 22:32:25.428 INFO [http-nio-8080-exec-1] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=21, login='Strix6', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='null', date_birth='null', block=user, firstName='null', secondName='null', country='null', city='null'}
+21-Aug-2017 22:32:25.428 INFO [http-nio-8080-exec-1] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=21, login='Strix6', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='null', date_birth='null', block=user, firstName='null', secondName='null', country='null', city='null'}
+21-Aug-2017 22:33:14.327 INFO [http-nio-8080-exec-3] lms.servlets.IndexServlet.doPost pathInfo:	/profile-edit
+21-Aug-2017 22:33:14.327 INFO [http-nio-8080-exec-3] lms.servlets.IndexServlet.doPost pathInfo:	/profile-edit
+21-Aug-2017 22:33:14.365 INFO [http-nio-8080-exec-8] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
+21-Aug-2017 22:33:14.365 INFO [http-nio-8080-exec-8] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
+21-Aug-2017 22:33:14.375 INFO [http-nio-8080-exec-8] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=21, login='Strix6', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-09', block=user, firstName='Анатолій', secondName='Бурлака', country='Україна', city='Київ'}
+21-Aug-2017 22:33:14.375 INFO [http-nio-8080-exec-8] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=21, login='Strix6', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-09', block=user, firstName='Анатолій', secondName='Бурлака', country='Україна', city='Київ'}
+21-Aug-2017 22:33:18.577 INFO [http-nio-8080-exec-5] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
+21-Aug-2017 22:33:18.577 INFO [http-nio-8080-exec-5] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
+21-Aug-2017 22:33:18.577 INFO [http-nio-8080-exec-5] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=21, login='Strix6', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-09', block=user, firstName='Анатолій', secondName='Бурлака', country='Україна', city='Київ'}
+21-Aug-2017 22:33:18.577 INFO [http-nio-8080-exec-5] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=21, login='Strix6', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-09', block=user, firstName='Анатолій', secondName='Бурлака', country='Україна', city='Київ'}
+21-Aug-2017 22:33:20.760 INFO [http-nio-8080-exec-7] lms.servlets.BoardServlet.doGet pathInfo:	/view
+21-Aug-2017 22:33:20.760 INFO [http-nio-8080-exec-7] lms.servlets.BoardServlet.doGet pathInfo:	/view
+21-Aug-2017 22:33:22.843 INFO [http-nio-8080-exec-9] lms.servlets.IndexServlet.doGet pathInfo:	/logout
+21-Aug-2017 22:33:22.843 INFO [http-nio-8080-exec-9] lms.servlets.IndexServlet.doGet pathInfo:	/logout
+21-Aug-2017 22:33:22.843 WARNING [http-nio-8080-exec-9] lms.servlets.IndexServlet.doGet logged out:	null
+21-Aug-2017 22:33:22.843 WARNING [http-nio-8080-exec-9] lms.servlets.IndexServlet.doGet logged out:	null
+21-Aug-2017 22:33:22.843 INFO [http-nio-8080-exec-10] lms.servlets.IndexServlet.doGet pathInfo:	/
+21-Aug-2017 22:33:22.843 INFO [http-nio-8080-exec-10] lms.servlets.IndexServlet.doGet pathInfo:	/
+21-Aug-2017 23:03:54.099 INFO [http-nio-8080-exec-6] lms.servlets.IndexServlet.doGet pathInfo:	/
+21-Aug-2017 23:03:54.099 INFO [http-nio-8080-exec-6] lms.servlets.IndexServlet.doGet pathInfo:	/
+21-Aug-2017 23:03:55.172 INFO [http-nio-8080-exec-1] lms.servlets.IndexServlet.doPost pathInfo:	/login
+21-Aug-2017 23:03:55.172 INFO [http-nio-8080-exec-1] lms.servlets.IndexServlet.doPost pathInfo:	/login
+21-Aug-2017 23:03:55.191 INFO [http-nio-8080-exec-1] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:03:55.191 INFO [http-nio-8080-exec-1] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:03:55.196 INFO [http-nio-8080-exec-4] lms.servlets.BoardServlet.doGet pathInfo:	/view
+21-Aug-2017 23:03:55.196 INFO [http-nio-8080-exec-4] lms.servlets.BoardServlet.doGet pathInfo:	/view
+21-Aug-2017 23:03:56.588 INFO [http-nio-8080-exec-3] lms.servlets.PanelServlet.doPost pathInfo:	/
+21-Aug-2017 23:03:56.588 INFO [http-nio-8080-exec-3] lms.servlets.PanelServlet.doPost pathInfo:	/
+21-Aug-2017 23:03:56.603 INFO [http-nio-8080-exec-8] lms.servlets.PanelServlet.doGet pathInfo:	/view
+21-Aug-2017 23:03:56.603 INFO [http-nio-8080-exec-8] lms.servlets.PanelServlet.doGet pathInfo:	/view
+21-Aug-2017 23:03:58.805 INFO [http-nio-8080-exec-5] lms.servlets.PanelServlet.doPost pathInfo:	/
+21-Aug-2017 23:03:58.805 INFO [http-nio-8080-exec-5] lms.servlets.PanelServlet.doPost pathInfo:	/
+21-Aug-2017 23:03:58.805 INFO [http-nio-8080-exec-7] lms.servlets.PanelServlet.doGet pathInfo:	/view
+21-Aug-2017 23:03:58.805 INFO [http-nio-8080-exec-7] lms.servlets.PanelServlet.doGet pathInfo:	/view
+21-Aug-2017 23:04:00.791 INFO [http-nio-8080-exec-9] lms.servlets.PanelServlet.doPost pathInfo:	/
+21-Aug-2017 23:04:00.791 INFO [http-nio-8080-exec-9] lms.servlets.PanelServlet.doPost pathInfo:	/
+21-Aug-2017 23:04:00.807 INFO [http-nio-8080-exec-10] lms.servlets.PanelServlet.doGet pathInfo:	/view
+21-Aug-2017 23:04:00.807 INFO [http-nio-8080-exec-10] lms.servlets.PanelServlet.doGet pathInfo:	/view
+21-Aug-2017 23:04:05.202 INFO [http-nio-8080-exec-1] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
+21-Aug-2017 23:04:05.202 INFO [http-nio-8080-exec-1] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
+21-Aug-2017 23:04:05.202 INFO [http-nio-8080-exec-1] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:04:05.202 INFO [http-nio-8080-exec-1] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:04:09.236 INFO [http-nio-8080-exec-5] lms.servlets.BoardServlet.doGet pathInfo:	/view
+21-Aug-2017 23:04:09.236 INFO [http-nio-8080-exec-5] lms.servlets.BoardServlet.doGet pathInfo:	/view
+21-Aug-2017 23:04:11.070 INFO [http-nio-8080-exec-7] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
+21-Aug-2017 23:04:11.070 INFO [http-nio-8080-exec-7] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
+21-Aug-2017 23:04:12.838 INFO [http-nio-8080-exec-9] lms.servlets.BoardServlet.doGet pathInfo:	/all
+21-Aug-2017 23:04:12.838 INFO [http-nio-8080-exec-9] lms.servlets.BoardServlet.doGet pathInfo:	/all
+21-Aug-2017 23:04:12.861 INFO [http-nio-8080-exec-9] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=15, login='Strixik4', password='123456', email='test@gmail.com', date_registered='2017-08-10', sex='man', date_birth='2017-08-15', block=user, firstName='gdfgdfgdf', secondName='gdfgdfgdfg', country='gdfgdfgdfg', city='gdfgdfgdfgdf'}
+21-Aug-2017 23:04:12.861 INFO [http-nio-8080-exec-9] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=15, login='Strixik4', password='123456', email='test@gmail.com', date_registered='2017-08-10', sex='man', date_birth='2017-08-15', block=user, firstName='gdfgdfgdf', secondName='gdfgdfgdfg', country='gdfgdfgdfg', city='gdfgdfgdfgdf'}
+21-Aug-2017 23:04:12.871 INFO [http-nio-8080-exec-9] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=11, login='Strixik', password='123456', email='strixik@list.ru', date_registered='2017-08-09', sex='man', date_birth='1987-11-20', block=user, firstName='Кирил', secondName='Богут', country='Україна', city='Чернівці'}
+21-Aug-2017 23:04:12.871 INFO [http-nio-8080-exec-9] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=11, login='Strixik', password='123456', email='strixik@list.ru', date_registered='2017-08-09', sex='man', date_birth='1987-11-20', block=user, firstName='Кирил', secondName='Богут', country='Україна', city='Чернівці'}
+21-Aug-2017 23:04:12.880 INFO [http-nio-8080-exec-9] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:04:12.880 INFO [http-nio-8080-exec-9] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:04:12.889 INFO [http-nio-8080-exec-9] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:04:12.889 INFO [http-nio-8080-exec-9] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:04:12.898 INFO [http-nio-8080-exec-9] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:04:12.898 INFO [http-nio-8080-exec-9] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:04:12.908 INFO [http-nio-8080-exec-9] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:04:12.908 INFO [http-nio-8080-exec-9] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:04:12.920 INFO [http-nio-8080-exec-9] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=block, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
+21-Aug-2017 23:04:12.920 INFO [http-nio-8080-exec-9] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=block, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
+21-Aug-2017 23:04:12.930 INFO [http-nio-8080-exec-9] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=block, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
+21-Aug-2017 23:04:12.930 INFO [http-nio-8080-exec-9] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=block, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
+21-Aug-2017 23:04:12.946 INFO [http-nio-8080-exec-9] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=block, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
+21-Aug-2017 23:04:12.946 INFO [http-nio-8080-exec-9] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=block, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
+21-Aug-2017 23:09:07.176 WARNING [RMI TCP Connection(12)-127.0.0.1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ROOT] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+21-Aug-2017 23:09:07.191 WARNING [RMI TCP Connection(12)-127.0.0.1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [MySQL Statement Cancellation Timer] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
  java.lang.Object.wait(Native Method)
  java.lang.Object.wait(Object.java:502)
  java.util.TimerThread.mainLoop(Timer.java:526)
  java.util.TimerThread.run(Timer.java:505)
-21-Aug-2017 15:41:08.384 INFO [http-nio-8080-exec-8] lms.servlets.IndexServlet.doPost pathInfo:	/register
-21-Aug-2017 15:41:08.384 INFO [http-nio-8080-exec-8] lms.servlets.IndexServlet.doPost pathInfo:	/register
-21-Aug-2017 15:41:08.787 INFO [http-nio-8080-exec-4] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:41:08.787 INFO [http-nio-8080-exec-4] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:41:13.133 INFO [http-nio-8080-exec-1] lms.servlets.IndexServlet.doPost pathInfo:	/login
-21-Aug-2017 15:41:13.133 INFO [http-nio-8080-exec-1] lms.servlets.IndexServlet.doPost pathInfo:	/login
-21-Aug-2017 15:41:13.162 INFO [http-nio-8080-exec-1] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=19, login='Strix4', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='null', date_birth='null', block=user, firstName='null', secondName='null', country='null', city='null'}
-21-Aug-2017 15:41:13.162 INFO [http-nio-8080-exec-1] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=19, login='Strix4', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='null', date_birth='null', block=user, firstName='null', secondName='null', country='null', city='null'}
-21-Aug-2017 15:41:13.172 INFO [http-nio-8080-exec-9] lms.servlets.BoardServlet.doGet pathInfo:	/view
-21-Aug-2017 15:41:13.172 INFO [http-nio-8080-exec-9] lms.servlets.BoardServlet.doGet pathInfo:	/view
-21-Aug-2017 15:41:15.299 INFO [http-nio-8080-exec-5] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
-21-Aug-2017 15:41:15.299 INFO [http-nio-8080-exec-5] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
-21-Aug-2017 15:41:15.318 INFO [http-nio-8080-exec-5] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=19, login='Strix4', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='null', date_birth='null', block=user, firstName='null', secondName='null', country='null', city='null'}
-21-Aug-2017 15:41:15.318 INFO [http-nio-8080-exec-5] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=19, login='Strix4', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='null', date_birth='null', block=user, firstName='null', secondName='null', country='null', city='null'}
-21-Aug-2017 15:41:30.831 INFO [http-nio-8080-exec-2] lms.servlets.IndexServlet.doGet pathInfo:	/favicon.ico
-21-Aug-2017 15:41:30.831 INFO [http-nio-8080-exec-2] lms.servlets.IndexServlet.doGet pathInfo:	/favicon.ico
-21-Aug-2017 15:41:30.836 INFO [http-nio-8080-exec-10] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:41:30.836 INFO [http-nio-8080-exec-10] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:41:30.840 INFO [http-nio-8080-exec-6] lms.servlets.BoardServlet.doGet pathInfo:	/view
-21-Aug-2017 15:41:30.840 INFO [http-nio-8080-exec-6] lms.servlets.BoardServlet.doGet pathInfo:	/view
-21-Aug-2017 15:42:14.515 INFO [http-nio-8080-exec-14] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
-21-Aug-2017 15:42:14.515 INFO [http-nio-8080-exec-14] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
-21-Aug-2017 15:42:14.531 INFO [http-nio-8080-exec-14] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=19, login='Strix4', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='null', date_birth='null', block=user, firstName='null', secondName='null', country='null', city='null'}
-21-Aug-2017 15:42:14.531 INFO [http-nio-8080-exec-14] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=19, login='Strix4', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='null', date_birth='null', block=user, firstName='null', secondName='null', country='null', city='null'}
-21-Aug-2017 15:42:16.338 INFO [http-nio-8080-exec-6] lms.servlets.BoardServlet.doGet pathInfo:	/view
-21-Aug-2017 15:42:16.338 INFO [http-nio-8080-exec-6] lms.servlets.BoardServlet.doGet pathInfo:	/view
-21-Aug-2017 15:42:18.333 INFO [http-nio-8080-exec-3] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
-21-Aug-2017 15:42:18.333 INFO [http-nio-8080-exec-3] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
-21-Aug-2017 15:42:18.348 INFO [http-nio-8080-exec-3] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=19, login='Strix4', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='null', date_birth='null', block=user, firstName='null', secondName='null', country='null', city='null'}
-21-Aug-2017 15:42:18.348 INFO [http-nio-8080-exec-3] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=19, login='Strix4', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='null', date_birth='null', block=user, firstName='null', secondName='null', country='null', city='null'}
-21-Aug-2017 15:48:53.173 WARNING [RMI TCP Connection(19)-127.0.0.1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ROOT] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
-21-Aug-2017 15:48:53.173 WARNING [RMI TCP Connection(19)-127.0.0.1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [MySQL Statement Cancellation Timer] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+21-Aug-2017 23:09:19.583 INFO [http-nio-8080-exec-1] lms.servlets.IndexServlet.doGet pathInfo:	/logout
+21-Aug-2017 23:09:19.583 INFO [http-nio-8080-exec-1] lms.servlets.IndexServlet.doGet pathInfo:	/logout
+21-Aug-2017 23:09:19.585 WARNING [http-nio-8080-exec-1] lms.servlets.IndexServlet.doGet logged out:	null
+21-Aug-2017 23:09:19.585 WARNING [http-nio-8080-exec-1] lms.servlets.IndexServlet.doGet logged out:	null
+21-Aug-2017 23:09:19.595 INFO [http-nio-8080-exec-8] lms.servlets.IndexServlet.doGet pathInfo:	/
+21-Aug-2017 23:09:19.595 INFO [http-nio-8080-exec-8] lms.servlets.IndexServlet.doGet pathInfo:	/
+21-Aug-2017 23:09:20.732 INFO [http-nio-8080-exec-4] lms.servlets.IndexServlet.doPost pathInfo:	/login
+21-Aug-2017 23:09:20.732 INFO [http-nio-8080-exec-4] lms.servlets.IndexServlet.doPost pathInfo:	/login
+21-Aug-2017 23:09:21.018 INFO [http-nio-8080-exec-4] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:09:21.018 INFO [http-nio-8080-exec-4] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:09:21.027 INFO [http-nio-8080-exec-10] lms.servlets.BoardServlet.doGet pathInfo:	/view
+21-Aug-2017 23:09:21.027 INFO [http-nio-8080-exec-10] lms.servlets.BoardServlet.doGet pathInfo:	/view
+21-Aug-2017 23:09:23.525 INFO [http-nio-8080-exec-6] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
+21-Aug-2017 23:09:23.525 INFO [http-nio-8080-exec-6] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
+21-Aug-2017 23:09:23.543 INFO [http-nio-8080-exec-6] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:09:23.543 INFO [http-nio-8080-exec-6] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:09:27.941 INFO [http-nio-8080-exec-2] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
+21-Aug-2017 23:09:27.941 INFO [http-nio-8080-exec-2] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
+21-Aug-2017 23:09:29.508 INFO [http-nio-8080-exec-7] lms.servlets.IndexServlet.doGet pathInfo:	/admintest
+21-Aug-2017 23:09:29.508 INFO [http-nio-8080-exec-7] lms.servlets.IndexServlet.doGet pathInfo:	/admintest
+21-Aug-2017 23:09:29.523 INFO [http-nio-8080-exec-7] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=21, login='Strix6', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-09', block=user, firstName='Анатолій', secondName='Бурлака', country='Україна', city='Київ'}
+21-Aug-2017 23:09:29.523 INFO [http-nio-8080-exec-7] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=21, login='Strix6', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-09', block=user, firstName='Анатолій', secondName='Бурлака', country='Україна', city='Київ'}
+21-Aug-2017 23:09:33.241 INFO [http-nio-8080-exec-3] lms.servlets.BoardServlet.doGet pathInfo:	/all
+21-Aug-2017 23:09:33.241 INFO [http-nio-8080-exec-3] lms.servlets.BoardServlet.doGet pathInfo:	/all
+21-Aug-2017 23:09:33.263 INFO [http-nio-8080-exec-3] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=15, login='Strixik4', password='123456', email='test@gmail.com', date_registered='2017-08-10', sex='man', date_birth='2017-08-15', block=user, firstName='gdfgdfgdf', secondName='gdfgdfgdfg', country='gdfgdfgdfg', city='gdfgdfgdfgdf'}
+21-Aug-2017 23:09:33.263 INFO [http-nio-8080-exec-3] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=15, login='Strixik4', password='123456', email='test@gmail.com', date_registered='2017-08-10', sex='man', date_birth='2017-08-15', block=user, firstName='gdfgdfgdf', secondName='gdfgdfgdfg', country='gdfgdfgdfg', city='gdfgdfgdfgdf'}
+21-Aug-2017 23:09:33.273 INFO [http-nio-8080-exec-3] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=11, login='Strixik', password='123456', email='strixik@list.ru', date_registered='2017-08-09', sex='man', date_birth='1987-11-20', block=user, firstName='Кирил', secondName='Богут', country='Україна', city='Чернівці'}
+21-Aug-2017 23:09:33.273 INFO [http-nio-8080-exec-3] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=11, login='Strixik', password='123456', email='strixik@list.ru', date_registered='2017-08-09', sex='man', date_birth='1987-11-20', block=user, firstName='Кирил', secondName='Богут', country='Україна', city='Чернівці'}
+21-Aug-2017 23:09:33.281 INFO [http-nio-8080-exec-3] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:09:33.281 INFO [http-nio-8080-exec-3] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:09:33.290 INFO [http-nio-8080-exec-3] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:09:33.290 INFO [http-nio-8080-exec-3] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:09:33.298 INFO [http-nio-8080-exec-3] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:09:33.298 INFO [http-nio-8080-exec-3] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:09:33.312 INFO [http-nio-8080-exec-3] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:09:33.312 INFO [http-nio-8080-exec-3] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:09:33.353 INFO [http-nio-8080-exec-3] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=block, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
+21-Aug-2017 23:09:33.353 INFO [http-nio-8080-exec-3] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=block, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
+21-Aug-2017 23:09:33.363 INFO [http-nio-8080-exec-3] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=block, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
+21-Aug-2017 23:09:33.363 INFO [http-nio-8080-exec-3] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=block, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
+21-Aug-2017 23:09:33.373 INFO [http-nio-8080-exec-3] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=block, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
+21-Aug-2017 23:09:33.373 INFO [http-nio-8080-exec-3] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=block, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
+21-Aug-2017 23:09:36.091 INFO [http-nio-8080-exec-9] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
+21-Aug-2017 23:09:36.091 INFO [http-nio-8080-exec-9] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
+21-Aug-2017 23:09:37.658 INFO [http-nio-8080-exec-5] lms.servlets.IndexServlet.doGet pathInfo:	/admintest
+21-Aug-2017 23:09:37.658 INFO [http-nio-8080-exec-5] lms.servlets.IndexServlet.doGet pathInfo:	/admintest
+21-Aug-2017 23:09:37.673 INFO [http-nio-8080-exec-5] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=15, login='Strixik4', password='123456', email='test@gmail.com', date_registered='2017-08-10', sex='man', date_birth='2017-08-15', block=user, firstName='gdfgdfgdf', secondName='gdfgdfgdfg', country='gdfgdfgdfg', city='gdfgdfgdfgdf'}
+21-Aug-2017 23:09:37.673 INFO [http-nio-8080-exec-5] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=15, login='Strixik4', password='123456', email='test@gmail.com', date_registered='2017-08-10', sex='man', date_birth='2017-08-15', block=user, firstName='gdfgdfgdf', secondName='gdfgdfgdfg', country='gdfgdfgdfg', city='gdfgdfgdfgdf'}
+21-Aug-2017 23:09:40.106 INFO [http-nio-8080-exec-11] lms.servlets.IndexServlet.doGet pathInfo:	/logout
+21-Aug-2017 23:09:40.106 INFO [http-nio-8080-exec-11] lms.servlets.IndexServlet.doGet pathInfo:	/logout
+21-Aug-2017 23:09:40.106 WARNING [http-nio-8080-exec-11] lms.servlets.IndexServlet.doGet logged out:	null
+21-Aug-2017 23:09:40.106 WARNING [http-nio-8080-exec-11] lms.servlets.IndexServlet.doGet logged out:	null
+21-Aug-2017 23:09:40.106 INFO [http-nio-8080-exec-8] lms.servlets.IndexServlet.doGet pathInfo:	/
+21-Aug-2017 23:09:40.106 INFO [http-nio-8080-exec-8] lms.servlets.IndexServlet.doGet pathInfo:	/
+21-Aug-2017 23:12:56.181 WARNING [RMI TCP Connection(21)-127.0.0.1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ROOT] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+21-Aug-2017 23:12:56.181 WARNING [RMI TCP Connection(21)-127.0.0.1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [MySQL Statement Cancellation Timer] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
  java.lang.Object.wait(Native Method)
  java.lang.Object.wait(Object.java:502)
  java.util.TimerThread.mainLoop(Timer.java:526)
  java.util.TimerThread.run(Timer.java:505)
-21-Aug-2017 15:48:57.777 INFO [http-nio-8080-exec-13] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:48:57.777 INFO [http-nio-8080-exec-13] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:49:00.278 INFO [http-nio-8080-exec-20] lms.servlets.IndexServlet.doPost pathInfo:	/login
-21-Aug-2017 15:49:00.278 INFO [http-nio-8080-exec-20] lms.servlets.IndexServlet.doPost pathInfo:	/login
-21-Aug-2017 15:49:00.551 INFO [http-nio-8080-exec-20] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
-21-Aug-2017 15:49:00.551 INFO [http-nio-8080-exec-20] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
-21-Aug-2017 15:49:00.559 INFO [http-nio-8080-exec-19] lms.servlets.BoardServlet.doGet pathInfo:	/view
-21-Aug-2017 15:49:00.559 INFO [http-nio-8080-exec-19] lms.servlets.BoardServlet.doGet pathInfo:	/view
-21-Aug-2017 15:49:02.924 INFO [http-nio-8080-exec-17] lms.servlets.IndexServlet.doGet pathInfo:	/logout
-21-Aug-2017 15:49:02.924 INFO [http-nio-8080-exec-17] lms.servlets.IndexServlet.doGet pathInfo:	/logout
-21-Aug-2017 15:49:02.924 WARNING [http-nio-8080-exec-17] lms.servlets.IndexServlet.doGet logged out:	null
-21-Aug-2017 15:49:02.924 WARNING [http-nio-8080-exec-17] lms.servlets.IndexServlet.doGet logged out:	null
-21-Aug-2017 15:49:02.924 INFO [http-nio-8080-exec-12] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:49:02.924 INFO [http-nio-8080-exec-12] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:49:06.313 INFO [http-nio-8080-exec-14] lms.servlets.IndexServlet.doPost pathInfo:	/login
-21-Aug-2017 15:49:06.313 INFO [http-nio-8080-exec-14] lms.servlets.IndexServlet.doPost pathInfo:	/login
-21-Aug-2017 15:49:06.313 INFO [http-nio-8080-exec-14] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=19, login='Strix4', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='null', date_birth='null', block=user, firstName='null', secondName='null', country='null', city='null'}
-21-Aug-2017 15:49:06.313 INFO [http-nio-8080-exec-14] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=19, login='Strix4', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='null', date_birth='null', block=user, firstName='null', secondName='null', country='null', city='null'}
-21-Aug-2017 15:49:06.330 INFO [http-nio-8080-exec-16] lms.servlets.BoardServlet.doGet pathInfo:	/view
-21-Aug-2017 15:49:06.330 INFO [http-nio-8080-exec-16] lms.servlets.BoardServlet.doGet pathInfo:	/view
-21-Aug-2017 15:49:08.331 INFO [http-nio-8080-exec-18] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
-21-Aug-2017 15:49:08.331 INFO [http-nio-8080-exec-18] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
-21-Aug-2017 15:49:08.331 INFO [http-nio-8080-exec-18] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=19, login='Strix4', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='null', date_birth='null', block=user, firstName='null', secondName='null', country='null', city='null'}
-21-Aug-2017 15:49:08.331 INFO [http-nio-8080-exec-18] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=19, login='Strix4', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='null', date_birth='null', block=user, firstName='null', secondName='null', country='null', city='null'}
-21-Aug-2017 15:49:34.254 INFO [http-nio-8080-exec-19] lms.servlets.IndexServlet.doPost pathInfo:	/profile-edit
-21-Aug-2017 15:49:34.254 INFO [http-nio-8080-exec-19] lms.servlets.IndexServlet.doPost pathInfo:	/profile-edit
-21-Aug-2017 15:50:15.045 INFO [http-nio-8080-exec-24] lms.servlets.IndexServlet.doPost pathInfo:	/profile-edit
-21-Aug-2017 15:50:15.045 INFO [http-nio-8080-exec-24] lms.servlets.IndexServlet.doPost pathInfo:	/profile-edit
-21-Aug-2017 15:50:15.063 INFO [http-nio-8080-exec-21] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
-21-Aug-2017 15:50:15.063 INFO [http-nio-8080-exec-21] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
-21-Aug-2017 15:50:15.072 INFO [http-nio-8080-exec-21] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=19, login='Strix4', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-16', block=user, firstName='Іванушка', secondName='Бабкін', country='Росія', city='Ростов'}
-21-Aug-2017 15:50:15.072 INFO [http-nio-8080-exec-21] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=19, login='Strix4', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-16', block=user, firstName='Іванушка', secondName='Бабкін', country='Росія', city='Ростов'}
-21-Aug-2017 15:50:17.929 INFO [http-nio-8080-exec-25] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
-21-Aug-2017 15:50:17.929 INFO [http-nio-8080-exec-25] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
-21-Aug-2017 15:50:17.929 INFO [http-nio-8080-exec-25] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=19, login='Strix4', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-16', block=user, firstName='Іванушка', secondName='Бабкін', country='Росія', city='Ростов'}
-21-Aug-2017 15:50:17.929 INFO [http-nio-8080-exec-25] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=19, login='Strix4', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-16', block=user, firstName='Іванушка', secondName='Бабкін', country='Росія', city='Ростов'}
-21-Aug-2017 15:50:30.461 INFO [http-nio-8080-exec-22] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
-21-Aug-2017 15:50:30.461 INFO [http-nio-8080-exec-22] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
-21-Aug-2017 15:50:30.476 INFO [http-nio-8080-exec-22] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=19, login='Strix4', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-16', block=user, firstName='Іванушка', secondName='Бабкін', country='Росія', city='Ростов'}
-21-Aug-2017 15:50:30.476 INFO [http-nio-8080-exec-22] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=19, login='Strix4', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-16', block=user, firstName='Іванушка', secondName='Бабкін', country='Росія', city='Ростов'}
-21-Aug-2017 15:50:56.714 WARNING [RMI TCP Connection(26)-127.0.0.1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ROOT] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
-21-Aug-2017 15:50:56.714 WARNING [RMI TCP Connection(26)-127.0.0.1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [MySQL Statement Cancellation Timer] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+21-Aug-2017 23:13:20.443 INFO [http-nio-8080-exec-14] lms.servlets.IndexServlet.doPost pathInfo:	/login
+21-Aug-2017 23:13:20.443 INFO [http-nio-8080-exec-14] lms.servlets.IndexServlet.doPost pathInfo:	/login
+21-Aug-2017 23:13:20.777 INFO [http-nio-8080-exec-14] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:13:20.777 INFO [http-nio-8080-exec-14] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:13:20.787 INFO [http-nio-8080-exec-18] lms.servlets.BoardServlet.doGet pathInfo:	/view
+21-Aug-2017 23:13:20.787 INFO [http-nio-8080-exec-18] lms.servlets.BoardServlet.doGet pathInfo:	/view
+21-Aug-2017 23:13:22.933 INFO [http-nio-8080-exec-11] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
+21-Aug-2017 23:13:22.933 INFO [http-nio-8080-exec-11] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
+21-Aug-2017 23:13:22.949 INFO [http-nio-8080-exec-11] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:13:22.949 INFO [http-nio-8080-exec-11] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:13:24.484 INFO [http-nio-8080-exec-13] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
+21-Aug-2017 23:13:24.484 INFO [http-nio-8080-exec-13] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
+21-Aug-2017 23:13:27.349 INFO [http-nio-8080-exec-17] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
+21-Aug-2017 23:13:27.349 INFO [http-nio-8080-exec-17] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
+21-Aug-2017 23:13:27.364 INFO [http-nio-8080-exec-17] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:13:27.364 INFO [http-nio-8080-exec-17] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:13:28.815 INFO [http-nio-8080-exec-15] lms.servlets.IndexServlet.doPost pathInfo:	/profile-edit
+21-Aug-2017 23:13:28.815 INFO [http-nio-8080-exec-15] lms.servlets.IndexServlet.doPost pathInfo:	/profile-edit
+21-Aug-2017 23:13:28.850 INFO [http-nio-8080-exec-20] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
+21-Aug-2017 23:13:28.850 INFO [http-nio-8080-exec-20] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
+21-Aug-2017 23:13:28.859 INFO [http-nio-8080-exec-20] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:13:28.859 INFO [http-nio-8080-exec-20] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:13:30.965 INFO [http-nio-8080-exec-19] lms.servlets.IndexServlet.doGet pathInfo:	/logout
+21-Aug-2017 23:13:30.965 INFO [http-nio-8080-exec-19] lms.servlets.IndexServlet.doGet pathInfo:	/logout
+21-Aug-2017 23:13:30.980 WARNING [http-nio-8080-exec-19] lms.servlets.IndexServlet.doGet logged out:	null
+21-Aug-2017 23:13:30.980 WARNING [http-nio-8080-exec-19] lms.servlets.IndexServlet.doGet logged out:	null
+21-Aug-2017 23:13:30.980 INFO [http-nio-8080-exec-16] lms.servlets.IndexServlet.doGet pathInfo:	/
+21-Aug-2017 23:13:30.980 INFO [http-nio-8080-exec-16] lms.servlets.IndexServlet.doGet pathInfo:	/
+21-Aug-2017 23:20:54.445 INFO [http-nio-8080-exec-21] lms.servlets.IndexServlet.doPost pathInfo:	/login
+21-Aug-2017 23:20:54.445 INFO [http-nio-8080-exec-21] lms.servlets.IndexServlet.doPost pathInfo:	/login
+21-Aug-2017 23:20:54.463 INFO [http-nio-8080-exec-21] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:20:54.463 INFO [http-nio-8080-exec-21] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:20:54.471 INFO [http-nio-8080-exec-22] lms.servlets.BoardServlet.doGet pathInfo:	/view
+21-Aug-2017 23:20:54.471 INFO [http-nio-8080-exec-22] lms.servlets.BoardServlet.doGet pathInfo:	/view
+21-Aug-2017 23:20:58.247 INFO [http-nio-8080-exec-23] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
+21-Aug-2017 23:20:58.247 INFO [http-nio-8080-exec-23] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
+21-Aug-2017 23:20:58.262 INFO [http-nio-8080-exec-23] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:20:58.262 INFO [http-nio-8080-exec-23] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:21:02.431 INFO [http-nio-8080-exec-24] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
+21-Aug-2017 23:21:02.431 INFO [http-nio-8080-exec-24] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
+21-Aug-2017 23:21:06.159 INFO [http-nio-8080-exec-25] lms.servlets.IndexServlet.doGet pathInfo:	/favicon.ico
+21-Aug-2017 23:21:06.159 INFO [http-nio-8080-exec-25] lms.servlets.IndexServlet.doGet pathInfo:	/favicon.ico
+21-Aug-2017 23:21:06.162 INFO [http-nio-8080-exec-26] lms.servlets.IndexServlet.doGet pathInfo:	/
+21-Aug-2017 23:21:06.162 INFO [http-nio-8080-exec-26] lms.servlets.IndexServlet.doGet pathInfo:	/
+21-Aug-2017 23:21:06.166 INFO [http-nio-8080-exec-27] lms.servlets.BoardServlet.doGet pathInfo:	/view
+21-Aug-2017 23:21:06.166 INFO [http-nio-8080-exec-27] lms.servlets.BoardServlet.doGet pathInfo:	/view
+21-Aug-2017 23:56:24.343 WARNING [RMI TCP Connection(25)-127.0.0.1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ROOT] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+21-Aug-2017 23:56:24.343 WARNING [RMI TCP Connection(25)-127.0.0.1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [MySQL Statement Cancellation Timer] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
  java.lang.Object.wait(Native Method)
  java.lang.Object.wait(Object.java:502)
  java.util.TimerThread.mainLoop(Timer.java:526)
  java.util.TimerThread.run(Timer.java:505)
-21-Aug-2017 15:51:00.232 INFO [http-nio-8080-exec-23] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:51:00.232 INFO [http-nio-8080-exec-23] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:51:01.208 INFO [http-nio-8080-exec-25] lms.servlets.IndexServlet.doPost pathInfo:	/login
-21-Aug-2017 15:51:01.208 INFO [http-nio-8080-exec-25] lms.servlets.IndexServlet.doPost pathInfo:	/login
-21-Aug-2017 15:51:01.492 INFO [http-nio-8080-exec-25] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
-21-Aug-2017 15:51:01.492 INFO [http-nio-8080-exec-25] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
-21-Aug-2017 15:51:01.499 INFO [http-nio-8080-exec-26] lms.servlets.BoardServlet.doGet pathInfo:	/view
-21-Aug-2017 15:51:01.499 INFO [http-nio-8080-exec-26] lms.servlets.BoardServlet.doGet pathInfo:	/view
-21-Aug-2017 15:51:03.443 INFO [http-nio-8080-exec-28] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:51:03.443 INFO [http-nio-8080-exec-28] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:51:03.443 INFO [http-nio-8080-exec-22] lms.servlets.BoardServlet.doGet pathInfo:	/view
-21-Aug-2017 15:51:03.443 INFO [http-nio-8080-exec-22] lms.servlets.BoardServlet.doGet pathInfo:	/view
-21-Aug-2017 15:51:05.538 INFO [http-nio-8080-exec-27] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:51:05.538 INFO [http-nio-8080-exec-27] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:51:05.553 INFO [http-nio-8080-exec-18] lms.servlets.BoardServlet.doGet pathInfo:	/view
-21-Aug-2017 15:51:05.553 INFO [http-nio-8080-exec-18] lms.servlets.BoardServlet.doGet pathInfo:	/view
-21-Aug-2017 15:51:07.724 INFO [http-nio-8080-exec-29] lms.servlets.IndexServlet.doGet pathInfo:	/logout
-21-Aug-2017 15:51:07.724 INFO [http-nio-8080-exec-29] lms.servlets.IndexServlet.doGet pathInfo:	/logout
-21-Aug-2017 15:51:07.724 WARNING [http-nio-8080-exec-29] lms.servlets.IndexServlet.doGet logged out:	null
-21-Aug-2017 15:51:07.724 WARNING [http-nio-8080-exec-29] lms.servlets.IndexServlet.doGet logged out:	null
-21-Aug-2017 15:51:07.724 INFO [http-nio-8080-exec-24] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:51:07.724 INFO [http-nio-8080-exec-24] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:51:23.258 INFO [http-nio-8080-exec-26] lms.servlets.IndexServlet.doPost pathInfo:	/register
-21-Aug-2017 15:51:23.258 INFO [http-nio-8080-exec-26] lms.servlets.IndexServlet.doPost pathInfo:	/register
-21-Aug-2017 15:51:23.293 INFO [http-nio-8080-exec-32] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:51:23.293 INFO [http-nio-8080-exec-32] lms.servlets.IndexServlet.doGet pathInfo:	/
-21-Aug-2017 15:51:27.208 INFO [http-nio-8080-exec-22] lms.servlets.IndexServlet.doPost pathInfo:	/login
-21-Aug-2017 15:51:27.208 INFO [http-nio-8080-exec-22] lms.servlets.IndexServlet.doPost pathInfo:	/login
-21-Aug-2017 15:51:27.224 INFO [http-nio-8080-exec-22] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=20, login='Strix5', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='null', date_birth='null', block=user, firstName='null', secondName='null', country='null', city='null'}
-21-Aug-2017 15:51:27.224 INFO [http-nio-8080-exec-22] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=20, login='Strix5', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='null', date_birth='null', block=user, firstName='null', secondName='null', country='null', city='null'}
-21-Aug-2017 15:51:27.224 INFO [http-nio-8080-exec-33] lms.servlets.BoardServlet.doGet pathInfo:	/view
-21-Aug-2017 15:51:27.224 INFO [http-nio-8080-exec-33] lms.servlets.BoardServlet.doGet pathInfo:	/view
-21-Aug-2017 15:51:29.294 INFO [http-nio-8080-exec-18] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
-21-Aug-2017 15:51:29.294 INFO [http-nio-8080-exec-18] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
-21-Aug-2017 15:51:29.294 INFO [http-nio-8080-exec-18] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=20, login='Strix5', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='null', date_birth='null', block=user, firstName='null', secondName='null', country='null', city='null'}
-21-Aug-2017 15:51:29.294 INFO [http-nio-8080-exec-18] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=20, login='Strix5', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='null', date_birth='null', block=user, firstName='null', secondName='null', country='null', city='null'}
-21-Aug-2017 15:52:15.621 INFO [http-nio-8080-exec-30] lms.servlets.IndexServlet.doPost pathInfo:	/profile-edit
-21-Aug-2017 15:52:15.621 INFO [http-nio-8080-exec-30] lms.servlets.IndexServlet.doPost pathInfo:	/profile-edit
-21-Aug-2017 15:52:15.644 INFO [http-nio-8080-exec-35] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
-21-Aug-2017 15:52:15.644 INFO [http-nio-8080-exec-35] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
-21-Aug-2017 15:52:15.652 INFO [http-nio-8080-exec-35] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=20, login='Strix5', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='1985-08-03', block=user, firstName='Іванушка', secondName='Максимів', country='Росія', city='Ростов'}
-21-Aug-2017 15:52:15.652 INFO [http-nio-8080-exec-35] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=20, login='Strix5', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='1985-08-03', block=user, firstName='Іванушка', secondName='Максимів', country='Росія', city='Ростов'}
-21-Aug-2017 15:52:19.258 INFO [http-nio-8080-exec-31] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
-21-Aug-2017 15:52:19.258 INFO [http-nio-8080-exec-31] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
-21-Aug-2017 15:52:19.273 INFO [http-nio-8080-exec-31] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=20, login='Strix5', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='1985-08-03', block=user, firstName='Іванушка', secondName='Максимів', country='Росія', city='Ростов'}
-21-Aug-2017 15:52:19.273 INFO [http-nio-8080-exec-31] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=20, login='Strix5', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='1985-08-03', block=user, firstName='Іванушка', secondName='Максимів', country='Росія', city='Ростов'}
+21-Aug-2017 23:56:32.379 INFO [http-nio-8080-exec-23] lms.servlets.IndexServlet.doGet pathInfo:	/
+21-Aug-2017 23:56:32.379 INFO [http-nio-8080-exec-23] lms.servlets.IndexServlet.doGet pathInfo:	/
+21-Aug-2017 23:56:33.295 INFO [http-nio-8080-exec-25] lms.servlets.IndexServlet.doPost pathInfo:	/login
+21-Aug-2017 23:56:33.295 INFO [http-nio-8080-exec-25] lms.servlets.IndexServlet.doPost pathInfo:	/login
+21-Aug-2017 23:56:33.568 INFO [http-nio-8080-exec-25] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:56:33.568 INFO [http-nio-8080-exec-25] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:56:33.575 INFO [http-nio-8080-exec-30] lms.servlets.BoardServlet.doGet pathInfo:	/view
+21-Aug-2017 23:56:33.575 INFO [http-nio-8080-exec-30] lms.servlets.BoardServlet.doGet pathInfo:	/view
+21-Aug-2017 23:56:37.842 INFO [http-nio-8080-exec-29] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
+21-Aug-2017 23:56:37.842 INFO [http-nio-8080-exec-29] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
+21-Aug-2017 23:57:58.903 WARNING [RMI TCP Connection(28)-127.0.0.1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ROOT] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+21-Aug-2017 23:57:58.903 WARNING [RMI TCP Connection(28)-127.0.0.1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [MySQL Statement Cancellation Timer] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.Object.wait(Object.java:502)
+ java.util.TimerThread.mainLoop(Timer.java:526)
+ java.util.TimerThread.run(Timer.java:505)
+21-Aug-2017 23:58:00.567 INFO [http-nio-8080-exec-36] lms.servlets.IndexServlet.doGet pathInfo:	/
+21-Aug-2017 23:58:00.567 INFO [http-nio-8080-exec-36] lms.servlets.IndexServlet.doGet pathInfo:	/
+21-Aug-2017 23:58:01.375 INFO [http-nio-8080-exec-35] lms.servlets.IndexServlet.doPost pathInfo:	/login
+21-Aug-2017 23:58:01.375 INFO [http-nio-8080-exec-35] lms.servlets.IndexServlet.doPost pathInfo:	/login
+21-Aug-2017 23:58:01.679 INFO [http-nio-8080-exec-35] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:58:01.679 INFO [http-nio-8080-exec-35] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:58:01.687 INFO [http-nio-8080-exec-37] lms.servlets.BoardServlet.doGet pathInfo:	/view
+21-Aug-2017 23:58:01.687 INFO [http-nio-8080-exec-37] lms.servlets.BoardServlet.doGet pathInfo:	/view
+21-Aug-2017 23:58:04.356 INFO [http-nio-8080-exec-34] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
+21-Aug-2017 23:58:04.356 INFO [http-nio-8080-exec-34] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
+21-Aug-2017 23:58:14.820 INFO [http-nio-8080-exec-40] lms.servlets.IndexServlet.doGet pathInfo:	/admintest
+21-Aug-2017 23:58:14.820 INFO [http-nio-8080-exec-40] lms.servlets.IndexServlet.doGet pathInfo:	/admintest
+21-Aug-2017 23:58:14.832 INFO [http-nio-8080-exec-40] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:58:14.832 INFO [http-nio-8080-exec-40] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:58:17.774 INFO [http-nio-8080-exec-39] lms.servlets.IndexServlet.doGet pathInfo:	/admintest
+21-Aug-2017 23:58:17.774 INFO [http-nio-8080-exec-39] lms.servlets.IndexServlet.doGet pathInfo:	/admintest
+21-Aug-2017 23:58:17.790 INFO [http-nio-8080-exec-39] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:58:17.790 INFO [http-nio-8080-exec-39] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:58:20.975 INFO [http-nio-8080-exec-33] lms.servlets.IndexServlet.doGet pathInfo:	/admintest
+21-Aug-2017 23:58:20.975 INFO [http-nio-8080-exec-33] lms.servlets.IndexServlet.doGet pathInfo:	/admintest
+21-Aug-2017 23:58:20.991 INFO [http-nio-8080-exec-33] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:58:20.991 INFO [http-nio-8080-exec-33] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:58:59.489 WARNING [RMI TCP Connection(33)-127.0.0.1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ROOT] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+21-Aug-2017 23:58:59.490 WARNING [RMI TCP Connection(33)-127.0.0.1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [MySQL Statement Cancellation Timer] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.Object.wait(Object.java:502)
+ java.util.TimerThread.mainLoop(Timer.java:526)
+ java.util.TimerThread.run(Timer.java:505)
+21-Aug-2017 23:59:01.445 INFO [http-nio-8080-exec-45] lms.servlets.IndexServlet.doGet pathInfo:	/
+21-Aug-2017 23:59:01.445 INFO [http-nio-8080-exec-45] lms.servlets.IndexServlet.doGet pathInfo:	/
+21-Aug-2017 23:59:02.691 INFO [http-nio-8080-exec-42] lms.servlets.IndexServlet.doPost pathInfo:	/login
+21-Aug-2017 23:59:02.691 INFO [http-nio-8080-exec-42] lms.servlets.IndexServlet.doPost pathInfo:	/login
+21-Aug-2017 23:59:03.050 INFO [http-nio-8080-exec-42] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:59:03.050 INFO [http-nio-8080-exec-42] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+21-Aug-2017 23:59:03.061 INFO [http-nio-8080-exec-46] lms.servlets.BoardServlet.doGet pathInfo:	/view
+21-Aug-2017 23:59:03.061 INFO [http-nio-8080-exec-46] lms.servlets.BoardServlet.doGet pathInfo:	/view
+21-Aug-2017 23:59:05.005 INFO [http-nio-8080-exec-38] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
+21-Aug-2017 23:59:05.005 INFO [http-nio-8080-exec-38] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
+21-Aug-2017 23:59:57.190 WARNING [RMI TCP Connection(36)-127.0.0.1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ROOT] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+21-Aug-2017 23:59:57.190 WARNING [RMI TCP Connection(36)-127.0.0.1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [MySQL Statement Cancellation Timer] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.Object.wait(Object.java:502)
+ java.util.TimerThread.mainLoop(Timer.java:526)
+ java.util.TimerThread.run(Timer.java:505)
+22-Aug-2017 00:00:08.764 INFO [http-nio-8080-exec-50] lms.servlets.IndexServlet.doGet pathInfo:	/
+22-Aug-2017 00:00:08.764 INFO [http-nio-8080-exec-50] lms.servlets.IndexServlet.doGet pathInfo:	/
+22-Aug-2017 00:00:09.603 INFO [http-nio-8080-exec-43] lms.servlets.IndexServlet.doPost pathInfo:	/login
+22-Aug-2017 00:00:09.603 INFO [http-nio-8080-exec-43] lms.servlets.IndexServlet.doPost pathInfo:	/login
+22-Aug-2017 00:00:09.973 INFO [http-nio-8080-exec-43] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+22-Aug-2017 00:00:09.973 INFO [http-nio-8080-exec-43] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+22-Aug-2017 00:00:09.983 INFO [http-nio-8080-exec-51] lms.servlets.BoardServlet.doGet pathInfo:	/view
+22-Aug-2017 00:00:09.983 INFO [http-nio-8080-exec-51] lms.servlets.BoardServlet.doGet pathInfo:	/view
+22-Aug-2017 00:00:12.552 INFO [http-nio-8080-exec-48] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
+22-Aug-2017 00:00:12.552 INFO [http-nio-8080-exec-48] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
+22-Aug-2017 00:00:20.186 INFO [http-nio-8080-exec-40] lms.servlets.IndexServlet.doGet pathInfo:	/admintest
+22-Aug-2017 00:00:20.186 INFO [http-nio-8080-exec-40] lms.servlets.IndexServlet.doGet pathInfo:	/admintest
+22-Aug-2017 00:00:20.201 INFO [http-nio-8080-exec-40] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+22-Aug-2017 00:00:20.201 INFO [http-nio-8080-exec-40] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+22-Aug-2017 00:00:23.486 INFO [http-nio-8080-exec-47] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
+22-Aug-2017 00:00:23.486 INFO [http-nio-8080-exec-47] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
+22-Aug-2017 00:00:56.079 WARNING [RMI TCP Connection(41)-127.0.0.1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ROOT] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+22-Aug-2017 00:00:56.079 WARNING [RMI TCP Connection(41)-127.0.0.1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [MySQL Statement Cancellation Timer] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.Object.wait(Object.java:502)
+ java.util.TimerThread.mainLoop(Timer.java:526)
+ java.util.TimerThread.run(Timer.java:505)
+22-Aug-2017 00:00:59.561 INFO [http-nio-8080-exec-56] lms.servlets.IndexServlet.doGet pathInfo:	/
+22-Aug-2017 00:00:59.561 INFO [http-nio-8080-exec-56] lms.servlets.IndexServlet.doGet pathInfo:	/
+22-Aug-2017 00:01:00.738 INFO [http-nio-8080-exec-49] lms.servlets.IndexServlet.doPost pathInfo:	/login
+22-Aug-2017 00:01:00.738 INFO [http-nio-8080-exec-49] lms.servlets.IndexServlet.doPost pathInfo:	/login
+22-Aug-2017 00:01:01.029 INFO [http-nio-8080-exec-49] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+22-Aug-2017 00:01:01.029 INFO [http-nio-8080-exec-49] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+22-Aug-2017 00:01:01.036 INFO [http-nio-8080-exec-51] lms.servlets.BoardServlet.doGet pathInfo:	/view
+22-Aug-2017 00:01:01.036 INFO [http-nio-8080-exec-51] lms.servlets.BoardServlet.doGet pathInfo:	/view
+22-Aug-2017 00:01:03.082 INFO [http-nio-8080-exec-54] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
+22-Aug-2017 00:01:03.082 INFO [http-nio-8080-exec-54] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
+22-Aug-2017 00:01:42.520 WARNING [RMI TCP Connection(44)-127.0.0.1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ROOT] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+22-Aug-2017 00:01:42.520 WARNING [RMI TCP Connection(44)-127.0.0.1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [MySQL Statement Cancellation Timer] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.Object.wait(Object.java:502)
+ java.util.TimerThread.mainLoop(Timer.java:526)
+ java.util.TimerThread.run(Timer.java:505)
+22-Aug-2017 00:01:44.721 INFO [http-nio-8080-exec-52] lms.servlets.IndexServlet.doGet pathInfo:	/
+22-Aug-2017 00:01:44.721 INFO [http-nio-8080-exec-52] lms.servlets.IndexServlet.doGet pathInfo:	/
+22-Aug-2017 00:01:45.900 INFO [http-nio-8080-exec-55] lms.servlets.IndexServlet.doPost pathInfo:	/login
+22-Aug-2017 00:01:45.900 INFO [http-nio-8080-exec-55] lms.servlets.IndexServlet.doPost pathInfo:	/login
+22-Aug-2017 00:01:46.295 INFO [http-nio-8080-exec-55] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+22-Aug-2017 00:01:46.295 INFO [http-nio-8080-exec-55] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+22-Aug-2017 00:01:46.311 INFO [http-nio-8080-exec-59] lms.servlets.BoardServlet.doGet pathInfo:	/view
+22-Aug-2017 00:01:46.311 INFO [http-nio-8080-exec-59] lms.servlets.BoardServlet.doGet pathInfo:	/view
+22-Aug-2017 00:01:48.499 INFO [http-nio-8080-exec-51] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
+22-Aug-2017 00:01:48.499 INFO [http-nio-8080-exec-51] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
+22-Aug-2017 00:01:56.989 INFO [http-nio-8080-exec-60] lms.servlets.IndexServlet.doGet pathInfo:	/admintest
+22-Aug-2017 00:01:56.989 INFO [http-nio-8080-exec-60] lms.servlets.IndexServlet.doGet pathInfo:	/admintest
+22-Aug-2017 00:01:57.002 INFO [http-nio-8080-exec-60] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=10, login='test', password='test123', email='strixik1985@gmail.com', date_registered='1985-10-24', sex='man', date_birth='2017-08-09', block=user, firstName='Alena', secondName='авіаіва', country='аіваіва', city='аіваіваів'}
+22-Aug-2017 00:01:57.002 INFO [http-nio-8080-exec-60] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=10, login='test', password='test123', email='strixik1985@gmail.com', date_registered='1985-10-24', sex='man', date_birth='2017-08-09', block=user, firstName='Alena', secondName='авіаіва', country='аіваіва', city='аіваіваів'}
+22-Aug-2017 00:02:13.584 INFO [http-nio-8080-exec-61] lms.servlets.BoardServlet.doGet pathInfo:	/all
+22-Aug-2017 00:02:13.584 INFO [http-nio-8080-exec-61] lms.servlets.BoardServlet.doGet pathInfo:	/all
+22-Aug-2017 00:02:13.616 INFO [http-nio-8080-exec-61] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=15, login='Strixik4', password='123456', email='test@gmail.com', date_registered='2017-08-10', sex='man', date_birth='2017-08-15', block=user, firstName='gdfgdfgdf', secondName='gdfgdfgdfg', country='gdfgdfgdfg', city='gdfgdfgdfgdf'}
+22-Aug-2017 00:02:13.616 INFO [http-nio-8080-exec-61] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=15, login='Strixik4', password='123456', email='test@gmail.com', date_registered='2017-08-10', sex='man', date_birth='2017-08-15', block=user, firstName='gdfgdfgdf', secondName='gdfgdfgdfg', country='gdfgdfgdfg', city='gdfgdfgdfgdf'}
+22-Aug-2017 00:02:13.624 INFO [http-nio-8080-exec-61] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=11, login='Strixik', password='123456', email='strixik@list.ru', date_registered='2017-08-09', sex='man', date_birth='1987-11-20', block=user, firstName='Кирил', secondName='Богут', country='Україна', city='Чернівці'}
+22-Aug-2017 00:02:13.624 INFO [http-nio-8080-exec-61] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=11, login='Strixik', password='123456', email='strixik@list.ru', date_registered='2017-08-09', sex='man', date_birth='1987-11-20', block=user, firstName='Кирил', secondName='Богут', country='Україна', city='Чернівці'}
+22-Aug-2017 00:02:13.633 INFO [http-nio-8080-exec-61] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+22-Aug-2017 00:02:13.633 INFO [http-nio-8080-exec-61] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+22-Aug-2017 00:02:13.642 INFO [http-nio-8080-exec-61] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+22-Aug-2017 00:02:13.642 INFO [http-nio-8080-exec-61] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+22-Aug-2017 00:02:13.650 INFO [http-nio-8080-exec-61] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+22-Aug-2017 00:02:13.650 INFO [http-nio-8080-exec-61] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+22-Aug-2017 00:02:13.662 INFO [http-nio-8080-exec-61] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+22-Aug-2017 00:02:13.662 INFO [http-nio-8080-exec-61] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+22-Aug-2017 00:02:13.678 INFO [http-nio-8080-exec-61] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=block, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
+22-Aug-2017 00:02:13.678 INFO [http-nio-8080-exec-61] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=block, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
+22-Aug-2017 00:02:13.689 INFO [http-nio-8080-exec-61] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=block, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
+22-Aug-2017 00:02:13.689 INFO [http-nio-8080-exec-61] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=block, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
+22-Aug-2017 00:02:13.698 INFO [http-nio-8080-exec-61] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=block, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
+22-Aug-2017 00:02:13.698 INFO [http-nio-8080-exec-61] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=block, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
+22-Aug-2017 00:02:15.614 INFO [http-nio-8080-exec-58] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
+22-Aug-2017 00:02:15.614 INFO [http-nio-8080-exec-58] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
+22-Aug-2017 00:02:18.023 INFO [http-nio-8080-exec-63] lms.servlets.IndexServlet.doGet pathInfo:	/favicon.ico
+22-Aug-2017 00:02:18.023 INFO [http-nio-8080-exec-63] lms.servlets.IndexServlet.doGet pathInfo:	/favicon.ico
+22-Aug-2017 00:02:18.026 INFO [http-nio-8080-exec-64] lms.servlets.IndexServlet.doGet pathInfo:	/
+22-Aug-2017 00:02:18.026 INFO [http-nio-8080-exec-64] lms.servlets.IndexServlet.doGet pathInfo:	/
+22-Aug-2017 00:02:18.032 INFO [http-nio-8080-exec-59] lms.servlets.BoardServlet.doGet pathInfo:	/view
+22-Aug-2017 00:02:18.032 INFO [http-nio-8080-exec-59] lms.servlets.BoardServlet.doGet pathInfo:	/view
+22-Aug-2017 00:03:11.795 INFO [http-nio-8080-exec-67] lms.servlets.BoardServlet.doGet pathInfo:	/all
+22-Aug-2017 00:03:11.795 INFO [http-nio-8080-exec-67] lms.servlets.BoardServlet.doGet pathInfo:	/all
+22-Aug-2017 00:03:11.817 INFO [http-nio-8080-exec-67] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=15, login='Strixik4', password='123456', email='test@gmail.com', date_registered='2017-08-10', sex='man', date_birth='2017-08-15', block=user, firstName='gdfgdfgdf', secondName='gdfgdfgdfg', country='gdfgdfgdfg', city='gdfgdfgdfgdf'}
+22-Aug-2017 00:03:11.817 INFO [http-nio-8080-exec-67] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=15, login='Strixik4', password='123456', email='test@gmail.com', date_registered='2017-08-10', sex='man', date_birth='2017-08-15', block=user, firstName='gdfgdfgdf', secondName='gdfgdfgdfg', country='gdfgdfgdfg', city='gdfgdfgdfgdf'}
+22-Aug-2017 00:03:11.825 INFO [http-nio-8080-exec-67] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=11, login='Strixik', password='123456', email='strixik@list.ru', date_registered='2017-08-09', sex='man', date_birth='1987-11-20', block=user, firstName='Кирил', secondName='Богут', country='Україна', city='Чернівці'}
+22-Aug-2017 00:03:11.825 INFO [http-nio-8080-exec-67] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=11, login='Strixik', password='123456', email='strixik@list.ru', date_registered='2017-08-09', sex='man', date_birth='1987-11-20', block=user, firstName='Кирил', secondName='Богут', country='Україна', city='Чернівці'}
+22-Aug-2017 00:03:11.833 INFO [http-nio-8080-exec-67] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+22-Aug-2017 00:03:11.833 INFO [http-nio-8080-exec-67] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+22-Aug-2017 00:03:11.842 INFO [http-nio-8080-exec-67] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+22-Aug-2017 00:03:11.842 INFO [http-nio-8080-exec-67] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+22-Aug-2017 00:03:11.851 INFO [http-nio-8080-exec-67] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+22-Aug-2017 00:03:11.851 INFO [http-nio-8080-exec-67] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+22-Aug-2017 00:03:11.860 INFO [http-nio-8080-exec-67] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+22-Aug-2017 00:03:11.860 INFO [http-nio-8080-exec-67] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+22-Aug-2017 00:03:11.875 INFO [http-nio-8080-exec-67] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=block, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
+22-Aug-2017 00:03:11.875 INFO [http-nio-8080-exec-67] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=block, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
+22-Aug-2017 00:03:11.887 INFO [http-nio-8080-exec-67] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=block, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
+22-Aug-2017 00:03:11.887 INFO [http-nio-8080-exec-67] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=block, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
+22-Aug-2017 00:03:11.900 INFO [http-nio-8080-exec-67] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=block, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
+22-Aug-2017 00:03:11.900 INFO [http-nio-8080-exec-67] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=block, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
+22-Aug-2017 00:03:13.848 INFO [http-nio-8080-exec-68] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
+22-Aug-2017 00:03:13.848 INFO [http-nio-8080-exec-68] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
+22-Aug-2017 00:04:39.500 WARNING [RMI TCP Connection(47)-127.0.0.1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ROOT] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+22-Aug-2017 00:04:39.500 WARNING [RMI TCP Connection(47)-127.0.0.1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [MySQL Statement Cancellation Timer] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.Object.wait(Object.java:502)
+ java.util.TimerThread.mainLoop(Timer.java:526)
+ java.util.TimerThread.run(Timer.java:505)
+22-Aug-2017 00:04:49.878 INFO [http-nio-8080-exec-67] lms.servlets.IndexServlet.doGet pathInfo:	/
+22-Aug-2017 00:04:49.878 INFO [http-nio-8080-exec-67] lms.servlets.IndexServlet.doGet pathInfo:	/
+22-Aug-2017 00:04:51.108 INFO [http-nio-8080-exec-64] lms.servlets.IndexServlet.doPost pathInfo:	/login
+22-Aug-2017 00:04:51.108 INFO [http-nio-8080-exec-64] lms.servlets.IndexServlet.doPost pathInfo:	/login
+22-Aug-2017 00:04:51.376 INFO [http-nio-8080-exec-64] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+22-Aug-2017 00:04:51.376 INFO [http-nio-8080-exec-64] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+22-Aug-2017 00:04:51.384 INFO [http-nio-8080-exec-63] lms.servlets.BoardServlet.doGet pathInfo:	/view
+22-Aug-2017 00:04:51.384 INFO [http-nio-8080-exec-63] lms.servlets.BoardServlet.doGet pathInfo:	/view
+22-Aug-2017 00:04:54.674 INFO [http-nio-8080-exec-69] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
+22-Aug-2017 00:04:54.674 INFO [http-nio-8080-exec-69] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
+22-Aug-2017 00:05:01.038 INFO [http-nio-8080-exec-72] lms.servlets.IndexServlet.doGet pathInfo:	/admintest
+22-Aug-2017 00:05:01.038 INFO [http-nio-8080-exec-72] lms.servlets.IndexServlet.doGet pathInfo:	/admintest
+22-Aug-2017 00:05:01.053 INFO [http-nio-8080-exec-72] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+22-Aug-2017 00:05:01.053 INFO [http-nio-8080-exec-72] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+22-Aug-2017 00:05:04.674 INFO [http-nio-8080-exec-66] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
+22-Aug-2017 00:05:04.674 INFO [http-nio-8080-exec-66] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
+22-Aug-2017 00:05:08.923 INFO [http-nio-8080-exec-68] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
+22-Aug-2017 00:05:08.923 INFO [http-nio-8080-exec-68] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
+22-Aug-2017 00:05:08.939 INFO [http-nio-8080-exec-68] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+22-Aug-2017 00:05:08.939 INFO [http-nio-8080-exec-68] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+22-Aug-2017 00:05:11.223 INFO [http-nio-8080-exec-70] lms.servlets.BoardServlet.doGet pathInfo:	/all
+22-Aug-2017 00:05:11.223 INFO [http-nio-8080-exec-70] lms.servlets.BoardServlet.doGet pathInfo:	/all
+22-Aug-2017 00:05:11.248 INFO [http-nio-8080-exec-70] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=15, login='Strixik4', password='123456', email='test@gmail.com', date_registered='2017-08-10', sex='man', date_birth='2017-08-15', block=user, firstName='gdfgdfgdf', secondName='gdfgdfgdfg', country='gdfgdfgdfg', city='gdfgdfgdfgdf'}
+22-Aug-2017 00:05:11.248 INFO [http-nio-8080-exec-70] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=15, login='Strixik4', password='123456', email='test@gmail.com', date_registered='2017-08-10', sex='man', date_birth='2017-08-15', block=user, firstName='gdfgdfgdf', secondName='gdfgdfgdfg', country='gdfgdfgdfg', city='gdfgdfgdfgdf'}
+22-Aug-2017 00:05:11.257 INFO [http-nio-8080-exec-70] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=11, login='Strixik', password='123456', email='strixik@list.ru', date_registered='2017-08-09', sex='man', date_birth='1987-11-20', block=user, firstName='Кирил', secondName='Богут', country='Україна', city='Чернівці'}
+22-Aug-2017 00:05:11.257 INFO [http-nio-8080-exec-70] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=11, login='Strixik', password='123456', email='strixik@list.ru', date_registered='2017-08-09', sex='man', date_birth='1987-11-20', block=user, firstName='Кирил', secondName='Богут', country='Україна', city='Чернівці'}
+22-Aug-2017 00:05:11.266 INFO [http-nio-8080-exec-70] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+22-Aug-2017 00:05:11.266 INFO [http-nio-8080-exec-70] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+22-Aug-2017 00:05:11.274 INFO [http-nio-8080-exec-70] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+22-Aug-2017 00:05:11.274 INFO [http-nio-8080-exec-70] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+22-Aug-2017 00:05:11.284 INFO [http-nio-8080-exec-70] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+22-Aug-2017 00:05:11.284 INFO [http-nio-8080-exec-70] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+22-Aug-2017 00:05:11.315 INFO [http-nio-8080-exec-70] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+22-Aug-2017 00:05:11.315 INFO [http-nio-8080-exec-70] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+22-Aug-2017 00:05:11.326 INFO [http-nio-8080-exec-70] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=block, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
+22-Aug-2017 00:05:11.326 INFO [http-nio-8080-exec-70] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=block, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
+22-Aug-2017 00:05:11.342 INFO [http-nio-8080-exec-70] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=block, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
+22-Aug-2017 00:05:11.342 INFO [http-nio-8080-exec-70] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=block, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
+22-Aug-2017 00:05:11.351 INFO [http-nio-8080-exec-70] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=block, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
+22-Aug-2017 00:05:11.351 INFO [http-nio-8080-exec-70] lms.dao.repository.UserRepo.findByUserId В базі знайдено користувача: 	User{id=18, login='Strix3', password='123456', email='strixik1985@gmail.com', date_registered='2017-08-21', sex='man', date_birth='2017-08-21', block=block, firstName='Олексій', secondName='Балагура', country='Україна', city='Львів'}
+22-Aug-2017 00:05:13.008 INFO [http-nio-8080-exec-73] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
+22-Aug-2017 00:05:13.008 INFO [http-nio-8080-exec-73] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
+22-Aug-2017 00:06:14.444 WARNING [RMI TCP Connection(50)-127.0.0.1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ROOT] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+22-Aug-2017 00:06:14.445 WARNING [RMI TCP Connection(50)-127.0.0.1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [MySQL Statement Cancellation Timer] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.Object.wait(Object.java:502)
+ java.util.TimerThread.mainLoop(Timer.java:526)
+ java.util.TimerThread.run(Timer.java:505)
+22-Aug-2017 00:06:29.705 INFO [http-nio-8080-exec-73] lms.servlets.IndexServlet.doGet pathInfo:	/
+22-Aug-2017 00:06:29.705 INFO [http-nio-8080-exec-73] lms.servlets.IndexServlet.doGet pathInfo:	/
+22-Aug-2017 00:06:30.621 INFO [http-nio-8080-exec-76] lms.servlets.IndexServlet.doPost pathInfo:	/login
+22-Aug-2017 00:06:30.621 INFO [http-nio-8080-exec-76] lms.servlets.IndexServlet.doPost pathInfo:	/login
+22-Aug-2017 00:06:30.886 INFO [http-nio-8080-exec-76] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+22-Aug-2017 00:06:30.886 INFO [http-nio-8080-exec-76] lms.dao.repository.UserRepo.findByUser В базі знайдено користувача: 	User{id=1, login='Strix', password='123456', email='stixik1985@gmail.com', date_registered='2017-08-09', sex='man', date_birth='1985-10-24', block=admin, firstName='Андронік', secondName='Голбан', country='Україна', city='Івано-Франківськ'}
+22-Aug-2017 00:06:30.895 INFO [http-nio-8080-exec-81] lms.servlets.BoardServlet.doGet pathInfo:	/view
+22-Aug-2017 00:06:30.895 INFO [http-nio-8080-exec-81] lms.servlets.BoardServlet.doGet pathInfo:	/view
+22-Aug-2017 00:06:33.387 INFO [http-nio-8080-exec-80] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
+22-Aug-2017 00:06:33.387 INFO [http-nio-8080-exec-80] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
+22-Aug-2017 00:06:39.618 INFO [http-nio-8080-exec-75] lms.servlets.IndexServlet.doGet pathInfo:	/logout
+22-Aug-2017 00:06:39.618 INFO [http-nio-8080-exec-75] lms.servlets.IndexServlet.doGet pathInfo:	/logout
+22-Aug-2017 00:06:39.618 WARNING [http-nio-8080-exec-75] lms.servlets.IndexServlet.doGet logged out:	null
+22-Aug-2017 00:06:39.618 WARNING [http-nio-8080-exec-75] lms.servlets.IndexServlet.doGet logged out:	null
+22-Aug-2017 00:06:39.618 INFO [http-nio-8080-exec-79] lms.servlets.IndexServlet.doGet pathInfo:	/
+22-Aug-2017 00:06:39.618 INFO [http-nio-8080-exec-79] lms.servlets.IndexServlet.doGet pathInfo:	/
 Using CATALINA_BASE:   "C:\Users\User\.IntelliJIdea2017.2\system\tomcat\Unnamed_xtrello_web-project_2"
 Using CATALINA_HOME:   "E:\apache-tomcat-9.0.0.M22-windows-x64\apache-tomcat-9.0.0.M22"
 Using CATALINA_TMPDIR: "E:\apache-tomcat-9.0.0.M22-windows-x64\apache-tomcat-9.0.0.M22\temp"
 Using JRE_HOME:        "C:\Program Files\Java\jdk1.8.0_131"
 Using CLASSPATH:       "E:\apache-tomcat-9.0.0.M22-windows-x64\apache-tomcat-9.0.0.M22\bin\bootstrap.jar;E:\apache-tomcat-9.0.0.M22-windows-x64\apache-tomcat-9.0.0.M22\bin\tomcat-juli.jar"
-21-Aug-2017 15:52:25.363 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
-21-Aug-2017 15:52:25.363 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
-21-Aug-2017 15:52:25.488 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
-21-Aug-2017 15:52:25.597 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
-21-Aug-2017 15:52:25.612 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ROOT] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
-21-Aug-2017 15:52:25.612 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [MySQL Statement Cancellation Timer] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+22-Aug-2017 00:06:49.287 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+22-Aug-2017 00:06:49.287 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+22-Aug-2017 00:06:49.349 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+22-Aug-2017 00:06:49.458 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+22-Aug-2017 00:06:49.458 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ROOT] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+22-Aug-2017 00:06:49.458 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [MySQL Statement Cancellation Timer] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
  java.lang.Object.wait(Native Method)
  java.lang.Object.wait(Object.java:502)
  java.util.TimerThread.mainLoop(Timer.java:526)
  java.util.TimerThread.run(Timer.java:505)
-21-Aug-2017 15:52:25.644 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
-21-Aug-2017 15:52:25.644 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
-21-Aug-2017 15:52:25.644 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
-21-Aug-2017 15:52:25.644 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+22-Aug-2017 00:06:49.489 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+22-Aug-2017 00:06:49.489 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+22-Aug-2017 00:06:49.489 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+22-Aug-2017 00:06:49.489 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
 Disconnected from server
