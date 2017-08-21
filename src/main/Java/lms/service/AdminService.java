@@ -1,15 +1,12 @@
 package lms.service;
 
 import lms.dao.UserDao;
-import lms.dao.entity.Board;
-import lms.dao.entity.User;
 import lms.dao.repository.BoardRepo;
 import lms.dao.repository.UserRepo;
 import lms.views.BoardHtmlViews;
 import lms.views.UserHtmlViews;
 
 import java.io.PrintWriter;
-import java.util.List;
 import java.util.logging.Logger;
 
 public class AdminService {
@@ -29,10 +26,11 @@ public class AdminService {
         return new String(UserHtmlViews.getInstance().getAdminInsertForm());
     }
 
+    UserDao userDao = new UserRepo();
+
     public void showAllUsers() {
-        UserDao userDao = new UserRepo();
-        List<User> users = userDao.showAllUsers();
-        for (User u : users) {
+
+        userDao.showAllUsers().stream().forEach(u -> {
             String showUserForm = showUserForm();
             String showUserInsertForm = showUserInsertForm();
             showUserInsertForm = showUserInsertForm.replace("getId", String.valueOf(u.getId()));
@@ -40,24 +38,23 @@ public class AdminService {
             showUserInsertForm = showUserInsertForm.replace("getEmail", u.getEmail());
             showUserForm = showUserForm.replace("<!--insert-->", showUserInsertForm);
             out.write(showUserForm);
-        }
+        });
+
     }
 
     /**
      * show all boards of all users
      */
     public void showAllBoardsForAdmin() {
-        if (out == null) return;
+
         BoardRepo boardRepo = new BoardRepo();
-        List<Board> boards = boardRepo.retrieveAllBoardsForAdmin();
         out.println(BoardHtmlViews.getInstance().getBoardAddModalWindow());
-        UserDao userDao = new UserRepo();
-        for (Board b : boards) {
+        boardRepo.retrieveAllBoardsForAdmin().stream().forEach(b -> {
             String boardTitle = BoardHtmlViews.getInstance().getBoardHtml();
             boardTitle = boardTitle.replace("<!--user-->",  userDao.findByUserId(b.getUserId()).getLogin() );
             boardTitle = boardTitle.replace("<!--board-->", b.getBoardTitle());
             boardTitle = boardTitle.replace("board_id", String.valueOf(b.getId()));
             out.println(boardTitle);
-        }
+        });
     }
 }

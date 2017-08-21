@@ -1,5 +1,16 @@
 <div>
-    <li class="nav navbar-right">
+    <div class="nav navbar-right margin-top-15 ">
+        <div class="navbar-form navbar-left margin-top-15">
+            <a href="/logout">
+                <button type="button" class="btn btn-danger " aria-label="Right Align">
+                    <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+                    Вийти
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <div class="nav navbar-right">
         <form action="/board/insert-search-notes-url-here" class="navbar-form navbar-left margin-top-15" role="search">
             <div class="form-group">
                 <input type="text" class="form-control" name="searchText" placeholder="Шукати Дошку">
@@ -8,7 +19,9 @@
                 <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
             </button>
         </form>
-    </li>
+    </div>
+
+
     <ul class="nav navbar-right">
 
         <li class="btn-group">
@@ -25,15 +38,6 @@
 
 
                     <ul class="dropdown-menu">
-                        <li>
-                            <a href="/logout">
-                                <button type="button" class="btn btn-danger" aria-label="Right Align">
-                                    <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
-                                    Вийти
-                                </button>
-                            </a>
-                        </li>
-
                         <li>
                             <a href="/profile-edit">
                                 <button type="button" class="btn btn-default" aria-label="Right Align">

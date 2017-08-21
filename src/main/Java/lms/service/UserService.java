@@ -12,6 +12,7 @@ import java.io.UnsupportedEncodingException;
 import java.time.LocalDate;
 
 public class UserService {
+    UserDao userDao = new UserRepo();
 
     private PrintWriter out;
 
@@ -38,7 +39,7 @@ public class UserService {
         if (out == null) return false;
         String login = Helper.requestParameter("login", request);
         String password = Helper.requestParameter("password", request);
-            UserDao userDao = new UserRepo();
+
             User user = userDao.findByUser(login);
         if (showErrorLoginForm(user, password)) {
             session.setAttribute("user_id", user.getId());
@@ -70,7 +71,6 @@ public class UserService {
         try {
             String regLogin = Helper.requestParameter("regLogin", request);
             regForm = Helper.checkFormField(1, regForm, regLogin, f -> {
-                UserDao userDao = new UserRepo();
                 User user = userDao.findByUser(regLogin);
                 if (user == null) {
                     return null;
@@ -108,9 +108,7 @@ public class UserService {
                 return "Невірна ел. адреса!";
             });
             if (!regForm.contains("has-error")) {
-                User user;
-                user = new User(regLogin, regFirstPasword, regEmail, LocalDate.now().toString());
-                UserDao userDao = new UserRepo();
+                User user = new User(regLogin, regFirstPasword, regEmail, LocalDate.now().toString());
                 userDao.saveUser(user);
                 return true;
             }
@@ -123,28 +121,25 @@ public class UserService {
     }
 
     public void showUserProfileForm(String login, HttpSession session ) {
-        if (out == null) return;
-        UserDao userDao = new UserRepo();
         User user = userDao.findByUser(login);
-        if (user == null) return;
-        String regForm = showProfileForm();
-        regForm = regForm.replace("xtrellovall1", "value=\"" + user.getLogin() + "\"");
-        regForm = regForm.replace("xtrellovall2", "value=\"" + user.getPassword() + "\"");
-        regForm = regForm.replace("xtrellovall3", "value=\"" + user.getPassword() + "\"");
-        regForm = regForm.replace("xtrellovall4", "value=\"" + user.getEmail() + "\"");
-        regForm = regForm.replace("xtrellovall5", "value=\"" + String.valueOf(user.getId()) + "\"");
-        regForm = regForm.replace("xtrellovall6", "value=\"" + user.getDate_registered() + "\"");
-        regForm = regForm.replace("xtrellovall7", "value=\"" + user.getSex() + "\"");
-        regForm = regForm.replace("xtrellovall8", "value=\"" + user.getDate_birth() + "\"");
+        String profForm = showProfileForm();
+        profForm = profForm.replace("xtrellovall1", "value=\"" + user.getLogin() + "\"");
+        profForm = profForm.replace("xtrellovall2", "value=\"" + user.getPassword() + "\"");
+        profForm = profForm.replace("xtrellovall3", "value=\"" + user.getPassword() + "\"");
+        profForm = profForm.replace("xtrellovall4", "value=\"" + user.getEmail() + "\"");
+        profForm = profForm.replace("xtrellovall5", "value=\"" + String.valueOf(user.getId()) + "\"");
+        profForm = profForm.replace("xtrellovall6", "value=\"" + user.getDate_registered() + "\"");
+        profForm = profForm.replace("xtrellovall7", "value=\"" + user.getSex() + "\"");
+        profForm = profForm.replace("xtrellovall8", "value=\"" + user.getDate_birth() + "\"");
         if (session.getAttribute("status").equals("admin")){
-        regForm = regForm.replace("xtrellovall9", "value=\"" + user.getBlock() + "\"");
+            profForm = profForm.replace("xtrellovall9", "value=\"" + user.getBlock() + "\"");
         }
-        regForm = regForm.replace("xtrellovall9", "value=\"" + user.getBlock() + "\"" + " readonly");
-        regForm = regForm.replace("xtrellovall0", "value=\"" + ((user.getFirstName() == null)?"Данні не заповнено":user.getFirstName())+ "\"");
-        regForm = regForm.replace("xtrellovall-1", "value=\"" +((user.getSecondName() == null)?"Данні не заповнено":user.getSecondName())+ "\"");
-        regForm = regForm.replace("xtrellovall-2", "value=\"" + ((user.getCountry() == null)?"Данні не заповнено":user.getCountry())+ "\"");
-        regForm = regForm.replace("xtrellovall-3", "value=\"" +((user.getCity() == null)?"Данні не заповнено":user.getCity())+ "\"");
-        out.println(regForm);
+        profForm = profForm.replace("xtrellovall9", "value=\"" + user.getBlock() + "\"" + " readonly");
+        profForm = profForm.replace("xtrellovall0", "value=\"" + ((user.getFirstName() == null) ? "Данні не заповнено" : user.getFirstName()) + "\"");
+        profForm = profForm.replace("xtrellovall-1", "value=\"" + ((user.getSecondName() == null) ? "Данні не заповнено" : user.getSecondName()) + "\"");
+        profForm = profForm.replace("xtrellovall-2", "value=\"" + ((user.getCountry() == null) ? "Данні не заповнено" : user.getCountry()) + "\"");
+        profForm = profForm.replace("xtrellovall-3", "value=\"" + ((user.getCity() == null) ? "Данні не заповнено" : user.getCity()) + "\"");
+        out.println(profForm);
     }
 
     public boolean checkProfileForm(HttpServletRequest request) {
@@ -263,7 +258,6 @@ public class UserService {
             if (!profForm.contains("has-error")) {
                 User user;
                 user = new User(Long.parseLong(upuserId), upLogin, upSecondPassword, upEmail, update_registered, upsex, update_birth, upblock, upfirstname, upsecondname, upcontry, upcity);
-                UserDao userDao = new UserRepo();
                 userDao.saveUser(user);
                 return true;
             }
