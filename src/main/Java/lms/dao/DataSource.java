@@ -23,7 +23,7 @@ public class DataSource implements AutoCloseable {
         try {
             Class.forName(JDBC_DRIVER).newInstance();
         } catch (IllegalAccessException | InstantiationException | ClassNotFoundException e) {
-            e.printStackTrace();
+            LOGGER.severe("Проблема з JDBC драйвером:\t " + e.toString());
         }
     }
 

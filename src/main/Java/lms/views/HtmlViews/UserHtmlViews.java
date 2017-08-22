@@ -49,14 +49,6 @@ public class UserHtmlViews {
         return menuRight;
     }
 
-    public String getAdminUserForm() {
-        return adminUserForm;
-    }
-
-    public String getAdminInsertForm() {
-        return adminInsertForm;
-    }
-
     public String getLoginForm() {
         return loginForm;
     }
@@ -67,5 +59,13 @@ public class UserHtmlViews {
 
     public String getProfileForm() {
         return profileForm;
+    }
+
+    public String getAdminUserForm() {
+        return adminUserForm;
+    }
+
+    public String getAdminInsertForm() {
+        return adminInsertForm;
     }
 }

@@ -53,7 +53,7 @@ public class RegistrationService {
             });
             String inputEmail = Helper.requestParameter("regEmail", request);
             registrationForm = Helper.checkFormField(4, registrationForm, inputEmail, f -> {
-                if (f.matches("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
+                if (f.matches("^[_A-Za-z0-9-+]+(\\.[_A-Za-z0-9-]+)*@"
                         + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$")
                         ) {
                     return null;

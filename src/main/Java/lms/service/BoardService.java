@@ -23,10 +23,9 @@ public class BoardService {
     public boolean addBoardForm(HttpServletRequest request, HttpSession session) {
         if (out == null) return false;
         try {
-            String boardTitle = new String(request.getParameter("nameBoard")
-                    .getBytes("iso-8859-1"), "UTF-8");
+            String boardTitle = new String(request.getParameter("nameBoard").getBytes("UTF-8"));
             long userId = Long.parseLong(session.getAttribute("user_id").toString());
-            LOGGER.info("ІД Юзера: " + userId + "Імя дошки: " + boardTitle);
+            LOGGER.info("User ID: " + userId + "Board title: " + boardTitle);
             if (userId != 0L && !boardTitle.isEmpty()) {
                 Board board = new Board(boardTitle, userId);
                 CRUD<Board> boardRepo = new BoardRepo();

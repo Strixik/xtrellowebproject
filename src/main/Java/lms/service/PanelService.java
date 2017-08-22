@@ -27,11 +27,10 @@ public class PanelService {
         if (out == null) return false;
         try {
             long boardId = Long.parseLong(session.getAttribute("board_id").toString());
-            String nameList = new String(request.getParameter("nameList")
-                    .getBytes("iso-8859-1"), "UTF-8");
-            LOGGER.info(boardId + " " + nameList);
-            if (boardId != 0L && !nameList.isEmpty()) {
-                Panel panel = new Panel(nameList, boardId);
+            String panelTitle = new String(request.getParameter("nameList").getBytes("UTF-8"));
+            LOGGER.info(boardId + " " + panelTitle);
+            if (boardId != 0L && !panelTitle.isEmpty()) {
+                Panel panel = new Panel(panelTitle, boardId);
                 CRUD<Panel> panelRepo = new PanelRepo();
                 panelRepo.save(panel);
                 return true;
@@ -55,12 +54,12 @@ public class PanelService {
             String panelTitle = PanelHtmlViews.getInstance().getListHtml();
             panelTitle = panelTitle.replace("<!--list-->", panel.getPanelTitle());
             panelTitle = panelTitle.replace("listId", String.valueOf(panel.getId()));
-            StringBuilder sb = new StringBuilder();
+            StringBuilder sBuilder = new StringBuilder();
             for (Card c: cards){
-                sb.append("<input type=\"radio\" value=\"").append(c.getId())
+                sBuilder.append("<input type=\"radio\" value=\"").append(c.getId())
                         .append("\" name=\"id\">").append("<li class=\"cardClass\">").append(c.getCardText()).append("</li>");
             }
-            panelTitle = panelTitle.replace("<!--" + panel.getId() + "your text" + "-->", sb);
+            panelTitle = panelTitle.replace("<!--" + panel.getId() + "your text" + "-->", sBuilder);
             out.println(panelTitle);
         }
     }

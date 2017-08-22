@@ -17,8 +17,7 @@ public class CardService {
     public void addCard (HttpServletRequest request) {
         try {
             long listId = Long.parseLong(request.getParameter("listid"));
-            String cardText = new String(request.getParameter("cardText")
-                    .getBytes("iso-8859-1"), "UTF-8");
+            String cardText = new String(request.getParameter("cardText").getBytes("UTF-8"));
             LOGGER.info(listId + " " + cardText);
             if (listId != 0 && !cardText.isEmpty()) {
                 Card card = new Card(cardText, listId);

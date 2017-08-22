@@ -9,7 +9,7 @@ import java.nio.file.Paths;
 import java.util.logging.Logger;
 
 /**
- * Singleton. Holds path object to html folder
+ * Singleton. Holds path to html folder
  */
 public class PathHtml {
     private static final Logger LOGGER = Logger.getLogger(PathHtml.class.getName());
@@ -37,7 +37,7 @@ public class PathHtml {
         Charset charset = Charset.forName("UTF-8");
 
         try (BufferedReader reader = Files.newBufferedReader(file, charset)) {
-            String line = null;
+            String line;
             while ((line = reader.readLine()) != null) {
                 sBuilder.append(line).append("\n");
             }

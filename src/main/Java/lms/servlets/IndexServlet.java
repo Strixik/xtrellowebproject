@@ -97,17 +97,20 @@ public class IndexServlet extends HttpServlet {
     @Override
     public void init() throws ServletException {
         super.init();
-        //set path to Html files
+        /**
+         * set path to Html files
+         */
         PathHtml pathHTML = PathHtml.getInstance();
         if (pathHTML.getPath().equals("")) {
             pathHTML.setPath(getServletContext().getRealPath("/WEB-INF/html/"));
 
         }
-        //load partial html files
+        /**
+         * load partial html files
+         */
         UserHtmlViews.getInstance();
         BoardHtmlViews.getInstance();
         PanelHtmlViews.getInstance();
-
         /**
          * Config Logger
          */
