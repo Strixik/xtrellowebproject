@@ -12,12 +12,12 @@ import java.util.logging.Logger;
 
 @WebServlet(name = "CardServlet", urlPatterns = "/card/*")
 public class CardServlet extends HttpServlet {
-    private static Logger log = Logger.getLogger(CardServlet.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(CardServlet.class.getName());
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         CardService cardView = new CardService();
 
-        log.info("pathInfo:\t" + request.getPathInfo());
+        LOGGER.info("pathInfo:\t" + request.getPathInfo());
         switch (request.getPathInfo()) {
             case "/add":
                 cardView.addCard(request);
@@ -33,7 +33,7 @@ public class CardServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        log.info("pathInfo:\t" + request.getPathInfo());
+        LOGGER.info("pathInfo:\t" + request.getPathInfo());
         response.sendRedirect("/list/view");
     }
 }

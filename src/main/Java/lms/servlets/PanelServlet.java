@@ -14,14 +14,14 @@ import java.util.logging.Logger;
 
 @WebServlet(name = "PanelServlet", urlPatterns = "/list/*")
 public class PanelServlet extends HttpServlet {
-    private static Logger log = Logger.getLogger(PanelServlet.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(PanelServlet.class.getName());
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
         HttpSession session = request.getSession();
         PanelService listView = new PanelService(out);
 
-        log.info("pathInfo:\t" + request.getPathInfo());
+        LOGGER.info("pathInfo:\t" + request.getPathInfo());
         switch (request.getPathInfo()) {
             case "/":
                 session.setAttribute("board_id", request.getParameter("boardid"));
@@ -53,7 +53,7 @@ public class PanelServlet extends HttpServlet {
         HttpSession session = request.getSession();
         PanelService listView = new PanelService(out);
 
-        log.info("pathInfo:\t" + request.getPathInfo());
+        LOGGER.info("pathInfo:\t" + request.getPathInfo());
         switch (request.getPathInfo()) {
             case "/view":
                 listView.showList(session);

@@ -13,19 +13,20 @@ import java.util.List;
 import java.util.logging.Logger;
 
 public class BoardRepo implements CRUD<Board> {
-    private static Logger log = Logger.getLogger(BoardRepo.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(BoardRepo.class.getName());
 
     @Override
     public void save(Board board) {
         DataSource dataSource = new DataSource();
         try (Connection con = dataSource.getConnection();
-             PreparedStatement preparedSt = con.prepareStatement("INSERT INTO board (board, user_id) VALUES (?,?)")
+             PreparedStatement preparedSt =
+                     con.prepareStatement("INSERT INTO board (board, user_id) VALUES (?,?)")
         ) {
             preparedSt.setString(1, board.getBoardTitle());
             preparedSt.setLong(2, board.getUserId());
             preparedSt.executeUpdate();
         } catch (SQLException e) {
-            log.severe("Connection to database is lost: \t" + e.toString());
+            LOGGER.severe("Connection to database is lost:\t" + e.toString());
         }
     }
 
@@ -38,7 +39,7 @@ public class BoardRepo implements CRUD<Board> {
             ) {
                 preparedSt.executeUpdate();
             } catch (SQLException e) {
-                log.severe("Connection to database is lost: \t" + e.toString());
+                LOGGER.severe("Connection to database is lost:\t" + e.toString());
             }
         }
     }
@@ -58,7 +59,7 @@ public class BoardRepo implements CRUD<Board> {
                 boards.add(aboard);
             }
         } catch (SQLException e) {
-            log.severe("Connection to database is lost: \t" + e.toString());
+            LOGGER.severe("Connection to database is lost:\t" + e.toString());
         }
         return boards;
     }
@@ -83,7 +84,7 @@ public class BoardRepo implements CRUD<Board> {
                 boards.add(board);
             }
         } catch (SQLException e) {
-            log.severe("Connection to database is lost: \t" + e.toString());
+            LOGGER.severe("Connection to database is lost:\t" + e.toString());
         }
         return boards;
     }
@@ -91,7 +92,8 @@ public class BoardRepo implements CRUD<Board> {
         DataSource dataSource = new DataSource();
         List<Board> boards = new ArrayList<>();
         try (Connection con = dataSource.getConnection();
-             PreparedStatement preparedSt = con.prepareStatement("SELECT DISTINCT id, board, user_id FROM board WHERE  board LIKE \"%" + searchString + "%\"AND user_id =\"" + id + "\"");
+             PreparedStatement preparedSt =
+                     con.prepareStatement("SELECT DISTINCT id, board, user_id FROM board WHERE  board LIKE \"%" + searchString + "%\"AND user_id =\"" + id + "\"");
              ResultSet rs = preparedSt.executeQuery()
         ) {
             while (rs.next()) {
@@ -104,7 +106,7 @@ public class BoardRepo implements CRUD<Board> {
             }
             return boards;
         } catch (SQLException e) {
-            log.severe("Connection to database is lost: \t" + e.toString());
+            LOGGER.severe("Connection to database is lost:\t" + e.toString());
         }
         return null;
     }

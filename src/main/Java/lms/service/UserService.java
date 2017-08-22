@@ -10,8 +10,10 @@ import javax.servlet.http.HttpSession;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.time.LocalDate;
+import java.util.logging.Logger;
 
 public class UserService {
+    private static final Logger LOGGER = Logger.getLogger(UserService.class.getName());
     UserDao userDao = new UserRepo();
 
     private PrintWriter out;
@@ -40,7 +42,7 @@ public class UserService {
         String login = Helper.requestParameter("login", request);
         String password = Helper.requestParameter("password", request);
 
-            User user = userDao.findByUser(login);
+        User user = userDao.findUserByLogin(login);
         if (showErrorLoginForm(user, password)) {
             session.setAttribute("user_id", user.getId());
             session.setAttribute("login", user.getLogin());
@@ -71,7 +73,7 @@ public class UserService {
         try {
             String regLogin = Helper.requestParameter("regLogin", request);
             regForm = Helper.checkFormField(1, regForm, regLogin, f -> {
-                User user = userDao.findByUser(regLogin);
+                User user = userDao.findUserByLogin(regLogin);
                 if (user == null) {
                     return null;
                 }
@@ -121,7 +123,7 @@ public class UserService {
     }
 
     public void showUserProfileForm(String login, HttpSession session ) {
-        User user = userDao.findByUser(login);
+        User user = userDao.findUserByLogin(login);
         String profForm = showProfileForm();
         profForm = profForm.replace("xtrellovall1", "value=\"" + user.getLogin() + "\"");
         profForm = profForm.replace("xtrellovall2", "value=\"" + user.getPassword() + "\"");

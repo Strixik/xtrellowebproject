@@ -4,13 +4,16 @@ import lms.dao.DataSource;
 import lms.dao.UserDao;
 import lms.dao.entity.User;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
 public class UserRepo implements UserDao {
-    private static Logger log = Logger.getLogger(UserRepo.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(UserRepo.class.getName());
 
 
     @Override
@@ -18,35 +21,36 @@ public class UserRepo implements UserDao {
         DataSource dataSource = new DataSource();
 
         try (Connection con = dataSource.getConnection();
-             PreparedStatement pstmt = (user.getId() == 0L) ?
+             PreparedStatement preparedSt = (user.getId() == 0L) ?
                      con.prepareStatement("INSERT INTO users (login, password, email, date_registered, sex, date_birth, block, firstname, secondname, contry, city)  VALUES (?,?,?,?,?,?,?,?,?,?,?)") :
                      con.prepareStatement("UPDATE users SET login=?, password=?, email=?, date_registered=?, sex=?, date_birth=?, block=?, firstname=?, secondname=?, contry=?, city=? WHERE id=" + user.getId())
         ) {
-            pstmt.setString(1, user.getLogin());
-            pstmt.setString(2, user.getPassword());
-            pstmt.setString(3, user.getEmail());
-            pstmt.setString(4, user.getDate_registered());
-            pstmt.setString(5, user.getSex());
-            pstmt.setString(6, user.getDate_birth());
-            pstmt.setString(7, (user.getBlock() == null)?"user":user.getBlock());
-            pstmt.setString(8, user.getFirstName());
-            pstmt.setString(9, user.getSecondName());
-            pstmt.setString(10, user.getCountry());
-            pstmt.setString(11, user.getCity());
-            pstmt.executeUpdate();
+            preparedSt.setString(1, user.getLogin());
+            preparedSt.setString(2, user.getPassword());
+            preparedSt.setString(3, user.getEmail());
+            preparedSt.setString(4, user.getDate_registered());
+            preparedSt.setString(5, user.getSex());
+            preparedSt.setString(6, user.getDate_birth());
+            preparedSt.setString(7, (user.getBlock() == null) ? "user" : user.getBlock());
+            preparedSt.setString(8, user.getFirstName());
+            preparedSt.setString(9, user.getSecondName());
+            preparedSt.setString(10, user.getCountry());
+            preparedSt.setString(11, user.getCity());
+            preparedSt.executeUpdate();
 
         } catch (SQLException e) {
-            log.severe("Connection to database is lost: \t" + e.toString());
+            LOGGER.severe("Connection to database is lost:\t" + e.toString());
         }
     }
 
     @Override
-    public User findByUser(String login) {
+    public User findUserByLogin(String login) {
         DataSource dataSource = new DataSource();
 
         try (Connection con = dataSource.getConnection();
-             Statement stmt = con.createStatement();
-             ResultSet rs = stmt.executeQuery("SELECT * FROM users WHERE users.login=\"" + login + "\";")
+             PreparedStatement preparedSt =
+                     con.prepareStatement("SELECT * FROM users WHERE users.login=\"" + login + "\";");
+             ResultSet rs = preparedSt.executeQuery()
         ) {
             if (rs.next()) {
                 User user = new User(
@@ -62,22 +66,23 @@ public class UserRepo implements UserDao {
                         rs.getString("secondname"),
                         rs.getString("contry"),
                         rs.getString("city"));
-                log.info("В базі знайдено користувача: \t" + user);
+                LOGGER.info("В базі знайдено користувача з логіном:\t" + user.getLogin());
                 return user;
             }
         } catch (SQLException e) {
-            log.severe("Connection to database is lost: \t" + e.toString());
+            LOGGER.severe("Connection to database is lost:\t" + e.toString());
         }
         return null;
     }
 
     @Override
-    public User findByUserId(long id) {
+    public User findUserById(long id) {
         DataSource dataSource = new DataSource();
 
         try (Connection con = dataSource.getConnection();
-             Statement stmt = con.createStatement();
-             ResultSet rs = stmt.executeQuery("SELECT * FROM users WHERE users.id=\"" + id + "\";")
+             PreparedStatement preparedSt =
+                     con.prepareStatement("SELECT * FROM users WHERE users.id=\"" + id + "\";");
+             ResultSet rs = preparedSt.executeQuery()
         ) {
             if (rs.next()) {
                 User user = new User(
@@ -93,24 +98,25 @@ public class UserRepo implements UserDao {
                         rs.getString("secondname"),
                         rs.getString("contry"),
                         rs.getString("city"));
-                log.info("В базі знайдено користувача: \t" + user);
+                LOGGER.info("В базі знайдено користувача з ID:\t" + user.getId());
                 return user;
             }
         } catch (SQLException e) {
-            log.severe("Connection to database is lost: \t" + e.toString());
+            LOGGER.severe("Connection to database is lost: \t" + e.toString());
         }
         return null;
     }
 
 
     @Override
-    public List<User> findByLoginByEmail(String searchString) {
+    public List<User> findUserByLoginByEmail(String searchString) {
 
         DataSource dataSource = new DataSource();
         List<User> users = new ArrayList<>();
 
         try (Connection con = dataSource.getConnection();
-             PreparedStatement preparedSt = con.prepareStatement("SELECT DISTINCT id, login, password, email, date_registered FROM users " +
+             PreparedStatement preparedSt =
+                     con.prepareStatement("SELECT DISTINCT id, login, password, email, date_registered FROM users " +
                      "WHERE (login LIKE \"%" + searchString + "%\" OR email LIKE \"%" + searchString + "%\") LIMIT 10");
              ResultSet rs = preparedSt.executeQuery()
         ) {
@@ -126,14 +132,13 @@ public class UserRepo implements UserDao {
             }
             return users;
         } catch (SQLException e) {
-            log.severe("Connection to database is lost: \t" + e.toString());
+            LOGGER.severe("Connection to database is lost:\t" + e.toString());
         }
         return null;
     }
 
     /**
      * method for admin
-     *
      * @return List<User> список усіх користувачів сайту
      */
     @Override
@@ -163,7 +168,7 @@ public class UserRepo implements UserDao {
             }
             return users;
         } catch (SQLException e) {
-            log.severe("Connection to database is lost: \t" + e.toString());
+            LOGGER.severe("Connection to database is lost: \t" + e.toString());
         }
         return null;
     }

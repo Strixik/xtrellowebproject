@@ -13,19 +13,20 @@ import java.util.List;
 import java.util.logging.Logger;
 
 public class PanelRepo implements CRUD<Panel> {
-    private static Logger log = Logger.getLogger(PanelRepo.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(PanelRepo.class.getName());
 
     @Override
     public void save(Panel panel) {
         DataSource dataSource = new DataSource();
         try (Connection con = dataSource.getConnection();
-             PreparedStatement preparedSt = con.prepareStatement("INSERT INTO list (list, id_board) VALUES (?,?)")
+             PreparedStatement preparedSt =
+                     con.prepareStatement("INSERT INTO list (list, id_board) VALUES (?,?)")
         ) {
             preparedSt.setString(1, panel.getPanelTitle());
             preparedSt.setLong(2, panel.getBoardId());
             preparedSt.executeUpdate();
         } catch (SQLException e) {
-            log.severe("Connection to database is lost: \t" + e.toString());
+            LOGGER.severe("Connection to database is lost:\t" + e.toString());
         }
     }
     @Override
@@ -33,11 +34,12 @@ public class PanelRepo implements CRUD<Panel> {
         DataSource dataSource = new DataSource();
         if (id > 0L) {
             try (Connection con = dataSource.getConnection();
-                 PreparedStatement preparedSt = con.prepareStatement("DELETE FROM list WHERE id =" + id)
+                 PreparedStatement preparedSt =
+                         con.prepareStatement("DELETE FROM list WHERE id =" + id)
             ) {
                 preparedSt.executeUpdate();
             } catch (SQLException e) {
-                log.severe("Connection to database is lost: \t" + e.toString());
+                LOGGER.severe("Connection to database is lost: \t" + e.toString());
             }
         }
     }
@@ -48,7 +50,8 @@ public class PanelRepo implements CRUD<Panel> {
         DataSource dataSource = new DataSource();
         List<Panel> panels = new ArrayList<>();
         try (Connection con = dataSource.getConnection();
-             PreparedStatement preparedSt = con.prepareStatement("SELECT * FROM list WHERE id_board=\"" + boardId + "\"");
+             PreparedStatement preparedSt =
+                     con.prepareStatement("SELECT * FROM list WHERE id_board=\"" + boardId + "\"");
              ResultSet rs = preparedSt.executeQuery()
         ) {
             while (rs.next()) {
@@ -58,7 +61,7 @@ public class PanelRepo implements CRUD<Panel> {
                 panels.add(panel);
             }
         } catch (SQLException e) {
-            log.severe("Connection to database is lost: \t" + e.toString());
+            LOGGER.severe("Connection to database is lost:\t" + e.toString());
         }
         return panels;
     }

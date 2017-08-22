@@ -9,7 +9,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.logging.Logger;
 
 public class CardService {
-    private static Logger log = Logger.getLogger(CardService.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(CardService.class.getName());
 
     public CardService() {
     }
@@ -19,14 +19,14 @@ public class CardService {
             long listId = Long.parseLong(request.getParameter("listid"));
             String cardText = new String(request.getParameter("cardText")
                     .getBytes("iso-8859-1"), "UTF-8");
-            log.info(listId + " " + cardText);
+            LOGGER.info(listId + " " + cardText);
             if (listId != 0 && !cardText.isEmpty()) {
                 Card card = new Card(cardText, listId);
                 CRUD<Card> cardCRUD = new CardRepo();
                 cardCRUD.save(card);
             }
         } catch (UnsupportedEncodingException e) {
-            log.severe("UnsupportedEncodingException " + e.toString());
+            LOGGER.severe("UnsupportedEncodingException " + e.toString());
         }
     }
 

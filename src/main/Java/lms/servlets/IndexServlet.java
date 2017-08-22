@@ -20,14 +20,14 @@ import java.util.logging.*;
 
 @WebServlet(name = "IndexServlet", urlPatterns = "/*", loadOnStartup = 1)
 public class IndexServlet extends HttpServlet {
-    private static Logger log = Logger.getLogger(IndexServlet.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(IndexServlet.class.getName());
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
         UserService indexView = new UserService(out);
         HttpSession session = request.getSession();
 
-        log.info("pathInfo:\t" + request.getPathInfo());
+        LOGGER.info("pathInfo:\t" + request.getPathInfo());
         switch (request.getPathInfo()) {
             case "/register":
                 if (indexView.checkRegistrationForm(request)) {
@@ -54,7 +54,7 @@ public class IndexServlet extends HttpServlet {
         UserService indexView = new UserService(out);
         AdminService adminView = new AdminService(out);
 
-        log.info("pathInfo:\t" + request.getPathInfo());
+        LOGGER.info("pathInfo:\t" + request.getPathInfo());
         switch (request.getPathInfo()) {
             case "/":
                 if (session.getAttribute("login") != null) {
@@ -64,7 +64,7 @@ public class IndexServlet extends HttpServlet {
                 }
                 break;
             case "/logout":
-                log.warning("logged out:\t" + session.getAttribute("username"));
+                LOGGER.info("logged out:\t" + session.getAttribute("username"));
                 session.removeAttribute("login");
                 response.sendRedirect("/");
                 break;
@@ -108,7 +108,7 @@ public class IndexServlet extends HttpServlet {
             Logger.getLogger("").addHandler(new ConsoleHandler());
             Logger.getLogger("").setLevel(Level.INFO);
         } catch (IOException e) {
-            log.severe("problem with log file: " + e);
+            System.out.println("Problem with log file:\t " + e.toString());
         }
     }
 }

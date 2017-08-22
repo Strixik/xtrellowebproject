@@ -12,7 +12,7 @@ import java.util.logging.Logger;
  * Singleton. Holds path object to html folder
  */
 public class PathHtml {
-    private static Logger log = Logger.getLogger(PathHtml.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(PathHtml.class.getName());
     private String path = "";
     private static PathHtml ourInstance = new PathHtml();
 
@@ -32,19 +32,19 @@ public class PathHtml {
     }
 
     public String getPartialHtml(String filename) {
-        StringBuilder strb = new StringBuilder();
+        StringBuilder sBuilder = new StringBuilder();
         Path file = Paths.get(this.path + filename);
         Charset charset = Charset.forName("UTF-8");
 
         try (BufferedReader reader = Files.newBufferedReader(file, charset)) {
             String line = null;
             while ((line = reader.readLine()) != null) {
-                strb.append(line).append("\n");
+                sBuilder.append(line).append("\n");
             }
         } catch (IOException e) {
-            log.warning("Can't find html file: " + e.toString());
+            LOGGER.warning("Can't find html file: " + e.toString());
         }
 
-        return strb.toString();
+        return sBuilder.toString();
     }
 }

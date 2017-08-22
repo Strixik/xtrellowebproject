@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 
 @WebFilter(filterName = "PageFilter", value = {"/*", "/board/*", "/list/*"})
 public class PageFilter implements Filter {
-    private static Logger log = Logger.getLogger(PageFilter.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(PageFilter.class.getName());
 
     public void destroy() {
     }

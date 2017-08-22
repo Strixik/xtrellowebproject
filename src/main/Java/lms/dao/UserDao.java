@@ -7,10 +7,11 @@ import java.util.List;
 public interface UserDao {
     void saveUser(User user);
 
-    User findByUser(String login);
-    User findByUserId(long id);
+    User findUserByLogin(String login);
 
-    List<User> findByLoginByEmail(String searchString);
+    User findUserById(long id);
+
+    List<User> findUserByLoginByEmail(String searchString);
 
     //method only for admin
     List<User> showAllUsers();

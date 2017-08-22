@@ -15,14 +15,14 @@ import java.util.logging.Logger;
 
 @WebServlet(name = "BoardServlet", urlPatterns = "/board/*")
 public class BoardServlet extends HttpServlet {
-    private static Logger log = Logger.getLogger(BoardServlet.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(BoardServlet.class.getName());
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
         BoardService boardView = new BoardService(out);
         HttpSession session = request.getSession();
 
-        log.info("pathInfo:\t" + request.getPathInfo());
+        LOGGER.info("pathInfo:\t" + request.getPathInfo());
         switch (request.getPathInfo()) {
             case "/add":
                 if (boardView.addBoardForm(request, session)) {
@@ -47,7 +47,7 @@ public class BoardServlet extends HttpServlet {
         BoardService boardView = new BoardService(out);
         AdminService adminView = new AdminService(out);
 
-        log.info("pathInfo:\t" + request.getPathInfo());
+        LOGGER.info("pathInfo:\t" + request.getPathInfo());
         switch (request.getPathInfo()) {
             case "/view":
                 boardView.showAllBoards(session);

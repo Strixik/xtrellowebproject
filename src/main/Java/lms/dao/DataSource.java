@@ -6,14 +6,14 @@ import java.sql.SQLException;
 import java.util.logging.Logger;
 
 /**
- * Class describe creation of database connection
+ * Class describes creation of database connection
  */
 public class DataSource implements AutoCloseable {
-    private static Logger log = Logger.getLogger(DataSource.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(DataSource.class.getName());
 
     // JDBC driver name and database URL
     private static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    private static final String DB_URL = "jdbc:mysql://localhost/xtrello?user=root&password=2259";
+    private static final String DB_URL = "jdbc:mysql://localhost/xtrello?user=root&password=0000";
 
     private Connection connection = null;
 
@@ -31,7 +31,7 @@ public class DataSource implements AutoCloseable {
                 connection = DriverManager.getConnection(DB_URL);
             }
         } catch (SQLException e) {
-            log.severe("Помилка підключення до бази " + e.toString());
+            LOGGER.severe("Помилка підключення до бази:\t " + e.toString());
         }
         return connection;
     }
@@ -42,7 +42,7 @@ public class DataSource implements AutoCloseable {
                 connection.close();
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            LOGGER.severe("Помилка закриття бази:\t " + e.toString());
         }
     }
 }

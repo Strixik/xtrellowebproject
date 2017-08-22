@@ -13,14 +13,12 @@ import java.util.List;
 import java.util.logging.Logger;
 
 public class BoardService {
-    private static Logger log = Logger.getLogger(BoardService.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(BoardService.class.getName());
     private PrintWriter out;
 
     public BoardService(PrintWriter out) {
         this.out = out;
     }
-
-    private static Logger logger = Logger.getGlobal();
 
     public boolean addBoardForm(HttpServletRequest request, HttpSession session) {
         if (out == null) return false;
@@ -28,7 +26,7 @@ public class BoardService {
             String boardTitle = new String(request.getParameter("nameBoard")
                     .getBytes("iso-8859-1"), "UTF-8");
             long userId = Long.parseLong(session.getAttribute("user_id").toString());
-            logger.info("ІД Юзера + Імя дошки\n" + userId + boardTitle);
+            LOGGER.info("ІД Юзера: " + userId + "Імя дошки: " + boardTitle);
             if (userId != 0L && !boardTitle.isEmpty()) {
                 Board board = new Board(boardTitle, userId);
                 CRUD<Board> boardRepo = new BoardRepo();
@@ -36,7 +34,7 @@ public class BoardService {
                 return true;
             }
         } catch (UnsupportedEncodingException e) {
-            log.severe("UnsupportedEncodingException " + e.toString());
+            LOGGER.severe("UnsupportedEncodingException:\t " + e.toString());
         }
         return false;
     }

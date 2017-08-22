@@ -10,7 +10,7 @@ import java.io.PrintWriter;
 import java.util.logging.Logger;
 
 public class AdminService {
-    private static Logger log = Logger.getLogger(UserService.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(UserService.class.getName());
 
     private PrintWriter out;
 
@@ -51,7 +51,7 @@ public class AdminService {
         out.println(BoardHtmlViews.getInstance().getBoardAddModalWindow());
         boardRepo.retrieveAllBoardsForAdmin().stream().forEach(b -> {
             String boardTitle = BoardHtmlViews.getInstance().getBoardHtml();
-            boardTitle = boardTitle.replace("<!--user-->",  userDao.findByUserId(b.getUserId()).getLogin() );
+            boardTitle = boardTitle.replace("<!--user-->", userDao.findUserById(b.getUserId()).getLogin());
             boardTitle = boardTitle.replace("<!--board-->", b.getBoardTitle());
             boardTitle = boardTitle.replace("board_id", String.valueOf(b.getId()));
             out.println(boardTitle);

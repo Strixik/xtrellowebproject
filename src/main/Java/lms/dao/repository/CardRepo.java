@@ -4,13 +4,16 @@ import lms.dao.CRUD;
 import lms.dao.DataSource;
 import lms.dao.entity.Card;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
 public class CardRepo implements CRUD<Card> {
-    private static Logger log = Logger.getLogger(CardRepo.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(CardRepo.class.getName());
 
     @Override
     public void save(Card card) {
@@ -23,7 +26,7 @@ public class CardRepo implements CRUD<Card> {
             preparedSt.setLong(2, card.getListId());
             preparedSt.executeUpdate();
         } catch (SQLException e) {
-            log.severe("Connection to database is lost: \t" + e.toString());
+            LOGGER.severe("Connection to database is lost:\t" + e.toString());
         }
     }
     @Override
@@ -31,11 +34,12 @@ public class CardRepo implements CRUD<Card> {
         DataSource dataSource = new DataSource();
         if (id > 0L) {
             try (Connection con = dataSource.getConnection();
-                 Statement statement = con.createStatement()
+                 PreparedStatement preparedSt =
+                         con.prepareStatement("DELETE FROM card WHERE id =" + id)
             ) {
-                statement.executeUpdate("DELETE FROM card WHERE id =" + id);
+                preparedSt.executeUpdate();
             } catch (SQLException e) {
-                log.severe("Connection to database is lost: \t" + e.toString());
+                LOGGER.severe("Connection to database is lost:\t" + e.toString());
             }
         }
     }
@@ -45,7 +49,8 @@ public class CardRepo implements CRUD<Card> {
         DataSource dataSource = new DataSource();
         List<Card> cards = new ArrayList<>();
         try (Connection con = dataSource.getConnection();
-             PreparedStatement preparedSt = con.prepareStatement("SELECT * FROM card WHERE id_list=\"" + listId + "\"");
+             PreparedStatement preparedSt =
+                     con.prepareStatement("SELECT * FROM card WHERE id_list=\"" + listId + "\"");
              ResultSet rs = preparedSt.executeQuery()) {
             while (rs.next()) {
                 long id = rs.getLong("id");
@@ -54,7 +59,7 @@ public class CardRepo implements CRUD<Card> {
                 cards.add(card);
             }
         } catch (SQLException e) {
-            log.severe("Connection to database is lost: \t" + e.toString());
+            LOGGER.severe("Connection to database is lost:\t" + e.toString());
         }
         return cards;
     }
