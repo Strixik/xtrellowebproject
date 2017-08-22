@@ -5,44 +5,44 @@ public class User {
     private String login;
     private String password;
     private String email;
-    private String date_registered;
+    private String dateOfRegistration;
     private String sex;
-    private String date_birth;
-    private String block;
+    private String dateOfBirth;
+    private String userStatus;
     private String firstName;
     private String secondName;
     private String country;
     private String city;
 
-    public User(long id, String login, String password, String email, String date_registered, String sex, String date_birth, String block, String firstName, String secondName, String country, String city) {
+    public User(long id, String login, String password, String email, String dateOfRegistration, String sex, String dateOfBirth, String userStatus, String firstName, String secondName, String country, String city) {
         this.id = id;
         this.login = login;
         this.password = password;
         this.email = email;
-        this.date_registered = date_registered;
+        this.dateOfRegistration = dateOfRegistration;
         this.sex = sex;
-        this.date_birth = date_birth;
-        this.block = block;
+        this.dateOfBirth = dateOfBirth;
+        this.userStatus = userStatus;
         this.firstName = firstName;
         this.secondName = secondName;
         this.country = country;
         this.city = city;
     }
 
-    public User(long id, String login, String password, String email, String date_registered) {
+    public User(long id, String login, String password, String email, String dateOfRegistration) {
         this.id = id;
         this.login = login;
         this.password = password;
         this.email = email;
-        this.date_registered = date_registered;
+        this.dateOfRegistration = dateOfRegistration;
     }
 
-    public User(String login, String password, String email, String date_registered) {
+    public User(String login, String password, String email, String dateOfRegistration) {
         this.id = 0L;
         this.login = login;
         this.password = password;
         this.email = email;
-        this.date_registered = date_registered;
+        this.dateOfRegistration = dateOfRegistration;
     }
 
     public User() {
@@ -80,12 +80,12 @@ public class User {
         this.email = email;
     }
 
-    public String getDate_registered() {
-        return date_registered;
+    public String getDateOfRegistration() {
+        return dateOfRegistration;
     }
 
-    public void setDate_registered(String date_registered) {
-        this.date_registered = date_registered;
+    public void setDateOfRegistration(String dateOfRegistration) {
+        this.dateOfRegistration = dateOfRegistration;
     }
 
     public String getSex() {
@@ -96,20 +96,20 @@ public class User {
         this.sex = sex;
     }
 
-    public String getDate_birth() {
-        return date_birth;
+    public String getDateOfBirth() {
+        return dateOfBirth;
     }
 
-    public void setDate_birth(String date_birth) {
-        this.date_birth = date_birth;
+    public void setDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
     }
 
-    public String getBlock() {
-        return block;
+    public String getUserStatus() {
+        return userStatus;
     }
 
-    public void setBlock(String block) {
-        this.block = block;
+    public void setUserStatus(String userStatus) {
+        this.userStatus = userStatus;
     }
 
     public String getFirstName() {
@@ -152,10 +152,10 @@ public class User {
                 ", login='" + login + '\'' +
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
-                ", date_registered='" + date_registered + '\'' +
+                ", dateOfRegistration='" + dateOfRegistration + '\'' +
                 ", sex='" + sex + '\'' +
-                ", date_birth='" + date_birth + '\'' +
-                ", block=" + block +
+                ", dateOfBirth='" + dateOfBirth + '\'' +
+                ", userStatus=" + userStatus +
                 ", firstName='" + firstName + '\'' +
                 ", secondName='" + secondName + '\'' +
                 ", country='" + country + '\'' +
@@ -175,11 +175,11 @@ public class User {
         if (login != null ? !login.equals(user.login) : user.login != null) return false;
         if (password != null ? !password.equals(user.password) : user.password != null) return false;
         if (email != null ? !email.equals(user.email) : user.email != null) return false;
-        if (date_registered != null ? !date_registered.equals(user.date_registered) : user.date_registered != null)
+        if (dateOfRegistration != null ? !dateOfRegistration.equals(user.dateOfRegistration) : user.dateOfRegistration != null)
             return false;
         if (sex != null ? !sex.equals(user.sex) : user.sex != null) return false;
-        if (date_birth != null ? !date_birth.equals(user.date_birth) : user.date_birth != null) return false;
-        if (block != null ? !block.equals(user.block) : user.block != null) return false;
+        if (dateOfBirth != null ? !dateOfBirth.equals(user.dateOfBirth) : user.dateOfBirth != null) return false;
+        if (userStatus != null ? !userStatus.equals(user.userStatus) : user.userStatus != null) return false;
         if (firstName != null ? !firstName.equals(user.firstName) : user.firstName != null) return false;
         if (secondName != null ? !secondName.equals(user.secondName) : user.secondName != null) return false;
         if (country != null ? !country.equals(user.country) : user.country != null) return false;
@@ -192,10 +192,10 @@ public class User {
         result = 31 * result + (login != null ? login.hashCode() : 0);
         result = 31 * result + (password != null ? password.hashCode() : 0);
         result = 31 * result + (email != null ? email.hashCode() : 0);
-        result = 31 * result + (date_registered != null ? date_registered.hashCode() : 0);
+        result = 31 * result + (dateOfRegistration != null ? dateOfRegistration.hashCode() : 0);
         result = 31 * result + (sex != null ? sex.hashCode() : 0);
-        result = 31 * result + (date_birth != null ? date_birth.hashCode() : 0);
-        result = 31 * result + (block != null ? block.hashCode() : 0);
+        result = 31 * result + (dateOfBirth != null ? dateOfBirth.hashCode() : 0);
+        result = 31 * result + (userStatus != null ? userStatus.hashCode() : 0);
         result = 31 * result + (firstName != null ? firstName.hashCode() : 0);
         result = 31 * result + (secondName != null ? secondName.hashCode() : 0);
         result = 31 * result + (country != null ? country.hashCode() : 0);

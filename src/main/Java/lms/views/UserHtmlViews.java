@@ -10,7 +10,7 @@ public class UserHtmlViews {
     private final String indexBottom;
     private final String menuRight;
     private final String loginForm;
-    private final String regForm;
+    private final String registrationForm;
     private final String profileForm;
     private final String adminUserForm;
     private final String adminInsertForm;
@@ -29,7 +29,7 @@ public class UserHtmlViews {
         this.indexBottom = pathHtml.getPartialHtml("index-bottom.html");
         this.menuRight = pathHtml.getPartialHtml("menu-right.html");
         this.loginForm = pathHtml.getPartialHtml("login-form.html");
-        this.regForm = pathHtml.getPartialHtml("reg-form.html");
+        this.registrationForm = pathHtml.getPartialHtml("registration-form.html");
         this.profileForm = pathHtml.getPartialHtml("profile-form.html");
         this.adminUserForm = pathHtml.getPartialHtml("user-list-for-admin.html");
         this.adminInsertForm = pathHtml.getPartialHtml("insert-for-admin-list-user.html");
@@ -59,8 +59,8 @@ public class UserHtmlViews {
         return loginForm;
     }
 
-    public String getRegForm() {
-        return regForm;
+    public String getRegistrationForm() {
+        return registrationForm;
     }
 
     public String getProfileForm() {

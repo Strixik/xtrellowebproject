@@ -28,10 +28,10 @@ public class UserRepo implements UserDao {
             preparedSt.setString(1, user.getLogin());
             preparedSt.setString(2, user.getPassword());
             preparedSt.setString(3, user.getEmail());
-            preparedSt.setString(4, user.getDate_registered());
+            preparedSt.setString(4, user.getDateOfRegistration());
             preparedSt.setString(5, user.getSex());
-            preparedSt.setString(6, user.getDate_birth());
-            preparedSt.setString(7, (user.getBlock() == null) ? "user" : user.getBlock());
+            preparedSt.setString(6, user.getDateOfBirth());
+            preparedSt.setString(7, (user.getUserStatus() == null) ? "user" : user.getUserStatus());
             preparedSt.setString(8, user.getFirstName());
             preparedSt.setString(9, user.getSecondName());
             preparedSt.setString(10, user.getCountry());
@@ -138,7 +138,7 @@ public class UserRepo implements UserDao {
     }
 
     /**
-     * method for admin
+     * method only for admin
      * @return List<User> список усіх користувачів сайту
      */
     @Override

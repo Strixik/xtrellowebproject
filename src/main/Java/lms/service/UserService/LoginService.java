@@ -20,15 +20,13 @@ public class LoginService {
         this.out = out;
     }
 
-    UserDao userDao = new UserRepo();
+    private UserDao userDao = new UserRepo();
 
     public void showLoginForm() {
-        if (out == null) return;
         out.println(UserHtmlViews.getInstance().getLoginForm());
     }
 
     public boolean checkLogin(HttpServletRequest request, HttpSession session) throws UnsupportedEncodingException {
-        if (out == null) return false;
         String login = Helper.requestParameter("login", request);
         String password = Helper.requestParameter("password", request);
 
@@ -36,10 +34,9 @@ public class LoginService {
         if (showLoginFailedMessage(user, password)) {
             session.setAttribute("user_id", user.getId());
             session.setAttribute("login", user.getLogin());
-            session.setAttribute("status", user.getBlock());
+            session.setAttribute("status", user.getUserStatus());
             return true;
         }
-
         return false;
     }
 
@@ -49,7 +46,7 @@ public class LoginService {
             loginForm = loginForm.replace("<!--#{ErrorLoginText}-->", "Неправильний логін або пароль!");
             out.println(loginForm);
             return false;
-        } else if (user.getBlock().equals("block")) {
+        } else if (user.getUserStatus().equals("block")) {
             loginForm = loginForm.replace("<!--#{ErrorLoginText}-->", "Даного користувача ЗАБЛОКОВАНО!");
             out.println(loginForm);
             return false;

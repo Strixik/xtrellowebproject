@@ -76,7 +76,7 @@ public class IndexServlet extends HttpServlet {
                 response.sendRedirect("/");
                 break;
             case "/register":
-                registrationView.showRegisterForm();
+                registrationView.showRegistrationForm();
                 break;
             case "/profile-edit":
                 profileView.showUserProfileForm(session.getAttribute("login").toString(), session);

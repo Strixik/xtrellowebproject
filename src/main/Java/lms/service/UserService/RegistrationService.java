@@ -22,45 +22,44 @@ public class RegistrationService {
 
     UserDao userDao = new UserRepo();
 
-    public void showRegisterForm() {
-        if (out == null) return;
-        out.println(UserHtmlViews.getInstance().getRegForm());
+    public void showRegistrationForm() {
+        out.println(UserHtmlViews.getInstance().getRegistrationForm());
     }
 
     public boolean checkRegistrationForm(HttpServletRequest request) {
-        String regForm = UserHtmlViews.getInstance().getRegForm();
+        String registrationForm = UserHtmlViews.getInstance().getRegistrationForm();
         try {
-            String regLogin = Helper.requestParameter("regLogin", request);
-            regForm = Helper.checkFormField(1, regForm, regLogin, f -> {
-                User user = userDao.findUserByLogin(regLogin);
+            String inputLogin = Helper.requestParameter("regLogin", request);
+            registrationForm = Helper.checkFormField(1, registrationForm, inputLogin, f -> {
+                User user = userDao.findUserByLogin(inputLogin);
                 if (user == null) {
                     return null;
                 }
                 return "Такий користувач вже зареєстрований";
             });
-            String regFirstPasword = Helper.requestParameter("regFirstPasword", request);
-            regForm = Helper.checkFormField(2, regForm, regFirstPasword, f -> {
+            String inputFirstPassword = Helper.requestParameter("regFirstPasword", request);
+            registrationForm = Helper.checkFormField(2, registrationForm, inputFirstPassword, f -> {
                 if (f.length() >= 6) {
                     return null;
                 }
                 return "Мінімальна довжина 6 символів";
             });
-            regForm = Helper.checkFormField(2, regForm, regFirstPasword, f -> {
+            registrationForm = Helper.checkFormField(2, registrationForm, inputFirstPassword, f -> {
                 if (f.length() <= 20) {
                     return null;
                 }
                 return "Максимальна довжина 20 символів";
             });
-            String regSecondPassword = Helper.requestParameter("regSecondPassword", request);
+            String inputSecondPassword = Helper.requestParameter("regSecondPassword", request);
 
-            regForm = Helper.checkFormField(3, regForm, regSecondPassword, f -> {
-                if (f.equals(regFirstPasword)) {
+            registrationForm = Helper.checkFormField(3, registrationForm, inputSecondPassword, f -> {
+                if (f.equals(inputFirstPassword)) {
                     return null;
                 }
                 return "Паролі повинні співпадати!";
             });
-            String regEmail = Helper.requestParameter("regEmail", request);
-            regForm = Helper.checkFormField(4, regForm, regEmail, f -> {
+            String inputEmail = Helper.requestParameter("regEmail", request);
+            registrationForm = Helper.checkFormField(4, registrationForm, inputEmail, f -> {
                 if (f.matches("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
                         + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$")
                         ) {
@@ -68,16 +67,16 @@ public class RegistrationService {
                 }
                 return "Невірна ел. адреса!";
             });
-            if (!regForm.contains("has-error")) {
-                User user = new User(regLogin, regFirstPasword, regEmail, LocalDate.now().toString());
+            if (!registrationForm.contains("has-error")) {
+                User user = new User(inputLogin, inputFirstPassword, inputEmail, LocalDate.now().toString());
                 userDao.saveUser(user);
                 return true;
             }
 
         } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
+            LOGGER.warning("Some problem with registration form:\t" + e.toString());
         }
-        out.println(regForm);
+        out.println(registrationForm);
         return false;
     }
 
