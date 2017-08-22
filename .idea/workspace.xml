@@ -7,30 +7,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b4c1f9b-0b96-4c5b-bb39-14e4cffdec28" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/Java/lms/service/UserService/LoginService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/Java/lms/service/UserService/ProfileService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/Java/lms/service/UserService/RegistrationService.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/Java/lms/service/UserService.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/Java/lms/service/AdminService.java" afterPath="$PROJECT_DIR$/src/main/Java/lms/service/UserService/AdminService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/lms/servlets/BoardServlet.class" afterPath="$PROJECT_DIR$/target/classes/lms/servlets/BoardServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/lms/servlets/CardServlet.class" afterPath="$PROJECT_DIR$/target/classes/lms/servlets/CardServlet.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/lms/service/AdminService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/lms/service/UserService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/service/AdminService.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/lms/dao/repository/UserRepo.class" afterPath="$PROJECT_DIR$/target/classes/lms/dao/repository/UserRepo.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/lms/servlets/IndexServlet.class" afterPath="$PROJECT_DIR$/target/classes/lms/servlets/IndexServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/lms/servlets/PageFilter.class" afterPath="$PROJECT_DIR$/target/classes/lms/servlets/PageFilter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/lms/servlets/PanelServlet.class" afterPath="$PROJECT_DIR$/target/classes/lms/servlets/PanelServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/dao/repository/UserRepo.class" afterPath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/dao/repository/UserRepo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/service/CardService.class" afterPath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/service/CardService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/service/PanelService.class" afterPath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/service/PanelService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/service/UserService.class" afterPath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/service/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/servlets/BoardServlet.class" afterPath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/servlets/BoardServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/servlets/CardServlet.class" afterPath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/servlets/CardServlet.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/servlets/IndexServlet.class" afterPath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/servlets/IndexServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/servlets/PageFilter.class" afterPath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/servlets/PageFilter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/servlets/PanelServlet.class" afterPath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/servlets/PanelServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/views/PathHtml.class" afterPath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/classes/lms/views/PathHtml.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Java/lms/service/Helper.java" afterPath="$PROJECT_DIR$/src/main/Java/lms/service/Helper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Java/lms/servlets/BoardServlet.java" afterPath="$PROJECT_DIR$/src/main/Java/lms/servlets/BoardServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Java/lms/servlets/IndexServlet.java" afterPath="$PROJECT_DIR$/src/main/Java/lms/servlets/IndexServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/profile-form.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/profile-form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/logs/app.log" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/logs/app.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/html/profile-form.html" afterPath="$PROJECT_DIR$/target/xtrello.web-project/WEB-INF/html/profile-form.html" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,7 +54,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/Java/lms/service/UserService/LoginService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="296">
-              <caret line="47" column="100" lean-forward="false" selection-start-line="47" selection-start-column="100" selection-end-line="47" selection-end-column="100" />
+              <caret line="48" column="100" lean-forward="false" selection-start-line="48" selection-start-column="100" selection-end-line="48" selection-end-column="100" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#562#563#0" expanded="true" />
@@ -81,7 +68,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/Java/lms/service/UserService/RegistrationService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1600">
-              <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+              <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#572#573#0" expanded="true" />
@@ -117,11 +104,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IndexServlet.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="IndexServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Java/lms/servlets/IndexServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="47" column="31" lean-forward="false" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
+            <state relative-caret-position="-1044">
+              <caret line="52" column="5" lean-forward="false" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile-form.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/profile-form.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1400">
+              <caret line="70" column="8" lean-forward="false" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -202,7 +199,6 @@
         <option value="$PROJECT_DIR$/src/main/Java/lms/views/BoardHtmlViews.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/Java/lms/dao/entity/User.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/profile-form.html" />
         <option value="$PROJECT_DIR$/src/main/resources/sql.sql" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/board.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/login-form.html" />
@@ -237,6 +233,7 @@
         <option value="$PROJECT_DIR$/src/main/Java/lms/service/AdminService.java" />
         <option value="$PROJECT_DIR$/src/main/Java/lms/service/UserService/AdminService.java" />
         <option value="$PROJECT_DIR$/src/main/Java/lms/servlets/IndexServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/profile-form.html" />
       </list>
     </option>
   </component>
@@ -699,7 +696,7 @@
       <workItem from="1503340251451" duration="9957000" />
       <workItem from="1503354438636" duration="4433000" />
       <workItem from="1503359021158" duration="15000" />
-      <workItem from="1503406580567" duration="2134000" />
+      <workItem from="1503406580567" duration="2509000" />
     </task>
     <task id="LOCAL-00001" summary="create empty CRUD interface">
       <created>1502980474794</created>
@@ -799,11 +796,18 @@
       <option name="project" value="LOCAL" />
       <updated>1503407825149</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="divide UserService into 3 classes LoginService/RegistrationService/ProfileService">
+      <created>1503408758161</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1503408758161</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119794000" />
+    <option name="totallyTimeSpent" value="120169000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1538" height="916" extended-state="6" />
@@ -929,7 +933,8 @@
     <MESSAGE value="refactoring" />
     <MESSAGE value="refactoring and adapt" />
     <MESSAGE value="fixed logger" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed logger" />
+    <MESSAGE value="divide UserService into 3 classes LoginService/RegistrationService/ProfileService" />
+    <option name="LAST_COMMIT_MESSAGE" value="divide UserService into 3 classes LoginService/RegistrationService/ProfileService" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1037,13 +1042,6 @@
     </entry>
     <entry file="das://table:/aa4df2c8/1441b81c-2c3a-4fa1-ab0b-f938a5a8f216/xtrello.users" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/user-list-for-admin.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/profile-form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="23" column="58" lean-forward="false" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/insert-for-admin-list-user.html" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/reg-form.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -1165,14 +1163,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/lms/dao/entity/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-428">
-          <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Java/lms/views/PanelHtmlViews.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
@@ -1248,7 +1238,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/Java/lms/service/UserService/LoginService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
-          <caret line="47" column="100" lean-forward="false" selection-start-line="47" selection-start-column="100" selection-end-line="47" selection-end-column="100" />
+          <caret line="48" column="100" lean-forward="false" selection-start-line="48" selection-start-column="100" selection-end-line="48" selection-end-column="100" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#562#563#0" expanded="true" />
@@ -1274,7 +1264,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/Java/lms/service/UserService/RegistrationService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1600">
-          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#572#573#0" expanded="true" />
@@ -1313,10 +1303,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/lms/dao/entity/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-644">
+          <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Java/lms/servlets/IndexServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="47" column="31" lean-forward="false" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
+        <state relative-caret-position="-1044">
+          <caret line="52" column="5" lean-forward="false" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/profile-form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1400">
+          <caret line="70" column="8" lean-forward="false" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="8" />
           <folding />
         </state>
       </provider>
