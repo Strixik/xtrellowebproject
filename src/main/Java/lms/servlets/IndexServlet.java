@@ -5,10 +5,10 @@ import lms.service.UserService.AdminService;
 import lms.service.UserService.LoginService;
 import lms.service.UserService.ProfileService;
 import lms.service.UserService.RegistrationService;
-import lms.views.BoardHtmlViews;
-import lms.views.PanelHtmlViews;
+import lms.views.HtmlViews.BoardHtmlViews;
+import lms.views.HtmlViews.PanelHtmlViews;
+import lms.views.HtmlViews.UserHtmlViews;
 import lms.views.PathHtml;
-import lms.views.UserHtmlViews;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

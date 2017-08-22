@@ -6,12 +6,14 @@ import java.sql.SQLException;
 import java.util.logging.Logger;
 
 /**
- * Class describes creation of database connection
+ * Class describes connection to database
  */
 public class DataSource implements AutoCloseable {
     private static final Logger LOGGER = Logger.getLogger(DataSource.class.getName());
 
-    // JDBC driver name and database URL
+    /**
+     * JDBC driver name and database URL
+     */
     private static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
     private static final String DB_URL = "jdbc:mysql://localhost/xtrello?user=root&password=0000";
 

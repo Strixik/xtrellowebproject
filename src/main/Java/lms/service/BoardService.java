@@ -3,7 +3,7 @@ package lms.service;
 import lms.dao.CRUD;
 import lms.dao.entity.Board;
 import lms.dao.repository.BoardRepo;
-import lms.views.BoardHtmlViews;
+import lms.views.HtmlViews.BoardHtmlViews;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -40,7 +40,7 @@ public class BoardService {
     }
 
     public boolean deleteBoard(HttpServletRequest request) {
-        long id = Long.parseLong(request.getParameter("boardid").toString());
+        long id = Long.parseLong(request.getParameter("boardid"));
         if (id > 0L) {
             CRUD<Board> boardRepo = new BoardRepo();
             boardRepo.remove(id);
@@ -65,11 +65,12 @@ public class BoardService {
 
     public void showAllBoardsSearch(HttpServletRequest request, HttpSession session) {
         if (out == null) return;
-        String str = request.getParameter("searchText");
-        Long user_id = Long.parseLong(session.getAttribute("user_id").toString());
+        String textForSearch = request.getParameter("searchText");
+        Long userId = Long.parseLong(session.getAttribute("user_id").toString());
         BoardRepo boardRepo = new BoardRepo();
         out.println(BoardHtmlViews.getInstance().getBoardAddModalWindow());
-        boardRepo.retrieveAllBoardsForSearch(str, user_id).stream().forEach(b -> {
+
+        boardRepo.retrieveAllBoardsForSearch(textForSearch, userId).stream().forEach(b -> {
             String boardTitle = BoardHtmlViews.getInstance().getBoardHtml();
             boardTitle = boardTitle.replace("<!--board-->", b.getBoardTitle());
             boardTitle = boardTitle.replace("board_id", String.valueOf(b.getId()));

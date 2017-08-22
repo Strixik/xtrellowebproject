@@ -1,4 +1,6 @@
-package lms.views;
+package lms.views.HtmlViews;
+
+import lms.views.PathHtml;
 
 /**
  * Lazy loading singleton with HTML parts

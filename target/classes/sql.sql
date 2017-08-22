@@ -39,13 +39,13 @@ FOREIGN KEY (id_list) REFERENCES list (id)
 CREATE TABLE users
 (
   id              INT AUTO_INCREMENT PRIMARY KEY,
-  login           VARCHAR(30)                                    NOT NULL,
-  password        VARCHAR(30)                                    NOT NULL,
+  login           VARCHAR(20)                                    NOT NULL,
+  password        VARCHAR(20)                                    NULL,
   email           VARCHAR(60)                                    NOT NULL,
-  dateOfRegistration DATE                                           NOT NULL,
+  date_registered DATE DEFAULT '2017-08-01'                      NOT NULL,
   sex             ENUM ('man', 'woman')                          NULL,
-  dateOfBirth      DATE                                           NULL,
-  userStatus           ENUM ('user', 'admin', 'userStatus') DEFAULT 'user' NULL,
+  date_birth      DATE                                           NULL,
+  block           ENUM ('user', 'admin', 'block') DEFAULT 'user' NULL,
   firstname       VARCHAR(30) DEFAULT ''                         NULL,
   secondname      VARCHAR(30) DEFAULT ''                         NULL,
   contry          VARCHAR(30) DEFAULT ''                         NULL,

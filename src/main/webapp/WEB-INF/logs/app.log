@@ -221,3 +221,133 @@ Connected to server
 22-Aug-2017 16:38:04.024 INFO [http-nio-8080-exec-48] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
 22-Aug-2017 16:38:04.034 INFO [http-nio-8080-exec-48] lms.dao.repository.UserRepo.findUserByLogin В базі знайдено користувача з логіном:	vlirm
 22-Aug-2017 16:38:04.034 INFO [http-nio-8080-exec-48] lms.dao.repository.UserRepo.findUserByLogin В базі знайдено користувача з логіном:	vlirm
+22-Aug-2017 16:48:10.175 WARNING [RMI TCP Connection(44)-127.0.0.1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ROOT] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+22-Aug-2017 16:48:10.176 WARNING [RMI TCP Connection(44)-127.0.0.1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [MySQL Statement Cancellation Timer] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.Object.wait(Object.java:502)
+ java.util.TimerThread.mainLoop(Timer.java:526)
+ java.util.TimerThread.run(Timer.java:505)
+22-Aug-2017 16:48:17.509 INFO [http-nio-8080-exec-46] lms.servlets.IndexServlet.doGet pathInfo:	/
+22-Aug-2017 16:48:17.509 INFO [http-nio-8080-exec-46] lms.servlets.IndexServlet.doGet pathInfo:	/
+22-Aug-2017 16:48:18.652 INFO [http-nio-8080-exec-52] lms.servlets.IndexServlet.doPost pathInfo:	/login
+22-Aug-2017 16:48:18.652 INFO [http-nio-8080-exec-52] lms.servlets.IndexServlet.doPost pathInfo:	/login
+22-Aug-2017 16:48:18.970 INFO [http-nio-8080-exec-52] lms.dao.repository.UserRepo.findUserByLogin В базі знайдено користувача з логіном:	vlirm
+22-Aug-2017 16:48:18.970 INFO [http-nio-8080-exec-52] lms.dao.repository.UserRepo.findUserByLogin В базі знайдено користувача з логіном:	vlirm
+22-Aug-2017 16:48:18.980 INFO [http-nio-8080-exec-48] lms.servlets.BoardServlet.doGet pathInfo:	/view
+22-Aug-2017 16:48:18.980 INFO [http-nio-8080-exec-48] lms.servlets.BoardServlet.doGet pathInfo:	/view
+22-Aug-2017 16:48:20.633 INFO [http-nio-8080-exec-51] lms.servlets.IndexServlet.doGet pathInfo:	/
+22-Aug-2017 16:48:20.633 INFO [http-nio-8080-exec-51] lms.servlets.IndexServlet.doGet pathInfo:	/
+22-Aug-2017 16:48:20.642 INFO [http-nio-8080-exec-49] lms.servlets.BoardServlet.doGet pathInfo:	/view
+22-Aug-2017 16:48:20.642 INFO [http-nio-8080-exec-49] lms.servlets.BoardServlet.doGet pathInfo:	/view
+22-Aug-2017 16:48:22.014 INFO [http-nio-8080-exec-54] lms.servlets.IndexServlet.doGet pathInfo:	/
+22-Aug-2017 16:48:22.014 INFO [http-nio-8080-exec-54] lms.servlets.IndexServlet.doGet pathInfo:	/
+22-Aug-2017 16:48:22.025 INFO [http-nio-8080-exec-50] lms.servlets.BoardServlet.doGet pathInfo:	/view
+22-Aug-2017 16:48:22.025 INFO [http-nio-8080-exec-50] lms.servlets.BoardServlet.doGet pathInfo:	/view
+22-Aug-2017 16:48:22.933 INFO [http-nio-8080-exec-55] lms.servlets.PanelServlet.doPost pathInfo:	/
+22-Aug-2017 16:48:22.933 INFO [http-nio-8080-exec-55] lms.servlets.PanelServlet.doPost pathInfo:	/
+22-Aug-2017 16:48:22.941 INFO [http-nio-8080-exec-56] lms.servlets.PanelServlet.doGet pathInfo:	/view
+22-Aug-2017 16:48:22.941 INFO [http-nio-8080-exec-56] lms.servlets.PanelServlet.doGet pathInfo:	/view
+22-Aug-2017 16:48:23.585 INFO [http-nio-8080-exec-53] lms.servlets.IndexServlet.doGet pathInfo:	/
+22-Aug-2017 16:48:23.585 INFO [http-nio-8080-exec-53] lms.servlets.IndexServlet.doGet pathInfo:	/
+22-Aug-2017 16:48:23.592 INFO [http-nio-8080-exec-47] lms.servlets.BoardServlet.doGet pathInfo:	/view
+22-Aug-2017 16:48:23.592 INFO [http-nio-8080-exec-47] lms.servlets.BoardServlet.doGet pathInfo:	/view
+22-Aug-2017 16:48:24.611 INFO [http-nio-8080-exec-57] lms.servlets.PanelServlet.doPost pathInfo:	/
+22-Aug-2017 16:48:24.611 INFO [http-nio-8080-exec-57] lms.servlets.PanelServlet.doPost pathInfo:	/
+22-Aug-2017 16:48:24.619 INFO [http-nio-8080-exec-48] lms.servlets.PanelServlet.doGet pathInfo:	/view
+22-Aug-2017 16:48:24.619 INFO [http-nio-8080-exec-48] lms.servlets.PanelServlet.doGet pathInfo:	/view
+22-Aug-2017 16:48:25.409 INFO [http-nio-8080-exec-58] lms.servlets.IndexServlet.doGet pathInfo:	/
+22-Aug-2017 16:48:25.409 INFO [http-nio-8080-exec-58] lms.servlets.IndexServlet.doGet pathInfo:	/
+22-Aug-2017 16:48:25.421 INFO [http-nio-8080-exec-49] lms.servlets.BoardServlet.doGet pathInfo:	/view
+22-Aug-2017 16:48:25.421 INFO [http-nio-8080-exec-49] lms.servlets.BoardServlet.doGet pathInfo:	/view
+22-Aug-2017 16:48:26.691 INFO [http-nio-8080-exec-59] lms.servlets.IndexServlet.doGet pathInfo:	/logout
+22-Aug-2017 16:48:26.691 INFO [http-nio-8080-exec-59] lms.servlets.IndexServlet.doGet pathInfo:	/logout
+22-Aug-2017 16:48:26.691 INFO [http-nio-8080-exec-59] lms.servlets.IndexServlet.doGet logged out:	null
+22-Aug-2017 16:48:26.691 INFO [http-nio-8080-exec-59] lms.servlets.IndexServlet.doGet logged out:	null
+22-Aug-2017 16:48:26.698 INFO [http-nio-8080-exec-50] lms.servlets.IndexServlet.doGet pathInfo:	/
+22-Aug-2017 16:48:26.698 INFO [http-nio-8080-exec-50] lms.servlets.IndexServlet.doGet pathInfo:	/
+22-Aug-2017 17:42:17.030 WARNING [RMI TCP Connection(59)-127.0.0.1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ROOT] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+22-Aug-2017 17:42:17.032 WARNING [RMI TCP Connection(59)-127.0.0.1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [MySQL Statement Cancellation Timer] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.Object.wait(Object.java:502)
+ java.util.TimerThread.mainLoop(Timer.java:526)
+ java.util.TimerThread.run(Timer.java:505)
+22-Aug-2017 17:42:51.495 INFO [http-nio-8080-exec-66] lms.servlets.IndexServlet.doGet pathInfo:	/
+22-Aug-2017 17:42:51.495 INFO [http-nio-8080-exec-66] lms.servlets.IndexServlet.doGet pathInfo:	/
+22-Aug-2017 17:42:52.536 INFO [http-nio-8080-exec-70] lms.servlets.IndexServlet.doPost pathInfo:	/login
+22-Aug-2017 17:42:52.536 INFO [http-nio-8080-exec-70] lms.servlets.IndexServlet.doPost pathInfo:	/login
+22-Aug-2017 17:42:52.788 INFO [http-nio-8080-exec-70] lms.dao.repository.UserRepo.findUserByLogin В базі знайдено користувача з логіном:	vlirm
+22-Aug-2017 17:42:52.788 INFO [http-nio-8080-exec-70] lms.dao.repository.UserRepo.findUserByLogin В базі знайдено користувача з логіном:	vlirm
+22-Aug-2017 17:42:52.802 INFO [http-nio-8080-exec-63] lms.servlets.BoardServlet.doGet pathInfo:	/view
+22-Aug-2017 17:42:52.802 INFO [http-nio-8080-exec-63] lms.servlets.BoardServlet.doGet pathInfo:	/view
+22-Aug-2017 17:43:09.206 INFO [http-nio-8080-exec-58] lms.servlets.BoardServlet.doGet pathInfo:	/view
+22-Aug-2017 17:43:09.206 INFO [http-nio-8080-exec-58] lms.servlets.BoardServlet.doGet pathInfo:	/view
+22-Aug-2017 17:43:11.339 INFO [http-nio-8080-exec-69] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
+22-Aug-2017 17:43:11.339 INFO [http-nio-8080-exec-69] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
+22-Aug-2017 17:43:11.352 INFO [http-nio-8080-exec-69] lms.dao.repository.UserRepo.findUserByLogin В базі знайдено користувача з логіном:	vlirm
+22-Aug-2017 17:43:11.352 INFO [http-nio-8080-exec-69] lms.dao.repository.UserRepo.findUserByLogin В базі знайдено користувача з логіном:	vlirm
+22-Aug-2017 17:43:28.025 INFO [http-nio-8080-exec-72] lms.servlets.IndexServlet.doGet pathInfo:	/logout
+22-Aug-2017 17:43:28.025 INFO [http-nio-8080-exec-72] lms.servlets.IndexServlet.doGet pathInfo:	/logout
+22-Aug-2017 17:43:28.025 INFO [http-nio-8080-exec-72] lms.servlets.IndexServlet.doGet logged out:	null
+22-Aug-2017 17:43:28.025 INFO [http-nio-8080-exec-72] lms.servlets.IndexServlet.doGet logged out:	null
+22-Aug-2017 17:43:28.034 INFO [http-nio-8080-exec-68] lms.servlets.IndexServlet.doGet pathInfo:	/
+22-Aug-2017 17:43:28.034 INFO [http-nio-8080-exec-68] lms.servlets.IndexServlet.doGet pathInfo:	/
+22-Aug-2017 17:43:35.329 INFO [http-nio-8080-exec-60] lms.servlets.IndexServlet.doPost pathInfo:	/login
+22-Aug-2017 17:43:35.329 INFO [http-nio-8080-exec-60] lms.servlets.IndexServlet.doPost pathInfo:	/login
+22-Aug-2017 17:43:35.341 INFO [http-nio-8080-exec-60] lms.dao.repository.UserRepo.findUserByLogin В базі знайдено користувача з логіном:	Mark_Z
+22-Aug-2017 17:43:35.341 INFO [http-nio-8080-exec-60] lms.dao.repository.UserRepo.findUserByLogin В базі знайдено користувача з логіном:	Mark_Z
+22-Aug-2017 17:43:35.350 INFO [http-nio-8080-exec-73] lms.servlets.BoardServlet.doGet pathInfo:	/view
+22-Aug-2017 17:43:35.350 INFO [http-nio-8080-exec-73] lms.servlets.BoardServlet.doGet pathInfo:	/view
+22-Aug-2017 17:43:37.445 INFO [http-nio-8080-exec-63] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
+22-Aug-2017 17:43:37.445 INFO [http-nio-8080-exec-63] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
+22-Aug-2017 17:43:37.455 INFO [http-nio-8080-exec-63] lms.dao.repository.UserRepo.findUserByLogin В базі знайдено користувача з логіном:	Mark_Z
+22-Aug-2017 17:43:37.455 INFO [http-nio-8080-exec-63] lms.dao.repository.UserRepo.findUserByLogin В базі знайдено користувача з логіном:	Mark_Z
+22-Aug-2017 17:44:36.759 INFO [http-nio-8080-exec-75] lms.servlets.IndexServlet.doPost pathInfo:	/profile-edit
+22-Aug-2017 17:44:36.759 INFO [http-nio-8080-exec-75] lms.servlets.IndexServlet.doPost pathInfo:	/profile-edit
+22-Aug-2017 17:45:17.245 INFO [http-nio-8080-exec-72] lms.servlets.IndexServlet.doPost pathInfo:	/profile-edit
+22-Aug-2017 17:45:17.245 INFO [http-nio-8080-exec-72] lms.servlets.IndexServlet.doPost pathInfo:	/profile-edit
+22-Aug-2017 17:45:17.270 INFO [http-nio-8080-exec-77] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
+22-Aug-2017 17:45:17.270 INFO [http-nio-8080-exec-77] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
+22-Aug-2017 17:45:17.280 INFO [http-nio-8080-exec-77] lms.dao.repository.UserRepo.findUserByLogin В базі знайдено користувача з логіном:	Mark_Z
+22-Aug-2017 17:45:17.280 INFO [http-nio-8080-exec-77] lms.dao.repository.UserRepo.findUserByLogin В базі знайдено користувача з логіном:	Mark_Z
+22-Aug-2017 17:45:19.635 INFO [http-nio-8080-exec-78] lms.servlets.IndexServlet.doPost pathInfo:	/profile-edit
+22-Aug-2017 17:45:19.635 INFO [http-nio-8080-exec-78] lms.servlets.IndexServlet.doPost pathInfo:	/profile-edit
+22-Aug-2017 17:45:19.656 INFO [http-nio-8080-exec-73] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
+22-Aug-2017 17:45:19.656 INFO [http-nio-8080-exec-73] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
+22-Aug-2017 17:45:19.667 INFO [http-nio-8080-exec-73] lms.dao.repository.UserRepo.findUserByLogin В базі знайдено користувача з логіном:	Mark_Z
+22-Aug-2017 17:45:19.667 INFO [http-nio-8080-exec-73] lms.dao.repository.UserRepo.findUserByLogin В базі знайдено користувача з логіном:	Mark_Z
+22-Aug-2017 17:45:21.470 INFO [http-nio-8080-exec-79] lms.servlets.IndexServlet.doGet pathInfo:	/
+22-Aug-2017 17:45:21.470 INFO [http-nio-8080-exec-79] lms.servlets.IndexServlet.doGet pathInfo:	/
+22-Aug-2017 17:45:21.479 INFO [http-nio-8080-exec-74] lms.servlets.BoardServlet.doGet pathInfo:	/view
+22-Aug-2017 17:45:21.479 INFO [http-nio-8080-exec-74] lms.servlets.BoardServlet.doGet pathInfo:	/view
+22-Aug-2017 17:58:17.100 INFO [http-nio-8080-exec-81] lms.servlets.IndexServlet.doGet pathInfo:	/logout
+22-Aug-2017 17:58:17.100 INFO [http-nio-8080-exec-81] lms.servlets.IndexServlet.doGet pathInfo:	/logout
+22-Aug-2017 17:58:17.101 INFO [http-nio-8080-exec-81] lms.servlets.IndexServlet.doGet logged out:	null
+22-Aug-2017 17:58:17.101 INFO [http-nio-8080-exec-81] lms.servlets.IndexServlet.doGet logged out:	null
+22-Aug-2017 17:58:17.110 INFO [http-nio-8080-exec-75] lms.servlets.IndexServlet.doGet pathInfo:	/
+22-Aug-2017 17:58:17.110 INFO [http-nio-8080-exec-75] lms.servlets.IndexServlet.doGet pathInfo:	/
+22-Aug-2017 17:58:18.559 INFO [http-nio-8080-exec-77] lms.servlets.IndexServlet.doPost pathInfo:	/login
+22-Aug-2017 17:58:18.559 INFO [http-nio-8080-exec-77] lms.servlets.IndexServlet.doPost pathInfo:	/login
+22-Aug-2017 17:58:18.572 INFO [http-nio-8080-exec-77] lms.dao.repository.UserRepo.findUserByLogin В базі знайдено користувача з логіном:	vlirm
+22-Aug-2017 17:58:18.572 INFO [http-nio-8080-exec-77] lms.dao.repository.UserRepo.findUserByLogin В базі знайдено користувача з логіном:	vlirm
+22-Aug-2017 17:58:18.582 INFO [http-nio-8080-exec-78] lms.servlets.BoardServlet.doGet pathInfo:	/view
+22-Aug-2017 17:58:18.582 INFO [http-nio-8080-exec-78] lms.servlets.BoardServlet.doGet pathInfo:	/view
+22-Aug-2017 17:58:21.954 INFO [http-nio-8080-exec-73] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
+22-Aug-2017 17:58:21.954 INFO [http-nio-8080-exec-73] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
+22-Aug-2017 17:58:23.046 INFO [http-nio-8080-exec-79] lms.servlets.IndexServlet.doGet pathInfo:	/admintest
+22-Aug-2017 17:58:23.046 INFO [http-nio-8080-exec-79] lms.servlets.IndexServlet.doGet pathInfo:	/admintest
+22-Aug-2017 17:58:23.062 INFO [http-nio-8080-exec-79] lms.dao.repository.UserRepo.findUserByLogin В базі знайдено користувача з логіном:	vlirm
+22-Aug-2017 17:58:23.062 INFO [http-nio-8080-exec-79] lms.dao.repository.UserRepo.findUserByLogin В базі знайдено користувача з логіном:	vlirm
+22-Aug-2017 17:58:25.998 INFO [http-nio-8080-exec-74] lms.servlets.IndexServlet.doGet pathInfo:	/
+22-Aug-2017 17:58:25.998 INFO [http-nio-8080-exec-74] lms.servlets.IndexServlet.doGet pathInfo:	/
+22-Aug-2017 17:58:26.007 INFO [http-nio-8080-exec-80] lms.servlets.BoardServlet.doGet pathInfo:	/view
+22-Aug-2017 17:58:26.007 INFO [http-nio-8080-exec-80] lms.servlets.BoardServlet.doGet pathInfo:	/view
+22-Aug-2017 17:58:29.340 INFO [http-nio-8080-exec-81] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
+22-Aug-2017 17:58:29.340 INFO [http-nio-8080-exec-81] lms.servlets.IndexServlet.doGet pathInfo:	/profile-edit
+22-Aug-2017 17:58:29.349 INFO [http-nio-8080-exec-81] lms.dao.repository.UserRepo.findUserByLogin В базі знайдено користувача з логіном:	vlirm
+22-Aug-2017 17:58:29.349 INFO [http-nio-8080-exec-81] lms.dao.repository.UserRepo.findUserByLogin В базі знайдено користувача з логіном:	vlirm
+22-Aug-2017 17:58:31.527 INFO [http-nio-8080-exec-75] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
+22-Aug-2017 17:58:31.527 INFO [http-nio-8080-exec-75] lms.servlets.IndexServlet.doGet pathInfo:	/useradmin
+22-Aug-2017 17:58:33.055 INFO [http-nio-8080-exec-76] lms.servlets.IndexServlet.doGet pathInfo:	/admintest
+22-Aug-2017 17:58:33.055 INFO [http-nio-8080-exec-76] lms.servlets.IndexServlet.doGet pathInfo:	/admintest
+22-Aug-2017 17:58:33.064 INFO [http-nio-8080-exec-76] lms.dao.repository.UserRepo.findUserByLogin В базі знайдено користувача з логіном:	Strix
+22-Aug-2017 17:58:33.064 INFO [http-nio-8080-exec-76] lms.dao.repository.UserRepo.findUserByLogin В базі знайдено користувача з логіном:	Strix

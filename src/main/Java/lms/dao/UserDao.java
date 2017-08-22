@@ -13,6 +13,8 @@ public interface UserDao {
 
     List<User> findUserByLoginByEmail(String searchString);
 
-    //method only for admin
+    /**
+     * Dao method only for admin
+     */
     List<User> showAllUsers();
 }

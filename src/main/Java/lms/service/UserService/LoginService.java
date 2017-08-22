@@ -4,7 +4,7 @@ import lms.dao.UserDao;
 import lms.dao.entity.User;
 import lms.dao.repository.UserRepo;
 import lms.service.Helper;
-import lms.views.UserHtmlViews;
+import lms.views.HtmlViews.UserHtmlViews;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;

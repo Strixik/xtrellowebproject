@@ -6,7 +6,7 @@ import lms.dao.entity.Card;
 import lms.dao.entity.Panel;
 import lms.dao.repository.CardRepo;
 import lms.dao.repository.PanelRepo;
-import lms.views.PanelHtmlViews;
+import lms.views.HtmlViews.PanelHtmlViews;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;

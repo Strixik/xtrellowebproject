@@ -1,6 +1,6 @@
 package lms.servlets;
 
-import lms.views.UserHtmlViews;
+import lms.views.HtmlViews.UserHtmlViews;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;

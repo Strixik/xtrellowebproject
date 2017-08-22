@@ -42,7 +42,7 @@ public class PathHtml {
                 sBuilder.append(line).append("\n");
             }
         } catch (IOException e) {
-            LOGGER.warning("Can't find html file: " + e.toString());
+            LOGGER.warning("HTML file not found:\t " + e.toString());
         }
 
         return sBuilder.toString();

@@ -4,7 +4,7 @@ import lms.dao.UserDao;
 import lms.dao.entity.User;
 import lms.dao.repository.UserRepo;
 import lms.service.Helper;
-import lms.views.UserHtmlViews;
+import lms.views.HtmlViews.UserHtmlViews;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.PrintWriter;
@@ -20,7 +20,7 @@ public class RegistrationService {
         this.out = out;
     }
 
-    UserDao userDao = new UserRepo();
+    private UserDao userDao = new UserRepo();
 
     public void showRegistrationForm() {
         out.println(UserHtmlViews.getInstance().getRegistrationForm());
@@ -39,19 +39,12 @@ public class RegistrationService {
             });
             String inputFirstPassword = Helper.requestParameter("regFirstPasword", request);
             registrationForm = Helper.checkFormField(2, registrationForm, inputFirstPassword, f -> {
-                if (f.length() >= 6) {
+                if (f.length() >= 6 && f.length() <= 20) {
                     return null;
                 }
-                return "Мінімальна довжина 6 символів";
-            });
-            registrationForm = Helper.checkFormField(2, registrationForm, inputFirstPassword, f -> {
-                if (f.length() <= 20) {
-                    return null;
-                }
-                return "Максимальна довжина 20 символів";
+                return "Довжина паролю може бути від 6 до 20 символів";
             });
             String inputSecondPassword = Helper.requestParameter("regSecondPassword", request);
-
             registrationForm = Helper.checkFormField(3, registrationForm, inputSecondPassword, f -> {
                 if (f.equals(inputFirstPassword)) {
                     return null;

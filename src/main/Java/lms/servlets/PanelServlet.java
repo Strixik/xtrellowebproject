@@ -19,6 +19,7 @@ public class PanelServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
         HttpSession session = request.getSession();
+
         PanelService listView = new PanelService(out);
 
         LOGGER.info("pathInfo:\t" + request.getPathInfo());
@@ -28,7 +29,6 @@ public class PanelServlet extends HttpServlet {
                 out.println(session.getAttribute("board_id"));
                 response.sendRedirect("/list/view");
                 break;
-
             case "/add":
                 if (listView.addListForm(request, session)) {
                     response.sendRedirect("/list/view");
@@ -51,6 +51,7 @@ public class PanelServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
         HttpSession session = request.getSession();
+
         PanelService listView = new PanelService(out);
 
         LOGGER.info("pathInfo:\t" + request.getPathInfo());

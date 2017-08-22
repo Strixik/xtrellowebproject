@@ -19,8 +19,9 @@ public class BoardServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
-        BoardService boardView = new BoardService(out);
         HttpSession session = request.getSession();
+
+        BoardService boardView = new BoardService(out);
 
         LOGGER.info("pathInfo:\t" + request.getPathInfo());
         switch (request.getPathInfo()) {
@@ -44,6 +45,7 @@ public class BoardServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
         HttpSession session = request.getSession();
+
         BoardService boardView = new BoardService(out);
         AdminService adminView = new AdminService(out);
 
