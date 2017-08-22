@@ -1,8 +1,10 @@
 package lms.servlets;
 
 
-import lms.service.AdminService;
-import lms.service.UserService;
+import lms.service.UserService.AdminService;
+import lms.service.UserService.LoginService;
+import lms.service.UserService.ProfileService;
+import lms.service.UserService.RegistrationService;
 import lms.views.BoardHtmlViews;
 import lms.views.PanelHtmlViews;
 import lms.views.PathHtml;
@@ -24,23 +26,26 @@ public class IndexServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
-        UserService indexView = new UserService(out);
         HttpSession session = request.getSession();
+
+        LoginService loginView = new LoginService(out);
+        RegistrationService registrationView = new RegistrationService(out);
+        ProfileService profileView = new ProfileService(out);
 
         LOGGER.info("pathInfo:\t" + request.getPathInfo());
         switch (request.getPathInfo()) {
             case "/register":
-                if (indexView.checkRegistrationForm(request)) {
+                if (registrationView.checkRegistrationForm(request)) {
                     response.sendRedirect("/");
                 }
                 break;
             case "/login":
-                if (indexView.checkLogin(request, session)) {
+                if (loginView.checkLogin(request, session)) {
                     response.sendRedirect("/board/view");
                 }
                 break;
             case "/profile-edit":
-                if (indexView.checkProfileForm(request)) {
+                if (profileView.checkProfileForm(request)) {
                     response.sendRedirect("/profile-edit");
                 }
                 break;
@@ -51,7 +56,10 @@ public class IndexServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
         HttpSession session = request.getSession();
-        UserService indexView = new UserService(out);
+
+        LoginService loginView = new LoginService(out);
+        RegistrationService registrationView = new RegistrationService(out);
+        ProfileService profileView = new ProfileService(out);
         AdminService adminView = new AdminService(out);
 
         LOGGER.info("pathInfo:\t" + request.getPathInfo());
@@ -60,7 +68,7 @@ public class IndexServlet extends HttpServlet {
                 if (session.getAttribute("login") != null) {
                     response.sendRedirect("/board/view");
                 } else {
-                    indexView.showLoginForm();
+                    loginView.showLoginForm();
                 }
                 break;
             case "/logout":
@@ -69,17 +77,17 @@ public class IndexServlet extends HttpServlet {
                 response.sendRedirect("/");
                 break;
             case "/register":
-                indexView.showRegisterForm();
+                registrationView.showRegisterForm();
                 break;
             case "/profile-edit":
-                indexView.showUserProfileForm(session.getAttribute("login").toString(),session);
+                profileView.showUserProfileForm(session.getAttribute("login").toString(), session);
                 break;
             case "/useradmin":
                 adminView.showAllUsers();
                 break;
             case "/admintest":
                 String login = request.getParameter("login");
-                indexView.showUserProfileForm(login, session);
+                profileView.showUserProfileForm(login, session);
                 break;
 
             default:
@@ -100,7 +108,10 @@ public class IndexServlet extends HttpServlet {
         UserHtmlViews.getInstance();
         BoardHtmlViews.getInstance();
         PanelHtmlViews.getInstance();
-        //logger config
+
+        /**
+         * Config Logger
+         */
         try {
             Handler fileHandler = new FileHandler(getServletContext().getRealPath("WEB-INF/logs/app.log"));
             fileHandler.setFormatter(new SimpleFormatter());

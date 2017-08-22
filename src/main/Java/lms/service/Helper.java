@@ -3,7 +3,7 @@ package lms.service;
 import javax.servlet.http.HttpServletRequest;
 import java.io.UnsupportedEncodingException;
 
-interface Helper<E> {
+public interface Helper<E> {
     static String requestParameter(String field, HttpServletRequest request) throws UnsupportedEncodingException {
         return new String(request.getParameter(field).getBytes("iso-8859-1"),
                 "UTF-8");

@@ -1,4 +1,4 @@
-package lms.service;
+package lms.service.UserService;
 
 import lms.dao.UserDao;
 import lms.dao.repository.BoardRepo;
@@ -10,7 +10,7 @@ import java.io.PrintWriter;
 import java.util.logging.Logger;
 
 public class AdminService {
-    private static final Logger LOGGER = Logger.getLogger(UserService.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(AdminService.class.getName());
 
     private PrintWriter out;
 
@@ -19,11 +19,11 @@ public class AdminService {
     }
 
     public String showUserForm() {
-        return new String(UserHtmlViews.getInstance().getAdminUserForm());
+        return UserHtmlViews.getInstance().getAdminUserForm();
     }
 
     public String showUserInsertForm() {
-        return new String(UserHtmlViews.getInstance().getAdminInsertForm());
+        return UserHtmlViews.getInstance().getAdminInsertForm();
     }
 
     UserDao userDao = new UserRepo();

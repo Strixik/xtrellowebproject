@@ -1,7 +1,7 @@
 package lms.servlets;
 
-import lms.service.AdminService;
 import lms.service.BoardService;
+import lms.service.UserService.AdminService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
