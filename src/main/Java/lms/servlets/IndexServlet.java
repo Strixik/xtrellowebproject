@@ -79,14 +79,14 @@ public class IndexServlet extends HttpServlet {
                 registrationView.showRegistrationForm();
                 break;
             case "/profile-edit":
-                profileView.showUserProfileForm(session.getAttribute("login").toString(), session);
+                profileView.showCurrentUserProfile(session.getAttribute("login").toString(), session);
                 break;
             case "/useradmin":
                 adminView.showAllUsers();
                 break;
             case "/admintest":
                 String login = request.getParameter("login");
-                profileView.showUserProfileForm(login, session);
+                profileView.showCurrentUserProfile(login, session);
                 break;
 
             default:

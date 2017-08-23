@@ -14,7 +14,8 @@ public class User {
     private String country;
     private String city;
 
-    public User(long id, String login, String password, String email, String dateOfRegistration, String sex, String dateOfBirth, String userStatus, String firstName, String secondName, String country, String city) {
+    public User(long id, String login, String password, String email, String dateOfRegistration, String sex,
+                String dateOfBirth, String userStatus, String firstName, String secondName, String country, String city) {
         this.id = id;
         this.login = login;
         this.password = password;

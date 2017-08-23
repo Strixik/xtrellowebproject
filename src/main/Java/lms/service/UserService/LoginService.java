@@ -3,7 +3,7 @@ package lms.service.UserService;
 import lms.dao.UserDao;
 import lms.dao.entity.User;
 import lms.dao.repository.UserRepo;
-import lms.service.Helper;
+import lms.service.helpers.Helper;
 import lms.views.HtmlViews.UserHtmlViews;
 
 import javax.servlet.http.HttpServletRequest;

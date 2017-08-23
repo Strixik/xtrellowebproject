@@ -22,8 +22,10 @@ public class UserRepo implements UserDao {
 
         try (Connection con = dataSource.getConnection();
              PreparedStatement preparedSt = (user.getId() == 0L) ?
-                     con.prepareStatement("INSERT INTO users (login, password, email, date_registered, sex, date_birth, block, firstname, secondname, contry, city)  VALUES (?,?,?,?,?,?,?,?,?,?,?)") :
-                     con.prepareStatement("UPDATE users SET login=?, password=?, email=?, date_registered=?, sex=?, date_birth=?, block=?, firstname=?, secondname=?, contry=?, city=? WHERE id=" + user.getId())
+                     con.prepareStatement("INSERT INTO users (login, password, email, date_registered, sex, " +
+                             "date_birth, block, firstname, secondname, contry, city)  VALUES (?,?,?,?,?,?,?,?,?,?,?)") :
+                     con.prepareStatement("UPDATE users SET login=?, password=?, email=?, date_registered=?, sex=?, " +
+                             "date_birth=?, block=?, firstname=?, secondname=?, contry=?, city=? WHERE id=" + user.getId())
         ) {
             preparedSt.setString(1, user.getLogin());
             preparedSt.setString(2, user.getPassword());
@@ -139,7 +141,7 @@ public class UserRepo implements UserDao {
 
     /**
      * method only for admin
-     * @return List<User> список усіх користувачів сайту
+     * @return List<User> list of all users
      */
     @Override
     public List<User> showAllUsers() {

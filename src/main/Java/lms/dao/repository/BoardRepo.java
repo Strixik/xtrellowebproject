@@ -49,7 +49,8 @@ public class BoardRepo implements CRUD<Board> {
         DataSource dataSource = new DataSource();
         List<Board> boards = new ArrayList<>();
         try (Connection con = dataSource.getConnection();
-             PreparedStatement preparedSt = con.prepareStatement("SELECT * FROM board WHERE user_id=\"" + user_id + "\"");
+             PreparedStatement preparedSt =
+                     con.prepareStatement("SELECT * FROM board WHERE user_id=\"" + user_id + "\"");
              ResultSet rs = preparedSt.executeQuery()) {
             while (rs.next()) {
                 long id = rs.getLong("id");
@@ -93,7 +94,8 @@ public class BoardRepo implements CRUD<Board> {
         List<Board> boards = new ArrayList<>();
         try (Connection con = dataSource.getConnection();
              PreparedStatement preparedSt =
-                     con.prepareStatement("SELECT DISTINCT id, board, user_id FROM board WHERE  board LIKE \"%" + searchString + "%\"AND user_id =\"" + id + "\"");
+                     con.prepareStatement("SELECT DISTINCT id, board, user_id FROM board WHERE board " +
+                             "LIKE \"%" + searchString + "%\"AND user_id =\"" + id + "\"");
              ResultSet rs = preparedSt.executeQuery()
         ) {
             while (rs.next()) {

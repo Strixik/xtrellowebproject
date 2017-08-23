@@ -3,7 +3,7 @@ package lms.service.UserService;
 import lms.dao.UserDao;
 import lms.dao.entity.User;
 import lms.dao.repository.UserRepo;
-import lms.service.Helper;
+import lms.service.helpers.Helper;
 import lms.views.HtmlViews.UserHtmlViews;
 
 import javax.servlet.http.HttpServletRequest;
@@ -11,6 +11,8 @@ import javax.servlet.http.HttpSession;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.logging.Logger;
+
+import static lms.service.helpers.Helper.CHECK_EMAIL_REGEX;
 
 public class ProfileService {
     private static final Logger LOGGER = Logger.getLogger(ProfileService.class.getName());
@@ -26,7 +28,7 @@ public class ProfileService {
         return UserHtmlViews.getInstance().getProfileForm();
     }
 
-    public void showUserProfileForm(String login, HttpSession session) {
+    public void showCurrentUserProfile(String login, HttpSession session) {
         User user = userDao.findUserByLogin(login);
 
         String profileForm = showProfileForm();
@@ -87,9 +89,8 @@ public class ProfileService {
                 return "Паролі повинні співпадати";
             });
             String updEmail = Helper.requestParameter("upEmail", request);
-            String checkEmailRegEx = "^[_A-Za-z0-9-+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
             profileForm = Helper.checkFormField(4, profileForm, updEmail, f -> {
-                if (f.matches(checkEmailRegEx)) {
+                if (f.matches(CHECK_EMAIL_REGEX)) {
                     return null;
                 }
                 return "Email введено в неправильному форматі";

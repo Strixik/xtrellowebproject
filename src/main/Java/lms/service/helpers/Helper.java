@@ -1,13 +1,12 @@
-package lms.service;
+package lms.service.helpers;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.UnsupportedEncodingException;
 
 public interface Helper<E> {
-    static String requestParameter(String field, HttpServletRequest request) throws UnsupportedEncodingException {
-        return new String(request.getParameter(field).getBytes("iso-8859-1"),
-                "UTF-8");
-    }
+    String CHECK_EMAIL_REGEX = "^[_A-Za-z0-9-+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
+
+    String check(E e);
 
     static <E> String checkFormField(int fieldNumber, String formStr, E field, Helper<E> ff) {
         String msg = ff.check(field);
@@ -19,5 +18,7 @@ public interface Helper<E> {
         return formStr;
     }
 
-    String check(E e);
+    static String requestParameter(String field, HttpServletRequest request) throws UnsupportedEncodingException {
+        return new String(request.getParameter(field).getBytes("UTF-8"));
+    }
 }

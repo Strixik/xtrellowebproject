@@ -9,6 +9,9 @@ import lms.views.HtmlViews.UserHtmlViews;
 import java.io.PrintWriter;
 import java.util.logging.Logger;
 
+/**
+ * Class with methods for work with admins
+ */
 public class AdminService {
     private static final Logger LOGGER = Logger.getLogger(AdminService.class.getName());
 
@@ -41,7 +44,7 @@ public class AdminService {
     }
 
     /**
-     * show all boards of all users
+     * Show all boards of all users
      */
     public void showAllBoardsForAdmin() {
         BoardRepo boardRepo = new BoardRepo();
