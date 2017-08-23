@@ -21,7 +21,6 @@ public class BoardService {
     }
 
     public boolean addBoardForm(HttpServletRequest request, HttpSession session) {
-        if (out == null) return false;
         try {
             String boardTitle = new String(request.getParameter("nameBoard").getBytes("UTF-8"));
             long userId = Long.parseLong(session.getAttribute("user_id").toString());
@@ -47,12 +46,10 @@ public class BoardService {
         } else return false;
     }
 
-
     public void showAllBoards(HttpSession session) {
-        if (out == null) return;
-        Long user_id = Long.parseLong(session.getAttribute("user_id").toString());
+        Long userId = Long.parseLong(session.getAttribute("user_id").toString());
         CRUD<Board> boardRepo = new BoardRepo();
-        List<Board> boards = boardRepo.retrieveAll(user_id);
+        List<Board> boards = boardRepo.retrieveAll(userId);
         out.println(BoardHtmlViews.getInstance().getBoardAddModalWindow());
         for (Board b : boards) {
             String boardTitle = BoardHtmlViews.getInstance().getBoardHtml();
@@ -62,8 +59,13 @@ public class BoardService {
         }
     }
 
+    /**
+     * method is used for search requests
+     *
+     * @param request
+     * @param session
+     */
     public void showAllBoardsSearch(HttpServletRequest request, HttpSession session) {
-        if (out == null) return;
         String textForSearch = request.getParameter("searchText");
         Long userId = Long.parseLong(session.getAttribute("user_id").toString());
         BoardRepo boardRepo = new BoardRepo();

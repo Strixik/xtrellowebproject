@@ -23,8 +23,7 @@ public class PanelService {
         this.out = out;
     }
 
-    public boolean addListForm(HttpServletRequest request, HttpSession session) {
-        if (out == null) return false;
+    public boolean addPanelForm(HttpServletRequest request, HttpSession session) {
         try {
             long boardId = Long.parseLong(session.getAttribute("board_id").toString());
             String panelTitle = new String(request.getParameter("nameList").getBytes("UTF-8"));
@@ -41,8 +40,7 @@ public class PanelService {
         return false;
     }
 
-    public void showList(HttpSession session) {
-        if (out == null) return;
+    public void showPanel(HttpSession session) {
         Long boardId = Long.parseLong(session.getAttribute("board_id").toString());
         CRUD<Panel> panelRepo = new PanelRepo();
         CRUD<Card> cardRepo = new CardRepo();
@@ -56,14 +54,15 @@ public class PanelService {
             panelTitle = panelTitle.replace("listId", String.valueOf(panel.getId()));
             StringBuilder sBuilder = new StringBuilder();
             for (Card c: cards){
-                sBuilder.append("<input type=\"radio\" value=\"").append(c.getId())
-                        .append("\" name=\"id\">").append("<li class=\"cardClass\">").append(c.getCardText()).append("</li>");
+                sBuilder.append("<input type=\"radio\" value=\"").append(c.getId()).append("\" name=\"id\">")
+                        .append("<li class=\"cardClass\">").append(c.getCardText()).append("</li>");
             }
             panelTitle = panelTitle.replace("<!--" + panel.getId() + "your text" + "-->", sBuilder);
             out.println(panelTitle);
         }
     }
-    public boolean deleteList(HttpServletRequest request) {
+
+    public boolean deletePanel(HttpServletRequest request) {
         long listId = Long.parseLong(request.getParameter("listid"));
         if (listId > 0L) {
             CRUD<Panel> panelRepo = new PanelRepo();

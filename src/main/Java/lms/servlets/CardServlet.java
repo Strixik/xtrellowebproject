@@ -20,7 +20,7 @@ public class CardServlet extends HttpServlet {
         LOGGER.info("pathInfo:\t" + request.getPathInfo());
         switch (request.getPathInfo()) {
             case "/add":
-                cardView.addCard(request);
+                cardView.insertCard(request);
                 response.sendRedirect("/list/view");
                 break;
             case "/del":

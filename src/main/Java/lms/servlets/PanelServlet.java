@@ -30,14 +30,14 @@ public class PanelServlet extends HttpServlet {
                 response.sendRedirect("/list/view");
                 break;
             case "/add":
-                if (listView.addListForm(request, session)) {
+                if (listView.addPanelForm(request, session)) {
                     response.sendRedirect("/list/view");
                 } else {
                     response.sendRedirect("/list/view");
                 }
                 break;
             case "/del":
-                if (listView.deleteList(request)) {
+                if (listView.deletePanel(request)) {
                     response.sendRedirect("/list/view");
                 } else {
                     response.sendRedirect("/list/view");
@@ -57,7 +57,7 @@ public class PanelServlet extends HttpServlet {
         LOGGER.info("pathInfo:\t" + request.getPathInfo());
         switch (request.getPathInfo()) {
             case "/view":
-                listView.showList(session);
+                listView.showPanel(session);
                 break;
         }
     }
