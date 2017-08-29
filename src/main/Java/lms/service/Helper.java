@@ -4,20 +4,25 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.UnsupportedEncodingException;
 
 public interface Helper<E> {
+    String CHECK_EMAIL_ADDRESS_REGEX =
+            "^[_A-Za-z0-9-+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
+
     static String requestParameter(String field, HttpServletRequest request) throws UnsupportedEncodingException {
         return new String(request.getParameter(field).getBytes("iso-8859-1"),
                 "UTF-8");
     }
 
-    static <E> String checkFormField(int fieldNumber, String formStr, E field, Helper<E> ff) {
-        String msg = ff.check(field);
-        formStr = formStr.replace("xtrellovall" + fieldNumber, "value=\"" + String.valueOf(field) + "\"");
-        if (msg != null) {
-            formStr = formStr.replace("group" + fieldNumber, "has-error");
-            formStr = formStr.replace("<!--" + fieldNumber + "-->", msg);
+
+    String check(E lambdaExp);
+
+    static <E> String checkFormField(int fieldNumber, String profileForm, E fieldValueNew, Helper<E> cautionMessage) {
+        String message = cautionMessage.check(fieldValueNew);
+        profileForm = profileForm.replace("xtrellovall" + fieldNumber,  String.valueOf(fieldValueNew));
+        if (message != null) {
+            profileForm = profileForm.replace("group" + fieldNumber, "has-error");
+            profileForm = profileForm.replace("<!--" + fieldNumber + "-->", message);
         }
-        return formStr;
+        return profileForm;
     }
 
-    String check(E e);
 }

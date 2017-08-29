@@ -26,20 +26,13 @@ public class BoardServlet extends HttpServlet {
         LOGGER.info("pathInfo:\t" + request.getPathInfo());
         switch (request.getPathInfo()) {
             case "/add":
-                if (boardView.addBoardForm(request, session)) {
-                    response.sendRedirect("/view");
-                } else {
-                    response.sendRedirect("/view");
-                }
+                boardView.addBoardForm(request, session);
                 break;
             case "/del":
-                if (boardView.deleteBoard(request)) {
-                    response.sendRedirect("/view");
-                } else {
-                    response.sendRedirect("/view");
-                }
+                boardView.deleteBoard(request);
                 break;
         }
+        response.sendRedirect("/view");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

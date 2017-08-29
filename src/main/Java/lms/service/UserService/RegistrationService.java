@@ -12,6 +12,8 @@ import java.io.UnsupportedEncodingException;
 import java.time.LocalDate;
 import java.util.logging.Logger;
 
+import static lms.service.Helper.CHECK_EMAIL_ADDRESS_REGEX;
+
 public class RegistrationService {
     private static final Logger LOGGER = Logger.getLogger(RegistrationService.class.getName());
     private PrintWriter out;
@@ -53,9 +55,7 @@ public class RegistrationService {
             });
             String inputEmail = Helper.requestParameter("regEmail", request);
             registrationForm = Helper.checkFormField(4, registrationForm, inputEmail, f -> {
-                if (f.matches("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
-                        + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$")
-                        ) {
+                if (f.matches(CHECK_EMAIL_ADDRESS_REGEX)) {
                     return null;
                 }
                 return "Невірна ел. адреса!";

@@ -20,7 +20,7 @@ public class BoardHtmlViews {
     }
 
 
-    public BoardHtmlViews() {
+    private BoardHtmlViews() {
         PathHtml pathHtml = PathHtml.getInstance();
 
         this.boardAddModalWindow = pathHtml.getPartialHtml("board-add-modal-window.html");

@@ -12,6 +12,8 @@ import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.logging.Logger;
 
+import static lms.service.Helper.CHECK_EMAIL_ADDRESS_REGEX;
+
 public class ProfileService {
     private static final Logger LOGGER = Logger.getLogger(ProfileService.class.getName());
     private PrintWriter out;
@@ -31,27 +33,29 @@ public class ProfileService {
 
         String profileForm = showProfileForm();
 
-        profileForm = profileForm.replace("xtrellovall1", "value=\"" + user.getLogin() + "\"");
-        profileForm = profileForm.replace("xtrellovall2", "value=\"" + user.getPassword() + "\"");
-        profileForm = profileForm.replace("xtrellovall3", "value=\"" + user.getPassword() + "\"");
-        profileForm = profileForm.replace("xtrellovall4", "value=\"" + user.getEmail() + "\"");
-        profileForm = profileForm.replace("xtrellovall5", "value=\"" + String.valueOf(user.getId()) + "\"");
-        profileForm = profileForm.replace("xtrellovall6", "value=\"" + user.getDateOfRegistration() + "\"");
-        profileForm = profileForm.replace("xtrellovall7", "value=\"" + user.getSex() + "\"");
-        profileForm = profileForm.replace("xtrellovall8", "value=\"" + user.getDateOfBirth() + "\"");
+        profileForm = profileForm.replace("xtrellovall1", user.getLogin());
+        profileForm = profileForm.replace("xtrellovall2", user.getPassword());
+        profileForm = profileForm.replace("xtrellovall3", user.getPassword());
+        profileForm = profileForm.replace("xtrellovall4", user.getEmail());
+        profileForm = profileForm.replace("xtrellovall5", String.valueOf(user.getId()));
+        profileForm = profileForm.replace("xtrellovall6", user.getDateOfRegistration());
+        profileForm = profileForm.replace("xtrellovall7", ((user.getSex()) == null)? "Стать": user.getSex());
+        profileForm = profileForm.replace("xtrellovall8", ((user.getDateOfBirth()) == null) ?
+                "1900-01-01" : user.getDateOfBirth());
 
         if (session.getAttribute("status").equals("admin")) {
-            profileForm = profileForm.replace("xtrellovall9", "value=\"" + user.getUserStatus() + "\"");
+            profileForm = profileForm.replace("xtrellovall9", user.getUserStatus());
+            profileForm = profileForm.replace("readonly", "");
         }
-        profileForm = profileForm.replace("xtrellovall9", "value=\"" + user.getUserStatus() + "\"" + " readonly");
-        profileForm = profileForm.replace("xtrellovall0", "value=\"" + ((user.getFirstName() == null) ?
-                "Дані не заповнено" : user.getFirstName()) + "\"");
-        profileForm = profileForm.replace("xtrellovall-1", "value=\"" + ((user.getSecondName() == null) ?
-                "Дані не заповнено" : user.getSecondName()) + "\"");
-        profileForm = profileForm.replace("xtrellovall-2", "value=\"" + ((user.getCountry() == null) ?
-                "Дані не заповнено" : user.getCountry()) + "\"");
-        profileForm = profileForm.replace("xtrellovall-3", "value=\"" + ((user.getCity() == null) ?
-                "Дані не заповнено" : user.getCity()) + "\"");
+        profileForm = profileForm.replace("xtrellovall9", user.getUserStatus());
+        profileForm = profileForm.replace("xtrellovall0", ((user.getFirstName() == null) ?
+                "Дані не заповнено" : user.getFirstName()));
+        profileForm = profileForm.replace("xtrellovall-1", ((user.getSecondName() == null) ?
+                "Дані не заповнено" : user.getSecondName()));
+        profileForm = profileForm.replace("xtrellovall-2", ((user.getCountry() == null) ?
+                "Дані не заповнено" : user.getCountry()));
+        profileForm = profileForm.replace("xtrellovall-3", ((user.getCity() == null) ?
+                "Дані не заповнено" : user.getCity()));
         out.println(profileForm);
     }
 
@@ -87,9 +91,8 @@ public class ProfileService {
                 return "Паролі повинні співпадати";
             });
             String updEmail = Helper.requestParameter("upEmail", request);
-            String checkEmailRegEx = "^[_A-Za-z0-9-+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
             profileForm = Helper.checkFormField(4, profileForm, updEmail, f -> {
-                if (f.matches(checkEmailRegEx)) {
+                if (f.matches(CHECK_EMAIL_ADDRESS_REGEX)) {
                     return null;
                 }
                 return "Email введено в неправильному форматі";

@@ -20,7 +20,7 @@ public class PanelHtmlViews {
     }
 
 
-    public PanelHtmlViews() {
+    private PanelHtmlViews() {
         PathHtml pathHtml = PathHtml.getInstance();
 
         this.listAddModalWindow = pathHtml.getPartialHtml("panel-add-modal-window.html");

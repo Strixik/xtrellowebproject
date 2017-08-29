@@ -27,25 +27,15 @@ public class PanelServlet extends HttpServlet {
             case "/":
                 session.setAttribute("board_id", request.getParameter("boardid"));
                 out.println(session.getAttribute("board_id"));
-                response.sendRedirect("/list/view");
                 break;
             case "/add":
-                if (listView.addListForm(request, session)) {
-                    response.sendRedirect("/list/view");
-                } else {
-                    response.sendRedirect("/list/view");
-                }
+                listView.addListForm(request, session);
                 break;
             case "/del":
-                if (listView.deleteList(request)) {
-                    response.sendRedirect("/list/view");
-                } else {
-                    response.sendRedirect("/list/view");
-                }
+                listView.deleteList(request);
                 break;
-            default:
-                response.sendRedirect("/list/view");
         }
+        response.sendRedirect("/list/view");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
