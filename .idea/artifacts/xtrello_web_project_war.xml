@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="xtrello.web-project:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="xtrello.web-project.war">
-      <element id="artifact" artifact-name="xtrello.web-project:war exploded" />
-    </root>
-  </artifact>
-</component>
