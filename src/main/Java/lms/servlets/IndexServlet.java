@@ -103,7 +103,10 @@ public class IndexServlet extends HttpServlet {
             pathHTML.setPath(getServletContext().getRealPath("/WEB-INF/html/"));
 
         }
-        //load partial html files
+
+        /**
+         * Loading partial html files
+         */
         UserHtmlViews.getInstance();
         BoardHtmlViews.getInstance();
         PanelHtmlViews.getInstance();

@@ -30,15 +30,13 @@ public class CardService {
         }
     }
 
-    public boolean deleteCard(HttpServletRequest request) {
+    public void deleteCard(HttpServletRequest request) {
         String cardId = request.getParameter("id");
 
         if (cardId != null && !cardId.isEmpty()) {
             long id = Long.parseLong(cardId);
             CRUD<Card> cardRepo = new CardRepo();
             cardRepo.remove(id);
-            return true;
         }
-        return false;
     }
 }

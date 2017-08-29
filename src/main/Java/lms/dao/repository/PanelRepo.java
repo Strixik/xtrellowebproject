@@ -29,6 +29,7 @@ public class PanelRepo implements CRUD<Panel> {
             LOGGER.severe("Connection to database is lost:\t" + e.toString());
         }
     }
+
     @Override
     public void remove(long id) {
         DataSource dataSource = new DataSource();
@@ -43,7 +44,6 @@ public class PanelRepo implements CRUD<Panel> {
             }
         }
     }
-
 
     @Override
     public List<Panel> retrieveAll(long boardId) {

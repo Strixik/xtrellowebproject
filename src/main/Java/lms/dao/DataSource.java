@@ -23,7 +23,7 @@ public class DataSource implements AutoCloseable {
         try {
             Class.forName(JDBC_DRIVER).newInstance();
         } catch (IllegalAccessException | InstantiationException | ClassNotFoundException e) {
-            e.printStackTrace();
+            LOGGER.severe("Some problem with JDBC driver: \t" + e.toString());
         }
     }
 
@@ -33,7 +33,7 @@ public class DataSource implements AutoCloseable {
                 connection = DriverManager.getConnection(DB_URL);
             }
         } catch (SQLException e) {
-            LOGGER.severe("Помилка підключення до бази:\t " + e.toString());
+            LOGGER.severe("Some problem with connection to database:\t " + e.toString());
         }
         return connection;
     }
@@ -44,7 +44,7 @@ public class DataSource implements AutoCloseable {
                 connection.close();
             }
         } catch (SQLException e) {
-            LOGGER.severe("Помилка закриття бази:\t " + e.toString());
+            LOGGER.severe("Problem with closing database:\t " + e.toString());
         }
     }
 }

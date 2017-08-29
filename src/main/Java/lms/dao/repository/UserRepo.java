@@ -22,8 +22,10 @@ public class UserRepo implements UserDao {
 
         try (Connection con = dataSource.getConnection();
              PreparedStatement preparedSt = (user.getId() == 0L) ?
-                     con.prepareStatement("INSERT INTO users (login, password, email, date_registered, sex, date_birth, block, firstname, secondname, contry, city)  VALUES (?,?,?,?,?,?,?,?,?,?,?)") :
-                     con.prepareStatement("UPDATE users SET login=?, password=?, email=?, date_registered=?, sex=?, date_birth=?, block=?, firstname=?, secondname=?, contry=?, city=? WHERE id=" + user.getId())
+                     con.prepareStatement("INSERT INTO users (login, password, email, date_registered, sex, " +
+                             "date_birth, block, firstname, secondname, contry, city)  VALUES (?,?,?,?,?,?,?,?,?,?,?)") :
+                     con.prepareStatement("UPDATE users SET login=?, password=?, email=?, date_registered=?, sex=?," +
+                             "date_birth=?, block=?, firstname=?, secondname=?, contry=?, city=? WHERE id=" + user.getId())
         ) {
             preparedSt.setString(1, user.getLogin());
             preparedSt.setString(2, user.getPassword());
@@ -66,7 +68,6 @@ public class UserRepo implements UserDao {
                         rs.getString("secondname"),
                         rs.getString("contry"),
                         rs.getString("city"));
-                LOGGER.info("В базі знайдено користувача з логіном:\t" + user.getLogin());
                 return user;
             }
         } catch (SQLException e) {
@@ -98,7 +99,6 @@ public class UserRepo implements UserDao {
                         rs.getString("secondname"),
                         rs.getString("contry"),
                         rs.getString("city"));
-                LOGGER.info("В базі знайдено користувача з ID:\t" + user.getId());
                 return user;
             }
         } catch (SQLException e) {
@@ -139,7 +139,7 @@ public class UserRepo implements UserDao {
 
     /**
      * method only for admin
-     * @return List<User> список усіх користувачів сайту
+     * @return List<User> list of all xTrello users
      */
     @Override
     public List<User> showAllUsers() {

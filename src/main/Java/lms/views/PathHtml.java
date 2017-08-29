@@ -37,7 +37,7 @@ public class PathHtml {
         Charset charset = Charset.forName("UTF-8");
 
         try (BufferedReader reader = Files.newBufferedReader(file, charset)) {
-            String line = null;
+            String line;
             while ((line = reader.readLine()) != null) {
                 sBuilder.append(line).append("\n");
             }

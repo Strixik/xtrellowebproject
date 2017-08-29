@@ -23,8 +23,7 @@ public class PanelService {
         this.out = out;
     }
 
-    public boolean addListForm(HttpServletRequest request, HttpSession session) {
-        if (out == null) return false;
+    public void addListForm(HttpServletRequest request, HttpSession session) {
         try {
             long boardId = Long.parseLong(session.getAttribute("board_id").toString());
             String nameList = new String(request.getParameter("nameList")
@@ -34,12 +33,10 @@ public class PanelService {
                 Panel panel = new Panel(nameList, boardId);
                 CRUD<Panel> panelRepo = new PanelRepo();
                 panelRepo.save(panel);
-                return true;
             }
         } catch (UnsupportedEncodingException e) {
             LOGGER.severe("UnsupportedEncodingException " + e.toString());
         }
-        return false;
     }
 
     public void showList(HttpSession session) {
@@ -55,21 +52,20 @@ public class PanelService {
             String panelTitle = PanelHtmlViews.getInstance().getListHtml();
             panelTitle = panelTitle.replace("<!--list-->", panel.getPanelTitle());
             panelTitle = panelTitle.replace("listId", String.valueOf(panel.getId()));
-            StringBuilder sb = new StringBuilder();
+            StringBuilder sBuilder = new StringBuilder();
             for (Card c: cards){
-                sb.append("<input type=\"radio\" value=\"").append(c.getId())
-                        .append("\" name=\"id\">").append("<li class=\"cardClass\">").append(c.getCardText()).append("</li>");
+                sBuilder.append("<input type=\"radio\" value=\"").append(c.getId()).append("\" name=\"id\">")
+                        .append("<li class=\"cardClass\">").append(c.getCardText()).append("</li>");
             }
-            panelTitle = panelTitle.replace("<!--" + panel.getId() + "your text" + "-->", sb);
+            panelTitle = panelTitle.replace("<!--" + panel.getId() + "your text" + "-->", sBuilder);
             out.println(panelTitle);
         }
     }
-    public boolean deleteList(HttpServletRequest request) {
+    public void deleteList(HttpServletRequest request) {
         long listId = Long.parseLong(request.getParameter("listid"));
         if (listId > 0L) {
             CRUD<Panel> panelRepo = new PanelRepo();
             panelRepo.remove(listId);
-            return true;
-        } else return false;
+        }
     }
 }

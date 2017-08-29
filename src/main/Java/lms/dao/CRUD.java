@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface CRUD<T> {
 
-    void save(T t);
+    void save(T someObject);
 
     void remove(long id);
 

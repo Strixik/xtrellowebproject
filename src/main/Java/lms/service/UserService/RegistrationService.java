@@ -3,7 +3,7 @@ package lms.service.UserService;
 import lms.dao.UserDao;
 import lms.dao.entity.User;
 import lms.dao.repository.UserRepo;
-import lms.service.Helper;
+import lms.service.helpers.Helper;
 import lms.views.HtmlViews.UserHtmlViews;
 
 import javax.servlet.http.HttpServletRequest;
@@ -12,7 +12,7 @@ import java.io.UnsupportedEncodingException;
 import java.time.LocalDate;
 import java.util.logging.Logger;
 
-import static lms.service.Helper.CHECK_EMAIL_ADDRESS_REGEX;
+import static lms.service.helpers.Helper.CHECK_EMAIL_ADDRESS_REGEX;
 
 public class RegistrationService {
     private static final Logger LOGGER = Logger.getLogger(RegistrationService.class.getName());

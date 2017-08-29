@@ -45,18 +45,19 @@ public class BoardRepo implements CRUD<Board> {
     }
 
     @Override
-    public List<Board> retrieveAll(long user_id) {
+    public List<Board> retrieveAll(long userId) {
         DataSource dataSource = new DataSource();
         List<Board> boards = new ArrayList<>();
         try (Connection con = dataSource.getConnection();
-             PreparedStatement preparedSt = con.prepareStatement("SELECT * FROM board WHERE user_id=\"" + user_id + "\"");
-             ResultSet rs = preparedSt.executeQuery()) {
+             PreparedStatement preparedSt =
+                     con.prepareStatement("SELECT * FROM board WHERE user_id=\"" + userId + "\"");
+             ResultSet rs = preparedSt.executeQuery()
+        ) {
             while (rs.next()) {
                 long id = rs.getLong("id");
-                String board = rs.getString("board");
-                Board aboard = new Board(id, board, user_id
-                );
-                boards.add(aboard);
+                String boardTitle = rs.getString("board");
+                Board board = new Board(id, boardTitle, userId);
+                boards.add(board);
             }
         } catch (SQLException e) {
             LOGGER.severe("Connection to database is lost:\t" + e.toString());
@@ -72,6 +73,7 @@ public class BoardRepo implements CRUD<Board> {
     public List<Board> retrieveAllBoardsForAdmin() {
         DataSource dataSource = new DataSource();
         List<Board> boards = new ArrayList<>();
+
         try (Connection con = dataSource.getConnection();
              PreparedStatement preparedSt = con.prepareStatement("SELECT * FROM board");
              ResultSet rs = preparedSt.executeQuery()
@@ -88,20 +90,21 @@ public class BoardRepo implements CRUD<Board> {
         }
         return boards;
     }
+
     public List<Board> retrieveAllBoardsForSearch(String searchString, Long id) {
         DataSource dataSource = new DataSource();
         List<Board> boards = new ArrayList<>();
         try (Connection con = dataSource.getConnection();
              PreparedStatement preparedSt =
-                     con.prepareStatement("SELECT DISTINCT id, board, user_id FROM board WHERE  board LIKE \"%" + searchString + "%\"AND user_id =\"" + id + "\"");
+                     con.prepareStatement("SELECT DISTINCT id, board, user_id FROM board WHERE  board LIKE \"%"
+                             + searchString + "%\"AND user_id =\"" + id + "\"");
              ResultSet rs = preparedSt.executeQuery()
         ) {
             while (rs.next()) {
                 Board board = new Board(
                         rs.getLong("id"),
                         rs.getString("board"),
-                        rs.getLong("user_id")
-                    );
+                        rs.getLong("user_id"));
                 boards.add(board);
             }
             return boards;
@@ -110,6 +113,6 @@ public class BoardRepo implements CRUD<Board> {
         }
         return null;
     }
-    }
+}
 
 

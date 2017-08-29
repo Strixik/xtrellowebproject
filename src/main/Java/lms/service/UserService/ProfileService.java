@@ -3,7 +3,7 @@ package lms.service.UserService;
 import lms.dao.UserDao;
 import lms.dao.entity.User;
 import lms.dao.repository.UserRepo;
-import lms.service.Helper;
+import lms.service.helpers.Helper;
 import lms.views.HtmlViews.UserHtmlViews;
 
 import javax.servlet.http.HttpServletRequest;
@@ -12,7 +12,7 @@ import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.logging.Logger;
 
-import static lms.service.Helper.CHECK_EMAIL_ADDRESS_REGEX;
+import static lms.service.helpers.Helper.CHECK_EMAIL_ADDRESS_REGEX;
 
 public class ProfileService {
     private static final Logger LOGGER = Logger.getLogger(ProfileService.class.getName());
@@ -33,28 +33,28 @@ public class ProfileService {
 
         String profileForm = showProfileForm();
 
-        profileForm = profileForm.replace("xtrellovall1", user.getLogin());
-        profileForm = profileForm.replace("xtrellovall2", user.getPassword());
-        profileForm = profileForm.replace("xtrellovall3", user.getPassword());
-        profileForm = profileForm.replace("xtrellovall4", user.getEmail());
-        profileForm = profileForm.replace("xtrellovall5", String.valueOf(user.getId()));
-        profileForm = profileForm.replace("xtrellovall6", user.getDateOfRegistration());
-        profileForm = profileForm.replace("xtrellovall7", ((user.getSex()) == null)? "Стать": user.getSex());
-        profileForm = profileForm.replace("xtrellovall8", ((user.getDateOfBirth()) == null) ?
+        profileForm = profileForm.replace("userFieldNumber1", user.getLogin());
+        profileForm = profileForm.replace("userFieldNumber2", user.getPassword());
+        profileForm = profileForm.replace("userFieldNumber3", user.getPassword());
+        profileForm = profileForm.replace("userFieldNumber4", user.getEmail());
+        profileForm = profileForm.replace("userFieldNumber5", String.valueOf(user.getId()));
+        profileForm = profileForm.replace("userFieldNumber6", user.getDateOfRegistration());
+        profileForm = profileForm.replace("userFieldNumber7", ((user.getSex()) == null)? "Стать": user.getSex());
+        profileForm = profileForm.replace("userFieldNumber8", ((user.getDateOfBirth()) == null) ?
                 "1900-01-01" : user.getDateOfBirth());
 
         if (session.getAttribute("status").equals("admin")) {
-            profileForm = profileForm.replace("xtrellovall9", user.getUserStatus());
+            profileForm = profileForm.replace("userFieldNumber9", user.getUserStatus());
             profileForm = profileForm.replace("readonly", "");
         }
-        profileForm = profileForm.replace("xtrellovall9", user.getUserStatus());
-        profileForm = profileForm.replace("xtrellovall0", ((user.getFirstName() == null) ?
+        profileForm = profileForm.replace("userFieldNumber9", user.getUserStatus());
+        profileForm = profileForm.replace("userFieldNumber0", ((user.getFirstName() == null) ?
                 "Дані не заповнено" : user.getFirstName()));
-        profileForm = profileForm.replace("xtrellovall-1", ((user.getSecondName() == null) ?
+        profileForm = profileForm.replace("userFieldNumber-1", ((user.getSecondName() == null) ?
                 "Дані не заповнено" : user.getSecondName()));
-        profileForm = profileForm.replace("xtrellovall-2", ((user.getCountry() == null) ?
+        profileForm = profileForm.replace("userFieldNumber-2", ((user.getCountry() == null) ?
                 "Дані не заповнено" : user.getCountry()));
-        profileForm = profileForm.replace("xtrellovall-3", ((user.getCity() == null) ?
+        profileForm = profileForm.replace("userFieldNumber-3", ((user.getCity() == null) ?
                 "Дані не заповнено" : user.getCity()));
         out.println(profileForm);
     }

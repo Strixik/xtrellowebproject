@@ -31,6 +31,7 @@ public class PageFilter implements Filter {
 
             String top = UserHtmlViews.getInstance().getIndexTop();
             HttpSession session = request.getSession();
+
             if (session.getAttribute("login") == null && (!request.getServletPath().equals(""))) {
                 response.sendRedirect("/");
             }
