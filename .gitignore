@@ -1,20 +1,17 @@
-# Created by .ignore support plugin (hsz.mobi)
-.gitignore
-.idea/*
-target/classes/lms/dao/CRUD.class
-target/classes/lms/dao/DataSource.class
-target/classes/lms/dao/UserDao.class
-target/classes/lms/dao/repository/BoardRepo.class
-target/classes/lms/dao/repository/CardRepo.class
-target/classes/lms/dao/repository/PanelRepo.class
+# Eclipse
+.classpath
+.project
+.settings/
 
-target/classes/lms/views/PathHtml.class
-target/generated-sources/
-target/xtrello.web-project/WEB-INF/classes/lms/dao/CRUD.class
-target/xtrello.web-project/WEB-INF/classes/lms/dao/DataSource.class
-target/xtrello.web-project/WEB-INF/classes/lms/dao/UserDao.class
-target/xtrello.web-project/WEB-INF/classes/lms/dao/repository/BoardRepo.class
-target/xtrello.web-project/WEB-INF/classes/lms/dao/repository/CardRepo.class
-target/xtrello.web-project/WEB-INF/classes/lms/dao/repository/PanelRepo.class
+# Intellij
+.idea/
+*.iml
+*.iws
 
-target/xtrello.web-project/WEB-INF/logs/
+# Mac
+.DS_Store
+
+# Maven
+log/
+target/
+.idea/workspace.xml
