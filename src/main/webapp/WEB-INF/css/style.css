@@ -277,3 +277,12 @@ a {
     color: #fcf97e;
     font-size: 0.9em;
 }
+.btn-userStatus{
+    width: 100%;
+}
+.bad{
+    float: right;
+}
+.padding-top20{
+    padding-top: 20px;
+}

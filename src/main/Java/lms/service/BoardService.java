@@ -3,6 +3,7 @@ package lms.service;
 import lms.dao.CRUD;
 import lms.dao.entity.Board;
 import lms.dao.repository.BoardRepo;
+import lms.service.helpers.Helper;
 import lms.views.HtmlViews.BoardHtmlViews;
 
 import javax.servlet.http.HttpServletRequest;
@@ -22,8 +23,7 @@ public class BoardService {
 
     public void addBoardForm(HttpServletRequest request, HttpSession session) {
         try {
-            String boardTitle = new String(request.getParameter("nameBoard")
-                    .getBytes("iso-8859-1"), "UTF-8");
+            String boardTitle = Helper.requestParameter("nameBoard", request);
             long userId = Long.parseLong(session.getAttribute("user_id").toString());
             LOGGER.info("ІД Юзера: " + userId + "Імя дошки: " + boardTitle);
             if (userId != 0L && !boardTitle.isEmpty()) {

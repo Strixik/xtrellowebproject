@@ -6,6 +6,7 @@ import lms.dao.entity.Card;
 import lms.dao.entity.Panel;
 import lms.dao.repository.CardRepo;
 import lms.dao.repository.PanelRepo;
+import lms.service.helpers.Helper;
 import lms.views.HtmlViews.PanelHtmlViews;
 
 import javax.servlet.http.HttpServletRequest;
@@ -26,8 +27,7 @@ public class PanelService {
     public void addListForm(HttpServletRequest request, HttpSession session) {
         try {
             long boardId = Long.parseLong(session.getAttribute("board_id").toString());
-            String nameList = new String(request.getParameter("nameList")
-                    .getBytes("iso-8859-1"), "UTF-8");
+            String nameList = Helper.requestParameter("nameList", request);
             LOGGER.info(boardId + " " + nameList);
             if (boardId != 0L && !nameList.isEmpty()) {
                 Panel panel = new Panel(nameList, boardId);
@@ -54,8 +54,8 @@ public class PanelService {
             panelTitle = panelTitle.replace("listId", String.valueOf(panel.getId()));
             StringBuilder sBuilder = new StringBuilder();
             for (Card c: cards){
-                sBuilder.append("<input type=\"radio\" value=\"").append(c.getId()).append("\" name=\"id\">")
-                        .append("<li class=\"cardClass\">").append(c.getCardText()).append("</li>");
+                sBuilder.append("<li class=\"cardClass\">").append("<input type=\"radio\" class=\"bad\" value=\"").append(c.getId()).append("\" name=\"id\">")
+                        .append(c.getCardText()).append("</li>");
             }
             panelTitle = panelTitle.replace("<!--" + panel.getId() + "your text" + "-->", sBuilder);
             out.println(panelTitle);

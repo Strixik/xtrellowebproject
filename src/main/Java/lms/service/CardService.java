@@ -3,6 +3,7 @@ package lms.service;
 import lms.dao.CRUD;
 import lms.dao.entity.Card;
 import lms.dao.repository.CardRepo;
+import lms.service.helpers.Helper;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.UnsupportedEncodingException;
@@ -17,8 +18,7 @@ public class CardService {
     public void addCard (HttpServletRequest request) {
         try {
             long listId = Long.parseLong(request.getParameter("listid"));
-            String cardText = new String(request.getParameter("cardText")
-                    .getBytes("iso-8859-1"), "UTF-8");
+            String cardText = Helper.requestParameter("cardText", request);
             LOGGER.info(listId + " " + cardText);
             if (listId != 0 && !cardText.isEmpty()) {
                 Card card = new Card(cardText, listId);

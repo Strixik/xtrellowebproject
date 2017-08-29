@@ -16,7 +16,7 @@ public interface Helper<E> {
     static <E> String checkFormField(int fieldNumber, String profileForm, E fieldValueNew, Helper<E> cautionMessage) {
         String message = cautionMessage.check(fieldValueNew);
         profileForm = profileForm.replace("userFieldNumber" + fieldNumber,  String.valueOf(fieldValueNew));
-        if (fieldValueNew.equals("admin")){
+        if (fieldValueNew.equals("admin")&& fieldNumber == 9){
             profileForm = profileForm.replace("readonly" ,"");
         }
         if (message != null) {
