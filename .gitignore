@@ -16,4 +16,3 @@ log/
 target/
 .idea/workspace.xml
 .idea
-!/src/main/webapp/WEB-INF/img/xLogo.png
