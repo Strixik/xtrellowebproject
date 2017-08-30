@@ -1,4 +1,4 @@
-![alt text](https://github.com/Strixik/xtrellowebproject/blob/vova_logger/src/main/webapp/WEB-INF/img/xLogo.gif)
+![alt text](https://github.com/Strixik/xtrellowebproject/blob/vova_logger/src/main/webapp/WEB-INF/img/xLogo.png)
 <br>
 **xTrello**
 ---
