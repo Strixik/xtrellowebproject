@@ -19,6 +19,6 @@ We also used:
 4) run the project using the local server (for example Tomcat)
 ***
 **_Database schema:_**
-[alt text](https://github.com/Strixik/xtrellowebproject/blob/vova_logger/src/main/webapp/WEB-INF/img/db_schema.png)
+![alt text](https://github.com/Strixik/xtrellowebproject/blob/vova_logger/src/main/webapp/WEB-INF/img/db_schema.png)
 ***
 Welcome to cooperation in development and improvement of xTrello!
