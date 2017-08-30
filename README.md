@@ -10,7 +10,7 @@ xTrello is an educational team Java web-project, which was developed by students
 Our purpose is to develop web-project using **_Java technologies (Core Java, Servlet API, JDBC)_** for backend and **_HTML/CSS, Bootstrap and JavaScript_** for frontend.
 We also used: 
 **_MySQL_** as database management system,
-**_TomCat_** as servlet container and web server,
+**_Tomcat_** as servlet container and web server,
 **_Maven_** as build automation tool,
 **_Trello_** as task manager and team working tool.
 ***
