@@ -1,4 +1,6 @@
-![alt text](https://github.com/Strixik/xtrellowebproject/blob/vova_logger/src/main/webapp/WEB-INF/img/xLogo.png)**xTrello**
+![alt text](https://github.com/Strixik/xtrellowebproject/blob/vova_logger/src/main/webapp/WEB-INF/img/xLogo.png)
+<br>
+**xTrello**
 ---
 
 xTrello is an educational team Java web-project, which was developed by students of Ivano-Frankivsk IT-Cluster Academy:
@@ -19,6 +21,7 @@ We also used:
 4) run the project using the local server (for example Tomcat)
 ***
 **_Database schema:_**
+<br>
 ![alt text](https://github.com/Strixik/xtrellowebproject/blob/vova_logger/src/main/webapp/WEB-INF/img/db_schema.png)
 ***
 Welcome to cooperation in development and improvement of xTrello!
