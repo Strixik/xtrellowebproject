@@ -1,5 +1,5 @@
 **xTrello**
-***
+---
 
 xTrello is an educational team Java web-project, which was developed by students of Ivano-Frankivsk IT-Cluster Academy:
 **_Andriy Golban, Grigoriy Vasiliev, Taras Pushkar, and Volodymyr Simkiv_**. Web-service for task management and team working **_trello.com_** was used as template for our application.
