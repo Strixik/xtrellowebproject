@@ -1,3 +1,4 @@
+![alt text](https://github.com/Strixik/xtrellowebproject/blob/vova_logger/src/main/webapp/WEB-INF/img/xLogo.png)
 **xTrello**
 ---
 
@@ -18,4 +19,7 @@ We also used:
 3) change _private static final String DB_URL (jdbc:mysql://localhost/xtrello?user & password)_ in class _Java.lms.dao.DataSource_ to your own
 4) run the project using the local server (for example Tomcat)
 ***
+![alt text](https://github.com/Strixik/xtrellowebproject/blob/vova_logger/src/main/webapp/WEB-INF/img/db_scheme.png)
+
+
 Welcome to cooperation in development and improvement of xTrello!
