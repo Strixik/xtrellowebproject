@@ -20,7 +20,7 @@ public class PanelServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         HttpSession session = request.getSession();
 
-        PanelService listView = new PanelService(out);
+        PanelService panelView = new PanelService(out);
 
         LOGGER.info("pathInfo:\t" + request.getPathInfo());
         switch (request.getPathInfo()) {
@@ -29,10 +29,10 @@ public class PanelServlet extends HttpServlet {
                 out.println(session.getAttribute("board_id"));
                 break;
             case "/add":
-                listView.addListForm(request, session);
+                panelView.addListForm(request, session);
                 break;
             case "/del":
-                listView.deleteList(request);
+                panelView.deleteList(request);
                 break;
         }
         response.sendRedirect("/list/view");
@@ -42,12 +42,12 @@ public class PanelServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         HttpSession session = request.getSession();
 
-        PanelService listView = new PanelService(out);
+        PanelService panelView = new PanelService(out);
 
         LOGGER.info("pathInfo:\t" + request.getPathInfo());
         switch (request.getPathInfo()) {
             case "/view":
-                listView.showList(session);
+                panelView.showList(session);
                 break;
         }
     }
