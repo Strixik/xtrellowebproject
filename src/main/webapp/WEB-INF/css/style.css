@@ -114,7 +114,6 @@ a {
 }
 
 .login-form .group input[data-type="password"] {
-    text-security: circle;
     -webkit-text-security: circle;
 }
 
@@ -202,7 +201,7 @@ a {
 
 .board {
     float: left;
-    color: yellow;
+    color: #fccc21;
     background-color: #342e3b;
     border: solid slategray 1px;
     text-align: center;
@@ -215,8 +214,7 @@ a {
     float: left;
     width: 200px;
     height: 100px;
-    margin: 20px;
-    margin-bottom: 50px;
+    margin: 40px;
     text-align: center;
     position: relative;
 }
@@ -238,7 +236,7 @@ a {
     min-width: 20%;
 }
 .navbar-brand {
-    color: violet;
+    font-family: "Segoe UI Black", sans-serif;
     font-size: 2em;
 }
 .liststyle{

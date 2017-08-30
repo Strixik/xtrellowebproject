@@ -54,8 +54,8 @@ public class PanelService {
             panelTitle = panelTitle.replace("listId", String.valueOf(panel.getId()));
             StringBuilder sBuilder = new StringBuilder();
             for (Card c: cards){
-                sBuilder.append("<li class=\"cardClass\">").append("<input type=\"radio\" class=\"bad\" value=\"").append(c.getId()).append("\" name=\"id\">")
-                        .append(c.getCardText()).append("</li>");
+                sBuilder.append("<li class=\"cardClass\">").append("<input type=\"radio\" class=\"bad\" value=\"")
+                        .append(c.getId()).append("\" name=\"id\">").append(c.getCardText()).append("</li>");
             }
             panelTitle = panelTitle.replace("<!--" + panel.getId() + "your text" + "-->", sBuilder);
             out.println(panelTitle);
