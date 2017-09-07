@@ -16,6 +16,7 @@ public class UserHtmlViews {
     private final String profileForm;
     private final String adminUserForm;
     private final String adminInsertForm;
+    private final String sqlLoginAndPassword;
 
 
     public static UserHtmlViews getInstance() {
@@ -35,6 +36,7 @@ public class UserHtmlViews {
         this.profileForm = pathHtml.getPartialHtml("profile-form.html");
         this.adminUserForm = pathHtml.getPartialHtml("user-list-for-admin.html");
         this.adminInsertForm = pathHtml.getPartialHtml("insert-for-admin-list-user.html");
+        this.sqlLoginAndPassword = pathHtml.getPartialTxt("sqlLoginAndPassword.txt");
     }
 
     public String getIndexTop() {
@@ -67,5 +69,10 @@ public class UserHtmlViews {
 
     public String getProfileForm() {
         return profileForm;
+    }
+
+    public String getSqlLoginAndPassword() {
+        System.out.println(sqlLoginAndPassword);
+        return sqlLoginAndPassword;
     }
 }

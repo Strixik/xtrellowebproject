@@ -1,5 +1,7 @@
 package lms.dao;
 
+import lms.views.HtmlViews.UserHtmlViews;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -15,10 +17,10 @@ public class DataSource implements AutoCloseable {
      * JDBC driver name and database URL
      */
     private static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    private static final String DB_URL = "jdbc:mysql://localhost/xtrello?user=root&password=2259";
+    private static final String DB_URL = UserHtmlViews.getInstance().getSqlLoginAndPassword().toString();
+
 
     private Connection connection = null;
-
     public DataSource() {
         try {
             Class.forName(JDBC_DRIVER).newInstance();

@@ -47,4 +47,18 @@ public class PathHtml {
 
         return sBuilder.toString();
     }
+    public String getPartialTxt(String filename) {
+        StringBuilder sBuilder = new StringBuilder();
+        Path file = Paths.get(this.path + filename);
+        try (BufferedReader reader = Files.newBufferedReader(file)) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                sBuilder.append(line);
+            }
+        } catch (IOException e) {
+            LOGGER.warning("txt file not found:\t " + e.toString());
+        }
+
+        return sBuilder.toString();
+    }
 }
