@@ -30,6 +30,8 @@ public class PageFilter implements Filter {
             PrintWriter out = resp.getWriter();
 
             String top = UserHtmlViews.getInstance().getIndexTop();
+            String bottom = UserHtmlViews.getInstance().getIndexBottom();
+
             HttpSession session = request.getSession();
 
             if (session.getAttribute("login") == null && (!request.getServletPath().equals(""))) {
@@ -38,6 +40,7 @@ public class PageFilter implements Filter {
             if (session.getAttribute("login") != null) {
                 top = top.replace("<!-- servletInsert01 -->", UserHtmlViews.getInstance().getMenuRight());
                 top = top.replace("<!-- currentUser -->", session.getAttribute("login").toString().toUpperCase());
+                bottom = bottom.replace("<!--LoginUserName-->", session.getAttribute("login").toString());
                 if (session.getAttribute("status").equals("admin")) {
                     top = top.replace("hidden", "");
                 }
@@ -45,7 +48,7 @@ public class PageFilter implements Filter {
 
             out.write(top);
             chain.doFilter(req, resp);
-            out.write(UserHtmlViews.getInstance().getIndexBottom());
+            out.write(bottom);
         }
     }
 
