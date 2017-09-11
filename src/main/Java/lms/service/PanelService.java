@@ -13,10 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.logging.Logger;
 
 public class PanelService {
@@ -94,29 +91,23 @@ public class PanelService {
             PanelRepo panelRepo = new PanelRepo();
             panelRepo.update(listId,listNameNew);
             CardRepo cardRepo = new CardRepo();
-            List<String> temp = new ArrayList<>();
-            List<Card> temp1 = cardRepo.retrieveAll(listId);
-            List<Card> temp2 = new ArrayList<Card>();
 
-                int i= 0;
-                for (String s : listText.split("\n")) {
-                 Iterator<Card> iter = temp1.iterator();
-                    while(iter.hasNext()){
-                    // cardRepo.update(iter.next().getId(),s,iter.next().getListId());
-                        System.out.println(iter.next().getId()+ s + iter.next().getListId());
-                    }
-            }
-        System.out.println(temp1);
-          /*  for (int j =0; j < temp.size(); ++j){
-                System.out.println(temp.get(j));
-                System.out.println(temp1.get(i).getId());
-                System.out.println(temp1.get(i).getListId());
-               *//* Card card = new Card(temp1.get(i).getId(), temp.get(j), temp1.get(i).getListId());
-                temp2.add(card);*//*
-                cardRepo.update(temp1.get(i).getId(),temp.get(j),temp1.get(i).getListId());
+            List<Card> temp1 = cardRepo.retrieveAll(listId);
+
+            String text = new String(listText);
+                String[] str = text.split("\n");
+
+
+            int i= 0;
+            for (int j =0; j < str.length; ++j){
+                Long id = temp1.get(i).getId();
+                String name = str[j];
+                Long idNote = temp1.get(i).getListId();
+                cardRepo.update(id,name,idNote);
                 ++i;
                 }
-        System.out.println(temp2);*/
+
+
 
 
 

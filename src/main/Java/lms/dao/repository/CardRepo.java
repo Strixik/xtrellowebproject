@@ -64,12 +64,16 @@ public class CardRepo implements CRUD<Card> {
         return cards;
     }
     public void update(long id, String name, long idNote) {
-        System.out.println(id + "-"+ name + "-"+ idNote);
+        System.out.println(id);
+        System.out.println(name);
+        System.out.println(idNote);
+
         DataSource dataSource = new DataSource();
+
         if (id > 0L) {
             try (Connection con = dataSource.getConnection();
                  PreparedStatement preparedSt =
-                         con.prepareStatement("UPDATE card SET card = ? WHERE id =\""+ idNote +"\" AND id_list =" + id)
+                         con.prepareStatement("UPDATE card SET card = ? WHERE id =\""+ id +"\" AND id_list =" + idNote)
 
             ) {
                 preparedSt.setString(1, name);
@@ -77,6 +81,13 @@ public class CardRepo implements CRUD<Card> {
             } catch (SQLException e) {
                 LOGGER.severe("Connection to database is lost: \t" + e.toString());
             }
+        }
+        else if (id == 0L && !(name.equals(null)) && !(name.equals("")) && !(idNote == 0L)){
+            Card card = new Card(name, idNote);
+            save(card);
+        }
+        else if (name.equals(null) || name.equals("") || idNote == 0L ){
+            remove(id);
         }
     }
 }
