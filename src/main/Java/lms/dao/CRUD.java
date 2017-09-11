@@ -10,4 +10,5 @@ public interface CRUD<T> {
 
     List<T> retrieveAll(long foreignKeyId);
 
+
 }

@@ -65,4 +65,20 @@ public class PanelRepo implements CRUD<Panel> {
         }
         return panels;
     }
+    public void update(long id, String name) {
+        DataSource dataSource = new DataSource();
+        if (id > 0L) {
+            try (Connection con = dataSource.getConnection();
+                 PreparedStatement preparedSt =
+                         con.prepareStatement("UPDATE list SET list = ? WHERE id =" + id)
+
+            ) {
+                preparedSt.setString(1, name);
+                preparedSt.executeUpdate();
+            } catch (SQLException e) {
+                LOGGER.severe("Connection to database is lost: \t" + e.toString());
+            }
+        }
+    }
+
 }

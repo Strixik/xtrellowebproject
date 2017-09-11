@@ -34,6 +34,9 @@ public class PanelServlet extends HttpServlet {
             case "/del":
                 panelView.deleteList(request);
                 break;
+            case "/up":
+                panelView.editingList(request);
+                break;
         }
         response.sendRedirect("/list/view");
     }

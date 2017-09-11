@@ -63,4 +63,20 @@ public class CardRepo implements CRUD<Card> {
         }
         return cards;
     }
+    public void update(long id, String name, long idNote) {
+        System.out.println(id + "-"+ name + "-"+ idNote);
+        DataSource dataSource = new DataSource();
+        if (id > 0L) {
+            try (Connection con = dataSource.getConnection();
+                 PreparedStatement preparedSt =
+                         con.prepareStatement("UPDATE card SET card = ? WHERE id =\""+ idNote +"\" AND id_list =" + id)
+
+            ) {
+                preparedSt.setString(1, name);
+                preparedSt.executeUpdate();
+            } catch (SQLException e) {
+                LOGGER.severe("Connection to database is lost: \t" + e.toString());
+            }
+        }
+    }
 }
